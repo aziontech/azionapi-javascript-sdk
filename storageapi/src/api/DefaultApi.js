@@ -63,7 +63,7 @@ export default class DefaultApi {
       let formParams = {
       };
 
-      let authNames = ['authToken'];
+      let authNames = [];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -114,7 +114,7 @@ export default class DefaultApi {
       let formParams = {
       };
 
-      let authNames = ['authToken'];
+      let authNames = [];
       let contentTypes = ['b2/x-auto'];
       let accepts = ['application/json'];
       let returnType = Object;

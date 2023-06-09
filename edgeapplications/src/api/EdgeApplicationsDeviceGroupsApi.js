@@ -78,7 +78,7 @@ export default class EdgeApplicationsDeviceGroupsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -130,7 +130,7 @@ export default class EdgeApplicationsDeviceGroupsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = ['application/json; version=3'];
       let returnType = DeviceGroupsIdResponse;
@@ -185,7 +185,7 @@ export default class EdgeApplicationsDeviceGroupsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json; version=3'];
       let accepts = ['application/json; version=3'];
       let returnType = DeviceGroupsIdResponse;
@@ -240,7 +240,7 @@ export default class EdgeApplicationsDeviceGroupsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json; version=3'];
       let accepts = ['application/json; version=3'];
       let returnType = DeviceGroupsIdResponse;
@@ -296,7 +296,7 @@ export default class EdgeApplicationsDeviceGroupsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = ['application/json; version=3'];
       let returnType = DeviceGroupsResponse;
@@ -345,7 +345,7 @@ export default class EdgeApplicationsDeviceGroupsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json; version=3'];
       let accepts = ['application/json; version=3'];
       let returnType = DeviceGroupsIdResponse;

@@ -1,6 +1,5 @@
 .babelrc
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 docs/CreateResourceRequest.md
@@ -30,14 +29,3 @@ src/model/ServiceResponseWithTotals.js
 src/model/UpdateResourceRequest.js
 src/model/UpdateServiceRequest.js
 src/model/Variable.js
-test/api/DefaultApi.spec.js
-test/model/CreateResourceRequest.spec.js
-test/model/CreateServiceRequest.spec.js
-test/model/ResourceDetail.spec.js
-test/model/ResourceResponse.spec.js
-test/model/ResourceResponseWithTotal.spec.js
-test/model/ServiceResponse.spec.js
-test/model/ServiceResponseWithTotals.spec.js
-test/model/UpdateResourceRequest.spec.js
-test/model/UpdateServiceRequest.spec.js
-test/model/Variable.spec.js

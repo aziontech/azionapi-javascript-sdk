@@ -21,12 +21,6 @@ Delete a version. A version is just um path prefix/sub-namespace for a set of fi
 
 ```javascript
 import StorageApi from 'storage_api';
-let defaultClient = StorageApi.ApiClient.instance;
-// Configure API key authorization: authToken
-let authToken = defaultClient.authentications['authToken'];
-authToken.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//authToken.apiKeyPrefix = 'Token';
 
 let apiInstance = new StorageApi.DefaultApi();
 let versionId = "versionId_example"; // String | The version identifier
@@ -52,7 +46,7 @@ null (empty response body)
 
 ### Authorization
 
-[authToken](../README.md#authToken)
+No authorization required
 
 ### HTTP request headers
 
@@ -72,12 +66,6 @@ Upload file and transfer to remote storage
 
 ```javascript
 import StorageApi from 'storage_api';
-let defaultClient = StorageApi.ApiClient.instance;
-// Configure API key authorization: authToken
-let authToken = defaultClient.authentications['authToken'];
-authToken.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//authToken.apiKeyPrefix = 'Token';
 
 let apiInstance = new StorageApi.DefaultApi();
 let xAzionStaticPath = "xAzionStaticPath_example"; // String | Required in order to get the path and file name. i.e.: assets/css/main.css
@@ -109,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[authToken](../README.md#authToken)
+No authorization required
 
 ### HTTP request headers
 

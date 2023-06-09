@@ -89,7 +89,7 @@ export default class EdgeApplicationsRulesEngineApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = ['application/json; version=3'];
       let returnType = RulesEngineResponse;
@@ -145,7 +145,7 @@ export default class EdgeApplicationsRulesEngineApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json; version=3'];
       let accepts = ['application/json; version=3'];
       let returnType = RulesEngineIdResponse;
@@ -202,7 +202,7 @@ export default class EdgeApplicationsRulesEngineApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -260,7 +260,7 @@ export default class EdgeApplicationsRulesEngineApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = ['application/json; version=3'];
       let returnType = RulesEngineIdResponse;
@@ -321,7 +321,7 @@ export default class EdgeApplicationsRulesEngineApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json; version=3'];
       let accepts = ['application/json; version=3'];
       let returnType = RulesEngineIdResponse;
@@ -382,7 +382,7 @@ export default class EdgeApplicationsRulesEngineApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json; version=3'];
       let accepts = ['application/json; version=3'];
       let returnType = RulesEngineIdResponse;

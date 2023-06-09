@@ -83,7 +83,7 @@ export default class EdgeApplicationsCacheSettingsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -135,7 +135,7 @@ export default class EdgeApplicationsCacheSettingsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = ['application/json; version=3'];
       let returnType = ApplicationCacheGetOneResponse;
@@ -190,7 +190,7 @@ export default class EdgeApplicationsCacheSettingsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json; version=3'];
       let accepts = ['application/json; version=3'];
       let returnType = ApplicationCachePutResponse;
@@ -243,7 +243,7 @@ export default class EdgeApplicationsCacheSettingsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json; version=3'];
       let accepts = ['application/json; version=3'];
       let returnType = ApplicationCachePatchResponse;
@@ -299,7 +299,7 @@ export default class EdgeApplicationsCacheSettingsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = ['application/json; version=3'];
       let returnType = ApplicationCacheGetResponse;
@@ -348,7 +348,7 @@ export default class EdgeApplicationsCacheSettingsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json; version=3'];
       let accepts = ['application/json; version=3'];
       let returnType = ApplicationCacheCreateResponse;
