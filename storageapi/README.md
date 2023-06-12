@@ -100,12 +100,6 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```javascript
 var StorageApi = require('storage_api');
 
-var defaultClient = StorageApi.ApiClient.instance;
-// Configure API key authorization: authToken
-var authToken = defaultClient.authentications['authToken'];
-authToken.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//authToken.apiKeyPrefix['Authorization'] = "Token"
 
 var api = new StorageApi.DefaultApi()
 var versionId = "versionId_example"; // {String} The version identifier

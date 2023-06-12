@@ -80,7 +80,7 @@ export default class EdgeApplicationsMainSettingsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = ['application/json; version=3'];
       let returnType = GetApplicationsResponse;
@@ -125,7 +125,7 @@ export default class EdgeApplicationsMainSettingsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -171,7 +171,7 @@ export default class EdgeApplicationsMainSettingsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = ['application/json; version=3'];
       let returnType = GetApplicationResponse;
@@ -220,7 +220,7 @@ export default class EdgeApplicationsMainSettingsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json; version=3'];
       let accepts = ['application/json; version=3'];
       let returnType = ApplicationUpdateResponse;
@@ -269,7 +269,7 @@ export default class EdgeApplicationsMainSettingsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json; version=3'];
       let accepts = ['application/json; version=3'];
       let returnType = ApplicationPutResult;
@@ -312,7 +312,7 @@ export default class EdgeApplicationsMainSettingsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json; version=3'];
       let accepts = ['application/json; version=3'];
       let returnType = CreateApplicationResult;

@@ -101,9 +101,11 @@ Please follow the [installation](#installation) instruction and execute the foll
 var ServicesApi = require('services_api');
 
 var defaultClient = ServicesApi.ApiClient.instance;
-// Configure Bearer access token for authorization: bearerAuth
-var bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+// Configure API key authorization: tokenAuth
+var tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix['Authorization'] = "Token"
 
 var api = new ServicesApi.DefaultApi()
 var serviceId = 789; // {Number} 
@@ -155,7 +157,10 @@ Class | Method | HTTP request | Description
 
 
 Authentication schemes defined for the API:
-### bearerAuth
+### tokenAuth
 
-- **Type**: Bearer authentication
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 

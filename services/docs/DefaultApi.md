@@ -28,9 +28,11 @@ Delete Service Resource by ID
 ```javascript
 import ServicesApi from 'services_api';
 let defaultClient = ServicesApi.ApiClient.instance;
-// Configure Bearer access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new ServicesApi.DefaultApi();
 let serviceId = 789; // Number | 
@@ -58,7 +60,7 @@ null (empty response body)
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 
@@ -77,9 +79,11 @@ Delete Service by ID
 ```javascript
 import ServicesApi from 'services_api';
 let defaultClient = ServicesApi.ApiClient.instance;
-// Configure Bearer access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new ServicesApi.DefaultApi();
 let id = 789; // Number | 
@@ -105,7 +109,7 @@ null (empty response body)
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 
@@ -124,9 +128,11 @@ Return Service Resource by ID
 ```javascript
 import ServicesApi from 'services_api';
 let defaultClient = ServicesApi.ApiClient.instance;
-// Configure Bearer access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new ServicesApi.DefaultApi();
 let serviceId = 789; // Number | 
@@ -154,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 
@@ -173,9 +179,11 @@ Return Service Resources by page
 ```javascript
 import ServicesApi from 'services_api';
 let defaultClient = ServicesApi.ApiClient.instance;
-// Configure Bearer access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new ServicesApi.DefaultApi();
 let serviceId = 789; // Number | 
@@ -213,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 
@@ -232,9 +240,11 @@ Return Service by ID
 ```javascript
 import ServicesApi from 'services_api';
 let defaultClient = ServicesApi.ApiClient.instance;
-// Configure Bearer access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new ServicesApi.DefaultApi();
 let id = 789; // Number | 
@@ -264,7 +274,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 
@@ -283,9 +293,11 @@ Return Services by page
 ```javascript
 import ServicesApi from 'services_api';
 let defaultClient = ServicesApi.ApiClient.instance;
-// Configure Bearer access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new ServicesApi.DefaultApi();
 let opts = {
@@ -321,7 +333,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 
@@ -340,9 +352,11 @@ Create Service
 ```javascript
 import ServicesApi from 'services_api';
 let defaultClient = ServicesApi.ApiClient.instance;
-// Configure Bearer access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new ServicesApi.DefaultApi();
 let createServiceRequest = new ServicesApi.CreateServiceRequest(); // CreateServiceRequest | 
@@ -368,7 +382,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 
@@ -387,9 +401,11 @@ Update Service by ID
 ```javascript
 import ServicesApi from 'services_api';
 let defaultClient = ServicesApi.ApiClient.instance;
-// Configure Bearer access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new ServicesApi.DefaultApi();
 let id = 789; // Number | 
@@ -417,7 +433,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 
@@ -436,9 +452,11 @@ Update Service Resource by ID
 ```javascript
 import ServicesApi from 'services_api';
 let defaultClient = ServicesApi.ApiClient.instance;
-// Configure Bearer access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new ServicesApi.DefaultApi();
 let serviceId = 789; // Number | 
@@ -468,7 +486,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 
@@ -487,9 +505,11 @@ Create Service Resource
 ```javascript
 import ServicesApi from 'services_api';
 let defaultClient = ServicesApi.ApiClient.instance;
-// Configure Bearer access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new ServicesApi.DefaultApi();
 let serviceId = 789; // Number | 
@@ -517,7 +537,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 

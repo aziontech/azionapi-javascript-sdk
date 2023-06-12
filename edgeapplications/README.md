@@ -256,11 +256,11 @@ Please follow the [installation](#installation) instruction and execute the foll
 var EdgeApplication = require('edge_application');
 
 var defaultClient = EdgeApplication.ApiClient.instance;
-// Configure API key authorization: JWT
-var JWT = defaultClient.authentications['JWT'];
-JWT.apiKey = "YOUR API KEY"
+// Configure API key authorization: tokenAuth
+var tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//JWT.apiKeyPrefix['Authorization'] = "Token"
+//tokenAuth.apiKeyPrefix['Authorization'] = "Token"
 
 var api = new EdgeApplication.EdgeApplicationsCacheSettingsApi()
 var edgeApplicationId = 789; // {Number} 
@@ -389,7 +389,7 @@ Class | Method | HTTP request | Description
 
 
 Authentication schemes defined for the API:
-### JWT
+### tokenAuth
 
 
 - **Type**: API key

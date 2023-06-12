@@ -1,6 +1,5 @@
 .babelrc
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 docs/BadRequestResponse.md
@@ -30,14 +29,3 @@ src/model/ListEdgeFunctionResponse.js
 src/model/PatchEdgeFunctionRequest.js
 src/model/PutEdgeFunctionRequest.js
 src/model/Results.js
-test/api/EdgeFunctionsApi.spec.js
-test/model/BadRequestResponse.spec.js
-test/model/CreateEdgeFunctionRequest.spec.js
-test/model/EdgeFunctionResponse.spec.js
-test/model/ErrorModel.spec.js
-test/model/ErrorResponse.spec.js
-test/model/Links.spec.js
-test/model/ListEdgeFunctionResponse.spec.js
-test/model/PatchEdgeFunctionRequest.spec.js
-test/model/PutEdgeFunctionRequest.spec.js
-test/model/Results.spec.js

@@ -46,7 +46,7 @@ class ApiClient {
          * @type {Array.<String>}
          */
         this.authentications = {
-            'JWT': {type: 'apiKey', 'in': 'header', name: 'Authorization'}
+            'tokenAuth': {type: 'apiKey', 'in': 'header', name: 'Authorization'}
         }
 
         /**

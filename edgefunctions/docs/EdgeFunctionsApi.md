@@ -24,11 +24,11 @@ edge_functions
 ```javascript
 import EdgeFunction from 'edge_function';
 let defaultClient = EdgeFunction.ApiClient.instance;
-// Configure API key authorization: JWT
-let JWT = defaultClient.authentications['JWT'];
-JWT.apiKey = 'YOUR API KEY';
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//JWT.apiKeyPrefix = 'Token';
+//tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new EdgeFunction.EdgeFunctionsApi();
 let opts = {
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../README.md#JWT)
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 
@@ -81,11 +81,11 @@ edge_functions
 ```javascript
 import EdgeFunction from 'edge_function';
 let defaultClient = EdgeFunction.ApiClient.instance;
-// Configure API key authorization: JWT
-let JWT = defaultClient.authentications['JWT'];
-JWT.apiKey = 'YOUR API KEY';
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//JWT.apiKeyPrefix = 'Token';
+//tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new EdgeFunction.EdgeFunctionsApi();
 let id = 789; // Number | 
@@ -111,7 +111,7 @@ null (empty response body)
 
 ### Authorization
 
-[JWT](../README.md#JWT)
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 
@@ -130,11 +130,11 @@ edge_functions
 ```javascript
 import EdgeFunction from 'edge_function';
 let defaultClient = EdgeFunction.ApiClient.instance;
-// Configure API key authorization: JWT
-let JWT = defaultClient.authentications['JWT'];
-JWT.apiKey = 'YOUR API KEY';
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//JWT.apiKeyPrefix = 'Token';
+//tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new EdgeFunction.EdgeFunctionsApi();
 let id = 789; // Number | 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../README.md#JWT)
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 
@@ -179,11 +179,11 @@ edge_functions
 ```javascript
 import EdgeFunction from 'edge_function';
 let defaultClient = EdgeFunction.ApiClient.instance;
-// Configure API key authorization: JWT
-let JWT = defaultClient.authentications['JWT'];
-JWT.apiKey = 'YOUR API KEY';
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//JWT.apiKeyPrefix = 'Token';
+//tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new EdgeFunction.EdgeFunctionsApi();
 let id = 789; // Number | 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../README.md#JWT)
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 
@@ -230,11 +230,11 @@ edge_functions
 ```javascript
 import EdgeFunction from 'edge_function';
 let defaultClient = EdgeFunction.ApiClient.instance;
-// Configure API key authorization: JWT
-let JWT = defaultClient.authentications['JWT'];
-JWT.apiKey = 'YOUR API KEY';
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//JWT.apiKeyPrefix = 'Token';
+//tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new EdgeFunction.EdgeFunctionsApi();
 let id = 789; // Number | 
@@ -262,7 +262,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../README.md#JWT)
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 
@@ -281,11 +281,11 @@ edge_functions
 ```javascript
 import EdgeFunction from 'edge_function';
 let defaultClient = EdgeFunction.ApiClient.instance;
-// Configure API key authorization: JWT
-let JWT = defaultClient.authentications['JWT'];
-JWT.apiKey = 'YOUR API KEY';
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//JWT.apiKeyPrefix = 'Token';
+//tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new EdgeFunction.EdgeFunctionsApi();
 let createEdgeFunctionRequest = new EdgeFunction.CreateEdgeFunctionRequest(); // CreateEdgeFunctionRequest | 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../README.md#JWT)
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 

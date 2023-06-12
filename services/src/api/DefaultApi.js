@@ -77,7 +77,7 @@ export default class DefaultApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -118,7 +118,7 @@ export default class DefaultApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -166,7 +166,7 @@ export default class DefaultApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ResourceDetail;
@@ -220,7 +220,7 @@ export default class DefaultApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ResourceResponseWithTotal;
@@ -266,7 +266,7 @@ export default class DefaultApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceResponse;
@@ -314,7 +314,7 @@ export default class DefaultApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceResponseWithTotals;
@@ -355,7 +355,7 @@ export default class DefaultApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceResponse;
@@ -402,7 +402,7 @@ export default class DefaultApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceResponse;
@@ -455,7 +455,7 @@ export default class DefaultApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ResourceDetail;
@@ -502,7 +502,7 @@ export default class DefaultApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ResourceDetail;

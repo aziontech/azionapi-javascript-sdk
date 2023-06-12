@@ -75,7 +75,7 @@ export default class EdgeFunctionsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = ['application/json; version=3', 'application/json'];
       let returnType = ListEdgeFunctionResponse;
@@ -116,7 +116,7 @@ export default class EdgeFunctionsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -158,7 +158,7 @@ export default class EdgeFunctionsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = EdgeFunctionResponse;
@@ -205,7 +205,7 @@ export default class EdgeFunctionsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json; version=3'];
       let accepts = ['application/json'];
       let returnType = EdgeFunctionResponse;
@@ -252,7 +252,7 @@ export default class EdgeFunctionsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json; version=3'];
       let accepts = ['application/json'];
       let returnType = EdgeFunctionResponse;
@@ -293,7 +293,7 @@ export default class EdgeFunctionsApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['tokenAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = EdgeFunctionResponse;
