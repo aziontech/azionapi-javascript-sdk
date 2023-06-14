@@ -6,8 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | 
 **name** | **String** |  | 
-**next** | **String** |  | [optional] 
 **active** | **Boolean** |  | 
+**debugRules** | **Boolean** |  | 
+**http3** | **Boolean** |  | 
 **deliveryProtocol** | **String** |  | 
 **httpPort** | **Object** |  | 
 **httpsPort** | **Object** |  | 
