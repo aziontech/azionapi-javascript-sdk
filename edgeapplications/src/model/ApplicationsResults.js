@@ -55,7 +55,7 @@ class ApplicationsResults {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('debug_rules')) {
-                obj['debug_rules'] = ApiClient.convertToType(data['debug_rules'], 'String');
+                obj['debug_rules'] = ApiClient.convertToType(data['debug_rules'], 'Boolean');
             }
             if (data.hasOwnProperty('last_editor')) {
                 obj['last_editor'] = ApiClient.convertToType(data['last_editor'], 'String');
@@ -82,10 +82,6 @@ class ApplicationsResults {
         // ensure the json data is a string
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['debug_rules'] && !(typeof data['debug_rules'] === 'string' || data['debug_rules'] instanceof String)) {
-            throw new Error("Expected the field `debug_rules` to be a primitive type in the JSON string but got " + data['debug_rules']);
         }
         // ensure the json data is a string
         if (data['last_editor'] && !(typeof data['last_editor'] === 'string' || data['last_editor'] instanceof String)) {
@@ -125,7 +121,7 @@ ApplicationsResults.prototype['id'] = undefined;
 ApplicationsResults.prototype['name'] = undefined;
 
 /**
- * @member {String} debug_rules
+ * @member {Boolean} debug_rules
  */
 ApplicationsResults.prototype['debug_rules'] = undefined;
 

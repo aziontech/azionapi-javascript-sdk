@@ -25,6 +25,8 @@ class ApplicationResults {
      * @param id {Number} 
      * @param name {String} 
      * @param active {Boolean} 
+     * @param debugRules {Boolean} 
+     * @param http3 {Boolean} 
      * @param deliveryProtocol {String} 
      * @param httpPort {Object} 
      * @param httpsPort {Object} 
@@ -40,9 +42,9 @@ class ApplicationResults {
      * @param rawLogs {Boolean} 
      * @param webApplicationFirewall {Boolean} 
      */
-    constructor(id, name, active, deliveryProtocol, httpPort, httpsPort, minimumTlsVersion, applicationAcceleration, caching, deviceDetection, edgeFirewall, edgeFunctions, imageOptimization, l2Caching, loadBalancer, rawLogs, webApplicationFirewall) { 
+    constructor(id, name, active, debugRules, http3, deliveryProtocol, httpPort, httpsPort, minimumTlsVersion, applicationAcceleration, caching, deviceDetection, edgeFirewall, edgeFunctions, imageOptimization, l2Caching, loadBalancer, rawLogs, webApplicationFirewall) { 
         
-        ApplicationResults.initialize(this, id, name, active, deliveryProtocol, httpPort, httpsPort, minimumTlsVersion, applicationAcceleration, caching, deviceDetection, edgeFirewall, edgeFunctions, imageOptimization, l2Caching, loadBalancer, rawLogs, webApplicationFirewall);
+        ApplicationResults.initialize(this, id, name, active, debugRules, http3, deliveryProtocol, httpPort, httpsPort, minimumTlsVersion, applicationAcceleration, caching, deviceDetection, edgeFirewall, edgeFunctions, imageOptimization, l2Caching, loadBalancer, rawLogs, webApplicationFirewall);
     }
 
     /**
@@ -50,10 +52,12 @@ class ApplicationResults {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, name, active, deliveryProtocol, httpPort, httpsPort, minimumTlsVersion, applicationAcceleration, caching, deviceDetection, edgeFirewall, edgeFunctions, imageOptimization, l2Caching, loadBalancer, rawLogs, webApplicationFirewall) { 
+    static initialize(obj, id, name, active, debugRules, http3, deliveryProtocol, httpPort, httpsPort, minimumTlsVersion, applicationAcceleration, caching, deviceDetection, edgeFirewall, edgeFunctions, imageOptimization, l2Caching, loadBalancer, rawLogs, webApplicationFirewall) { 
         obj['id'] = id;
         obj['name'] = name;
         obj['active'] = active;
+        obj['debug_rules'] = debugRules;
+        obj['http3'] = http3;
         obj['delivery_protocol'] = deliveryProtocol;
         obj['http_port'] = httpPort;
         obj['https_port'] = httpsPort;
@@ -87,11 +91,14 @@ class ApplicationResults {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('next')) {
-                obj['next'] = ApiClient.convertToType(data['next'], 'String');
-            }
             if (data.hasOwnProperty('active')) {
                 obj['active'] = ApiClient.convertToType(data['active'], 'Boolean');
+            }
+            if (data.hasOwnProperty('debug_rules')) {
+                obj['debug_rules'] = ApiClient.convertToType(data['debug_rules'], 'Boolean');
+            }
+            if (data.hasOwnProperty('http3')) {
+                obj['http3'] = ApiClient.convertToType(data['http3'], 'Boolean');
             }
             if (data.hasOwnProperty('delivery_protocol')) {
                 obj['delivery_protocol'] = ApiClient.convertToType(data['delivery_protocol'], 'String');
@@ -156,10 +163,6 @@ class ApplicationResults {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
         }
         // ensure the json data is a string
-        if (data['next'] && !(typeof data['next'] === 'string' || data['next'] instanceof String)) {
-            throw new Error("Expected the field `next` to be a primitive type in the JSON string but got " + data['next']);
-        }
-        // ensure the json data is a string
         if (data['delivery_protocol'] && !(typeof data['delivery_protocol'] === 'string' || data['delivery_protocol'] instanceof String)) {
             throw new Error("Expected the field `delivery_protocol` to be a primitive type in the JSON string but got " + data['delivery_protocol']);
         }
@@ -174,7 +177,7 @@ class ApplicationResults {
 
 }
 
-ApplicationResults.RequiredProperties = ["id", "name", "active", "delivery_protocol", "http_port", "https_port", "minimum_tls_version", "application_acceleration", "caching", "device_detection", "edge_firewall", "edge_functions", "image_optimization", "l2_caching", "load_balancer", "raw_logs", "web_application_firewall"];
+ApplicationResults.RequiredProperties = ["id", "name", "active", "debug_rules", "http3", "delivery_protocol", "http_port", "https_port", "minimum_tls_version", "application_acceleration", "caching", "device_detection", "edge_firewall", "edge_functions", "image_optimization", "l2_caching", "load_balancer", "raw_logs", "web_application_firewall"];
 
 /**
  * @member {Number} id
@@ -187,14 +190,19 @@ ApplicationResults.prototype['id'] = undefined;
 ApplicationResults.prototype['name'] = undefined;
 
 /**
- * @member {String} next
- */
-ApplicationResults.prototype['next'] = undefined;
-
-/**
  * @member {Boolean} active
  */
 ApplicationResults.prototype['active'] = undefined;
+
+/**
+ * @member {Boolean} debug_rules
+ */
+ApplicationResults.prototype['debug_rules'] = undefined;
+
+/**
+ * @member {Boolean} http3
+ */
+ApplicationResults.prototype['http3'] = undefined;
 
 /**
  * @member {String} delivery_protocol
