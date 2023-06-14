@@ -13,7 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import ApplicationLinks from './ApplicationLinks';
-import ApplicationResults from './ApplicationResults';
+import ApplicationsResults from './ApplicationsResults';
 
 /**
  * The GetApplicationsResponse model module.
@@ -28,7 +28,7 @@ class GetApplicationsResponse {
      * @param totalPages {Number} 
      * @param schemaVersion {Number} 
      * @param links {module:model/ApplicationLinks} 
-     * @param results {Array.<module:model/ApplicationResults>} 
+     * @param results {Array.<module:model/ApplicationsResults>} 
      */
     constructor(count, totalPages, schemaVersion, links, results) { 
         
@@ -72,7 +72,7 @@ class GetApplicationsResponse {
                 obj['links'] = ApplicationLinks.constructFromObject(data['links']);
             }
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [ApplicationResults]);
+                obj['results'] = ApiClient.convertToType(data['results'], [ApplicationsResults]);
             }
         }
         return obj;
@@ -101,7 +101,7 @@ class GetApplicationsResponse {
             }
             // validate the optional field `results` (array)
             for (const item of data['results']) {
-                ApplicationResults.validateJSON(item);
+                ApplicationsResults.validateJSON(item);
             };
         }
 
@@ -134,7 +134,7 @@ GetApplicationsResponse.prototype['schema_version'] = undefined;
 GetApplicationsResponse.prototype['links'] = undefined;
 
 /**
- * @member {Array.<module:model/ApplicationResults>} results
+ * @member {Array.<module:model/ApplicationsResults>} results
  */
 GetApplicationsResponse.prototype['results'] = undefined;
 

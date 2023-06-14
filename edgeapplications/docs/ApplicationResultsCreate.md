@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **active** | **Boolean** |  | 
 **deliveryProtocol** | **String** |  | 
-**httpPort** | [**Interface**](Interface.md) |  | 
-**httpsPort** | [**Interface**](Interface.md) |  | 
+**httpPort** | **Object** |  | 
+**httpsPort** | **Object** |  | 
 **minimumTlsVersion** | **String** |  | 
 **applicationAcceleration** | **Boolean** |  | 
 **caching** | **Boolean** |  | 

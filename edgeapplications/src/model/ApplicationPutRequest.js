@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import Interface from './Interface';
 
 /**
  * The ApplicationPutRequest model module.
@@ -57,10 +56,10 @@ class ApplicationPutRequest {
                 obj['delivery_protocol'] = ApiClient.convertToType(data['delivery_protocol'], 'String');
             }
             if (data.hasOwnProperty('http_port')) {
-                obj['http_port'] = ApiClient.convertToType(data['http_port'], Interface);
+                obj['http_port'] = ApiClient.convertToType(data['http_port'], Object);
             }
             if (data.hasOwnProperty('https_port')) {
-                obj['https_port'] = ApiClient.convertToType(data['https_port'], Interface);
+                obj['https_port'] = ApiClient.convertToType(data['https_port'], Object);
             }
             if (data.hasOwnProperty('minimum_tls_version')) {
                 obj['minimum_tls_version'] = ApiClient.convertToType(data['minimum_tls_version'], 'String');
@@ -146,12 +145,12 @@ ApplicationPutRequest.prototype['name'] = undefined;
 ApplicationPutRequest.prototype['delivery_protocol'] = undefined;
 
 /**
- * @member {module:model/Interface} http_port
+ * @member {Object} http_port
  */
 ApplicationPutRequest.prototype['http_port'] = undefined;
 
 /**
- * @member {module:model/Interface} https_port
+ * @member {Object} https_port
  */
 ApplicationPutRequest.prototype['https_port'] = undefined;
 

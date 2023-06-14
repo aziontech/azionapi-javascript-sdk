@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **next** | **String** |  | [optional] 
 **active** | **Boolean** |  | 
 **deliveryProtocol** | **String** |  | 
-**httpPort** | [**Interface**](Interface.md) |  | 
-**httpsPort** | [**Interface**](Interface.md) |  | 
+**httpPort** | **Object** |  | 
+**httpsPort** | **Object** |  | 
 **minimumTlsVersion** | **String** |  | 
 **applicationAcceleration** | **Boolean** |  | 
 **caching** | **Boolean** |  | 

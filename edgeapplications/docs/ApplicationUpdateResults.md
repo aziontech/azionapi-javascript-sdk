@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **id** | **Number** |  | 
 **name** | **String** |  | 
 **deliveryProtocol** | **String** |  | 
-**httpPort** | [**Interface**](Interface.md) |  | 
-**httpsPort** | [**Interface**](Interface.md) |  | 
+**httpPort** | **Object** |  | 
+**httpsPort** | **Object** |  | 
 **minimumTlsVersion** | **String** |  | 
 **active** | **Boolean** |  | 
 **applicationAcceleration** | **Boolean** |  | 

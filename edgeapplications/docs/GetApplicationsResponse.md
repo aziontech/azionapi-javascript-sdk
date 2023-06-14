@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **totalPages** | **Number** |  | 
 **schemaVersion** | **Number** |  | 
 **links** | [**ApplicationLinks**](ApplicationLinks.md) |  | 
-**results** | [**[ApplicationResults]**](ApplicationResults.md) |  | 
+**results** | [**[ApplicationsResults]**](ApplicationsResults.md) |  | 
 
 
