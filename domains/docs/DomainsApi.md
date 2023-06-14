@@ -201,6 +201,10 @@ tokenAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new Domain.DomainsApi();
 let opts = {
+  'page': 789, // Number | 
+  'pageSize': 789, // Number | 
+  'sort': "sort_example", // String | 
+  'orderBy': "orderBy_example", // String | 
   'accept': application/json; version=3 // String | 
 };
 apiInstance.getDomains(opts, (error, data, response) => {
@@ -217,6 +221,10 @@ apiInstance.getDomains(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **page** | **Number**|  | [optional] 
+ **pageSize** | **Number**|  | [optional] 
+ **sort** | **String**|  | [optional] 
+ **orderBy** | **String**|  | [optional] 
  **accept** | **String**|  | [optional] 
 
 ### Return type

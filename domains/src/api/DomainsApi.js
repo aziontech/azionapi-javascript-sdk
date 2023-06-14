@@ -187,6 +187,10 @@ export default class DomainsApi {
      * /domains
      * It returns the list of domains of an account.
      * @param {Object} opts Optional parameters
+     * @param {Number} [page] 
+     * @param {Number} [pageSize] 
+     * @param {String} [sort] 
+     * @param {String} [orderBy] 
      * @param {String} [accept] 
      * @param {module:api/DomainsApi~getDomainsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DomainResponseWithResults}
@@ -198,6 +202,10 @@ export default class DomainsApi {
       let pathParams = {
       };
       let queryParams = {
+        'page': opts['page'],
+        'page_size': opts['pageSize'],
+        'sort': opts['sort'],
+        'order_by': opts['orderBy']
       };
       let headerParams = {
         'Accept': opts['accept']
