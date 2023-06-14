@@ -23,11 +23,10 @@ class ApplicationsResults {
     /**
      * Constructs a new <code>ApplicationsResults</code>.
      * @alias module:model/ApplicationsResults
-     * @param next {String} 
      */
-    constructor(next) { 
+    constructor() { 
         
-        ApplicationsResults.initialize(this, next);
+        ApplicationsResults.initialize(this);
     }
 
     /**
@@ -35,8 +34,7 @@ class ApplicationsResults {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, next) { 
-        obj['next'] = next;
+    static initialize(obj) { 
     }
 
     /**
@@ -53,14 +51,23 @@ class ApplicationsResults {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'Number');
             }
-            if (data.hasOwnProperty('next')) {
-                obj['next'] = ApiClient.convertToType(data['next'], 'String');
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
+            if (data.hasOwnProperty('debug_rules')) {
+                obj['debug_rules'] = ApiClient.convertToType(data['debug_rules'], 'String');
+            }
+            if (data.hasOwnProperty('last_editor')) {
+                obj['last_editor'] = ApiClient.convertToType(data['last_editor'], 'String');
+            }
+            if (data.hasOwnProperty('last_modified')) {
+                obj['last_modified'] = ApiClient.convertToType(data['last_modified'], 'String');
             }
             if (data.hasOwnProperty('active')) {
                 obj['active'] = ApiClient.convertToType(data['active'], 'Boolean');
             }
-            if (data.hasOwnProperty('links')) {
-                obj['links'] = ApplicationOrigins.constructFromObject(data['links']);
+            if (data.hasOwnProperty('origins')) {
+                obj['origins'] = ApiClient.convertToType(data['origins'], [ApplicationOrigins]);
             }
         }
         return obj;
@@ -72,19 +79,31 @@ class ApplicationsResults {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ApplicationsResults</code>.
      */
     static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of ApplicationsResults.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
         }
         // ensure the json data is a string
-        if (data['next'] && !(typeof data['next'] === 'string' || data['next'] instanceof String)) {
-            throw new Error("Expected the field `next` to be a primitive type in the JSON string but got " + data['next']);
+        if (data['debug_rules'] && !(typeof data['debug_rules'] === 'string' || data['debug_rules'] instanceof String)) {
+            throw new Error("Expected the field `debug_rules` to be a primitive type in the JSON string but got " + data['debug_rules']);
         }
-        // validate the optional field `links`
-        if (data['links']) { // data not null
-          ApplicationOrigins.validateJSON(data['links']);
+        // ensure the json data is a string
+        if (data['last_editor'] && !(typeof data['last_editor'] === 'string' || data['last_editor'] instanceof String)) {
+            throw new Error("Expected the field `last_editor` to be a primitive type in the JSON string but got " + data['last_editor']);
+        }
+        // ensure the json data is a string
+        if (data['last_modified'] && !(typeof data['last_modified'] === 'string' || data['last_modified'] instanceof String)) {
+            throw new Error("Expected the field `last_modified` to be a primitive type in the JSON string but got " + data['last_modified']);
+        }
+        if (data['origins']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['origins'])) {
+                throw new Error("Expected the field `origins` to be an array in the JSON data but got " + data['origins']);
+            }
+            // validate the optional field `origins` (array)
+            for (const item of data['origins']) {
+                ApplicationOrigins.validateJSON(item);
+            };
         }
 
         return true;
@@ -93,7 +112,7 @@ class ApplicationsResults {
 
 }
 
-ApplicationsResults.RequiredProperties = ["next"];
+
 
 /**
  * @member {Number} id
@@ -101,9 +120,24 @@ ApplicationsResults.RequiredProperties = ["next"];
 ApplicationsResults.prototype['id'] = undefined;
 
 /**
- * @member {String} next
+ * @member {String} name
  */
-ApplicationsResults.prototype['next'] = undefined;
+ApplicationsResults.prototype['name'] = undefined;
+
+/**
+ * @member {String} debug_rules
+ */
+ApplicationsResults.prototype['debug_rules'] = undefined;
+
+/**
+ * @member {String} last_editor
+ */
+ApplicationsResults.prototype['last_editor'] = undefined;
+
+/**
+ * @member {String} last_modified
+ */
+ApplicationsResults.prototype['last_modified'] = undefined;
 
 /**
  * @member {Boolean} active
@@ -111,9 +145,9 @@ ApplicationsResults.prototype['next'] = undefined;
 ApplicationsResults.prototype['active'] = undefined;
 
 /**
- * @member {module:model/ApplicationOrigins} links
+ * @member {Array.<module:model/ApplicationOrigins>} origins
  */
-ApplicationsResults.prototype['links'] = undefined;
+ApplicationsResults.prototype['origins'] = undefined;
 
 
 

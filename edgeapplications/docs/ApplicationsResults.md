@@ -5,8 +5,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | [optional] 
-**next** | **String** |  | 
+**name** | **String** |  | [optional] 
+**debugRules** | **String** |  | [optional] 
+**lastEditor** | **String** |  | [optional] 
+**lastModified** | **String** |  | [optional] 
 **active** | **Boolean** |  | [optional] 
-**links** | [**ApplicationOrigins**](ApplicationOrigins.md) |  | [optional] 
+**origins** | [**[ApplicationOrigins]**](ApplicationOrigins.md) |  | [optional] 
 
 

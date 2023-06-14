@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import Interface from './Interface';
 
 /**
  * The ApplicationResultsCreate model module.
@@ -27,8 +26,8 @@ class ApplicationResultsCreate {
      * @param name {String} 
      * @param active {Boolean} 
      * @param deliveryProtocol {String} 
-     * @param httpPort {module:model/Interface} 
-     * @param httpsPort {module:model/Interface} 
+     * @param httpPort {Object} 
+     * @param httpsPort {Object} 
      * @param minimumTlsVersion {String} 
      * @param applicationAcceleration {Boolean} 
      * @param caching {Boolean} 
@@ -93,10 +92,10 @@ class ApplicationResultsCreate {
                 obj['delivery_protocol'] = ApiClient.convertToType(data['delivery_protocol'], 'String');
             }
             if (data.hasOwnProperty('http_port')) {
-                obj['http_port'] = ApiClient.convertToType(data['http_port'], Interface);
+                obj['http_port'] = ApiClient.convertToType(data['http_port'], Object);
             }
             if (data.hasOwnProperty('https_port')) {
-                obj['https_port'] = ApiClient.convertToType(data['https_port'], Interface);
+                obj['https_port'] = ApiClient.convertToType(data['https_port'], Object);
             }
             if (data.hasOwnProperty('minimum_tls_version')) {
                 obj['minimum_tls_version'] = ApiClient.convertToType(data['minimum_tls_version'], 'String');
@@ -186,12 +185,12 @@ ApplicationResultsCreate.prototype['active'] = undefined;
 ApplicationResultsCreate.prototype['delivery_protocol'] = undefined;
 
 /**
- * @member {module:model/Interface} http_port
+ * @member {Object} http_port
  */
 ApplicationResultsCreate.prototype['http_port'] = undefined;
 
 /**
- * @member {module:model/Interface} https_port
+ * @member {Object} https_port
  */
 ApplicationResultsCreate.prototype['https_port'] = undefined;
 
