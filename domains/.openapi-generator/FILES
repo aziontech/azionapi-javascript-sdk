@@ -1,6 +1,5 @@
 .babelrc
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 docs/CreateDomainRequest.md
@@ -24,11 +23,3 @@ src/model/DomainResponseWithResults.js
 src/model/DomainResults.js
 src/model/PutDomainRequest.js
 src/model/UpdateDomainRequest.js
-test/api/DomainsApi.spec.js
-test/model/CreateDomainRequest.spec.js
-test/model/DomainLinks.spec.js
-test/model/DomainResponseWithResult.spec.js
-test/model/DomainResponseWithResults.spec.js
-test/model/DomainResults.spec.js
-test/model/PutDomainRequest.spec.js
-test/model/UpdateDomainRequest.spec.js
