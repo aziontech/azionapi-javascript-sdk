@@ -7,6 +7,9 @@ Name | Type | Description | Notes
 **id** | **Number** |  | 
 **name** | **String** |  | 
 **active** | **Boolean** |  | 
+**debugRules** | **Boolean** |  | 
+**http3** | **Boolean** |  | 
+**supportedCiphers** | **String** |  | 
 **deliveryProtocol** | **String** |  | 
 **httpPort** | **Object** |  | 
 **httpsPort** | **Object** |  | 

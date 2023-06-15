@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **active** | **Boolean** |  | 
 **debugRules** | **Boolean** |  | 
 **http3** | **Boolean** |  | 
+**supportedCiphers** | **String** |  | 
 **deliveryProtocol** | **String** |  | 
 **httpPort** | **Object** |  | 
 **httpsPort** | **Object** |  | 
