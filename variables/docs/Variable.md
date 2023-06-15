@@ -1,4 +1,4 @@
-# OpenapiJsClient.Variable
+# Variables.Variable
 
 ## Properties
 

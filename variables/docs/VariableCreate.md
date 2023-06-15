@@ -1,4 +1,4 @@
-# OpenapiJsClient.VariableCreate
+# Variables.VariableCreate
 
 ## Properties
 
