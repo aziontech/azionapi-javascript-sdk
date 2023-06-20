@@ -37,48 +37,6 @@ export default class VariablesApi {
 
 
     /**
-     * Callback function to receive the result of the apiSchemaRetrieve operation.
-     * @callback module:api/VariablesApi~apiSchemaRetrieveCallback
-     * @param {String} error Error message, if any.
-     * @param {Object.<String, {String: Object}>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * OpenApi3 schema for this API. Format can be selected via content negotiation.  - YAML: application/vnd.oai.openapi - JSON: application/vnd.oai.openapi+json
-     * @param {Object} opts Optional parameters
-     * @param {module:model/String} [format] 
-     * @param {module:model/String} [lang] 
-     * @param {module:api/VariablesApi~apiSchemaRetrieveCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object.<String, {String: Object}>}
-     */
-    apiSchemaRetrieve(opts, callback) {
-      opts = opts || {};
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'format': opts['format'],
-        'lang': opts['lang']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['tokenAuth'];
-      let contentTypes = [];
-      let accepts = ['application/vnd.oai.openapi', 'application/yaml', 'application/vnd.oai.openapi+json', 'application/json'];
-      let returnType = {'String': Object};
-      return this.apiClient.callApi(
-        '/api/schema', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the apiVariablesCreate operation.
      * @callback module:api/VariablesApi~apiVariablesCreateCallback
      * @param {String} error Error message, if any.

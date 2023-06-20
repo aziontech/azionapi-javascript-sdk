@@ -15,4 +15,3 @@ src/index.js
 src/model/Variable.js
 src/model/VariableCreate.js
 src/model/VariableGet.js
-test/api/VariablesApi.spec.js

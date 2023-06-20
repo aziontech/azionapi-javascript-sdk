@@ -4,68 +4,12 @@ All URIs are relative to *https://stage-variables.azion.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiSchemaRetrieve**](VariablesApi.md#apiSchemaRetrieve) | **GET** /api/schema | 
 [**apiVariablesCreate**](VariablesApi.md#apiVariablesCreate) | **POST** /api/variables | 
 [**apiVariablesDestroy**](VariablesApi.md#apiVariablesDestroy) | **DELETE** /api/variables/{uuid} | 
 [**apiVariablesList**](VariablesApi.md#apiVariablesList) | **GET** /api/variables | 
 [**apiVariablesRetrieve**](VariablesApi.md#apiVariablesRetrieve) | **GET** /api/variables/{uuid} | 
 [**apiVariablesUpdate**](VariablesApi.md#apiVariablesUpdate) | **PUT** /api/variables/{uuid} | 
 
-
-
-## apiSchemaRetrieve
-
-> {String: Object} apiSchemaRetrieve(opts)
-
-
-
-OpenApi3 schema for this API. Format can be selected via content negotiation.  - YAML: application/vnd.oai.openapi - JSON: application/vnd.oai.openapi+json
-
-### Example
-
-```javascript
-import Variables from 'variables';
-let defaultClient = Variables.ApiClient.instance;
-// Configure API key authorization: tokenAuth
-let tokenAuth = defaultClient.authentications['tokenAuth'];
-tokenAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//tokenAuth.apiKeyPrefix = 'Token';
-
-let apiInstance = new Variables.VariablesApi();
-let opts = {
-  'format': "format_example", // String | 
-  'lang': "lang_example" // String | 
-};
-apiInstance.apiSchemaRetrieve(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **format** | **String**|  | [optional] 
- **lang** | **String**|  | [optional] 
-
-### Return type
-
-**{String: Object}**
-
-### Authorization
-
-[tokenAuth](../README.md#tokenAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/vnd.oai.openapi, application/yaml, application/vnd.oai.openapi+json, application/json
 
 
 ## apiVariablesCreate
