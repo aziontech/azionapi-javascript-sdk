@@ -150,7 +150,7 @@ export default class ZonesApi {
 
       let authNames = ['tokenAuth'];
       let contentTypes = [];
-      let accepts = ['application/json; version=3'];
+      let accepts = ['application/json', 'application/json; version=3'];
       let returnType = GetZonesResponse;
       return this.apiClient.callApi(
         '/intelligent_dns', 'GET',
