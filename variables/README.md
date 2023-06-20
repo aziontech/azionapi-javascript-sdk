@@ -108,10 +108,7 @@ tokenAuth.apiKey = "YOUR API KEY"
 //tokenAuth.apiKeyPrefix['Authorization'] = "Token"
 
 var api = new Variables.VariablesApi()
-var opts = {
-  'format': "format_example", // {String} 
-  'lang': "lang_example" // {String} 
-};
+var variableCreate = {"key":"MY_SIMPLE_VAR","value":"My not secret value"}; // {VariableCreate} 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -119,7 +116,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.apiSchemaRetrieve(opts, callback);
+api.apiVariablesCreate(variableCreate, callback);
 
 ```
 
@@ -129,7 +126,6 @@ All URIs are relative to *https://stage-variables.azion.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*Variables.VariablesApi* | [**apiSchemaRetrieve**](docs/VariablesApi.md#apiSchemaRetrieve) | **GET** /api/schema | 
 *Variables.VariablesApi* | [**apiVariablesCreate**](docs/VariablesApi.md#apiVariablesCreate) | **POST** /api/variables | 
 *Variables.VariablesApi* | [**apiVariablesDestroy**](docs/VariablesApi.md#apiVariablesDestroy) | **DELETE** /api/variables/{uuid} | 
 *Variables.VariablesApi* | [**apiVariablesList**](docs/VariablesApi.md#apiVariablesList) | **GET** /api/variables | 
