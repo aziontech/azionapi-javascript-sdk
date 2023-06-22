@@ -1,4 +1,4 @@
-# EdgeApplication.DeviceGroupsResultResponse
+# EdgeApplicationApi.DeviceGroupsResultResponse
 
 ## Properties
 

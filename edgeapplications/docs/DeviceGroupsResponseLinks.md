@@ -1,4 +1,4 @@
-# EdgeApplication.DeviceGroupsResponseLinks
+# EdgeApplicationApi.DeviceGroupsResponseLinks
 
 ## Properties
 

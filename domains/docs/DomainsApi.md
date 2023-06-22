@@ -1,4 +1,4 @@
-# Domain.DomainsApi
+# DomainApi.DomainsApi
 
 All URIs are relative to *https://api.azionapi.net*
 
@@ -24,19 +24,19 @@ It enables you to include a new domain into an account.
 ### Example
 
 ```javascript
-import Domain from 'domain';
-let defaultClient = Domain.ApiClient.instance;
+import DomainApi from 'domain_api';
+let defaultClient = DomainApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new Domain.DomainsApi();
+let apiInstance = new DomainApi.DomainsApi();
 let opts = {
   'accept': application/json; version=3, // String | 
   'contentType': application/json, // String | 
-  'createDomainRequest': new Domain.CreateDomainRequest() // CreateDomainRequest | 
+  'createDomainRequest': new DomainApi.CreateDomainRequest() // CreateDomainRequest | 
 };
 apiInstance.createDomain(opts, (error, data, response) => {
   if (error) {
@@ -81,15 +81,15 @@ It enables you to delete a domain.
 ### Example
 
 ```javascript
-import Domain from 'domain';
-let defaultClient = Domain.ApiClient.instance;
+import DomainApi from 'domain_api';
+let defaultClient = DomainApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new Domain.DomainsApi();
+let apiInstance = new DomainApi.DomainsApi();
 let id = "id_example"; // String | The id of the domain to be deleted. 
 let opts = {
   'accept': application/json; version=3 // String | 
@@ -136,15 +136,15 @@ It returns details of a domain.
 ### Example
 
 ```javascript
-import Domain from 'domain';
-let defaultClient = Domain.ApiClient.instance;
+import DomainApi from 'domain_api';
+let defaultClient = DomainApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new Domain.DomainsApi();
+let apiInstance = new DomainApi.DomainsApi();
 let id = "id_example"; // String | The id of the domain to be consulted. 
 let opts = {
   'accept': application/json; version=3 // String | 
@@ -191,15 +191,15 @@ It returns the list of domains of an account.
 ### Example
 
 ```javascript
-import Domain from 'domain';
-let defaultClient = Domain.ApiClient.instance;
+import DomainApi from 'domain_api';
+let defaultClient = DomainApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new Domain.DomainsApi();
+let apiInstance = new DomainApi.DomainsApi();
 let opts = {
   'page': 789, // Number | 
   'pageSize': 789, // Number | 
@@ -252,20 +252,20 @@ It overwrites all fields of a domain, while preserving the id. Optional fields n
 ### Example
 
 ```javascript
-import Domain from 'domain';
-let defaultClient = Domain.ApiClient.instance;
+import DomainApi from 'domain_api';
+let defaultClient = DomainApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new Domain.DomainsApi();
+let apiInstance = new DomainApi.DomainsApi();
 let id = "id_example"; // String | 
 let opts = {
   'accept': application/json; version=3, // String | 
   'contentType': application/json, // String | 
-  'putDomainRequest': new Domain.PutDomainRequest() // PutDomainRequest | 
+  'putDomainRequest': new DomainApi.PutDomainRequest() // PutDomainRequest | 
 };
 apiInstance.putDomain(id, opts, (error, data, response) => {
   if (error) {
@@ -311,20 +311,20 @@ It updates one or more fields in a Domain, preserving the value of the fields no
 ### Example
 
 ```javascript
-import Domain from 'domain';
-let defaultClient = Domain.ApiClient.instance;
+import DomainApi from 'domain_api';
+let defaultClient = DomainApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new Domain.DomainsApi();
+let apiInstance = new DomainApi.DomainsApi();
 let id = "id_example"; // String | 
 let opts = {
   'accept': application/json; version=3, // String | 
   'contentType': application/json, // String | 
-  'updateDomainRequest': new Domain.UpdateDomainRequest() // UpdateDomainRequest | 
+  'updateDomainRequest': new DomainApi.UpdateDomainRequest() // UpdateDomainRequest | 
 };
 apiInstance.updateDomain(id, opts, (error, data, response) => {
   if (error) {

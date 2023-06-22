@@ -1,4 +1,4 @@
-# EdgeApplication.ApplicationPutRequest
+# EdgeApplicationApi.ApplicationPutRequest
 
 ## Properties
 

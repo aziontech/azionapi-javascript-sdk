@@ -1,4 +1,4 @@
-# EdgeFunction.EdgeFunctionsApi
+# EdgeFunctionApi.EdgeFunctionsApi
 
 All URIs are relative to *https://api.azionapi.net*
 
@@ -22,15 +22,15 @@ edge_functions
 ### Example
 
 ```javascript
-import EdgeFunction from 'edge_function';
-let defaultClient = EdgeFunction.ApiClient.instance;
+import EdgeFunctionApi from 'edge_function_api';
+let defaultClient = EdgeFunctionApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeFunction.EdgeFunctionsApi();
+let apiInstance = new EdgeFunctionApi.EdgeFunctionsApi();
 let opts = {
   'page': 789, // Number | 
   'pageSize': 789, // Number | 
@@ -79,15 +79,15 @@ edge_functions
 ### Example
 
 ```javascript
-import EdgeFunction from 'edge_function';
-let defaultClient = EdgeFunction.ApiClient.instance;
+import EdgeFunctionApi from 'edge_function_api';
+let defaultClient = EdgeFunctionApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeFunction.EdgeFunctionsApi();
+let apiInstance = new EdgeFunctionApi.EdgeFunctionsApi();
 let id = 789; // Number | 
 apiInstance.edgeFunctionsIdDelete(id, (error, data, response) => {
   if (error) {
@@ -128,15 +128,15 @@ edge_functions
 ### Example
 
 ```javascript
-import EdgeFunction from 'edge_function';
-let defaultClient = EdgeFunction.ApiClient.instance;
+import EdgeFunctionApi from 'edge_function_api';
+let defaultClient = EdgeFunctionApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeFunction.EdgeFunctionsApi();
+let apiInstance = new EdgeFunctionApi.EdgeFunctionsApi();
 let id = 789; // Number | 
 apiInstance.edgeFunctionsIdGet(id, (error, data, response) => {
   if (error) {
@@ -177,17 +177,17 @@ edge_functions
 ### Example
 
 ```javascript
-import EdgeFunction from 'edge_function';
-let defaultClient = EdgeFunction.ApiClient.instance;
+import EdgeFunctionApi from 'edge_function_api';
+let defaultClient = EdgeFunctionApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeFunction.EdgeFunctionsApi();
+let apiInstance = new EdgeFunctionApi.EdgeFunctionsApi();
 let id = 789; // Number | 
-let patchEdgeFunctionRequest = new EdgeFunction.PatchEdgeFunctionRequest(); // PatchEdgeFunctionRequest | 
+let patchEdgeFunctionRequest = new EdgeFunctionApi.PatchEdgeFunctionRequest(); // PatchEdgeFunctionRequest | 
 apiInstance.edgeFunctionsIdPatch(id, patchEdgeFunctionRequest, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -228,17 +228,17 @@ edge_functions
 ### Example
 
 ```javascript
-import EdgeFunction from 'edge_function';
-let defaultClient = EdgeFunction.ApiClient.instance;
+import EdgeFunctionApi from 'edge_function_api';
+let defaultClient = EdgeFunctionApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeFunction.EdgeFunctionsApi();
+let apiInstance = new EdgeFunctionApi.EdgeFunctionsApi();
 let id = 789; // Number | 
-let putEdgeFunctionRequest = new EdgeFunction.PutEdgeFunctionRequest(); // PutEdgeFunctionRequest | 
+let putEdgeFunctionRequest = new EdgeFunctionApi.PutEdgeFunctionRequest(); // PutEdgeFunctionRequest | 
 apiInstance.edgeFunctionsIdPut(id, putEdgeFunctionRequest, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -279,16 +279,16 @@ edge_functions
 ### Example
 
 ```javascript
-import EdgeFunction from 'edge_function';
-let defaultClient = EdgeFunction.ApiClient.instance;
+import EdgeFunctionApi from 'edge_function_api';
+let defaultClient = EdgeFunctionApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeFunction.EdgeFunctionsApi();
-let createEdgeFunctionRequest = new EdgeFunction.CreateEdgeFunctionRequest(); // CreateEdgeFunctionRequest | 
+let apiInstance = new EdgeFunctionApi.EdgeFunctionsApi();
+let createEdgeFunctionRequest = new EdgeFunctionApi.CreateEdgeFunctionRequest(); // CreateEdgeFunctionRequest | 
 apiInstance.edgeFunctionsPost(createEdgeFunctionRequest, (error, data, response) => {
   if (error) {
     console.error(error);

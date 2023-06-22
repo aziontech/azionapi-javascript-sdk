@@ -1,4 +1,4 @@
-# EdgeApplication.UpdateDeviceGroupsRequest
+# EdgeApplicationApi.UpdateDeviceGroupsRequest
 
 ## Properties
 

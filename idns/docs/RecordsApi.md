@@ -1,4 +1,4 @@
-# IntelligentDns.RecordsApi
+# IntelligentDnsApi.RecordsApi
 
 All URIs are relative to *https://api.azionapi.net*
 
@@ -20,15 +20,15 @@ Remove an Intelligent DNS zone record
 ### Example
 
 ```javascript
-import IntelligentDns from 'intelligent_dns';
-let defaultClient = IntelligentDns.ApiClient.instance;
+import IntelligentDnsApi from 'intelligent_dns_api';
+let defaultClient = IntelligentDnsApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new IntelligentDns.RecordsApi();
+let apiInstance = new IntelligentDnsApi.RecordsApi();
 let zoneId = 56; // Number | The hosted zone id
 let recordId = 56; // Number | The zone record id
 apiInstance.deleteZoneRecord(zoneId, recordId, (error, data, response) => {
@@ -71,15 +71,15 @@ Get a collection of Intelligent DNS zone records
 ### Example
 
 ```javascript
-import IntelligentDns from 'intelligent_dns';
-let defaultClient = IntelligentDns.ApiClient.instance;
+import IntelligentDnsApi from 'intelligent_dns_api';
+let defaultClient = IntelligentDnsApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new IntelligentDns.RecordsApi();
+let apiInstance = new IntelligentDnsApi.RecordsApi();
 let zoneId = 56; // Number | The hosted zone id
 apiInstance.getZoneRecords(zoneId, (error, data, response) => {
   if (error) {
@@ -120,15 +120,15 @@ Create a new Intelligent DNS zone record
 ### Example
 
 ```javascript
-import IntelligentDns from 'intelligent_dns';
-let defaultClient = IntelligentDns.ApiClient.instance;
+import IntelligentDnsApi from 'intelligent_dns_api';
+let defaultClient = IntelligentDnsApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new IntelligentDns.RecordsApi();
+let apiInstance = new IntelligentDnsApi.RecordsApi();
 let zoneId = 56; // Number | The hosted zone id
 let opts = {
   'recordPostOrPut': {"record_type":"A","entry":"site","description":"Site record","ttl":3600,"answers_list":["1.2.3.4","5.6.7.8"]} // RecordPostOrPut | 
@@ -173,15 +173,15 @@ Update an Intelligent DNS zone record
 ### Example
 
 ```javascript
-import IntelligentDns from 'intelligent_dns';
-let defaultClient = IntelligentDns.ApiClient.instance;
+import IntelligentDnsApi from 'intelligent_dns_api';
+let defaultClient = IntelligentDnsApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new IntelligentDns.RecordsApi();
+let apiInstance = new IntelligentDnsApi.RecordsApi();
 let zoneId = 56; // Number | The hosted zone id
 let recordId = 56; // Number | The zone record id
 let opts = {

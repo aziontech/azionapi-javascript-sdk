@@ -1,4 +1,4 @@
-# EdgeApplication.RulesEngineCriteria
+# EdgeApplicationApi.RulesEngineCriteria
 
 ## Properties
 

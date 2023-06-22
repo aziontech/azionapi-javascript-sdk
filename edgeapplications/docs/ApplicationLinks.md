@@ -1,4 +1,4 @@
-# EdgeApplication.ApplicationLinks
+# EdgeApplicationApi.ApplicationLinks
 
 ## Properties
 

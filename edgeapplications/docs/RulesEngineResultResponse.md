@@ -1,4 +1,4 @@
-# EdgeApplication.RulesEngineResultResponse
+# EdgeApplicationApi.RulesEngineResultResponse
 
 ## Properties
 

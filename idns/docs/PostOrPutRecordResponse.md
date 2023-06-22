@@ -1,4 +1,4 @@
-# IntelligentDns.PostOrPutRecordResponse
+# IntelligentDnsApi.PostOrPutRecordResponse
 
 ## Properties
 

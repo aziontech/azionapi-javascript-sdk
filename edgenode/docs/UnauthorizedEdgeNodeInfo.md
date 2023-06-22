@@ -1,4 +1,4 @@
-# EdgenodeApi.UnauthorizedEdgeNodeInfo
+# EdgeNodeApi.UnauthorizedEdgeNodeInfo
 
 ## Properties
 

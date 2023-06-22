@@ -1,6 +1,5 @@
 .babelrc
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 docs/AuthorizeEdgeNodesRequest.md
@@ -42,20 +41,3 @@ src/model/UnauthorizedEdgeNodeInfo.js
 src/model/UpdateEdgeNodeResponse.js
 src/model/UpdateServiceBindRequest.js
 src/model/Variable.js
-test/api/DefaultApi.spec.js
-test/model/AuthorizeEdgeNodesRequest.spec.js
-test/model/AuthorizeEdgeNodesResponse.spec.js
-test/model/EdgeNodeDetailResponse.spec.js
-test/model/EdgeNodeModules.spec.js
-test/model/EdgeNodeResponse.spec.js
-test/model/EdgeNodeResponseWithTotal.spec.js
-test/model/NodeGroup.spec.js
-test/model/NodeGroupResponse.spec.js
-test/model/ServiceBindDetailResponse.spec.js
-test/model/ServiceBindRequest.spec.js
-test/model/ServiceResponse.spec.js
-test/model/ServiceResponseWithTotal.spec.js
-test/model/UnauthorizedEdgeNodeInfo.spec.js
-test/model/UpdateEdgeNodeResponse.spec.js
-test/model/UpdateServiceBindRequest.spec.js
-test/model/Variable.spec.js

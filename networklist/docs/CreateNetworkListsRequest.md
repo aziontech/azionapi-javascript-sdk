@@ -1,4 +1,4 @@
-# AzionApi.CreateNetworkListsRequest
+# NetworkListsApi.CreateNetworkListsRequest
 
 ## Properties
 

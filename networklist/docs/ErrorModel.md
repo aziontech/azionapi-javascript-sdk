@@ -1,4 +1,4 @@
-# AzionApi.ErrorModel
+# NetworkListsApi.ErrorModel
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# EdgenodeApi.Variable
+# EdgeNodeApi.Variable
 
 ## Properties
 

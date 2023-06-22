@@ -1,4 +1,4 @@
-# EdgeApplication.CreateRulesEngineRequest
+# EdgeApplicationApi.CreateRulesEngineRequest
 
 ## Properties
 

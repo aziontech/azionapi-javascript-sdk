@@ -1,4 +1,4 @@
-# EdgeApplication.RulesEngineIdResponse
+# EdgeApplicationApi.RulesEngineIdResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# EdgeApplication.ApplicationUpdateInstanceRequest
+# EdgeApplicationApi.ApplicationUpdateInstanceRequest
 
 ## Properties
 

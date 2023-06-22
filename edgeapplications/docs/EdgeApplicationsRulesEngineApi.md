@@ -1,4 +1,4 @@
-# EdgeApplication.EdgeApplicationsRulesEngineApi
+# EdgeApplicationApi.EdgeApplicationsRulesEngineApi
 
 All URIs are relative to *https://api.azionapi.net*
 
@@ -22,15 +22,15 @@ Method | HTTP request | Description
 ### Example
 
 ```javascript
-import EdgeApplication from 'edge_application';
-let defaultClient = EdgeApplication.ApiClient.instance;
+import EdgeApplicationApi from 'edge_application_api';
+let defaultClient = EdgeApplicationApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeApplication.EdgeApplicationsRulesEngineApi();
+let apiInstance = new EdgeApplicationApi.EdgeApplicationsRulesEngineApi();
 let edgeApplicationId = 789; // Number | 
 let phase = "phase_example"; // String | 
 let opts = {
@@ -89,21 +89,21 @@ Check below the list of behaviors that can be applied:  | Name                  
 ### Example
 
 ```javascript
-import EdgeApplication from 'edge_application';
-let defaultClient = EdgeApplication.ApiClient.instance;
+import EdgeApplicationApi from 'edge_application_api';
+let defaultClient = EdgeApplicationApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeApplication.EdgeApplicationsRulesEngineApi();
+let apiInstance = new EdgeApplicationApi.EdgeApplicationsRulesEngineApi();
 let edgeApplicationId = 789; // Number | 
 let phase = "phase_example"; // String | 
 let opts = {
   'accept': application/json; version=3, // String | 
   'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
-  'createRulesEngineRequest': new EdgeApplication.CreateRulesEngineRequest() // CreateRulesEngineRequest | 
+  'createRulesEngineRequest': new EdgeApplicationApi.CreateRulesEngineRequest() // CreateRulesEngineRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdRulesEnginePhaseRulesPost(edgeApplicationId, phase, opts, (error, data, response) => {
   if (error) {
@@ -148,15 +148,15 @@ Name | Type | Description  | Notes
 ### Example
 
 ```javascript
-import EdgeApplication from 'edge_application';
-let defaultClient = EdgeApplication.ApiClient.instance;
+import EdgeApplicationApi from 'edge_application_api';
+let defaultClient = EdgeApplicationApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeApplication.EdgeApplicationsRulesEngineApi();
+let apiInstance = new EdgeApplicationApi.EdgeApplicationsRulesEngineApi();
 let edgeApplicationId = 789; // Number | The id of the edge application you plan to delete. 
 let phase = "phase_example"; // String | 
 let ruleId = 789; // Number | The id of the rule you plan to delete. 
@@ -205,15 +205,15 @@ null (empty response body)
 ### Example
 
 ```javascript
-import EdgeApplication from 'edge_application';
-let defaultClient = EdgeApplication.ApiClient.instance;
+import EdgeApplicationApi from 'edge_application_api';
+let defaultClient = EdgeApplicationApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeApplication.EdgeApplicationsRulesEngineApi();
+let apiInstance = new EdgeApplicationApi.EdgeApplicationsRulesEngineApi();
 let edgeApplicationId = 789; // Number | The id of the edge application you want to get. 
 let phase = "phase_example"; // String | 
 let ruleId = 789; // Number | The id of the rule you plan to delete. 
@@ -262,22 +262,22 @@ Name | Type | Description  | Notes
 ### Example
 
 ```javascript
-import EdgeApplication from 'edge_application';
-let defaultClient = EdgeApplication.ApiClient.instance;
+import EdgeApplicationApi from 'edge_application_api';
+let defaultClient = EdgeApplicationApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeApplication.EdgeApplicationsRulesEngineApi();
+let apiInstance = new EdgeApplicationApi.EdgeApplicationsRulesEngineApi();
 let edgeApplicationId = 789; // Number | 
 let phase = "phase_example"; // String | 
 let ruleId = 789; // Number | 
 let opts = {
   'accept': application/json; version=3, // String | 
   'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
-  'patchRulesEngineRequest': new EdgeApplication.PatchRulesEngineRequest() // PatchRulesEngineRequest | 
+  'patchRulesEngineRequest': new EdgeApplicationApi.PatchRulesEngineRequest() // PatchRulesEngineRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdRulesEnginePhaseRulesRuleIdPatch(edgeApplicationId, phase, ruleId, opts, (error, data, response) => {
   if (error) {
@@ -323,22 +323,22 @@ Name | Type | Description  | Notes
 ### Example
 
 ```javascript
-import EdgeApplication from 'edge_application';
-let defaultClient = EdgeApplication.ApiClient.instance;
+import EdgeApplicationApi from 'edge_application_api';
+let defaultClient = EdgeApplicationApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeApplication.EdgeApplicationsRulesEngineApi();
+let apiInstance = new EdgeApplicationApi.EdgeApplicationsRulesEngineApi();
 let edgeApplicationId = 789; // Number | 
 let phase = "phase_example"; // String | 
 let ruleId = 789; // Number | 
 let opts = {
   'accept': application/json; version=3, // String | 
   'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
-  'updateRulesEngineRequest': new EdgeApplication.UpdateRulesEngineRequest() // UpdateRulesEngineRequest | 
+  'updateRulesEngineRequest': new EdgeApplicationApi.UpdateRulesEngineRequest() // UpdateRulesEngineRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdRulesEnginePhaseRulesRuleIdPut(edgeApplicationId, phase, ruleId, opts, (error, data, response) => {
   if (error) {

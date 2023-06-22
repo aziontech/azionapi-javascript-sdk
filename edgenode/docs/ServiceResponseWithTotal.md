@@ -1,4 +1,4 @@
-# EdgenodeApi.ServiceResponseWithTotal
+# EdgeNodeApi.ServiceResponseWithTotal
 
 ## Properties
 

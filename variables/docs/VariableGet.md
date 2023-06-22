@@ -1,4 +1,4 @@
-# Variables.VariableGet
+# VariablesApi.VariableGet
 
 ## Properties
 

@@ -1,10 +1,10 @@
-# Domain.DomainResponseWithResult
+# DomainApi.DomainResponseWithResult
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **schemaVersion** | **Number** |  | 
-**results** | [**DomainResults**](.md) |  | 
+**results** | [**DomainResults**](DomainResults.md) |  | 
 
 

@@ -1,4 +1,4 @@
-# IntelligentDns.PostOrPutZoneResponse
+# IntelligentDnsApi.PostOrPutZoneResponse
 
 ## Properties
 

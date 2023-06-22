@@ -1,4 +1,4 @@
-# IntelligentDns.DnsSecDelegationSignerDigestType
+# IntelligentDnsApi.DnsSecDelegationSignerDigestType
 
 ## Properties
 

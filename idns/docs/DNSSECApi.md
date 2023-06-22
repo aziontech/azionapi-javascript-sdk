@@ -1,4 +1,4 @@
-# IntelligentDns.DNSSECApi
+# IntelligentDnsApi.DNSSECApi
 
 All URIs are relative to *https://api.azionapi.net*
 
@@ -18,15 +18,15 @@ Retrieve the DNSSEC zone status
 ### Example
 
 ```javascript
-import IntelligentDns from 'intelligent_dns';
-let defaultClient = IntelligentDns.ApiClient.instance;
+import IntelligentDnsApi from 'intelligent_dns_api';
+let defaultClient = IntelligentDnsApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new IntelligentDns.DNSSECApi();
+let apiInstance = new IntelligentDnsApi.DNSSECApi();
 let zoneId = 56; // Number | The hosted zone id
 apiInstance.getZoneDnsSec(zoneId, (error, data, response) => {
   if (error) {
@@ -67,15 +67,15 @@ Update the DNSSEC zone
 ### Example
 
 ```javascript
-import IntelligentDns from 'intelligent_dns';
-let defaultClient = IntelligentDns.ApiClient.instance;
+import IntelligentDnsApi from 'intelligent_dns_api';
+let defaultClient = IntelligentDnsApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new IntelligentDns.DNSSECApi();
+let apiInstance = new IntelligentDnsApi.DNSSECApi();
 let zoneId = 56; // Number | The hosted zone id
 let opts = {
   'dnsSec': {"is_enabled":true} // DnsSec | 

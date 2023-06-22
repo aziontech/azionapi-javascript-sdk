@@ -1,4 +1,4 @@
-# EdgenodeApi.EdgeNodeModules
+# EdgeNodeApi.EdgeNodeModules
 
 ## Properties
 

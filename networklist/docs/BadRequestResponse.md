@@ -1,4 +1,4 @@
-# AzionApi.BadRequestResponse
+# NetworkListsApi.BadRequestResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# EdgeApplication.ApplicationCacheResults
+# EdgeApplicationApi.ApplicationCacheResults
 
 ## Properties
 

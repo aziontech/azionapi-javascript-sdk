@@ -1,4 +1,4 @@
-# EdgeFunction.ListEdgeFunctionResponse
+# EdgeFunctionApi.ListEdgeFunctionResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# IntelligentDns.GetOrPatchDnsSecResponse
+# IntelligentDnsApi.GetOrPatchDnsSecResponse
 
 ## Properties
 

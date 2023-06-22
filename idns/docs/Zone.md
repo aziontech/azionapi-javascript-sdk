@@ -1,4 +1,4 @@
-# IntelligentDns.Zone
+# IntelligentDnsApi.Zone
 
 ## Properties
 

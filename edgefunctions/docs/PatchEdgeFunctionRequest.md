@@ -1,4 +1,4 @@
-# EdgeFunction.PatchEdgeFunctionRequest
+# EdgeFunctionApi.PatchEdgeFunctionRequest
 
 ## Properties
 
@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **code** | **String** |  | [optional] 
 **jsonArgs** | **Object** |  | [optional] 
 **active** | **Boolean** |  | [optional] 
+**isProprietaryCode** | **Boolean** |  | [optional] 
 
 
