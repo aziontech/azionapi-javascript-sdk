@@ -1,4 +1,4 @@
-# IntelligentDns.RecordGet
+# IntelligentDnsApi.RecordGet
 
 ## Properties
 

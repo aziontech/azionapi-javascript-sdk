@@ -1,4 +1,4 @@
-# EdgeFunction.Results
+# EdgeFunctionApi.Results
 
 ## Properties
 
@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **lastEditor** | **String** |  | [optional] 
 **modified** | **String** |  | [optional] 
 **referenceCount** | **Number** |  | [optional] 
+**isProprietaryCode** | **Boolean** |  | [optional] 
 
 

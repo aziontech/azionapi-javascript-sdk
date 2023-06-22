@@ -1,4 +1,4 @@
-# EdgeApplication.CreateOriginsRequest
+# EdgeApplicationApi.CreateOriginsRequest
 
 ## Properties
 

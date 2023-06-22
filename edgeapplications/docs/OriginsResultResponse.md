@@ -1,4 +1,4 @@
-# EdgeApplication.OriginsResultResponse
+# EdgeApplicationApi.OriginsResultResponse
 
 ## Properties
 

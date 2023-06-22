@@ -1,4 +1,4 @@
-# Domain.DomainLinks
+# DomainApi.DomainLinks
 
 ## Properties
 

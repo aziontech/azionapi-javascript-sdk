@@ -1,4 +1,4 @@
-# IntelligentDns.ErrorsResponse
+# IntelligentDnsApi.ErrorsResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# AzionApi.ListNetworkListsResponse
+# NetworkListsApi.ListNetworkListsResponse
 
 ## Properties
 

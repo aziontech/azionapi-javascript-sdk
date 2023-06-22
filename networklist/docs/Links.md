@@ -1,4 +1,4 @@
-# AzionApi.Links
+# NetworkListsApi.Links
 
 ## Properties
 

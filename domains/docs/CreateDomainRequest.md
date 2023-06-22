@@ -1,4 +1,4 @@
-# Domain.CreateDomainRequest
+# DomainApi.CreateDomainRequest
 
 ## Properties
 

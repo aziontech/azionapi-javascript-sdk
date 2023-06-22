@@ -1,4 +1,4 @@
-# EdgeFunction.Links
+# EdgeFunctionApi.Links
 
 ## Properties
 

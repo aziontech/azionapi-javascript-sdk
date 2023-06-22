@@ -1,4 +1,4 @@
-# EdgeFunction.PutEdgeFunctionRequest
+# EdgeFunctionApi.PutEdgeFunctionRequest
 
 ## Properties
 
@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **active** | **Boolean** |  | [optional] 
 **initiatorType** | **String** |  | [optional] 
 **language** | **String** |  | [optional] 
+**isProprietaryCode** | **Boolean** |  | [optional] 
 
 

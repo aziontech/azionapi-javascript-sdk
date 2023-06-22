@@ -4,8 +4,8 @@ All URIs are relative to *https://storage-api.azion.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteVersion**](DefaultApi.md#deleteVersion) | **DELETE** /storage/{version_id}/delete | 
-[**storageVersionIdPost**](DefaultApi.md#storageVersionIdPost) | **POST** /storage/{version_id} | 
+[**deleteVersion**](DefaultApi.md#deleteVersion) | **DELETE** /storage/{version_id}/delete | /domains/:version_id
+[**storageVersionIdPost**](DefaultApi.md#storageVersionIdPost) | **POST** /storage/{version_id} | /domains/:version_id
 
 
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 > deleteVersion(versionId)
 
-
+/domains/:version_id
 
 Delete a version. A version is just um path prefix/sub-namespace for a set of files.
 
@@ -21,6 +21,12 @@ Delete a version. A version is just um path prefix/sub-namespace for a set of fi
 
 ```javascript
 import StorageApi from 'storage_api';
+let defaultClient = StorageApi.ApiClient.instance;
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new StorageApi.DefaultApi();
 let versionId = "versionId_example"; // String | The version identifier
@@ -46,7 +52,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 
@@ -58,7 +64,7 @@ No authorization required
 
 > Object storageVersionIdPost(xAzionStaticPath, versionId, opts)
 
-
+/domains/:version_id
 
 Upload file and transfer to remote storage
 
@@ -66,6 +72,12 @@ Upload file and transfer to remote storage
 
 ```javascript
 import StorageApi from 'storage_api';
+let defaultClient = StorageApi.ApiClient.instance;
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new StorageApi.DefaultApi();
 let xAzionStaticPath = "xAzionStaticPath_example"; // String | Required in order to get the path and file name. i.e.: assets/css/main.css
@@ -97,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 

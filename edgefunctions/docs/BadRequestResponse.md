@@ -1,4 +1,4 @@
-# EdgeFunction.BadRequestResponse
+# EdgeFunctionApi.BadRequestResponse
 
 ## Properties
 

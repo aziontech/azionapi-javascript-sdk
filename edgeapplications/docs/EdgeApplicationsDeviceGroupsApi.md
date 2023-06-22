@@ -1,4 +1,4 @@
-# EdgeApplication.EdgeApplicationsDeviceGroupsApi
+# EdgeApplicationApi.EdgeApplicationsDeviceGroupsApi
 
 All URIs are relative to *https://api.azionapi.net*
 
@@ -22,15 +22,15 @@ Method | HTTP request | Description
 ### Example
 
 ```javascript
-import EdgeApplication from 'edge_application';
-let defaultClient = EdgeApplication.ApiClient.instance;
+import EdgeApplicationApi from 'edge_application_api';
+let defaultClient = EdgeApplicationApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeApplication.EdgeApplicationsDeviceGroupsApi();
+let apiInstance = new EdgeApplicationApi.EdgeApplicationsDeviceGroupsApi();
 let edgeApplicationId = 789; // Number | 
 let deviceGroupId = 789; // Number | 
 let opts = {
@@ -77,15 +77,15 @@ null (empty response body)
 ### Example
 
 ```javascript
-import EdgeApplication from 'edge_application';
-let defaultClient = EdgeApplication.ApiClient.instance;
+import EdgeApplicationApi from 'edge_application_api';
+let defaultClient = EdgeApplicationApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeApplication.EdgeApplicationsDeviceGroupsApi();
+let apiInstance = new EdgeApplicationApi.EdgeApplicationsDeviceGroupsApi();
 let edgeApplicationId = 789; // Number | 
 let deviceGroupId = 789; // Number | 
 let opts = {
@@ -132,21 +132,21 @@ Name | Type | Description  | Notes
 ### Example
 
 ```javascript
-import EdgeApplication from 'edge_application';
-let defaultClient = EdgeApplication.ApiClient.instance;
+import EdgeApplicationApi from 'edge_application_api';
+let defaultClient = EdgeApplicationApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeApplication.EdgeApplicationsDeviceGroupsApi();
+let apiInstance = new EdgeApplicationApi.EdgeApplicationsDeviceGroupsApi();
 let edgeApplicationId = 789; // Number | 
 let deviceGroupId = 789; // Number | 
 let opts = {
   'accept': application/json; version=3, // String | 
   'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
-  'patchDeviceGroupsRequest': new EdgeApplication.PatchDeviceGroupsRequest() // PatchDeviceGroupsRequest | 
+  'patchDeviceGroupsRequest': new EdgeApplicationApi.PatchDeviceGroupsRequest() // PatchDeviceGroupsRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdDeviceGroupsDeviceGroupIdPatch(edgeApplicationId, deviceGroupId, opts, (error, data, response) => {
   if (error) {
@@ -191,21 +191,21 @@ Name | Type | Description  | Notes
 ### Example
 
 ```javascript
-import EdgeApplication from 'edge_application';
-let defaultClient = EdgeApplication.ApiClient.instance;
+import EdgeApplicationApi from 'edge_application_api';
+let defaultClient = EdgeApplicationApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeApplication.EdgeApplicationsDeviceGroupsApi();
+let apiInstance = new EdgeApplicationApi.EdgeApplicationsDeviceGroupsApi();
 let edgeApplicationId = 789; // Number | 
 let deviceGroupId = 789; // Number | 
 let opts = {
   'accept': application/json; version=3, // String | 
   'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
-  'updateDeviceGroupsRequest': new EdgeApplication.UpdateDeviceGroupsRequest() // UpdateDeviceGroupsRequest | 
+  'updateDeviceGroupsRequest': new EdgeApplicationApi.UpdateDeviceGroupsRequest() // UpdateDeviceGroupsRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdDeviceGroupsDeviceGroupIdPut(edgeApplicationId, deviceGroupId, opts, (error, data, response) => {
   if (error) {
@@ -250,15 +250,15 @@ Name | Type | Description  | Notes
 ### Example
 
 ```javascript
-import EdgeApplication from 'edge_application';
-let defaultClient = EdgeApplication.ApiClient.instance;
+import EdgeApplicationApi from 'edge_application_api';
+let defaultClient = EdgeApplicationApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeApplication.EdgeApplicationsDeviceGroupsApi();
+let apiInstance = new EdgeApplicationApi.EdgeApplicationsDeviceGroupsApi();
 let edgeApplicationId = 789; // Number | 
 let opts = {
   'page': 789, // Number | 
@@ -313,20 +313,20 @@ Name | Type | Description  | Notes
 ### Example
 
 ```javascript
-import EdgeApplication from 'edge_application';
-let defaultClient = EdgeApplication.ApiClient.instance;
+import EdgeApplicationApi from 'edge_application_api';
+let defaultClient = EdgeApplicationApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeApplication.EdgeApplicationsDeviceGroupsApi();
+let apiInstance = new EdgeApplicationApi.EdgeApplicationsDeviceGroupsApi();
 let edgeApplicationId = 789; // Number | 
 let opts = {
   'accept': application/json; version=3, // String | 
   'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
-  'createDeviceGroupsRequest': new EdgeApplication.CreateDeviceGroupsRequest() // CreateDeviceGroupsRequest | 
+  'createDeviceGroupsRequest': new EdgeApplicationApi.CreateDeviceGroupsRequest() // CreateDeviceGroupsRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdDeviceGroupsPost(edgeApplicationId, opts, (error, data, response) => {
   if (error) {

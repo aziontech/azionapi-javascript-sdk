@@ -1,4 +1,4 @@
-# EdgenodeApi.ServiceBindDetailResponse
+# EdgeNodeApi.ServiceBindDetailResponse
 
 ## Properties
 

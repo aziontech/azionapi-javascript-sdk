@@ -1,4 +1,4 @@
-# EdgeApplication.GetApplicationResponse
+# EdgeApplicationApi.GetApplicationResponse
 
 ## Properties
 

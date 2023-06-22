@@ -1,4 +1,4 @@
-# EdgenodeApi.NodeGroup
+# EdgeNodeApi.NodeGroup
 
 ## Properties
 

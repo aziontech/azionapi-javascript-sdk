@@ -1,4 +1,4 @@
-# EdgeApplication.PatchRulesEngineRequest
+# EdgeApplicationApi.PatchRulesEngineRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# IntelligentDns.GetZonesResponse
+# IntelligentDnsApi.GetZonesResponse
 
 ## Properties
 

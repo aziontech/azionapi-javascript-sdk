@@ -1,6 +1,6 @@
 # ServicesApi.DefaultApi
 
-All URIs are relative to *http://localhost:3002*
+All URIs are relative to *http://bff.azion.net:3002*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,8 +9,8 @@ Method | HTTP request | Description
 [**getResource**](DefaultApi.md#getResource) | **GET** /edge_services/{serviceId}/resources/{resourceId} | Return Service Resource by ID
 [**getResources**](DefaultApi.md#getResources) | **GET** /edge_services/{serviceId}/resources | Return Service Resources by page
 [**getService**](DefaultApi.md#getService) | **GET** /edge_services/{id} | Return Service by ID
-[**getServices**](DefaultApi.md#getServices) | **GET** /edge_services/ | Return Services by page
-[**newService**](DefaultApi.md#newService) | **POST** /edge_services/ | Create Service
+[**getServices**](DefaultApi.md#getServices) | **GET** /edge_services | Return Services by page
+[**newService**](DefaultApi.md#newService) | **POST** /edge_services | Create Service
 [**patchService**](DefaultApi.md#patchService) | **PATCH** /edge_services/{id} | Update Service by ID
 [**patchServiceResource**](DefaultApi.md#patchServiceResource) | **PATCH** /edge_services/{serviceId}/resources/{resourceId} | Update Service Resource by ID
 [**postResource**](DefaultApi.md#postResource) | **POST** /edge_services/{serviceId}/resources | Create Service Resource
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ## getResources
 
-> ResourceResponseWithTotal getResources(serviceId, opts)
+> Object getResources(serviceId, opts)
 
 Return Service Resources by page
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResourceResponseWithTotal**](ResourceResponseWithTotal.md)
+**Object**
 
 ### Authorization
 

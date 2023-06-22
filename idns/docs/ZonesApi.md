@@ -1,4 +1,4 @@
-# IntelligentDns.ZonesApi
+# IntelligentDnsApi.ZonesApi
 
 All URIs are relative to *https://api.azionapi.net*
 
@@ -21,15 +21,15 @@ Remove an Intelligent DNS hosted zone
 ### Example
 
 ```javascript
-import IntelligentDns from 'intelligent_dns';
-let defaultClient = IntelligentDns.ApiClient.instance;
+import IntelligentDnsApi from 'intelligent_dns_api';
+let defaultClient = IntelligentDnsApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new IntelligentDns.ZonesApi();
+let apiInstance = new IntelligentDnsApi.ZonesApi();
 let zoneId = 56; // Number | The hosted zone id
 apiInstance.deleteZone(zoneId, (error, data, response) => {
   if (error) {
@@ -70,15 +70,15 @@ Get an Intelligent DNS hosted zone
 ### Example
 
 ```javascript
-import IntelligentDns from 'intelligent_dns';
-let defaultClient = IntelligentDns.ApiClient.instance;
+import IntelligentDnsApi from 'intelligent_dns_api';
+let defaultClient = IntelligentDnsApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new IntelligentDns.ZonesApi();
+let apiInstance = new IntelligentDnsApi.ZonesApi();
 let zoneId = 56; // Number | The hosted zone id
 apiInstance.getZone(zoneId, (error, data, response) => {
   if (error) {
@@ -119,15 +119,15 @@ Get a collection of Intelligent DNS zones
 ### Example
 
 ```javascript
-import IntelligentDns from 'intelligent_dns';
-let defaultClient = IntelligentDns.ApiClient.instance;
+import IntelligentDnsApi from 'intelligent_dns_api';
+let defaultClient = IntelligentDnsApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new IntelligentDns.ZonesApi();
+let apiInstance = new IntelligentDnsApi.ZonesApi();
 apiInstance.getZones((error, data, response) => {
   if (error) {
     console.error(error);
@@ -164,15 +164,15 @@ Add a new Intelligent DNS zone
 ### Example
 
 ```javascript
-import IntelligentDns from 'intelligent_dns';
-let defaultClient = IntelligentDns.ApiClient.instance;
+import IntelligentDnsApi from 'intelligent_dns_api';
+let defaultClient = IntelligentDnsApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new IntelligentDns.ZonesApi();
+let apiInstance = new IntelligentDnsApi.ZonesApi();
 let opts = {
   'zone': {"name":"New Intelligent DNS zone","domain":"new.domain.com","is_active":true} // Zone | 
 };
@@ -215,15 +215,15 @@ Update an Intelligent DNS hosted zone
 ### Example
 
 ```javascript
-import IntelligentDns from 'intelligent_dns';
-let defaultClient = IntelligentDns.ApiClient.instance;
+import IntelligentDnsApi from 'intelligent_dns_api';
+let defaultClient = IntelligentDnsApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new IntelligentDns.ZonesApi();
+let apiInstance = new IntelligentDnsApi.ZonesApi();
 let zoneId = 56; // Number | The hosted zone id
 let opts = {
   'zone': {"name":"Update Intelligent DNS zone","domain":"other.domain.com","is_active":true} // Zone | 

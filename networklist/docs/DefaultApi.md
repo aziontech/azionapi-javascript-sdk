@@ -1,4 +1,4 @@
-# AzionApi.DefaultApi
+# NetworkListsApi.DefaultApi
 
 All URIs are relative to *https://api.azionapi.net*
 
@@ -20,9 +20,15 @@ List all user Network Lists
 ### Example
 
 ```javascript
-import AzionApi from 'azion_api';
+import NetworkListsApi from 'network_lists_api';
+let defaultClient = NetworkListsApi.ApiClient.instance;
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new AzionApi.DefaultApi();
+let apiInstance = new NetworkListsApi.DefaultApi();
 let opts = {
   'page': 56 // Number | 
 };
@@ -48,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 
@@ -65,10 +71,16 @@ Create a Network Lists
 ### Example
 
 ```javascript
-import AzionApi from 'azion_api';
+import NetworkListsApi from 'network_lists_api';
+let defaultClient = NetworkListsApi.ApiClient.instance;
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new AzionApi.DefaultApi();
-let createNetworkListsRequest = new AzionApi.CreateNetworkListsRequest(); // CreateNetworkListsRequest | 
+let apiInstance = new NetworkListsApi.DefaultApi();
+let createNetworkListsRequest = new NetworkListsApi.CreateNetworkListsRequest(); // CreateNetworkListsRequest | 
 apiInstance.networkListsPost(createNetworkListsRequest, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -91,7 +103,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 
@@ -108,9 +120,15 @@ Retrieve a Network Lists set by uuid
 ### Example
 
 ```javascript
-import AzionApi from 'azion_api';
+import NetworkListsApi from 'network_lists_api';
+let defaultClient = NetworkListsApi.ApiClient.instance;
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new AzionApi.DefaultApi();
+let apiInstance = new NetworkListsApi.DefaultApi();
 let uuid = "uuid_example"; // String | 
 apiInstance.networkListsUuidGet(uuid, (error, data, response) => {
   if (error) {
@@ -134,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 
@@ -151,11 +169,17 @@ Overwrite some Network Lists attributes
 ### Example
 
 ```javascript
-import AzionApi from 'azion_api';
+import NetworkListsApi from 'network_lists_api';
+let defaultClient = NetworkListsApi.ApiClient.instance;
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new AzionApi.DefaultApi();
+let apiInstance = new NetworkListsApi.DefaultApi();
 let uuid = "uuid_example"; // String | 
-let updateNetworkListsRequest = new AzionApi.UpdateNetworkListsRequest(); // UpdateNetworkListsRequest | 
+let updateNetworkListsRequest = new NetworkListsApi.UpdateNetworkListsRequest(); // UpdateNetworkListsRequest | 
 apiInstance.networkListsUuidPut(uuid, updateNetworkListsRequest, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -179,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[tokenAuth](../README.md#tokenAuth)
 
 ### HTTP request headers
 

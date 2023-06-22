@@ -1,6 +1,6 @@
-# EdgenodeApi.DefaultApi
+# EdgeNodeApi.DefaultApi
 
-All URIs are relative to *http://localhost:3001*
+All URIs are relative to *https://api.azionapi.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -27,16 +27,16 @@ Authorize edge-node
 ### Example
 
 ```javascript
-import EdgenodeApi from 'edgenode_api';
-let defaultClient = EdgenodeApi.ApiClient.instance;
+import EdgeNodeApi from 'edge_node_api';
+let defaultClient = EdgeNodeApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgenodeApi.DefaultApi();
-let authorizeEdgeNodesRequest = new EdgenodeApi.AuthorizeEdgeNodesRequest(); // AuthorizeEdgeNodesRequest | 
+let apiInstance = new EdgeNodeApi.DefaultApi();
+let authorizeEdgeNodesRequest = new EdgeNodeApi.AuthorizeEdgeNodesRequest(); // AuthorizeEdgeNodesRequest | 
 apiInstance.authorizeEdgeNode(authorizeEdgeNodesRequest, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -76,17 +76,17 @@ Create an edge-node Service association
 ### Example
 
 ```javascript
-import EdgenodeApi from 'edgenode_api';
-let defaultClient = EdgenodeApi.ApiClient.instance;
+import EdgeNodeApi from 'edge_node_api';
+let defaultClient = EdgeNodeApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgenodeApi.DefaultApi();
+let apiInstance = new EdgeNodeApi.DefaultApi();
 let edgenodeId = 789; // Number | 
-let serviceBindRequest = new EdgenodeApi.ServiceBindRequest(); // ServiceBindRequest | 
+let serviceBindRequest = new EdgeNodeApi.ServiceBindRequest(); // ServiceBindRequest | 
 apiInstance.createEdgeNodeSvcs(edgenodeId, serviceBindRequest, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -127,15 +127,15 @@ Delete edge-node by ID
 ### Example
 
 ```javascript
-import EdgenodeApi from 'edgenode_api';
-let defaultClient = EdgenodeApi.ApiClient.instance;
+import EdgeNodeApi from 'edge_node_api';
+let defaultClient = EdgeNodeApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgenodeApi.DefaultApi();
+let apiInstance = new EdgeNodeApi.DefaultApi();
 let edgenodeId = 789; // Number | 
 apiInstance.delEdgeNode(edgenodeId, (error, data, response) => {
   if (error) {
@@ -176,15 +176,15 @@ Delete an edge-node Service association
 ### Example
 
 ```javascript
-import EdgenodeApi from 'edgenode_api';
-let defaultClient = EdgenodeApi.ApiClient.instance;
+import EdgeNodeApi from 'edge_node_api';
+let defaultClient = EdgeNodeApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgenodeApi.DefaultApi();
+let apiInstance = new EdgeNodeApi.DefaultApi();
 let edgenodeId = 789; // Number | 
 let bindId = 789; // Number | 
 apiInstance.delEdgeNodeSvc(edgenodeId, bindId, (error, data, response) => {
@@ -227,15 +227,15 @@ Return edge-node by ID
 ### Example
 
 ```javascript
-import EdgenodeApi from 'edgenode_api';
-let defaultClient = EdgenodeApi.ApiClient.instance;
+import EdgeNodeApi from 'edge_node_api';
+let defaultClient = EdgeNodeApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgenodeApi.DefaultApi();
+let apiInstance = new EdgeNodeApi.DefaultApi();
 let edgenodeId = 789; // Number | 
 apiInstance.getEdgeNode(edgenodeId, (error, data, response) => {
   if (error) {
@@ -276,15 +276,15 @@ Return edge-node groups
 ### Example
 
 ```javascript
-import EdgenodeApi from 'edgenode_api';
-let defaultClient = EdgenodeApi.ApiClient.instance;
+import EdgeNodeApi from 'edge_node_api';
+let defaultClient = EdgeNodeApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgenodeApi.DefaultApi();
+let apiInstance = new EdgeNodeApi.DefaultApi();
 apiInstance.getEdgeNodeGroups((error, data, response) => {
   if (error) {
     console.error(error);
@@ -321,15 +321,15 @@ Return edge-node Service association by ID
 ### Example
 
 ```javascript
-import EdgenodeApi from 'edgenode_api';
-let defaultClient = EdgenodeApi.ApiClient.instance;
+import EdgeNodeApi from 'edge_node_api';
+let defaultClient = EdgeNodeApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgenodeApi.DefaultApi();
+let apiInstance = new EdgeNodeApi.DefaultApi();
 let edgenodeId = 789; // Number | 
 let bindId = 789; // Number | 
 apiInstance.getEdgeNodeSvcDetail(edgenodeId, bindId, (error, data, response) => {
@@ -372,15 +372,15 @@ Return edge-node Services association
 ### Example
 
 ```javascript
-import EdgenodeApi from 'edgenode_api';
-let defaultClient = EdgenodeApi.ApiClient.instance;
+import EdgeNodeApi from 'edge_node_api';
+let defaultClient = EdgeNodeApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgenodeApi.DefaultApi();
+let apiInstance = new EdgeNodeApi.DefaultApi();
 let edgenodeId = 789; // Number | 
 let opts = {
   'isBound': true, // Boolean | 
@@ -435,15 +435,15 @@ Return edge-nodes
 ### Example
 
 ```javascript
-import EdgenodeApi from 'edgenode_api';
-let defaultClient = EdgenodeApi.ApiClient.instance;
+import EdgeNodeApi from 'edge_node_api';
+let defaultClient = EdgeNodeApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgenodeApi.DefaultApi();
+let apiInstance = new EdgeNodeApi.DefaultApi();
 let opts = {
   'filter': "filter_example", // String | 
   'orderBy': "orderBy_example", // String | 
@@ -494,15 +494,15 @@ Update edge-node
 ### Example
 
 ```javascript
-import EdgenodeApi from 'edgenode_api';
-let defaultClient = EdgenodeApi.ApiClient.instance;
+import EdgeNodeApi from 'edge_node_api';
+let defaultClient = EdgeNodeApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgenodeApi.DefaultApi();
+let apiInstance = new EdgeNodeApi.DefaultApi();
 let edgenodeId = 789; // Number | 
 apiInstance.updateEdgeNode(edgenodeId, (error, data, response) => {
   if (error) {
@@ -543,18 +543,18 @@ Update edge-node Service association by ID
 ### Example
 
 ```javascript
-import EdgenodeApi from 'edgenode_api';
-let defaultClient = EdgenodeApi.ApiClient.instance;
+import EdgeNodeApi from 'edge_node_api';
+let defaultClient = EdgeNodeApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgenodeApi.DefaultApi();
+let apiInstance = new EdgeNodeApi.DefaultApi();
 let edgenodeId = 789; // Number | 
 let bindId = 789; // Number | 
-let updateServiceBindRequest = new EdgenodeApi.UpdateServiceBindRequest(); // UpdateServiceBindRequest | 
+let updateServiceBindRequest = new EdgeNodeApi.UpdateServiceBindRequest(); // UpdateServiceBindRequest | 
 apiInstance.updateEdgeNodeSvcDetail(edgenodeId, bindId, updateServiceBindRequest, (error, data, response) => {
   if (error) {
     console.error(error);

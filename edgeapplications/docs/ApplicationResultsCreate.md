@@ -1,4 +1,4 @@
-# EdgeApplication.ApplicationResultsCreate
+# EdgeApplicationApi.ApplicationResultsCreate
 
 ## Properties
 

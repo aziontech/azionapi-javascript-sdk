@@ -1,4 +1,4 @@
-# IntelligentDns.DnsSec
+# IntelligentDnsApi.DnsSec
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# IntelligentDns.GetRecordsResponse
+# IntelligentDnsApi.GetRecordsResponse
 
 ## Properties
 

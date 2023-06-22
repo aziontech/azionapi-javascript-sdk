@@ -1,4 +1,4 @@
-# EdgeFunction.ErrorResponse
+# EdgeFunctionApi.ErrorResponse
 
 ## Properties
 

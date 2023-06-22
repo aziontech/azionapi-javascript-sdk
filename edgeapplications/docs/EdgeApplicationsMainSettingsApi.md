@@ -1,4 +1,4 @@
-# EdgeApplication.EdgeApplicationsMainSettingsApi
+# EdgeApplicationApi.EdgeApplicationsMainSettingsApi
 
 All URIs are relative to *https://api.azionapi.net*
 
@@ -15,22 +15,22 @@ Method | HTTP request | Description
 
 ## edgeApplicationsGet
 
-> GetApplicationsResponse edgeApplicationsGet(opts)
+> Object edgeApplicationsGet(opts)
 
 /edge_applications
 
 ### Example
 
 ```javascript
-import EdgeApplication from 'edge_application';
-let defaultClient = EdgeApplication.ApiClient.instance;
+import EdgeApplicationApi from 'edge_application_api';
+let defaultClient = EdgeApplicationApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeApplication.EdgeApplicationsMainSettingsApi();
+let apiInstance = new EdgeApplicationApi.EdgeApplicationsMainSettingsApi();
 let opts = {
   'page': 789, // Number | 
   'pageSize': 789, // Number | 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetApplicationsResponse**](GetApplicationsResponse.md)
+**Object**
 
 ### Authorization
 
@@ -83,15 +83,15 @@ Name | Type | Description  | Notes
 ### Example
 
 ```javascript
-import EdgeApplication from 'edge_application';
-let defaultClient = EdgeApplication.ApiClient.instance;
+import EdgeApplicationApi from 'edge_application_api';
+let defaultClient = EdgeApplicationApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeApplication.EdgeApplicationsMainSettingsApi();
+let apiInstance = new EdgeApplicationApi.EdgeApplicationsMainSettingsApi();
 let id = "id_example"; // String | The id of the edge application that you plan to delete.
 let opts = {
   'accept': application/json; version=3 // String | 
@@ -136,15 +136,15 @@ null (empty response body)
 ### Example
 
 ```javascript
-import EdgeApplication from 'edge_application';
-let defaultClient = EdgeApplication.ApiClient.instance;
+import EdgeApplicationApi from 'edge_application_api';
+let defaultClient = EdgeApplicationApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeApplication.EdgeApplicationsMainSettingsApi();
+let apiInstance = new EdgeApplicationApi.EdgeApplicationsMainSettingsApi();
 let id = "id_example"; // String | 
 let opts = {
   'accept': application/json; version=3 // String | 
@@ -189,20 +189,20 @@ Name | Type | Description  | Notes
 ### Example
 
 ```javascript
-import EdgeApplication from 'edge_application';
-let defaultClient = EdgeApplication.ApiClient.instance;
+import EdgeApplicationApi from 'edge_application_api';
+let defaultClient = EdgeApplicationApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeApplication.EdgeApplicationsMainSettingsApi();
+let apiInstance = new EdgeApplicationApi.EdgeApplicationsMainSettingsApi();
 let id = "id_example"; // String | 
 let opts = {
   'accept': application/json; version=3, // String | 
   'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
-  'applicationUpdateRequest': new EdgeApplication.ApplicationUpdateRequest() // ApplicationUpdateRequest | 
+  'applicationUpdateRequest': new EdgeApplicationApi.ApplicationUpdateRequest() // ApplicationUpdateRequest | 
 };
 apiInstance.edgeApplicationsIdPatch(id, opts, (error, data, response) => {
   if (error) {
@@ -246,20 +246,20 @@ Name | Type | Description  | Notes
 ### Example
 
 ```javascript
-import EdgeApplication from 'edge_application';
-let defaultClient = EdgeApplication.ApiClient.instance;
+import EdgeApplicationApi from 'edge_application_api';
+let defaultClient = EdgeApplicationApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeApplication.EdgeApplicationsMainSettingsApi();
+let apiInstance = new EdgeApplicationApi.EdgeApplicationsMainSettingsApi();
 let id = "id_example"; // String | The Id of the edge application to be overwritten. 
 let opts = {
   'accept': application/json; version=3, // String | 
   'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
-  'applicationPutRequest': new EdgeApplication.ApplicationPutRequest() // ApplicationPutRequest | 
+  'applicationPutRequest': new EdgeApplicationApi.ApplicationPutRequest() // ApplicationPutRequest | 
 };
 apiInstance.edgeApplicationsIdPut(id, opts, (error, data, response) => {
   if (error) {
@@ -303,19 +303,19 @@ Name | Type | Description  | Notes
 ### Example
 
 ```javascript
-import EdgeApplication from 'edge_application';
-let defaultClient = EdgeApplication.ApiClient.instance;
+import EdgeApplicationApi from 'edge_application_api';
+let defaultClient = EdgeApplicationApi.ApiClient.instance;
 // Configure API key authorization: tokenAuth
 let tokenAuth = defaultClient.authentications['tokenAuth'];
 tokenAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new EdgeApplication.EdgeApplicationsMainSettingsApi();
+let apiInstance = new EdgeApplicationApi.EdgeApplicationsMainSettingsApi();
 let opts = {
   'accept': application/json; version=3, // String | 
   'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
-  'createApplicationRequest': new EdgeApplication.CreateApplicationRequest() // CreateApplicationRequest | 
+  'createApplicationRequest': new EdgeApplicationApi.CreateApplicationRequest() // CreateApplicationRequest | 
 };
 apiInstance.edgeApplicationsPost(opts, (error, data, response) => {
   if (error) {

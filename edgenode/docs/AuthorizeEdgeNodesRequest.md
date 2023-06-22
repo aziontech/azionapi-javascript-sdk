@@ -1,4 +1,4 @@
-# EdgenodeApi.AuthorizeEdgeNodesRequest
+# EdgeNodeApi.AuthorizeEdgeNodesRequest
 
 ## Properties
 

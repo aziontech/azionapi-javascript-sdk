@@ -1,4 +1,4 @@
-# EdgeApplication.OriginsResponseLinks
+# EdgeApplicationApi.OriginsResponseLinks
 
 ## Properties
 

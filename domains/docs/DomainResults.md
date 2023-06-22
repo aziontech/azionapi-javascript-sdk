@@ -1,4 +1,4 @@
-# Domain.DomainResults
+# DomainApi.DomainResults
 
 ## Properties
 

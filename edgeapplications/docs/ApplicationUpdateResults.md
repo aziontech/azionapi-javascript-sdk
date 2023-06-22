@@ -1,4 +1,4 @@
-# EdgeApplication.ApplicationUpdateResults
+# EdgeApplicationApi.ApplicationUpdateResults
 
 ## Properties
 

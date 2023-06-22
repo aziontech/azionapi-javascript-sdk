@@ -1,4 +1,4 @@
-# EdgeApplication.ApplicationCachePatchResponse
+# EdgeApplicationApi.ApplicationCachePatchResponse
 
 ## Properties
 

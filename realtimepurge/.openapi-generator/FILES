@@ -1,6 +1,5 @@
 .babelrc
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 docs/PurgeCacheKeyRequest.md
@@ -16,7 +15,3 @@ src/index.js
 src/model/PurgeCacheKeyRequest.js
 src/model/PurgeUrlRequest.js
 src/model/PurgeWildcardRequest.js
-test/api/RealTimePurgeApi.spec.js
-test/model/PurgeCacheKeyRequest.spec.js
-test/model/PurgeUrlRequest.spec.js
-test/model/PurgeWildcardRequest.spec.js

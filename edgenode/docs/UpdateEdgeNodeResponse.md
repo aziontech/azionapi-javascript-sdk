@@ -1,4 +1,4 @@
-# EdgenodeApi.UpdateEdgeNodeResponse
+# EdgeNodeApi.UpdateEdgeNodeResponse
 
 ## Properties
 
