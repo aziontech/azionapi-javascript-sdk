@@ -210,6 +210,7 @@ Class | Method | HTTP request | Description
  - [EdgeApplicationApi.DeviceGroupsResponseLinks](docs/DeviceGroupsResponseLinks.md)
  - [EdgeApplicationApi.DeviceGroupsResultResponse](docs/DeviceGroupsResultResponse.md)
  - [EdgeApplicationApi.GetApplicationResponse](docs/GetApplicationResponse.md)
+ - [EdgeApplicationApi.GetApplicationsResponse](docs/GetApplicationsResponse.md)
  - [EdgeApplicationApi.OriginsIdResponse](docs/OriginsIdResponse.md)
  - [EdgeApplicationApi.OriginsResponse](docs/OriginsResponse.md)
  - [EdgeApplicationApi.OriginsResponseLinks](docs/OriginsResponseLinks.md)

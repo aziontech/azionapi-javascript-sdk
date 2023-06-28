@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## edgeApplicationsGet
 
-> Object edgeApplicationsGet(opts)
+> GetApplicationsResponse edgeApplicationsGet(opts)
 
 /edge_applications
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**GetApplicationsResponse**](GetApplicationsResponse.md)
 
 ### Authorization
 

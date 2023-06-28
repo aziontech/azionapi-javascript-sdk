@@ -20,6 +20,7 @@ import ApplicationUpdateResponse from '../model/ApplicationUpdateResponse';
 import CreateApplicationRequest from '../model/CreateApplicationRequest';
 import CreateApplicationResult from '../model/CreateApplicationResult';
 import GetApplicationResponse from '../model/GetApplicationResponse';
+import GetApplicationsResponse from '../model/GetApplicationsResponse';
 
 /**
 * EdgeApplicationsMainSettings service.
@@ -44,7 +45,7 @@ export default class EdgeApplicationsMainSettingsApi {
      * Callback function to receive the result of the edgeApplicationsGet operation.
      * @callback module:api/EdgeApplicationsMainSettingsApi~edgeApplicationsGetCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {module:model/GetApplicationsResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -58,7 +59,7 @@ export default class EdgeApplicationsMainSettingsApi {
      * @param {String} [sort] 
      * @param {String} [accept] 
      * @param {module:api/EdgeApplicationsMainSettingsApi~edgeApplicationsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link module:model/GetApplicationsResponse}
      */
     edgeApplicationsGet(opts, callback) {
       opts = opts || {};
@@ -82,7 +83,7 @@ export default class EdgeApplicationsMainSettingsApi {
       let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = ['application/json; version=3'];
-      let returnType = Object;
+      let returnType = GetApplicationsResponse;
       return this.apiClient.callApi(
         '/edge_applications', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
