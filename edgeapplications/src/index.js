@@ -52,6 +52,7 @@ import DeviceGroupsResponse from './model/DeviceGroupsResponse';
 import DeviceGroupsResponseLinks from './model/DeviceGroupsResponseLinks';
 import DeviceGroupsResultResponse from './model/DeviceGroupsResultResponse';
 import GetApplicationResponse from './model/GetApplicationResponse';
+import GetApplicationsResponse from './model/GetApplicationsResponse';
 import OriginsIdResponse from './model/OriginsIdResponse';
 import OriginsResponse from './model/OriginsResponse';
 import OriginsResponseLinks from './model/OriginsResponseLinks';
@@ -348,6 +349,12 @@ export {
      * @property {module:model/GetApplicationResponse}
      */
     GetApplicationResponse,
+
+    /**
+     * The GetApplicationsResponse model constructor.
+     * @property {module:model/GetApplicationsResponse}
+     */
+    GetApplicationsResponse,
 
     /**
      * The OriginsIdResponse model constructor.

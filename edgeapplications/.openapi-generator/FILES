@@ -47,6 +47,7 @@ docs/EdgeApplicationsMainSettingsApi.md
 docs/EdgeApplicationsOriginsApi.md
 docs/EdgeApplicationsRulesEngineApi.md
 docs/GetApplicationResponse.md
+docs/GetApplicationsResponse.md
 docs/OriginsIdResponse.md
 docs/OriginsResponse.md
 docs/OriginsResponseLinks.md
@@ -114,6 +115,7 @@ src/model/DeviceGroupsResponse.js
 src/model/DeviceGroupsResponseLinks.js
 src/model/DeviceGroupsResultResponse.js
 src/model/GetApplicationResponse.js
+src/model/GetApplicationsResponse.js
 src/model/OriginsIdResponse.js
 src/model/OriginsResponse.js
 src/model/OriginsResponseLinks.js
