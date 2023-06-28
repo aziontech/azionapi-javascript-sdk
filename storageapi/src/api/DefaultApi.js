@@ -42,6 +42,7 @@ export default class DefaultApi {
      */
 
     /**
+     * /storage/:version_id/delete
      * Delete a version. A version is just um path prefix/sub-namespace for a set of files.
      * @param {String} versionId The version identifier
      * @param {module:api/DefaultApi~deleteVersionCallback} callback The callback function, accepting three arguments: error, data, response
@@ -83,6 +84,7 @@ export default class DefaultApi {
      */
 
     /**
+     * /storage/:version_id
      * Upload file and transfer to remote storage
      * @param {String} xAzionStaticPath Required in order to get the path and file name. i.e.: assets/css/main.css
      * @param {String} versionId 
