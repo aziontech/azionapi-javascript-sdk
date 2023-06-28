@@ -129,5 +129,3 @@ dist
 .yarn/install-state.gz
 .pnp.*go.mod
 go.sum
-go.mod
-go.sum
