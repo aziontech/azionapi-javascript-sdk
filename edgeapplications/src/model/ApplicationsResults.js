@@ -23,10 +23,17 @@ class ApplicationsResults {
     /**
      * Constructs a new <code>ApplicationsResults</code>.
      * @alias module:model/ApplicationsResults
+     * @param id {Number} 
+     * @param name {String} 
+     * @param debugRules {Boolean} 
+     * @param lastEditor {String} 
+     * @param lastModified {String} 
+     * @param active {Boolean} 
+     * @param origins {Array.<module:model/ApplicationOrigins>} 
      */
-    constructor() { 
+    constructor(id, name, debugRules, lastEditor, lastModified, active, origins) { 
         
-        ApplicationsResults.initialize(this);
+        ApplicationsResults.initialize(this, id, name, debugRules, lastEditor, lastModified, active, origins);
     }
 
     /**
@@ -34,7 +41,14 @@ class ApplicationsResults {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, id, name, debugRules, lastEditor, lastModified, active, origins) { 
+        obj['id'] = id;
+        obj['name'] = name;
+        obj['debug_rules'] = debugRules;
+        obj['last_editor'] = lastEditor;
+        obj['last_modified'] = lastModified;
+        obj['active'] = active;
+        obj['origins'] = origins;
     }
 
     /**
@@ -79,6 +93,12 @@ class ApplicationsResults {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ApplicationsResults</code>.
      */
     static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of ApplicationsResults.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
         // ensure the json data is a string
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
@@ -108,7 +128,7 @@ class ApplicationsResults {
 
 }
 
-
+ApplicationsResults.RequiredProperties = ["id", "name", "debug_rules", "last_editor", "last_modified", "active", "origins"];
 
 /**
  * @member {Number} id
