@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Number** |  | [optional] 
-**name** | **String** |  | [optional] 
-**debugRules** | **Boolean** |  | [optional] 
-**lastEditor** | **String** |  | [optional] 
-**lastModified** | **String** |  | [optional] 
-**active** | **Boolean** |  | [optional] 
-**origins** | [**[ApplicationOrigins]**](ApplicationOrigins.md) |  | [optional] 
+**id** | **Number** |  | 
+**name** | **String** |  | 
+**debugRules** | **Boolean** |  | 
+**lastEditor** | **String** |  | 
+**lastModified** | **String** |  | 
+**active** | **Boolean** |  | 
+**origins** | [**[ApplicationOrigins]**](ApplicationOrigins.md) |  | 
 
 
