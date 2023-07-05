@@ -110,7 +110,7 @@ export default class DefaultApi {
 
       let authNames = ['tokenAuth'];
       let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
+      let accepts = ['application/json', 'text/html'];
       let returnType = null;
       return this.apiClient.callApi(
         '/network_lists', 'POST',
@@ -152,7 +152,7 @@ export default class DefaultApi {
 
       let authNames = ['tokenAuth'];
       let contentTypes = [];
-      let accepts = ['application/json'];
+      let accepts = ['application/json', 'text/html'];
       let returnType = NetworkListsResponse;
       return this.apiClient.callApi(
         '/network_lists/{uuid}', 'GET',
@@ -199,7 +199,7 @@ export default class DefaultApi {
 
       let authNames = ['tokenAuth'];
       let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
+      let accepts = ['application/json', 'text/html'];
       let returnType = ListNetworkListsResponse;
       return this.apiClient.callApi(
         '/network_lists/{uuid}', 'PUT',
