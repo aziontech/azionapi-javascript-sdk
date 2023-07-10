@@ -1,14 +1,14 @@
 # VariablesApi.VariablesApi
 
-All URIs are relative to *https://stage-variables.azion.com*
+All URIs are relative to *https://stage-api.azion.net/variables*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiVariablesCreate**](VariablesApi.md#apiVariablesCreate) | **POST** /api/variables | /api/variables
-[**apiVariablesDestroy**](VariablesApi.md#apiVariablesDestroy) | **DELETE** /api/variables/{uuid} | /api/variables/:uuid
-[**apiVariablesList**](VariablesApi.md#apiVariablesList) | **GET** /api/variables | /api/variables
-[**apiVariablesRetrieve**](VariablesApi.md#apiVariablesRetrieve) | **GET** /api/variables/{uuid} | /api/variables/:uuid
-[**apiVariablesUpdate**](VariablesApi.md#apiVariablesUpdate) | **PUT** /api/variables/{uuid} | /api/variables/:uuid
+[**apiVariablesCreate**](VariablesApi.md#apiVariablesCreate) | **POST** /variables | /variables
+[**apiVariablesDestroy**](VariablesApi.md#apiVariablesDestroy) | **DELETE** /variables/{uuid} | /variables/:uuid
+[**apiVariablesList**](VariablesApi.md#apiVariablesList) | **GET** /variables | /variables
+[**apiVariablesRetrieve**](VariablesApi.md#apiVariablesRetrieve) | **GET** /variables/{uuid} | /variables/:uuid
+[**apiVariablesUpdate**](VariablesApi.md#apiVariablesUpdate) | **PUT** /variables/{uuid} | /variables/:uuid
 
 
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 > VariableGet apiVariablesCreate(variableCreate)
 
-/api/variables
+/variables
 
 Create a new Variable. &lt;br&gt;&lt;ul&gt;&lt;li&gt;If the attribute \&quot;secret\&quot; is informed with value \&quot;true\&quot; in request payload the Variable value will be secret and no longer viewable after creation.&lt;/li&gt;&lt;li&gt;If the attribute \&quot;secret\&quot; is not informed the Variable value will be considered as not secret by default.&lt;/li&gt;&lt;/ul&gt;
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 > apiVariablesDestroy(uuid)
 
-/api/variables/:uuid
+/variables/:uuid
 
 Delete a Variable by it&#39;s UUID
 
@@ -118,7 +118,7 @@ null (empty response body)
 
 > [Variable] apiVariablesList()
 
-/api/variables
+/variables
 
 List all user&#39;s Variables.
 
@@ -165,7 +165,7 @@ This endpoint does not need any parameter.
 
 > Variable apiVariablesRetrieve(uuid)
 
-/api/variables/:uuid
+/variables/:uuid
 
 Retrieve all data for a Variable by it&#39;s UUID
 
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 > VariableGet apiVariablesUpdate(uuid, variableCreate)
 
-/api/variables/:uuid
+/variables/:uuid
 
 Update variable attributes by it&#39;s UUID. Keep the Variable UUID but overwrite all editable attributes.
 

@@ -45,7 +45,7 @@ export default class VariablesApi {
      */
 
     /**
-     * /api/variables
+     * /variables
      * Create a new Variable. <br><ul><li>If the attribute \"secret\" is informed with value \"true\" in request payload the Variable value will be secret and no longer viewable after creation.</li><li>If the attribute \"secret\" is not informed the Variable value will be considered as not secret by default.</li></ul>
      * @param {module:model/VariableCreate} variableCreate 
      * @param {module:api/VariablesApi~apiVariablesCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -72,7 +72,7 @@ export default class VariablesApi {
       let accepts = ['application/json'];
       let returnType = VariableGet;
       return this.apiClient.callApi(
-        '/api/variables', 'POST',
+        '/variables', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -87,7 +87,7 @@ export default class VariablesApi {
      */
 
     /**
-     * /api/variables/:uuid
+     * /variables/:uuid
      * Delete a Variable by it's UUID
      * @param {String} uuid 
      * @param {module:api/VariablesApi~apiVariablesDestroyCallback} callback The callback function, accepting three arguments: error, data, response
@@ -114,7 +114,7 @@ export default class VariablesApi {
       let accepts = [];
       let returnType = null;
       return this.apiClient.callApi(
-        '/api/variables/{uuid}', 'DELETE',
+        '/variables/{uuid}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -129,7 +129,7 @@ export default class VariablesApi {
      */
 
     /**
-     * /api/variables
+     * /variables
      * List all user's Variables.
      * @param {module:api/VariablesApi~apiVariablesListCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/Variable>}
@@ -151,7 +151,7 @@ export default class VariablesApi {
       let accepts = ['application/json'];
       let returnType = [Variable];
       return this.apiClient.callApi(
-        '/api/variables', 'GET',
+        '/variables', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -166,7 +166,7 @@ export default class VariablesApi {
      */
 
     /**
-     * /api/variables/:uuid
+     * /variables/:uuid
      * Retrieve all data for a Variable by it's UUID
      * @param {String} uuid 
      * @param {module:api/VariablesApi~apiVariablesRetrieveCallback} callback The callback function, accepting three arguments: error, data, response
@@ -194,7 +194,7 @@ export default class VariablesApi {
       let accepts = ['application/json'];
       let returnType = Variable;
       return this.apiClient.callApi(
-        '/api/variables/{uuid}', 'GET',
+        '/variables/{uuid}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -209,7 +209,7 @@ export default class VariablesApi {
      */
 
     /**
-     * /api/variables/:uuid
+     * /variables/:uuid
      * Update variable attributes by it's UUID. Keep the Variable UUID but overwrite all editable attributes.
      * @param {String} uuid 
      * @param {module:model/VariableCreate} variableCreate 
@@ -242,7 +242,7 @@ export default class VariablesApi {
       let accepts = ['application/json'];
       let returnType = VariableGet;
       return this.apiClient.callApi(
-        '/api/variables/{uuid}', 'PUT',
+        '/variables/{uuid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
