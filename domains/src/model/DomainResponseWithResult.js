@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import DomainLinks from './DomainLinks';
 import DomainResults from './DomainResults';
 
 /**
@@ -23,12 +24,12 @@ class DomainResponseWithResult {
     /**
      * Constructs a new <code>DomainResponseWithResult</code>.
      * @alias module:model/DomainResponseWithResult
-     * @param schemaVersion {Number} 
      * @param results {module:model/DomainResults} 
+     * @param schemaVersion {Number} 
      */
-    constructor(schemaVersion, results) { 
+    constructor(results, schemaVersion) { 
         
-        DomainResponseWithResult.initialize(this, schemaVersion, results);
+        DomainResponseWithResult.initialize(this, results, schemaVersion);
     }
 
     /**
@@ -36,9 +37,9 @@ class DomainResponseWithResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, schemaVersion, results) { 
-        obj['schema_version'] = schemaVersion;
+    static initialize(obj, results, schemaVersion) { 
         obj['results'] = results;
+        obj['schema_version'] = schemaVersion;
     }
 
     /**
@@ -52,11 +53,20 @@ class DomainResponseWithResult {
         if (data) {
             obj = obj || new DomainResponseWithResult();
 
-            if (data.hasOwnProperty('schema_version')) {
-                obj['schema_version'] = ApiClient.convertToType(data['schema_version'], 'Number');
+            if (data.hasOwnProperty('count')) {
+                obj['count'] = ApiClient.convertToType(data['count'], 'Number');
+            }
+            if (data.hasOwnProperty('links')) {
+                obj['links'] = DomainLinks.constructFromObject(data['links']);
             }
             if (data.hasOwnProperty('results')) {
                 obj['results'] = DomainResults.constructFromObject(data['results']);
+            }
+            if (data.hasOwnProperty('total_pages')) {
+                obj['total_pages'] = ApiClient.convertToType(data['total_pages'], 'Number');
+            }
+            if (data.hasOwnProperty('schema_version')) {
+                obj['schema_version'] = ApiClient.convertToType(data['schema_version'], 'Number');
             }
         }
         return obj;
@@ -74,6 +84,10 @@ class DomainResponseWithResult {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
         }
+        // validate the optional field `links`
+        if (data['links']) { // data not null
+          DomainLinks.validateJSON(data['links']);
+        }
         // validate the optional field `results`
         if (data['results']) { // data not null
           DomainResults.validateJSON(data['results']);
@@ -85,17 +99,32 @@ class DomainResponseWithResult {
 
 }
 
-DomainResponseWithResult.RequiredProperties = ["schema_version", "results"];
+DomainResponseWithResult.RequiredProperties = ["results", "schema_version"];
 
 /**
- * @member {Number} schema_version
+ * @member {Number} count
  */
-DomainResponseWithResult.prototype['schema_version'] = undefined;
+DomainResponseWithResult.prototype['count'] = undefined;
+
+/**
+ * @member {module:model/DomainLinks} links
+ */
+DomainResponseWithResult.prototype['links'] = undefined;
 
 /**
  * @member {module:model/DomainResults} results
  */
 DomainResponseWithResult.prototype['results'] = undefined;
+
+/**
+ * @member {Number} total_pages
+ */
+DomainResponseWithResult.prototype['total_pages'] = undefined;
+
+/**
+ * @member {Number} schema_version
+ */
+DomainResponseWithResult.prototype['schema_version'] = undefined;
 
 
 
