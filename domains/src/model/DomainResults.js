@@ -24,10 +24,19 @@ class DomainResults {
      * @alias module:model/DomainResults
      * @param id {Number} 
      * @param name {String} 
+     * @param cnames {Array.<String>} 
+     * @param cnameAccessOnly {Boolean} 
+     * @param isActive {Boolean} 
+     * @param edgeApplicationId {Number} 
+     * @param digitalCertificateId {Number} 
+     * @param domainName {String} 
+     * @param isMtlsEnabled {Boolean} 
+     * @param mtlsTrustedCaCertificateId {String} 
+     * @param mtlsVerification {String} 
      */
-    constructor(id, name) { 
+    constructor(id, name, cnames, cnameAccessOnly, isActive, edgeApplicationId, digitalCertificateId, domainName, isMtlsEnabled, mtlsTrustedCaCertificateId, mtlsVerification) { 
         
-        DomainResults.initialize(this, id, name);
+        DomainResults.initialize(this, id, name, cnames, cnameAccessOnly, isActive, edgeApplicationId, digitalCertificateId, domainName, isMtlsEnabled, mtlsTrustedCaCertificateId, mtlsVerification);
     }
 
     /**
@@ -35,9 +44,18 @@ class DomainResults {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, name) { 
+    static initialize(obj, id, name, cnames, cnameAccessOnly, isActive, edgeApplicationId, digitalCertificateId, domainName, isMtlsEnabled, mtlsTrustedCaCertificateId, mtlsVerification) { 
         obj['id'] = id;
         obj['name'] = name;
+        obj['cnames'] = cnames;
+        obj['cname_access_only'] = cnameAccessOnly;
+        obj['is_active'] = isActive;
+        obj['edge_application_id'] = edgeApplicationId;
+        obj['digital_certificate_id'] = digitalCertificateId;
+        obj['domain_name'] = domainName;
+        obj['is_mtls_enabled'] = isMtlsEnabled;
+        obj['mtls_trusted_ca_certificate_id'] = mtlsTrustedCaCertificateId;
+        obj['mtls_verification'] = mtlsVerification;
     }
 
     /**
@@ -78,6 +96,15 @@ class DomainResults {
             if (data.hasOwnProperty('environment')) {
                 obj['environment'] = ApiClient.convertToType(data['environment'], 'String');
             }
+            if (data.hasOwnProperty('is_mtls_enabled')) {
+                obj['is_mtls_enabled'] = ApiClient.convertToType(data['is_mtls_enabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('mtls_trusted_ca_certificate_id')) {
+                obj['mtls_trusted_ca_certificate_id'] = ApiClient.convertToType(data['mtls_trusted_ca_certificate_id'], 'String');
+            }
+            if (data.hasOwnProperty('mtls_verification')) {
+                obj['mtls_verification'] = ApiClient.convertToType(data['mtls_verification'], 'String');
+            }
         }
         return obj;
     }
@@ -110,6 +137,14 @@ class DomainResults {
         if (data['environment'] && !(typeof data['environment'] === 'string' || data['environment'] instanceof String)) {
             throw new Error("Expected the field `environment` to be a primitive type in the JSON string but got " + data['environment']);
         }
+        // ensure the json data is a string
+        if (data['mtls_trusted_ca_certificate_id'] && !(typeof data['mtls_trusted_ca_certificate_id'] === 'string' || data['mtls_trusted_ca_certificate_id'] instanceof String)) {
+            throw new Error("Expected the field `mtls_trusted_ca_certificate_id` to be a primitive type in the JSON string but got " + data['mtls_trusted_ca_certificate_id']);
+        }
+        // ensure the json data is a string
+        if (data['mtls_verification'] && !(typeof data['mtls_verification'] === 'string' || data['mtls_verification'] instanceof String)) {
+            throw new Error("Expected the field `mtls_verification` to be a primitive type in the JSON string but got " + data['mtls_verification']);
+        }
 
         return true;
     }
@@ -117,7 +152,7 @@ class DomainResults {
 
 }
 
-DomainResults.RequiredProperties = ["id", "name"];
+DomainResults.RequiredProperties = ["id", "name", "cnames", "cname_access_only", "is_active", "edge_application_id", "digital_certificate_id", "domain_name", "is_mtls_enabled", "mtls_trusted_ca_certificate_id", "mtls_verification"];
 
 /**
  * @member {Number} id
@@ -163,6 +198,21 @@ DomainResults.prototype['domain_name'] = undefined;
  * @member {String} environment
  */
 DomainResults.prototype['environment'] = undefined;
+
+/**
+ * @member {Boolean} is_mtls_enabled
+ */
+DomainResults.prototype['is_mtls_enabled'] = undefined;
+
+/**
+ * @member {String} mtls_trusted_ca_certificate_id
+ */
+DomainResults.prototype['mtls_trusted_ca_certificate_id'] = undefined;
+
+/**
+ * @member {String} mtls_verification
+ */
+DomainResults.prototype['mtls_verification'] = undefined;
 
 
 

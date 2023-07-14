@@ -4,7 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**schemaVersion** | **Number** |  | 
+**count** | **Number** |  | [optional] 
+**links** | [**DomainLinks**](DomainLinks.md) |  | [optional] 
 **results** | [**DomainResults**](DomainResults.md) |  | 
+**totalPages** | **Number** |  | [optional] 
+**schemaVersion** | **Number** |  | 
 
 
