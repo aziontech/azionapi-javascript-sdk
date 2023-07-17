@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** |  | 
-**target** | **Object** |  | [optional] 
+**target** | **String** |  | [optional] 
 
 

@@ -53,7 +53,7 @@ class RulesEngineBehavior {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('target')) {
-                obj['target'] = ApiClient.convertToType(data['target'], Object);
+                obj['target'] = ApiClient.convertToType(data['target'], 'String');
             }
         }
         return obj;
@@ -75,6 +75,10 @@ class RulesEngineBehavior {
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
         }
+        // ensure the json data is a string
+        if (data['target'] && !(typeof data['target'] === 'string' || data['target'] instanceof String)) {
+            throw new Error("Expected the field `target` to be a primitive type in the JSON string but got " + data['target']);
+        }
 
         return true;
     }
@@ -90,7 +94,7 @@ RulesEngineBehavior.RequiredProperties = ["name"];
 RulesEngineBehavior.prototype['name'] = undefined;
 
 /**
- * @member {Object} target
+ * @member {String} target
  */
 RulesEngineBehavior.prototype['target'] = undefined;
 
