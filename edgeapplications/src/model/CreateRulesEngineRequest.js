@@ -58,6 +58,9 @@ class CreateRulesEngineRequest {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
             if (data.hasOwnProperty('criteria')) {
                 obj['criteria'] = ApiClient.convertToType(data['criteria'], [[RulesEngineCriteria]]);
             }
@@ -83,6 +86,10 @@ class CreateRulesEngineRequest {
         // ensure the json data is a string
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
         }
         // ensure the json data is an array
         if (!Array.isArray(data['criteria'])) {
@@ -111,6 +118,11 @@ CreateRulesEngineRequest.RequiredProperties = ["name", "criteria", "behaviors"];
  * @member {String} name
  */
 CreateRulesEngineRequest.prototype['name'] = undefined;
+
+/**
+ * @member {String} description
+ */
+CreateRulesEngineRequest.prototype['description'] = undefined;
 
 /**
  * @member {Array.<Array.<module:model/RulesEngineCriteria>>} criteria
