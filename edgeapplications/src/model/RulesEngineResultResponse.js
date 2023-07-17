@@ -67,6 +67,9 @@ class RulesEngineResultResponse {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
             if (data.hasOwnProperty('phase')) {
                 obj['phase'] = ApiClient.convertToType(data['phase'], 'String');
             }
@@ -101,6 +104,10 @@ class RulesEngineResultResponse {
         // ensure the json data is a string
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
         }
         // ensure the json data is a string
         if (data['phase'] && !(typeof data['phase'] === 'string' || data['phase'] instanceof String)) {
@@ -138,6 +145,11 @@ RulesEngineResultResponse.prototype['id'] = undefined;
  * @member {String} name
  */
 RulesEngineResultResponse.prototype['name'] = undefined;
+
+/**
+ * @member {String} description
+ */
+RulesEngineResultResponse.prototype['description'] = undefined;
 
 /**
  * @member {String} phase
