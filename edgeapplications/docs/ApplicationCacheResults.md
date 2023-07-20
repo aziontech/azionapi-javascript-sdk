@@ -19,5 +19,8 @@ Name | Type | Description | Notes
 **deviceGroup** | **[String]** |  | 
 **enableCachingForPost** | **Boolean** |  | 
 **l2CachingEnabled** | **Boolean** |  | 
+**enableCachingForOptions** | **Boolean** |  | 
+**enableStaleCache** | **Boolean** |  | 
+**l2Region** | **String** |  | 
 
 

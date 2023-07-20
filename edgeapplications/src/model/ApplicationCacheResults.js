@@ -37,10 +37,13 @@ class ApplicationCacheResults {
      * @param deviceGroup {Array.<String>} 
      * @param enableCachingForPost {Boolean} 
      * @param l2CachingEnabled {Boolean} 
+     * @param enableCachingForOptions {Boolean} 
+     * @param enableStaleCache {Boolean} 
+     * @param l2Region {String} 
      */
-    constructor(id, name, browserCacheSettings, browserCacheSettingsMaximumTtl, cdnCacheSettings, cdnCacheSettingsMaximumTtl, cacheByQueryString, queryStringFields, enableQueryStringSort, cacheByCookies, cookieNames, adaptiveDeliveryAction, deviceGroup, enableCachingForPost, l2CachingEnabled) { 
+    constructor(id, name, browserCacheSettings, browserCacheSettingsMaximumTtl, cdnCacheSettings, cdnCacheSettingsMaximumTtl, cacheByQueryString, queryStringFields, enableQueryStringSort, cacheByCookies, cookieNames, adaptiveDeliveryAction, deviceGroup, enableCachingForPost, l2CachingEnabled, enableCachingForOptions, enableStaleCache, l2Region) { 
         
-        ApplicationCacheResults.initialize(this, id, name, browserCacheSettings, browserCacheSettingsMaximumTtl, cdnCacheSettings, cdnCacheSettingsMaximumTtl, cacheByQueryString, queryStringFields, enableQueryStringSort, cacheByCookies, cookieNames, adaptiveDeliveryAction, deviceGroup, enableCachingForPost, l2CachingEnabled);
+        ApplicationCacheResults.initialize(this, id, name, browserCacheSettings, browserCacheSettingsMaximumTtl, cdnCacheSettings, cdnCacheSettingsMaximumTtl, cacheByQueryString, queryStringFields, enableQueryStringSort, cacheByCookies, cookieNames, adaptiveDeliveryAction, deviceGroup, enableCachingForPost, l2CachingEnabled, enableCachingForOptions, enableStaleCache, l2Region);
     }
 
     /**
@@ -48,7 +51,7 @@ class ApplicationCacheResults {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, name, browserCacheSettings, browserCacheSettingsMaximumTtl, cdnCacheSettings, cdnCacheSettingsMaximumTtl, cacheByQueryString, queryStringFields, enableQueryStringSort, cacheByCookies, cookieNames, adaptiveDeliveryAction, deviceGroup, enableCachingForPost, l2CachingEnabled) { 
+    static initialize(obj, id, name, browserCacheSettings, browserCacheSettingsMaximumTtl, cdnCacheSettings, cdnCacheSettingsMaximumTtl, cacheByQueryString, queryStringFields, enableQueryStringSort, cacheByCookies, cookieNames, adaptiveDeliveryAction, deviceGroup, enableCachingForPost, l2CachingEnabled, enableCachingForOptions, enableStaleCache, l2Region) { 
         obj['id'] = id;
         obj['name'] = name;
         obj['browser_cache_settings'] = browserCacheSettings;
@@ -64,6 +67,9 @@ class ApplicationCacheResults {
         obj['device_group'] = deviceGroup;
         obj['enable_caching_for_post'] = enableCachingForPost;
         obj['l2_caching_enabled'] = l2CachingEnabled;
+        obj['enable_caching_for_options'] = enableCachingForOptions;
+        obj['enable_stale_cache'] = enableStaleCache;
+        obj['l2_region'] = l2Region;
     }
 
     /**
@@ -122,6 +128,15 @@ class ApplicationCacheResults {
             if (data.hasOwnProperty('l2_caching_enabled')) {
                 obj['l2_caching_enabled'] = ApiClient.convertToType(data['l2_caching_enabled'], 'Boolean');
             }
+            if (data.hasOwnProperty('enable_caching_for_options')) {
+                obj['enable_caching_for_options'] = ApiClient.convertToType(data['enable_caching_for_options'], 'Boolean');
+            }
+            if (data.hasOwnProperty('enable_stale_cache')) {
+                obj['enable_stale_cache'] = ApiClient.convertToType(data['enable_stale_cache'], 'Boolean');
+            }
+            if (data.hasOwnProperty('l2_region')) {
+                obj['l2_region'] = ApiClient.convertToType(data['l2_region'], 'String');
+            }
         }
         return obj;
     }
@@ -174,6 +189,10 @@ class ApplicationCacheResults {
         if (!Array.isArray(data['device_group'])) {
             throw new Error("Expected the field `device_group` to be an array in the JSON data but got " + data['device_group']);
         }
+        // ensure the json data is a string
+        if (data['l2_region'] && !(typeof data['l2_region'] === 'string' || data['l2_region'] instanceof String)) {
+            throw new Error("Expected the field `l2_region` to be a primitive type in the JSON string but got " + data['l2_region']);
+        }
 
         return true;
     }
@@ -181,7 +200,7 @@ class ApplicationCacheResults {
 
 }
 
-ApplicationCacheResults.RequiredProperties = ["id", "name", "browser_cache_settings", "browser_cache_settings_maximum_ttl", "cdn_cache_settings", "cdn_cache_settings_maximum_ttl", "cache_by_query_string", "query_string_fields", "enable_query_string_sort", "cache_by_cookies", "cookie_names", "adaptive_delivery_action", "device_group", "enable_caching_for_post", "l2_caching_enabled"];
+ApplicationCacheResults.RequiredProperties = ["id", "name", "browser_cache_settings", "browser_cache_settings_maximum_ttl", "cdn_cache_settings", "cdn_cache_settings_maximum_ttl", "cache_by_query_string", "query_string_fields", "enable_query_string_sort", "cache_by_cookies", "cookie_names", "adaptive_delivery_action", "device_group", "enable_caching_for_post", "l2_caching_enabled", "enable_caching_for_options", "enable_stale_cache", "l2_region"];
 
 /**
  * @member {Number} id
@@ -257,6 +276,21 @@ ApplicationCacheResults.prototype['enable_caching_for_post'] = undefined;
  * @member {Boolean} l2_caching_enabled
  */
 ApplicationCacheResults.prototype['l2_caching_enabled'] = undefined;
+
+/**
+ * @member {Boolean} enable_caching_for_options
+ */
+ApplicationCacheResults.prototype['enable_caching_for_options'] = undefined;
+
+/**
+ * @member {Boolean} enable_stale_cache
+ */
+ApplicationCacheResults.prototype['enable_stale_cache'] = undefined;
+
+/**
+ * @member {String} l2_region
+ */
+ApplicationCacheResults.prototype['l2_region'] = undefined;
 
 
 
