@@ -128,6 +128,18 @@ class ApplicationCacheResults {
             if (data.hasOwnProperty('l2_caching_enabled')) {
                 obj['l2_caching_enabled'] = ApiClient.convertToType(data['l2_caching_enabled'], 'Boolean');
             }
+            if (data.hasOwnProperty('is_slice_configuration_enabled')) {
+                obj['is_slice_configuration_enabled'] = ApiClient.convertToType(data['is_slice_configuration_enabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('is_slice_edge_caching_enabled')) {
+                obj['is_slice_edge_caching_enabled'] = ApiClient.convertToType(data['is_slice_edge_caching_enabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('is_slice_l2_caching_enabled')) {
+                obj['is_slice_l2_caching_enabled'] = ApiClient.convertToType(data['is_slice_l2_caching_enabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('slice_configuration_range')) {
+                obj['slice_configuration_range'] = ApiClient.convertToType(data['slice_configuration_range'], 'Boolean');
+            }
             if (data.hasOwnProperty('enable_caching_for_options')) {
                 obj['enable_caching_for_options'] = ApiClient.convertToType(data['enable_caching_for_options'], 'Boolean');
             }
@@ -276,6 +288,26 @@ ApplicationCacheResults.prototype['enable_caching_for_post'] = undefined;
  * @member {Boolean} l2_caching_enabled
  */
 ApplicationCacheResults.prototype['l2_caching_enabled'] = undefined;
+
+/**
+ * @member {Boolean} is_slice_configuration_enabled
+ */
+ApplicationCacheResults.prototype['is_slice_configuration_enabled'] = undefined;
+
+/**
+ * @member {Boolean} is_slice_edge_caching_enabled
+ */
+ApplicationCacheResults.prototype['is_slice_edge_caching_enabled'] = undefined;
+
+/**
+ * @member {Boolean} is_slice_l2_caching_enabled
+ */
+ApplicationCacheResults.prototype['is_slice_l2_caching_enabled'] = undefined;
+
+/**
+ * @member {Boolean} slice_configuration_range
+ */
+ApplicationCacheResults.prototype['slice_configuration_range'] = undefined;
 
 /**
  * @member {Boolean} enable_caching_for_options
