@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **status** | **String** |  | [optional] 
 **certificateType** | **String** |  | [optional] 
 **managed** | **Boolean** |  | [optional] 
+**issuer** | **String** |  | [optional] 
+**azionInformation** | **String** |  | [optional] 
 
 
 
