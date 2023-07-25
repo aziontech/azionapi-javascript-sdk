@@ -68,6 +68,12 @@ class ResultsInner {
             if (data.hasOwnProperty('managed')) {
                 obj['managed'] = ApiClient.convertToType(data['managed'], 'Boolean');
             }
+            if (data.hasOwnProperty('issuer')) {
+                obj['issuer'] = ApiClient.convertToType(data['issuer'], 'String');
+            }
+            if (data.hasOwnProperty('azion_information')) {
+                obj['azion_information'] = ApiClient.convertToType(data['azion_information'], 'String');
+            }
         }
         return obj;
     }
@@ -97,6 +103,14 @@ class ResultsInner {
         // ensure the json data is a string
         if (data['certificate_type'] && !(typeof data['certificate_type'] === 'string' || data['certificate_type'] instanceof String)) {
             throw new Error("Expected the field `certificate_type` to be a primitive type in the JSON string but got " + data['certificate_type']);
+        }
+        // ensure the json data is a string
+        if (data['issuer'] && !(typeof data['issuer'] === 'string' || data['issuer'] instanceof String)) {
+            throw new Error("Expected the field `issuer` to be a primitive type in the JSON string but got " + data['issuer']);
+        }
+        // ensure the json data is a string
+        if (data['azion_information'] && !(typeof data['azion_information'] === 'string' || data['azion_information'] instanceof String)) {
+            throw new Error("Expected the field `azion_information` to be a primitive type in the JSON string but got " + data['azion_information']);
         }
 
         return true;
@@ -141,6 +155,16 @@ ResultsInner.prototype['certificate_type'] = undefined;
  * @member {Boolean} managed
  */
 ResultsInner.prototype['managed'] = undefined;
+
+/**
+ * @member {String} issuer
+ */
+ResultsInner.prototype['issuer'] = undefined;
+
+/**
+ * @member {String} azion_information
+ */
+ResultsInner.prototype['azion_information'] = undefined;
 
 
 

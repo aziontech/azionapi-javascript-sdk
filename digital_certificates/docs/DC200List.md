@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **totalPages** | **Number** |  | [optional] 
 **schemaVersion** | **Number** |  | [optional] 
 **links** | [**DC200ListLinks**](DC200ListLinks.md) |  | [optional] 
-**results** | **[Array]** |  | [optional] 
+**results** | [**[ResultsInner]**](ResultsInner.md) |  | [optional] 
 
 

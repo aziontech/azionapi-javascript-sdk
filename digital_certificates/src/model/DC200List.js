@@ -62,7 +62,7 @@ class DC200List {
                 obj['links'] = DC200ListLinks.constructFromObject(data['links']);
             }
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [Array]);
+                obj['results'] = ApiClient.convertToType(data['results'], [ResultsInner]);
             }
         }
         return obj;
@@ -78,9 +78,15 @@ class DC200List {
         if (data['links']) { // data not null
           DC200ListLinks.validateJSON(data['links']);
         }
-        // ensure the json data is an array
-        if (!Array.isArray(data['results'])) {
-            throw new Error("Expected the field `results` to be an array in the JSON data but got " + data['results']);
+        if (data['results']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['results'])) {
+                throw new Error("Expected the field `results` to be an array in the JSON data but got " + data['results']);
+            }
+            // validate the optional field `results` (array)
+            for (const item of data['results']) {
+                ResultsInner.validateJSON(item);
+            };
         }
 
         return true;
@@ -112,7 +118,7 @@ DC200List.prototype['schema_version'] = undefined;
 DC200List.prototype['links'] = undefined;
 
 /**
- * @member {Array.<Array.<module:model/ResultsInner>>} results
+ * @member {Array.<module:model/ResultsInner>} results
  */
 DC200List.prototype['results'] = undefined;
 
