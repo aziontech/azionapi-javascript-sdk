@@ -20,5 +20,11 @@ Name | Type | Description | Notes
 **enableCachingForPost** | **Boolean** |  | 
 **enableCachingForOptions** | **Boolean** |  | [optional] 
 **l2CachingEnabled** | **Boolean** |  | 
+**isSliceConfigurationEnabled** | **Boolean** |  | [optional] 
+**isSliceEdgeCachingEnabled** | **Boolean** |  | [optional] 
+**isSliceL2CachingEnabled** | **Boolean** |  | [optional] 
+**sliceConfigurationRange** | **Number** |  | [optional] 
+**enableStaleCache** | **Boolean** |  | [optional] 
+**l2Region** | **String** |  | [optional] 
 
 

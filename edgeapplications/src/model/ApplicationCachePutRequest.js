@@ -79,6 +79,12 @@ class ApplicationCachePutRequest {
             if (data.hasOwnProperty('cookie_names')) {
                 obj['cookie_names'] = ApiClient.convertToType(data['cookie_names'], ['String']);
             }
+            if (data.hasOwnProperty('adaptive_delivery_action')) {
+                obj['adaptive_delivery_action'] = ApiClient.convertToType(data['adaptive_delivery_action'], 'String');
+            }
+            if (data.hasOwnProperty('device_group')) {
+                obj['device_group'] = ApiClient.convertToType(data['device_group'], ['Number']);
+            }
             if (data.hasOwnProperty('enable_caching_for_post')) {
                 obj['enable_caching_for_post'] = ApiClient.convertToType(data['enable_caching_for_post'], 'Boolean');
             }
@@ -96,6 +102,15 @@ class ApplicationCachePutRequest {
             }
             if (data.hasOwnProperty('slice_configuration_range')) {
                 obj['slice_configuration_range'] = ApiClient.convertToType(data['slice_configuration_range'], 'Number');
+            }
+            if (data.hasOwnProperty('enable_caching_for_options')) {
+                obj['enable_caching_for_options'] = ApiClient.convertToType(data['enable_caching_for_options'], 'Boolean');
+            }
+            if (data.hasOwnProperty('enable_stale_cache')) {
+                obj['enable_stale_cache'] = ApiClient.convertToType(data['enable_stale_cache'], 'Boolean');
+            }
+            if (data.hasOwnProperty('l2_region')) {
+                obj['l2_region'] = ApiClient.convertToType(data['l2_region'], 'String');
             }
         }
         return obj;
@@ -140,6 +155,18 @@ class ApplicationCachePutRequest {
         // ensure the json data is an array
         if (!Array.isArray(data['cookie_names'])) {
             throw new Error("Expected the field `cookie_names` to be an array in the JSON data but got " + data['cookie_names']);
+        }
+        // ensure the json data is a string
+        if (data['adaptive_delivery_action'] && !(typeof data['adaptive_delivery_action'] === 'string' || data['adaptive_delivery_action'] instanceof String)) {
+            throw new Error("Expected the field `adaptive_delivery_action` to be a primitive type in the JSON string but got " + data['adaptive_delivery_action']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['device_group'])) {
+            throw new Error("Expected the field `device_group` to be an array in the JSON data but got " + data['device_group']);
+        }
+        // ensure the json data is a string
+        if (data['l2_region'] && !(typeof data['l2_region'] === 'string' || data['l2_region'] instanceof String)) {
+            throw new Error("Expected the field `l2_region` to be a primitive type in the JSON string but got " + data['l2_region']);
         }
 
         return true;
@@ -201,6 +228,16 @@ ApplicationCachePutRequest.prototype['cache_by_cookies'] = undefined;
 ApplicationCachePutRequest.prototype['cookie_names'] = undefined;
 
 /**
+ * @member {String} adaptive_delivery_action
+ */
+ApplicationCachePutRequest.prototype['adaptive_delivery_action'] = undefined;
+
+/**
+ * @member {Array.<Number>} device_group
+ */
+ApplicationCachePutRequest.prototype['device_group'] = undefined;
+
+/**
  * @member {Boolean} enable_caching_for_post
  */
 ApplicationCachePutRequest.prototype['enable_caching_for_post'] = undefined;
@@ -229,6 +266,21 @@ ApplicationCachePutRequest.prototype['is_slice_l2_caching_enabled'] = undefined;
  * @member {Number} slice_configuration_range
  */
 ApplicationCachePutRequest.prototype['slice_configuration_range'] = undefined;
+
+/**
+ * @member {Boolean} enable_caching_for_options
+ */
+ApplicationCachePutRequest.prototype['enable_caching_for_options'] = undefined;
+
+/**
+ * @member {Boolean} enable_stale_cache
+ */
+ApplicationCachePutRequest.prototype['enable_stale_cache'] = undefined;
+
+/**
+ * @member {String} l2_region
+ */
+ApplicationCachePutRequest.prototype['l2_region'] = undefined;
 
 
 
