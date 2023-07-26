@@ -14,7 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import CreateCSRRequest from '../model/CreateCSRRequest';
-import DC201 from '../model/DC201';
+import DC200 from '../model/DC200';
 import DC400 from '../model/DC400';
 import DC403 from '../model/DC403';
 
@@ -41,7 +41,7 @@ export default class CreateCSRApi {
      * Callback function to receive the result of the createCSR operation.
      * @callback module:api/CreateCSRApi~createCSRCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/DC201} data The data returned by the service call.
+     * @param {module:model/DC200} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -49,7 +49,7 @@ export default class CreateCSRApi {
      * Create an encrypted Certificate Request with Azion, which can then be sent for signing to a CA
      * @param {module:model/CreateCSRRequest} createCSRRequest 
      * @param {module:api/CreateCSRApi~createCSRCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DC201}
+     * data is of type: {@link module:model/DC200}
      */
     createCSR(createCSRRequest, callback) {
       let postBody = createCSRRequest;
@@ -70,7 +70,7 @@ export default class CreateCSRApi {
       let authNames = ['tokenAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json; version=3'];
-      let returnType = DC201;
+      let returnType = DC200;
       return this.apiClient.callApi(
         '/digital_certificates/csr', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## createCSR
 
-> DC201 createCSR(createCSRRequest)
+> DC200 createCSR(createCSRRequest)
 
 Create an encrypted Certificate Request with Azion, which can then be sent for signing to a CA
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DC201**](DC201.md)
+[**DC200**](DC200.md)
 
 ### Authorization
 

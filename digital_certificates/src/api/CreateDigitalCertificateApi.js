@@ -14,7 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import CreateCertificateRequest from '../model/CreateCertificateRequest';
-import DC201 from '../model/DC201';
+import DC200 from '../model/DC200';
 import DC400 from '../model/DC400';
 import DC403 from '../model/DC403';
 
@@ -41,7 +41,7 @@ export default class CreateDigitalCertificateApi {
      * Callback function to receive the result of the createCertificate operation.
      * @callback module:api/CreateDigitalCertificateApi~createCertificateCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/DC201} data The data returned by the service call.
+     * @param {module:model/DC200} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -49,7 +49,7 @@ export default class CreateDigitalCertificateApi {
      * Create a new digital certificate
      * @param {module:model/CreateCertificateRequest} createCertificateRequest 
      * @param {module:api/CreateDigitalCertificateApi~createCertificateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DC201}
+     * data is of type: {@link module:model/DC200}
      */
     createCertificate(createCertificateRequest, callback) {
       let postBody = createCertificateRequest;
@@ -70,7 +70,7 @@ export default class CreateDigitalCertificateApi {
       let authNames = ['tokenAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json; version=3'];
-      let returnType = DC201;
+      let returnType = DC200;
       return this.apiClient.callApi(
         '/digital_certificates', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

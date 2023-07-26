@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## createCertificate
 
-> DC201 createCertificate(createCertificateRequest)
+> DC200 createCertificate(createCertificateRequest)
 
 Create a new digital certificate
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DC201**](DC201.md)
+[**DC200**](DC200.md)
 
 ### Authorization
 
