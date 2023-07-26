@@ -34,7 +34,7 @@ class ApplicationCacheResults {
      * @param cacheByCookies {String} 
      * @param cookieNames {Array.<String>} 
      * @param adaptiveDeliveryAction {String} 
-     * @param deviceGroup {Array.<String>} 
+     * @param deviceGroup {Array.<Number>} 
      * @param enableCachingForPost {Boolean} 
      * @param l2CachingEnabled {Boolean} 
      * @param enableCachingForOptions {Boolean} 
@@ -120,7 +120,7 @@ class ApplicationCacheResults {
                 obj['adaptive_delivery_action'] = ApiClient.convertToType(data['adaptive_delivery_action'], 'String');
             }
             if (data.hasOwnProperty('device_group')) {
-                obj['device_group'] = ApiClient.convertToType(data['device_group'], ['String']);
+                obj['device_group'] = ApiClient.convertToType(data['device_group'], ['Number']);
             }
             if (data.hasOwnProperty('enable_caching_for_post')) {
                 obj['enable_caching_for_post'] = ApiClient.convertToType(data['enable_caching_for_post'], 'Boolean');
@@ -138,7 +138,7 @@ class ApplicationCacheResults {
                 obj['is_slice_l2_caching_enabled'] = ApiClient.convertToType(data['is_slice_l2_caching_enabled'], 'Boolean');
             }
             if (data.hasOwnProperty('slice_configuration_range')) {
-                obj['slice_configuration_range'] = ApiClient.convertToType(data['slice_configuration_range'], 'Boolean');
+                obj['slice_configuration_range'] = ApiClient.convertToType(data['slice_configuration_range'], 'Number');
             }
             if (data.hasOwnProperty('enable_caching_for_options')) {
                 obj['enable_caching_for_options'] = ApiClient.convertToType(data['enable_caching_for_options'], 'Boolean');
@@ -275,7 +275,7 @@ ApplicationCacheResults.prototype['cookie_names'] = undefined;
 ApplicationCacheResults.prototype['adaptive_delivery_action'] = undefined;
 
 /**
- * @member {Array.<String>} device_group
+ * @member {Array.<Number>} device_group
  */
 ApplicationCacheResults.prototype['device_group'] = undefined;
 
@@ -305,7 +305,7 @@ ApplicationCacheResults.prototype['is_slice_edge_caching_enabled'] = undefined;
 ApplicationCacheResults.prototype['is_slice_l2_caching_enabled'] = undefined;
 
 /**
- * @member {Boolean} slice_configuration_range
+ * @member {Number} slice_configuration_range
  */
 ApplicationCacheResults.prototype['slice_configuration_range'] = undefined;
 

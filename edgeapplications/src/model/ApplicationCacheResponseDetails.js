@@ -110,7 +110,7 @@ class ApplicationCacheResponseDetails {
                 obj['adaptive_delivery_action'] = ApiClient.convertToType(data['adaptive_delivery_action'], 'String');
             }
             if (data.hasOwnProperty('device_group')) {
-                obj['device_group'] = ApiClient.convertToType(data['device_group'], ['String']);
+                obj['device_group'] = ApiClient.convertToType(data['device_group'], ['Number']);
             }
             if (data.hasOwnProperty('enable_caching_for_post')) {
                 obj['enable_caching_for_post'] = ApiClient.convertToType(data['enable_caching_for_post'], 'Boolean');
@@ -243,7 +243,7 @@ ApplicationCacheResponseDetails.prototype['cookie_names'] = undefined;
 ApplicationCacheResponseDetails.prototype['adaptive_delivery_action'] = undefined;
 
 /**
- * @member {Array.<String>} device_group
+ * @member {Array.<Number>} device_group
  */
 ApplicationCacheResponseDetails.prototype['device_group'] = undefined;
 
