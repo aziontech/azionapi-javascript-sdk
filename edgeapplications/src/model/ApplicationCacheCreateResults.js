@@ -34,7 +34,7 @@ class ApplicationCacheCreateResults {
      * @param cacheByCookies {String} 
      * @param cookieNames {Array.<String>} 
      * @param adaptiveDeliveryAction {String} 
-     * @param deviceGroup {Array.<String>} 
+     * @param deviceGroup {Array.<Number>} 
      * @param enableCachingForPost {Boolean} 
      * @param l2CachingEnabled {Boolean} 
      */
@@ -114,7 +114,7 @@ class ApplicationCacheCreateResults {
                 obj['adaptive_delivery_action'] = ApiClient.convertToType(data['adaptive_delivery_action'], 'String');
             }
             if (data.hasOwnProperty('device_group')) {
-                obj['device_group'] = ApiClient.convertToType(data['device_group'], ['String']);
+                obj['device_group'] = ApiClient.convertToType(data['device_group'], ['Number']);
             }
             if (data.hasOwnProperty('enable_caching_for_post')) {
                 obj['enable_caching_for_post'] = ApiClient.convertToType(data['enable_caching_for_post'], 'Boolean');
@@ -269,7 +269,7 @@ ApplicationCacheCreateResults.prototype['cookie_names'] = undefined;
 ApplicationCacheCreateResults.prototype['adaptive_delivery_action'] = undefined;
 
 /**
- * @member {Array.<String>} device_group
+ * @member {Array.<Number>} device_group
  */
 ApplicationCacheCreateResults.prototype['device_group'] = undefined;
 
