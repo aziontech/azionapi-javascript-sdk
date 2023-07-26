@@ -142,7 +142,6 @@ Class | Method | HTTP request | Description
  - [DigitalCertificatesApi.DC200](docs/DC200.md)
  - [DigitalCertificatesApi.DC200List](docs/DC200List.md)
  - [DigitalCertificatesApi.DC200ListLinks](docs/DC200ListLinks.md)
- - [DigitalCertificatesApi.DC201](docs/DC201.md)
  - [DigitalCertificatesApi.DC400](docs/DC400.md)
  - [DigitalCertificatesApi.DC401](docs/DC401.md)
  - [DigitalCertificatesApi.DC403](docs/DC403.md)

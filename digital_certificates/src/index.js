@@ -18,7 +18,6 @@ import CreateCertificateRequest from './model/CreateCertificateRequest';
 import DC200 from './model/DC200';
 import DC200List from './model/DC200List';
 import DC200ListLinks from './model/DC200ListLinks';
-import DC201 from './model/DC201';
 import DC400 from './model/DC400';
 import DC401 from './model/DC401';
 import DC403 from './model/DC403';
@@ -104,12 +103,6 @@ export {
      * @property {module:model/DC200ListLinks}
      */
     DC200ListLinks,
-
-    /**
-     * The DC201 model constructor.
-     * @property {module:model/DC201}
-     */
-    DC201,
 
     /**
      * The DC400 model constructor.

@@ -51,8 +51,8 @@ class DC200 {
             if (data.hasOwnProperty('schema_version')) {
                 obj['schema_version'] = ApiClient.convertToType(data['schema_version'], 'Number');
             }
-            if (data.hasOwnProperty('result')) {
-                obj['result'] = SingleResult.constructFromObject(data['result']);
+            if (data.hasOwnProperty('results')) {
+                obj['results'] = SingleResult.constructFromObject(data['results']);
             }
         }
         return obj;
@@ -64,9 +64,9 @@ class DC200 {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DC200</code>.
      */
     static validateJSON(data) {
-        // validate the optional field `result`
-        if (data['result']) { // data not null
-          SingleResult.validateJSON(data['result']);
+        // validate the optional field `results`
+        if (data['results']) { // data not null
+          SingleResult.validateJSON(data['results']);
         }
 
         return true;
@@ -83,9 +83,9 @@ class DC200 {
 DC200.prototype['schema_version'] = undefined;
 
 /**
- * @member {module:model/SingleResult} result
+ * @member {module:model/SingleResult} results
  */
-DC200.prototype['result'] = undefined;
+DC200.prototype['results'] = undefined;
 
 
 
