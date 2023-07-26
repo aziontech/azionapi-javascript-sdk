@@ -121,6 +121,24 @@ class ApplicationCacheResponseDetails {
             if (data.hasOwnProperty('l2_caching_enabled')) {
                 obj['l2_caching_enabled'] = ApiClient.convertToType(data['l2_caching_enabled'], 'Boolean');
             }
+            if (data.hasOwnProperty('is_slice_configuration_enabled')) {
+                obj['is_slice_configuration_enabled'] = ApiClient.convertToType(data['is_slice_configuration_enabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('is_slice_edge_caching_enabled')) {
+                obj['is_slice_edge_caching_enabled'] = ApiClient.convertToType(data['is_slice_edge_caching_enabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('is_slice_l2_caching_enabled')) {
+                obj['is_slice_l2_caching_enabled'] = ApiClient.convertToType(data['is_slice_l2_caching_enabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('slice_configuration_range')) {
+                obj['slice_configuration_range'] = ApiClient.convertToType(data['slice_configuration_range'], 'Number');
+            }
+            if (data.hasOwnProperty('enable_stale_cache')) {
+                obj['enable_stale_cache'] = ApiClient.convertToType(data['enable_stale_cache'], 'Boolean');
+            }
+            if (data.hasOwnProperty('l2_region')) {
+                obj['l2_region'] = ApiClient.convertToType(data['l2_region'], 'String');
+            }
         }
         return obj;
     }
@@ -172,6 +190,10 @@ class ApplicationCacheResponseDetails {
         // ensure the json data is an array
         if (!Array.isArray(data['device_group'])) {
             throw new Error("Expected the field `device_group` to be an array in the JSON data but got " + data['device_group']);
+        }
+        // ensure the json data is a string
+        if (data['l2_region'] && !(typeof data['l2_region'] === 'string' || data['l2_region'] instanceof String)) {
+            throw new Error("Expected the field `l2_region` to be a primitive type in the JSON string but got " + data['l2_region']);
         }
 
         return true;
@@ -261,6 +283,36 @@ ApplicationCacheResponseDetails.prototype['enable_caching_for_options'] = undefi
  * @member {Boolean} l2_caching_enabled
  */
 ApplicationCacheResponseDetails.prototype['l2_caching_enabled'] = undefined;
+
+/**
+ * @member {Boolean} is_slice_configuration_enabled
+ */
+ApplicationCacheResponseDetails.prototype['is_slice_configuration_enabled'] = undefined;
+
+/**
+ * @member {Boolean} is_slice_edge_caching_enabled
+ */
+ApplicationCacheResponseDetails.prototype['is_slice_edge_caching_enabled'] = undefined;
+
+/**
+ * @member {Boolean} is_slice_l2_caching_enabled
+ */
+ApplicationCacheResponseDetails.prototype['is_slice_l2_caching_enabled'] = undefined;
+
+/**
+ * @member {Number} slice_configuration_range
+ */
+ApplicationCacheResponseDetails.prototype['slice_configuration_range'] = undefined;
+
+/**
+ * @member {Boolean} enable_stale_cache
+ */
+ApplicationCacheResponseDetails.prototype['enable_stale_cache'] = undefined;
+
+/**
+ * @member {String} l2_region
+ */
+ApplicationCacheResponseDetails.prototype['l2_region'] = undefined;
 
 
 
