@@ -57,6 +57,8 @@ docs/PatchDeviceGroupsRequest.md
 docs/PatchOriginsRequest.md
 docs/PatchRulesEngineRequest.md
 docs/RulesEngineBehavior.md
+docs/RulesEngineBehaviorTarget.md
+docs/RulesEngineBehaviorTargetOneOf.md
 docs/RulesEngineCriteria.md
 docs/RulesEngineIdResponse.md
 docs/RulesEngineResponse.md
@@ -125,6 +127,8 @@ src/model/PatchDeviceGroupsRequest.js
 src/model/PatchOriginsRequest.js
 src/model/PatchRulesEngineRequest.js
 src/model/RulesEngineBehavior.js
+src/model/RulesEngineBehaviorTarget.js
+src/model/RulesEngineBehaviorTargetOneOf.js
 src/model/RulesEngineCriteria.js
 src/model/RulesEngineIdResponse.js
 src/model/RulesEngineResponse.js
@@ -133,3 +137,5 @@ src/model/RulesEngineResultResponseBehaviors.js
 src/model/UpdateDeviceGroupsRequest.js
 src/model/UpdateOriginsRequest.js
 src/model/UpdateRulesEngineRequest.js
+test/model/RulesEngineBehaviorTarget.spec.js
+test/model/RulesEngineBehaviorTargetOneOf.spec.js
