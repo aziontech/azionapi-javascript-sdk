@@ -220,6 +220,8 @@ Class | Method | HTTP request | Description
  - [EdgeApplicationApi.PatchOriginsRequest](docs/PatchOriginsRequest.md)
  - [EdgeApplicationApi.PatchRulesEngineRequest](docs/PatchRulesEngineRequest.md)
  - [EdgeApplicationApi.RulesEngineBehavior](docs/RulesEngineBehavior.md)
+ - [EdgeApplicationApi.RulesEngineBehaviorTarget](docs/RulesEngineBehaviorTarget.md)
+ - [EdgeApplicationApi.RulesEngineBehaviorTargetOneOf](docs/RulesEngineBehaviorTargetOneOf.md)
  - [EdgeApplicationApi.RulesEngineCriteria](docs/RulesEngineCriteria.md)
  - [EdgeApplicationApi.RulesEngineIdResponse](docs/RulesEngineIdResponse.md)
  - [EdgeApplicationApi.RulesEngineResponse](docs/RulesEngineResponse.md)

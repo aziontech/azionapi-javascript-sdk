@@ -62,6 +62,8 @@ import PatchDeviceGroupsRequest from './model/PatchDeviceGroupsRequest';
 import PatchOriginsRequest from './model/PatchOriginsRequest';
 import PatchRulesEngineRequest from './model/PatchRulesEngineRequest';
 import RulesEngineBehavior from './model/RulesEngineBehavior';
+import RulesEngineBehaviorTarget from './model/RulesEngineBehaviorTarget';
+import RulesEngineBehaviorTargetOneOf from './model/RulesEngineBehaviorTargetOneOf';
 import RulesEngineCriteria from './model/RulesEngineCriteria';
 import RulesEngineIdResponse from './model/RulesEngineIdResponse';
 import RulesEngineResponse from './model/RulesEngineResponse';
@@ -409,6 +411,18 @@ export {
      * @property {module:model/RulesEngineBehavior}
      */
     RulesEngineBehavior,
+
+    /**
+     * The RulesEngineBehaviorTarget model constructor.
+     * @property {module:model/RulesEngineBehaviorTarget}
+     */
+    RulesEngineBehaviorTarget,
+
+    /**
+     * The RulesEngineBehaviorTargetOneOf model constructor.
+     * @property {module:model/RulesEngineBehaviorTargetOneOf}
+     */
+    RulesEngineBehaviorTargetOneOf,
 
     /**
      * The RulesEngineCriteria model constructor.
