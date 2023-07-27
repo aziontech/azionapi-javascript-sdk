@@ -79,11 +79,38 @@ class ApplicationCacheCreateRequest {
             if (data.hasOwnProperty('cookie_names')) {
                 obj['cookie_names'] = ApiClient.convertToType(data['cookie_names'], ['String']);
             }
-            if (data.hasOwnProperty('user_email')) {
-                obj['user_email'] = ApiClient.convertToType(data['user_email'], 'String');
+            if (data.hasOwnProperty('adaptive_delivery_action')) {
+                obj['adaptive_delivery_action'] = ApiClient.convertToType(data['adaptive_delivery_action'], 'String');
+            }
+            if (data.hasOwnProperty('device_group')) {
+                obj['device_group'] = ApiClient.convertToType(data['device_group'], ['Number']);
+            }
+            if (data.hasOwnProperty('enable_caching_for_post')) {
+                obj['enable_caching_for_post'] = ApiClient.convertToType(data['enable_caching_for_post'], 'Boolean');
             }
             if (data.hasOwnProperty('l2_caching_enabled')) {
                 obj['l2_caching_enabled'] = ApiClient.convertToType(data['l2_caching_enabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('is_slice_configuration_enabled')) {
+                obj['is_slice_configuration_enabled'] = ApiClient.convertToType(data['is_slice_configuration_enabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('is_slice_edge_caching_enabled')) {
+                obj['is_slice_edge_caching_enabled'] = ApiClient.convertToType(data['is_slice_edge_caching_enabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('is_slice_l2_caching_enabled')) {
+                obj['is_slice_l2_caching_enabled'] = ApiClient.convertToType(data['is_slice_l2_caching_enabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('slice_configuration_range')) {
+                obj['slice_configuration_range'] = ApiClient.convertToType(data['slice_configuration_range'], 'Number');
+            }
+            if (data.hasOwnProperty('enable_caching_for_options')) {
+                obj['enable_caching_for_options'] = ApiClient.convertToType(data['enable_caching_for_options'], 'Boolean');
+            }
+            if (data.hasOwnProperty('enable_stale_cache')) {
+                obj['enable_stale_cache'] = ApiClient.convertToType(data['enable_stale_cache'], 'Boolean');
+            }
+            if (data.hasOwnProperty('l2_region')) {
+                obj['l2_region'] = ApiClient.convertToType(data['l2_region'], 'String');
             }
         }
         return obj;
@@ -130,8 +157,16 @@ class ApplicationCacheCreateRequest {
             throw new Error("Expected the field `cookie_names` to be an array in the JSON data but got " + data['cookie_names']);
         }
         // ensure the json data is a string
-        if (data['user_email'] && !(typeof data['user_email'] === 'string' || data['user_email'] instanceof String)) {
-            throw new Error("Expected the field `user_email` to be a primitive type in the JSON string but got " + data['user_email']);
+        if (data['adaptive_delivery_action'] && !(typeof data['adaptive_delivery_action'] === 'string' || data['adaptive_delivery_action'] instanceof String)) {
+            throw new Error("Expected the field `adaptive_delivery_action` to be a primitive type in the JSON string but got " + data['adaptive_delivery_action']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['device_group'])) {
+            throw new Error("Expected the field `device_group` to be an array in the JSON data but got " + data['device_group']);
+        }
+        // ensure the json data is a string
+        if (data['l2_region'] && !(typeof data['l2_region'] === 'string' || data['l2_region'] instanceof String)) {
+            throw new Error("Expected the field `l2_region` to be a primitive type in the JSON string but got " + data['l2_region']);
         }
 
         return true;
@@ -193,14 +228,59 @@ ApplicationCacheCreateRequest.prototype['cache_by_cookies'] = undefined;
 ApplicationCacheCreateRequest.prototype['cookie_names'] = undefined;
 
 /**
- * @member {String} user_email
+ * @member {String} adaptive_delivery_action
  */
-ApplicationCacheCreateRequest.prototype['user_email'] = undefined;
+ApplicationCacheCreateRequest.prototype['adaptive_delivery_action'] = undefined;
+
+/**
+ * @member {Array.<Number>} device_group
+ */
+ApplicationCacheCreateRequest.prototype['device_group'] = undefined;
+
+/**
+ * @member {Boolean} enable_caching_for_post
+ */
+ApplicationCacheCreateRequest.prototype['enable_caching_for_post'] = undefined;
 
 /**
  * @member {Boolean} l2_caching_enabled
  */
 ApplicationCacheCreateRequest.prototype['l2_caching_enabled'] = undefined;
+
+/**
+ * @member {Boolean} is_slice_configuration_enabled
+ */
+ApplicationCacheCreateRequest.prototype['is_slice_configuration_enabled'] = undefined;
+
+/**
+ * @member {Boolean} is_slice_edge_caching_enabled
+ */
+ApplicationCacheCreateRequest.prototype['is_slice_edge_caching_enabled'] = undefined;
+
+/**
+ * @member {Boolean} is_slice_l2_caching_enabled
+ */
+ApplicationCacheCreateRequest.prototype['is_slice_l2_caching_enabled'] = undefined;
+
+/**
+ * @member {Number} slice_configuration_range
+ */
+ApplicationCacheCreateRequest.prototype['slice_configuration_range'] = undefined;
+
+/**
+ * @member {Boolean} enable_caching_for_options
+ */
+ApplicationCacheCreateRequest.prototype['enable_caching_for_options'] = undefined;
+
+/**
+ * @member {Boolean} enable_stale_cache
+ */
+ApplicationCacheCreateRequest.prototype['enable_stale_cache'] = undefined;
+
+/**
+ * @member {String} l2_region
+ */
+ApplicationCacheCreateRequest.prototype['l2_region'] = undefined;
 
 
 

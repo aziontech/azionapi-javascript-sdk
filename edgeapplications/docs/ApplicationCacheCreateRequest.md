@@ -14,7 +14,16 @@ Name | Type | Description | Notes
 **enableQueryStringSort** | **Boolean** |  | [optional] 
 **cacheByCookies** | **String** |  | [optional] 
 **cookieNames** | **[String]** |  | [optional] 
-**userEmail** | **String** |  | [optional] 
+**adaptiveDeliveryAction** | **String** |  | [optional] 
+**deviceGroup** | **[Number]** |  | [optional] 
+**enableCachingForPost** | **Boolean** |  | [optional] 
 **l2CachingEnabled** | **Boolean** |  | [optional] 
+**isSliceConfigurationEnabled** | **Boolean** |  | [optional] 
+**isSliceEdgeCachingEnabled** | **Boolean** |  | [optional] 
+**isSliceL2CachingEnabled** | **Boolean** |  | [optional] 
+**sliceConfigurationRange** | **Number** |  | [optional] 
+**enableCachingForOptions** | **Boolean** |  | [optional] 
+**enableStaleCache** | **Boolean** |  | [optional] 
+**l2Region** | **String** |  | [optional] 
 
 
