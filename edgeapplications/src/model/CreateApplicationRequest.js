@@ -100,6 +100,9 @@ class CreateApplicationRequest {
             if (data.hasOwnProperty('http3')) {
                 obj['http3'] = ApiClient.convertToType(data['http3'], 'Boolean');
             }
+            if (data.hasOwnProperty('minimum_tls_version')) {
+                obj['minimum_tls_version'] = ApiClient.convertToType(data['minimum_tls_version'], 'String');
+            }
         }
         return obj;
     }
@@ -151,6 +154,10 @@ class CreateApplicationRequest {
         // ensure the json data is a string
         if (data['supported_ciphers'] && !(typeof data['supported_ciphers'] === 'string' || data['supported_ciphers'] instanceof String)) {
             throw new Error("Expected the field `supported_ciphers` to be a primitive type in the JSON string but got " + data['supported_ciphers']);
+        }
+        // ensure the json data is a string
+        if (data['minimum_tls_version'] && !(typeof data['minimum_tls_version'] === 'string' || data['minimum_tls_version'] instanceof String)) {
+            throw new Error("Expected the field `minimum_tls_version` to be a primitive type in the JSON string but got " + data['minimum_tls_version']);
         }
 
         return true;
@@ -245,6 +252,11 @@ CreateApplicationRequest.prototype['l2_caching'] = undefined;
  * @member {Boolean} http3
  */
 CreateApplicationRequest.prototype['http3'] = undefined;
+
+/**
+ * @member {String} minimum_tls_version
+ */
+CreateApplicationRequest.prototype['minimum_tls_version'] = undefined;
 
 
 

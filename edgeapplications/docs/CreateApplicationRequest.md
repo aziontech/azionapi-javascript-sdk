@@ -21,5 +21,6 @@ Name | Type | Description | Notes
 **httpsPort** | **Object** |  | [optional] 
 **l2Caching** | **Boolean** |  | [optional] 
 **http3** | **Boolean** |  | [optional] 
+**minimumTlsVersion** | **String** |  | [optional] 
 
 
