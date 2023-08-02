@@ -20,5 +20,8 @@ Name | Type | Description | Notes
 **loadBalancer** | **Boolean** |  | [optional] 
 **rawLogs** | **Boolean** |  | [optional] 
 **webApplicationFirewall** | **Boolean** |  | [optional] 
+**debugRules** | **Boolean** |  | [optional] 
+**http3** | **Boolean** |  | [optional] 
+**supportedCiphers** | **String** |  | [optional] 
 
 

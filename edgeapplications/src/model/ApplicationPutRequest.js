@@ -97,6 +97,15 @@ class ApplicationPutRequest {
             if (data.hasOwnProperty('web_application_firewall')) {
                 obj['web_application_firewall'] = ApiClient.convertToType(data['web_application_firewall'], 'Boolean');
             }
+            if (data.hasOwnProperty('debug_rules')) {
+                obj['debug_rules'] = ApiClient.convertToType(data['debug_rules'], 'Boolean');
+            }
+            if (data.hasOwnProperty('http3')) {
+                obj['http3'] = ApiClient.convertToType(data['http3'], 'Boolean');
+            }
+            if (data.hasOwnProperty('supported_ciphers')) {
+                obj['supported_ciphers'] = ApiClient.convertToType(data['supported_ciphers'], 'String');
+            }
         }
         return obj;
     }
@@ -124,6 +133,10 @@ class ApplicationPutRequest {
         // ensure the json data is a string
         if (data['minimum_tls_version'] && !(typeof data['minimum_tls_version'] === 'string' || data['minimum_tls_version'] instanceof String)) {
             throw new Error("Expected the field `minimum_tls_version` to be a primitive type in the JSON string but got " + data['minimum_tls_version']);
+        }
+        // ensure the json data is a string
+        if (data['supported_ciphers'] && !(typeof data['supported_ciphers'] === 'string' || data['supported_ciphers'] instanceof String)) {
+            throw new Error("Expected the field `supported_ciphers` to be a primitive type in the JSON string but got " + data['supported_ciphers']);
         }
 
         return true;
@@ -213,6 +226,21 @@ ApplicationPutRequest.prototype['raw_logs'] = undefined;
  * @member {Boolean} web_application_firewall
  */
 ApplicationPutRequest.prototype['web_application_firewall'] = undefined;
+
+/**
+ * @member {Boolean} debug_rules
+ */
+ApplicationPutRequest.prototype['debug_rules'] = undefined;
+
+/**
+ * @member {Boolean} http3
+ */
+ApplicationPutRequest.prototype['http3'] = undefined;
+
+/**
+ * @member {String} supported_ciphers
+ */
+ApplicationPutRequest.prototype['supported_ciphers'] = undefined;
 
 
 
