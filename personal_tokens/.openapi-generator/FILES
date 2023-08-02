@@ -1,6 +1,5 @@
 .babelrc
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 docs/CreatePersonalTokenRequest.md
@@ -20,9 +19,3 @@ src/model/CreatePersonalTokenResponse.js
 src/model/PersonalTokenResponseGet.js
 src/model/PersonalTokenResponseWithResults.js
 src/model/PersonalTokenResponseWithResultsLinks.js
-test/api/PersonalTokenApi.spec.js
-test/model/CreatePersonalTokenRequest.spec.js
-test/model/CreatePersonalTokenResponse.spec.js
-test/model/PersonalTokenResponseGet.spec.js
-test/model/PersonalTokenResponseWithResults.spec.js
-test/model/PersonalTokenResponseWithResultsLinks.spec.js
