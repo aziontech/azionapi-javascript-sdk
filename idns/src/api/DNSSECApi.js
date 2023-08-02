@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import DnsSec from '../model/DnsSec';
+import ErrorResponse from '../model/ErrorResponse';
 import ErrorsResponse from '../model/ErrorsResponse';
 import GetOrPatchDnsSecResponse from '../model/GetOrPatchDnsSecResponse';
 
