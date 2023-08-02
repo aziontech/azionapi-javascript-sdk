@@ -142,6 +142,9 @@ class ApplicationResultsCreate {
             if (data.hasOwnProperty('web_application_firewall')) {
                 obj['web_application_firewall'] = ApiClient.convertToType(data['web_application_firewall'], 'Boolean');
             }
+            if (data.hasOwnProperty('l2_caching')) {
+                obj['l2_caching'] = ApiClient.convertToType(data['l2_caching'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -277,6 +280,11 @@ ApplicationResultsCreate.prototype['raw_logs'] = undefined;
  * @member {Boolean} web_application_firewall
  */
 ApplicationResultsCreate.prototype['web_application_firewall'] = undefined;
+
+/**
+ * @member {Boolean} l2_caching
+ */
+ApplicationResultsCreate.prototype['l2_caching'] = undefined;
 
 
 

@@ -82,6 +82,24 @@ class CreateApplicationRequest {
             if (data.hasOwnProperty('cdn_cache_settings_maximum_ttl')) {
                 obj['cdn_cache_settings_maximum_ttl'] = ApiClient.convertToType(data['cdn_cache_settings_maximum_ttl'], 'Number');
             }
+            if (data.hasOwnProperty('debug_rules')) {
+                obj['debug_rules'] = ApiClient.convertToType(data['debug_rules'], 'Boolean');
+            }
+            if (data.hasOwnProperty('supported_ciphers')) {
+                obj['supported_ciphers'] = ApiClient.convertToType(data['supported_ciphers'], 'String');
+            }
+            if (data.hasOwnProperty('http_port')) {
+                obj['http_port'] = ApiClient.convertToType(data['http_port'], Object);
+            }
+            if (data.hasOwnProperty('https_port')) {
+                obj['https_port'] = ApiClient.convertToType(data['https_port'], Object);
+            }
+            if (data.hasOwnProperty('l2_caching')) {
+                obj['l2_caching'] = ApiClient.convertToType(data['l2_caching'], 'Boolean');
+            }
+            if (data.hasOwnProperty('http3')) {
+                obj['http3'] = ApiClient.convertToType(data['http3'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -129,6 +147,10 @@ class CreateApplicationRequest {
         // ensure the json data is a string
         if (data['cdn_cache_settings'] && !(typeof data['cdn_cache_settings'] === 'string' || data['cdn_cache_settings'] instanceof String)) {
             throw new Error("Expected the field `cdn_cache_settings` to be a primitive type in the JSON string but got " + data['cdn_cache_settings']);
+        }
+        // ensure the json data is a string
+        if (data['supported_ciphers'] && !(typeof data['supported_ciphers'] === 'string' || data['supported_ciphers'] instanceof String)) {
+            throw new Error("Expected the field `supported_ciphers` to be a primitive type in the JSON string but got " + data['supported_ciphers']);
         }
 
         return true;
@@ -193,6 +215,36 @@ CreateApplicationRequest.prototype['browser_cache_settings_maximum_ttl'] = undef
  * @member {Number} cdn_cache_settings_maximum_ttl
  */
 CreateApplicationRequest.prototype['cdn_cache_settings_maximum_ttl'] = undefined;
+
+/**
+ * @member {Boolean} debug_rules
+ */
+CreateApplicationRequest.prototype['debug_rules'] = undefined;
+
+/**
+ * @member {String} supported_ciphers
+ */
+CreateApplicationRequest.prototype['supported_ciphers'] = undefined;
+
+/**
+ * @member {Object} http_port
+ */
+CreateApplicationRequest.prototype['http_port'] = undefined;
+
+/**
+ * @member {Object} https_port
+ */
+CreateApplicationRequest.prototype['https_port'] = undefined;
+
+/**
+ * @member {Boolean} l2_caching
+ */
+CreateApplicationRequest.prototype['l2_caching'] = undefined;
+
+/**
+ * @member {Boolean} http3
+ */
+CreateApplicationRequest.prototype['http3'] = undefined;
 
 
 
