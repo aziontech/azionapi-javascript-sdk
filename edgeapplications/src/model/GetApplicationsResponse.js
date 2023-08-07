@@ -74,6 +74,12 @@ class GetApplicationsResponse {
             if (data.hasOwnProperty('results')) {
                 obj['results'] = ApiClient.convertToType(data['results'], [ApplicationsResults]);
             }
+            if (data.hasOwnProperty('next')) {
+                obj['next'] = ApiClient.convertToType(data['next'], 'String');
+            }
+            if (data.hasOwnProperty('previous')) {
+                obj['previous'] = ApiClient.convertToType(data['previous'], 'String');
+            }
         }
         return obj;
     }
@@ -103,6 +109,14 @@ class GetApplicationsResponse {
             for (const item of data['results']) {
                 ApplicationsResults.validateJSON(item);
             };
+        }
+        // ensure the json data is a string
+        if (data['next'] && !(typeof data['next'] === 'string' || data['next'] instanceof String)) {
+            throw new Error("Expected the field `next` to be a primitive type in the JSON string but got " + data['next']);
+        }
+        // ensure the json data is a string
+        if (data['previous'] && !(typeof data['previous'] === 'string' || data['previous'] instanceof String)) {
+            throw new Error("Expected the field `previous` to be a primitive type in the JSON string but got " + data['previous']);
         }
 
         return true;
@@ -137,6 +151,16 @@ GetApplicationsResponse.prototype['links'] = undefined;
  * @member {Array.<module:model/ApplicationsResults>} results
  */
 GetApplicationsResponse.prototype['results'] = undefined;
+
+/**
+ * @member {String} next
+ */
+GetApplicationsResponse.prototype['next'] = undefined;
+
+/**
+ * @member {String} previous
+ */
+GetApplicationsResponse.prototype['previous'] = undefined;
 
 
 

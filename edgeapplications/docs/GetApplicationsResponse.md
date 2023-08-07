@@ -9,5 +9,7 @@ Name | Type | Description | Notes
 **schemaVersion** | **Number** |  | 
 **links** | [**ApplicationLinks**](ApplicationLinks.md) |  | 
 **results** | [**[ApplicationsResults]**](ApplicationsResults.md) |  | 
+**next** | **String** |  | [optional] 
+**previous** | **String** |  | [optional] 
 
 
