@@ -18,9 +18,11 @@ import CreateNetworkListsRequest from './model/CreateNetworkListsRequest';
 import ErrorModel from './model/ErrorModel';
 import Links from './model/Links';
 import ListNetworkListsResponse from './model/ListNetworkListsResponse';
+import NetworkListResponseEntry from './model/NetworkListResponseEntry';
+import NetworkListUuidResponse from './model/NetworkListUuidResponse';
+import NetworkListUuidResponseEntry from './model/NetworkListUuidResponseEntry';
 import NetworkLists from './model/NetworkLists';
 import NetworkListsResponse from './model/NetworkListsResponse';
-import UpdateNetworkListsRequest from './model/UpdateNetworkListsRequest';
 import DefaultApi from './api/DefaultApi';
 
 
@@ -93,6 +95,24 @@ export {
     ListNetworkListsResponse,
 
     /**
+     * The NetworkListResponseEntry model constructor.
+     * @property {module:model/NetworkListResponseEntry}
+     */
+    NetworkListResponseEntry,
+
+    /**
+     * The NetworkListUuidResponse model constructor.
+     * @property {module:model/NetworkListUuidResponse}
+     */
+    NetworkListUuidResponse,
+
+    /**
+     * The NetworkListUuidResponseEntry model constructor.
+     * @property {module:model/NetworkListUuidResponseEntry}
+     */
+    NetworkListUuidResponseEntry,
+
+    /**
      * The NetworkLists model constructor.
      * @property {module:model/NetworkLists}
      */
@@ -103,12 +123,6 @@ export {
      * @property {module:model/NetworkListsResponse}
      */
     NetworkListsResponse,
-
-    /**
-     * The UpdateNetworkListsRequest model constructor.
-     * @property {module:model/UpdateNetworkListsRequest}
-     */
-    UpdateNetworkListsRequest,
 
     /**
     * The DefaultApi service constructor.

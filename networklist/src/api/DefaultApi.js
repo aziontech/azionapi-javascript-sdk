@@ -17,8 +17,8 @@ import BadRequestResponse from '../model/BadRequestResponse';
 import CreateNetworkListsRequest from '../model/CreateNetworkListsRequest';
 import ErrorModel from '../model/ErrorModel';
 import ListNetworkListsResponse from '../model/ListNetworkListsResponse';
+import NetworkListUuidResponse from '../model/NetworkListUuidResponse';
 import NetworkListsResponse from '../model/NetworkListsResponse';
-import UpdateNetworkListsRequest from '../model/UpdateNetworkListsRequest';
 
 /**
 * Default service.
@@ -51,6 +51,9 @@ export default class DefaultApi {
      * List all user Network Lists
      * @param {Object} opts Optional parameters
      * @param {Number} [page] 
+     * @param {Number} [pageSize] 
+     * @param {String} [sort] 
+     * @param {String} [orderBy] 
      * @param {module:api/DefaultApi~networkListsGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ListNetworkListsResponse}
      */
@@ -61,7 +64,10 @@ export default class DefaultApi {
       let pathParams = {
       };
       let queryParams = {
-        'page': opts['page']
+        'page': opts['page'],
+        'page_size': opts['pageSize'],
+        'sort': opts['sort'],
+        'order_by': opts['orderBy']
       };
       let headerParams = {
       };
@@ -83,7 +89,7 @@ export default class DefaultApi {
      * Callback function to receive the result of the networkListsPost operation.
      * @callback module:api/DefaultApi~networkListsPostCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/NetworkListsResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -91,6 +97,7 @@ export default class DefaultApi {
      * Create a Network Lists
      * @param {module:model/CreateNetworkListsRequest} createNetworkListsRequest 
      * @param {module:api/DefaultApi~networkListsPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/NetworkListsResponse}
      */
     networkListsPost(createNetworkListsRequest, callback) {
       let postBody = createNetworkListsRequest;
@@ -111,7 +118,7 @@ export default class DefaultApi {
       let authNames = ['tokenAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json', 'text/html'];
-      let returnType = null;
+      let returnType = NetworkListsResponse;
       return this.apiClient.callApi(
         '/network_lists', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -123,7 +130,7 @@ export default class DefaultApi {
      * Callback function to receive the result of the networkListsUuidGet operation.
      * @callback module:api/DefaultApi~networkListsUuidGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/NetworkListsResponse} data The data returned by the service call.
+     * @param {module:model/NetworkListUuidResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -131,7 +138,7 @@ export default class DefaultApi {
      * Retrieve a Network Lists set by uuid
      * @param {String} uuid 
      * @param {module:api/DefaultApi~networkListsUuidGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/NetworkListsResponse}
+     * data is of type: {@link module:model/NetworkListUuidResponse}
      */
     networkListsUuidGet(uuid, callback) {
       let postBody = null;
@@ -153,7 +160,7 @@ export default class DefaultApi {
       let authNames = ['tokenAuth'];
       let contentTypes = [];
       let accepts = ['application/json', 'text/html'];
-      let returnType = NetworkListsResponse;
+      let returnType = NetworkListUuidResponse;
       return this.apiClient.callApi(
         '/network_lists/{uuid}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -165,26 +172,26 @@ export default class DefaultApi {
      * Callback function to receive the result of the networkListsUuidPut operation.
      * @callback module:api/DefaultApi~networkListsUuidPutCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ListNetworkListsResponse} data The data returned by the service call.
+     * @param {module:model/NetworkListsResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Overwrite some Network Lists attributes
      * @param {String} uuid 
-     * @param {module:model/UpdateNetworkListsRequest} updateNetworkListsRequest 
+     * @param {module:model/CreateNetworkListsRequest} createNetworkListsRequest 
      * @param {module:api/DefaultApi~networkListsUuidPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ListNetworkListsResponse}
+     * data is of type: {@link module:model/NetworkListsResponse}
      */
-    networkListsUuidPut(uuid, updateNetworkListsRequest, callback) {
-      let postBody = updateNetworkListsRequest;
+    networkListsUuidPut(uuid, createNetworkListsRequest, callback) {
+      let postBody = createNetworkListsRequest;
       // verify the required parameter 'uuid' is set
       if (uuid === undefined || uuid === null) {
         throw new Error("Missing the required parameter 'uuid' when calling networkListsUuidPut");
       }
-      // verify the required parameter 'updateNetworkListsRequest' is set
-      if (updateNetworkListsRequest === undefined || updateNetworkListsRequest === null) {
-        throw new Error("Missing the required parameter 'updateNetworkListsRequest' when calling networkListsUuidPut");
+      // verify the required parameter 'createNetworkListsRequest' is set
+      if (createNetworkListsRequest === undefined || createNetworkListsRequest === null) {
+        throw new Error("Missing the required parameter 'createNetworkListsRequest' when calling networkListsUuidPut");
       }
 
       let pathParams = {
@@ -200,7 +207,7 @@ export default class DefaultApi {
       let authNames = ['tokenAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json', 'text/html'];
-      let returnType = ListNetworkListsResponse;
+      let returnType = NetworkListsResponse;
       return this.apiClient.callApi(
         '/network_lists/{uuid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,

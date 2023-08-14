@@ -1,4 +1,4 @@
-# NetworkListsApi.NetworkLists
+# NetworkListsApi.NetworkListResponseEntry
 
 ## Properties
 
@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **lastModified** | **String** |  | [optional] 
 **listType** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
-**countryList** | **[String]** |  | [optional] 
-**ipList** | **[String]** |  | [optional] 
+**itemsValues** | **[String]** |  | [optional] 
 
 

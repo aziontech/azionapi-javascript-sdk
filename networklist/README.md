@@ -109,7 +109,10 @@ tokenAuth.apiKey = "YOUR API KEY"
 
 var api = new NetworkListsApi.DefaultApi()
 var opts = {
-  'page': 56 // {Number} 
+  'page': 56, // {Number} 
+  'pageSize': 56, // {Number} 
+  'sort': "sort_example", // {String} 
+  'orderBy': "orderBy_example" // {String} 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -141,9 +144,11 @@ Class | Method | HTTP request | Description
  - [NetworkListsApi.ErrorModel](docs/ErrorModel.md)
  - [NetworkListsApi.Links](docs/Links.md)
  - [NetworkListsApi.ListNetworkListsResponse](docs/ListNetworkListsResponse.md)
+ - [NetworkListsApi.NetworkListResponseEntry](docs/NetworkListResponseEntry.md)
+ - [NetworkListsApi.NetworkListUuidResponse](docs/NetworkListUuidResponse.md)
+ - [NetworkListsApi.NetworkListUuidResponseEntry](docs/NetworkListUuidResponseEntry.md)
  - [NetworkListsApi.NetworkLists](docs/NetworkLists.md)
  - [NetworkListsApi.NetworkListsResponse](docs/NetworkListsResponse.md)
- - [NetworkListsApi.UpdateNetworkListsRequest](docs/UpdateNetworkListsRequest.md)
 
 
 ## Documentation for Authorization

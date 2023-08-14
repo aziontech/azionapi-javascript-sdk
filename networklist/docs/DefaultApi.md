@@ -30,7 +30,10 @@ tokenAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new NetworkListsApi.DefaultApi();
 let opts = {
-  'page': 56 // Number | 
+  'page': 56, // Number | 
+  'pageSize': 56, // Number | 
+  'sort': "sort_example", // String | 
+  'orderBy': "orderBy_example" // String | 
 };
 apiInstance.networkListsGet(opts, (error, data, response) => {
   if (error) {
@@ -47,6 +50,9 @@ apiInstance.networkListsGet(opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**|  | [optional] 
+ **pageSize** | **Number**|  | [optional] 
+ **sort** | **String**|  | [optional] 
+ **orderBy** | **String**|  | [optional] 
 
 ### Return type
 
@@ -64,7 +70,7 @@ Name | Type | Description  | Notes
 
 ## networkListsPost
 
-> networkListsPost(createNetworkListsRequest)
+> NetworkListsResponse networkListsPost(createNetworkListsRequest)
 
 Create a Network Lists
 
@@ -85,7 +91,7 @@ apiInstance.networkListsPost(createNetworkListsRequest, (error, data, response) 
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -99,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**NetworkListsResponse**](NetworkListsResponse.md)
 
 ### Authorization
 
@@ -113,7 +119,7 @@ null (empty response body)
 
 ## networkListsUuidGet
 
-> NetworkListsResponse networkListsUuidGet(uuid)
+> NetworkListUuidResponse networkListsUuidGet(uuid)
 
 Retrieve a Network Lists set by uuid
 
@@ -148,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NetworkListsResponse**](NetworkListsResponse.md)
+[**NetworkListUuidResponse**](NetworkListUuidResponse.md)
 
 ### Authorization
 
@@ -162,7 +168,7 @@ Name | Type | Description  | Notes
 
 ## networkListsUuidPut
 
-> ListNetworkListsResponse networkListsUuidPut(uuid, updateNetworkListsRequest)
+> NetworkListsResponse networkListsUuidPut(uuid, createNetworkListsRequest)
 
 Overwrite some Network Lists attributes
 
@@ -179,8 +185,8 @@ tokenAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new NetworkListsApi.DefaultApi();
 let uuid = "uuid_example"; // String | 
-let updateNetworkListsRequest = new NetworkListsApi.UpdateNetworkListsRequest(); // UpdateNetworkListsRequest | 
-apiInstance.networkListsUuidPut(uuid, updateNetworkListsRequest, (error, data, response) => {
+let createNetworkListsRequest = new NetworkListsApi.CreateNetworkListsRequest(); // CreateNetworkListsRequest | 
+apiInstance.networkListsUuidPut(uuid, createNetworkListsRequest, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -195,11 +201,11 @@ apiInstance.networkListsUuidPut(uuid, updateNetworkListsRequest, (error, data, r
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **String**|  | 
- **updateNetworkListsRequest** | [**UpdateNetworkListsRequest**](UpdateNetworkListsRequest.md)|  | 
+ **createNetworkListsRequest** | [**CreateNetworkListsRequest**](CreateNetworkListsRequest.md)|  | 
 
 ### Return type
 
-[**ListNetworkListsResponse**](ListNetworkListsResponse.md)
+[**NetworkListsResponse**](NetworkListsResponse.md)
 
 ### Authorization
 

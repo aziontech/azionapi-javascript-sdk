@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The NetworkLists model module.
- * @module model/NetworkLists
+ * The NetworkListUuidResponseEntry model module.
+ * @module model/NetworkListUuidResponseEntry
  * @version 1.0.0
  */
-class NetworkLists {
+class NetworkListUuidResponseEntry {
     /**
-     * Constructs a new <code>NetworkLists</code>.
-     * @alias module:model/NetworkLists
+     * Constructs a new <code>NetworkListUuidResponseEntry</code>.
+     * @alias module:model/NetworkListUuidResponseEntry
      */
     constructor() { 
         
-        NetworkLists.initialize(this);
+        NetworkListUuidResponseEntry.initialize(this);
     }
 
     /**
@@ -37,19 +37,16 @@ class NetworkLists {
     }
 
     /**
-     * Constructs a <code>NetworkLists</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>NetworkListUuidResponseEntry</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/NetworkLists} obj Optional instance to populate.
-     * @return {module:model/NetworkLists} The populated <code>NetworkLists</code> instance.
+     * @param {module:model/NetworkListUuidResponseEntry} obj Optional instance to populate.
+     * @return {module:model/NetworkListUuidResponseEntry} The populated <code>NetworkListUuidResponseEntry</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new NetworkLists();
+            obj = obj || new NetworkListUuidResponseEntry();
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
             if (data.hasOwnProperty('last_editor')) {
                 obj['last_editor'] = ApiClient.convertToType(data['last_editor'], 'String');
             }
@@ -62,20 +59,17 @@ class NetworkLists {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('country_list')) {
-                obj['country_list'] = ApiClient.convertToType(data['country_list'], ['String']);
-            }
-            if (data.hasOwnProperty('ip_list')) {
-                obj['ip_list'] = ApiClient.convertToType(data['ip_list'], ['String']);
+            if (data.hasOwnProperty('items_values')) {
+                obj['items_values'] = ApiClient.convertToType(data['items_values'], ['String']);
             }
         }
         return obj;
     }
 
     /**
-     * Validates the JSON data with respect to <code>NetworkLists</code>.
+     * Validates the JSON data with respect to <code>NetworkListUuidResponseEntry</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>NetworkLists</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>NetworkListUuidResponseEntry</code>.
      */
     static validateJSON(data) {
         // ensure the json data is a string
@@ -95,12 +89,8 @@ class NetworkLists {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
         }
         // ensure the json data is an array
-        if (!Array.isArray(data['country_list'])) {
-            throw new Error("Expected the field `country_list` to be an array in the JSON data but got " + data['country_list']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['ip_list'])) {
-            throw new Error("Expected the field `ip_list` to be an array in the JSON data but got " + data['ip_list']);
+        if (!Array.isArray(data['items_values'])) {
+            throw new Error("Expected the field `items_values` to be an array in the JSON data but got " + data['items_values']);
         }
 
         return true;
@@ -112,44 +102,34 @@ class NetworkLists {
 
 
 /**
- * @member {Number} id
- */
-NetworkLists.prototype['id'] = undefined;
-
-/**
  * @member {String} last_editor
  */
-NetworkLists.prototype['last_editor'] = undefined;
+NetworkListUuidResponseEntry.prototype['last_editor'] = undefined;
 
 /**
  * @member {String} last_modified
  */
-NetworkLists.prototype['last_modified'] = undefined;
+NetworkListUuidResponseEntry.prototype['last_modified'] = undefined;
 
 /**
  * @member {String} list_type
  */
-NetworkLists.prototype['list_type'] = undefined;
+NetworkListUuidResponseEntry.prototype['list_type'] = undefined;
 
 /**
  * @member {String} name
  */
-NetworkLists.prototype['name'] = undefined;
+NetworkListUuidResponseEntry.prototype['name'] = undefined;
 
 /**
- * @member {Array.<String>} country_list
+ * @member {Array.<String>} items_values
  */
-NetworkLists.prototype['country_list'] = undefined;
-
-/**
- * @member {Array.<String>} ip_list
- */
-NetworkLists.prototype['ip_list'] = undefined;
+NetworkListUuidResponseEntry.prototype['items_values'] = undefined;
 
 
 
 
 
 
-export default NetworkLists;
+export default NetworkListUuidResponseEntry;
 
