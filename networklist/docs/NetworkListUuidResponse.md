@@ -1,10 +1,10 @@
-# NetworkListsApi.NetworkListsResponse
+# NetworkListsApi.NetworkListUuidResponse
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**NetworkListResponseEntry**](NetworkListResponseEntry.md) |  | [optional] 
+**results** | [**NetworkListUuidResponseEntry**](NetworkListUuidResponseEntry.md) |  | [optional] 
 **schemaVersion** | **Number** |  | [optional] 
 
 

@@ -9,3 +9,16 @@ Name | Type | Description | Notes
 **listType** | **String** |  | [optional] 
 
 
+
+## Enum: ListTypeEnum
+
+
+* `ip_cidr` (value: `"ip_cidr"`)
+
+* `asn` (value: `"asn"`)
+
+* `countries` (value: `"countries"`)
+
+
+
+

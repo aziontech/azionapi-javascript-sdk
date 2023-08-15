@@ -98,12 +98,39 @@ CreateNetworkListsRequest.prototype['name'] = undefined;
 CreateNetworkListsRequest.prototype['items_values'] = undefined;
 
 /**
- * @member {String} list_type
+ * @member {module:model/CreateNetworkListsRequest.ListTypeEnum} list_type
  */
 CreateNetworkListsRequest.prototype['list_type'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>list_type</code> property.
+ * @enum {String}
+ * @readonly
+ */
+CreateNetworkListsRequest['ListTypeEnum'] = {
+
+    /**
+     * value: "ip_cidr"
+     * @const
+     */
+    "ip_cidr": "ip_cidr",
+
+    /**
+     * value: "asn"
+     * @const
+     */
+    "asn": "asn",
+
+    /**
+     * value: "countries"
+     * @const
+     */
+    "countries": "countries"
+};
 
 
 

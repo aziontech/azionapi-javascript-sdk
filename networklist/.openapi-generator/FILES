@@ -8,9 +8,11 @@ docs/DefaultApi.md
 docs/ErrorModel.md
 docs/Links.md
 docs/ListNetworkListsResponse.md
+docs/NetworkListResponseEntry.md
+docs/NetworkListUuidResponse.md
+docs/NetworkListUuidResponseEntry.md
 docs/NetworkLists.md
 docs/NetworkListsResponse.md
-docs/UpdateNetworkListsRequest.md
 git_push.sh
 mocha.opts
 package.json
@@ -22,6 +24,11 @@ src/model/CreateNetworkListsRequest.js
 src/model/ErrorModel.js
 src/model/Links.js
 src/model/ListNetworkListsResponse.js
+src/model/NetworkListResponseEntry.js
+src/model/NetworkListUuidResponse.js
+src/model/NetworkListUuidResponseEntry.js
 src/model/NetworkLists.js
 src/model/NetworkListsResponse.js
-src/model/UpdateNetworkListsRequest.js
+test/model/NetworkListResponseEntry.spec.js
+test/model/NetworkListUuidResponse.spec.js
+test/model/NetworkListUuidResponseEntry.spec.js

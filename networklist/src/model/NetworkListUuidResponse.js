@@ -12,21 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
-import NetworkListResponseEntry from './NetworkListResponseEntry';
+import NetworkListUuidResponseEntry from './NetworkListUuidResponseEntry';
 
 /**
- * The NetworkListsResponse model module.
- * @module model/NetworkListsResponse
+ * The NetworkListUuidResponse model module.
+ * @module model/NetworkListUuidResponse
  * @version 1.0.0
  */
-class NetworkListsResponse {
+class NetworkListUuidResponse {
     /**
-     * Constructs a new <code>NetworkListsResponse</code>.
-     * @alias module:model/NetworkListsResponse
+     * Constructs a new <code>NetworkListUuidResponse</code>.
+     * @alias module:model/NetworkListUuidResponse
      */
     constructor() { 
         
-        NetworkListsResponse.initialize(this);
+        NetworkListUuidResponse.initialize(this);
     }
 
     /**
@@ -38,18 +38,18 @@ class NetworkListsResponse {
     }
 
     /**
-     * Constructs a <code>NetworkListsResponse</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>NetworkListUuidResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/NetworkListsResponse} obj Optional instance to populate.
-     * @return {module:model/NetworkListsResponse} The populated <code>NetworkListsResponse</code> instance.
+     * @param {module:model/NetworkListUuidResponse} obj Optional instance to populate.
+     * @return {module:model/NetworkListUuidResponse} The populated <code>NetworkListUuidResponse</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new NetworkListsResponse();
+            obj = obj || new NetworkListUuidResponse();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = NetworkListResponseEntry.constructFromObject(data['results']);
+                obj['results'] = NetworkListUuidResponseEntry.constructFromObject(data['results']);
             }
             if (data.hasOwnProperty('schema_version')) {
                 obj['schema_version'] = ApiClient.convertToType(data['schema_version'], 'Number');
@@ -59,14 +59,14 @@ class NetworkListsResponse {
     }
 
     /**
-     * Validates the JSON data with respect to <code>NetworkListsResponse</code>.
+     * Validates the JSON data with respect to <code>NetworkListUuidResponse</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>NetworkListsResponse</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>NetworkListUuidResponse</code>.
      */
     static validateJSON(data) {
         // validate the optional field `results`
         if (data['results']) { // data not null
-          NetworkListResponseEntry.validateJSON(data['results']);
+          NetworkListUuidResponseEntry.validateJSON(data['results']);
         }
 
         return true;
@@ -78,19 +78,19 @@ class NetworkListsResponse {
 
 
 /**
- * @member {module:model/NetworkListResponseEntry} results
+ * @member {module:model/NetworkListUuidResponseEntry} results
  */
-NetworkListsResponse.prototype['results'] = undefined;
+NetworkListUuidResponse.prototype['results'] = undefined;
 
 /**
  * @member {Number} schema_version
  */
-NetworkListsResponse.prototype['schema_version'] = undefined;
+NetworkListUuidResponse.prototype['schema_version'] = undefined;
 
 
 
 
 
 
-export default NetworkListsResponse;
+export default NetworkListUuidResponse;
 
