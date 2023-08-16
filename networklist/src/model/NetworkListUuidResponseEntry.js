@@ -12,6 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import NetworkListUuidResponseEntryInt from './NetworkListUuidResponseEntryInt';
+import NetworkListUuidResponseEntryString from './NetworkListUuidResponseEntryString';
 
 /**
  * The NetworkListUuidResponseEntry model module.
@@ -22,18 +24,56 @@ class NetworkListUuidResponseEntry {
     /**
      * Constructs a new <code>NetworkListUuidResponseEntry</code>.
      * @alias module:model/NetworkListUuidResponseEntry
+     * @param {(module:model/NetworkListUuidResponseEntryInt|module:model/NetworkListUuidResponseEntryString)} instance The actual instance to initialize NetworkListUuidResponseEntry.
      */
-    constructor() { 
-        
-        NetworkListUuidResponseEntry.initialize(this);
-    }
+    constructor(instance = null) {
+        if (instance === null) {
+            this.actualInstance = null;
+            return;
+        }
+        var match = 0;
+        var errorMessages = [];
+        try {
+            if (typeof instance === "NetworkListUuidResponseEntryString") {
+                this.actualInstance = instance;
+            } else {
+                // plain JS object
+                // validate the object
+                NetworkListUuidResponseEntryString.validateJSON(instance); // throw an exception if no match
+                // create NetworkListUuidResponseEntryString from JS object
+                this.actualInstance = NetworkListUuidResponseEntryString.constructFromObject(instance);
+            }
+            match++;
+        } catch(err) {
+            // json data failed to deserialize into NetworkListUuidResponseEntryString
+            errorMessages.push("Failed to construct NetworkListUuidResponseEntryString: " + err)
+        }
 
-    /**
-     * Initializes the fields of this object.
-     * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
-     * Only for internal use.
-     */
-    static initialize(obj) { 
+        try {
+            if (typeof instance === "NetworkListUuidResponseEntryInt") {
+                this.actualInstance = instance;
+            } else {
+                // plain JS object
+                // validate the object
+                NetworkListUuidResponseEntryInt.validateJSON(instance); // throw an exception if no match
+                // create NetworkListUuidResponseEntryInt from JS object
+                this.actualInstance = NetworkListUuidResponseEntryInt.constructFromObject(instance);
+            }
+            match++;
+        } catch(err) {
+            // json data failed to deserialize into NetworkListUuidResponseEntryInt
+            errorMessages.push("Failed to construct NetworkListUuidResponseEntryInt: " + err)
+        }
+
+        if (match > 1) {
+            throw new Error("Multiple matches found constructing `NetworkListUuidResponseEntry` with oneOf schemas NetworkListUuidResponseEntryInt, NetworkListUuidResponseEntryString. Input: " + JSON.stringify(instance));
+        } else if (match === 0) {
+            this.actualInstance = null; // clear the actual instance in case there are multiple matches
+            throw new Error("No match found constructing `NetworkListUuidResponseEntry` with oneOf schemas NetworkListUuidResponseEntryInt, NetworkListUuidResponseEntryString. Details: " +
+                            errorMessages.join(", "));
+        } else { // only 1 match
+            // the input is valid
+        }
     }
 
     /**
@@ -44,62 +84,42 @@ class NetworkListUuidResponseEntry {
      * @return {module:model/NetworkListUuidResponseEntry} The populated <code>NetworkListUuidResponseEntry</code> instance.
      */
     static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new NetworkListUuidResponseEntry();
-
-            if (data.hasOwnProperty('last_editor')) {
-                obj['last_editor'] = ApiClient.convertToType(data['last_editor'], 'String');
-            }
-            if (data.hasOwnProperty('last_modified')) {
-                obj['last_modified'] = ApiClient.convertToType(data['last_modified'], 'String');
-            }
-            if (data.hasOwnProperty('list_type')) {
-                obj['list_type'] = ApiClient.convertToType(data['list_type'], 'String');
-            }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('items_values')) {
-                obj['items_values'] = ApiClient.convertToType(data['items_values'], ['String']);
-            }
-        }
-        return obj;
+        return new NetworkListUuidResponseEntry(data);
     }
 
     /**
-     * Validates the JSON data with respect to <code>NetworkListUuidResponseEntry</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>NetworkListUuidResponseEntry</code>.
+     * Gets the actual instance, which can be <code>NetworkListUuidResponseEntryInt</code>, <code>NetworkListUuidResponseEntryString</code>.
+     * @return {(module:model/NetworkListUuidResponseEntryInt|module:model/NetworkListUuidResponseEntryString)} The actual instance.
      */
-    static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['last_editor'] && !(typeof data['last_editor'] === 'string' || data['last_editor'] instanceof String)) {
-            throw new Error("Expected the field `last_editor` to be a primitive type in the JSON string but got " + data['last_editor']);
-        }
-        // ensure the json data is a string
-        if (data['last_modified'] && !(typeof data['last_modified'] === 'string' || data['last_modified'] instanceof String)) {
-            throw new Error("Expected the field `last_modified` to be a primitive type in the JSON string but got " + data['last_modified']);
-        }
-        // ensure the json data is a string
-        if (data['list_type'] && !(typeof data['list_type'] === 'string' || data['list_type'] instanceof String)) {
-            throw new Error("Expected the field `list_type` to be a primitive type in the JSON string but got " + data['list_type']);
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['items_values'])) {
-            throw new Error("Expected the field `items_values` to be an array in the JSON data but got " + data['items_values']);
-        }
-
-        return true;
+    getActualInstance() {
+        return this.actualInstance;
     }
 
+    /**
+     * Sets the actual instance, which can be <code>NetworkListUuidResponseEntryInt</code>, <code>NetworkListUuidResponseEntryString</code>.
+     * @param {(module:model/NetworkListUuidResponseEntryInt|module:model/NetworkListUuidResponseEntryString)} obj The actual instance.
+     */
+    setActualInstance(obj) {
+       this.actualInstance = NetworkListUuidResponseEntry.constructFromObject(obj).getActualInstance();
+    }
 
+    /**
+     * Returns the JSON representation of the actual instance.
+     * @return {string}
+     */
+    toJSON = function(){
+        return this.getActualInstance();
+    }
+
+    /**
+     * Create an instance of NetworkListUuidResponseEntry from a JSON string.
+     * @param {string} json_string JSON string.
+     * @return {module:model/NetworkListUuidResponseEntry} An instance of NetworkListUuidResponseEntry.
+     */
+    static fromJSON = function(json_string){
+        return NetworkListUuidResponseEntry.constructFromObject(JSON.parse(json_string));
+    }
 }
-
-
 
 /**
  * @member {String} last_editor
@@ -122,14 +142,12 @@ NetworkListUuidResponseEntry.prototype['list_type'] = undefined;
 NetworkListUuidResponseEntry.prototype['name'] = undefined;
 
 /**
- * @member {Array.<String>} items_values
+ * @member {Array.<Number>} items_values
  */
 NetworkListUuidResponseEntry.prototype['items_values'] = undefined;
 
 
-
-
-
+NetworkListUuidResponseEntry.OneOf = ["NetworkListUuidResponseEntryInt", "NetworkListUuidResponseEntryString"];
 
 export default NetworkListUuidResponseEntry;
 

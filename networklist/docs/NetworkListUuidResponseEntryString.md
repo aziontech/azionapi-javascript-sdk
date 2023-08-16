@@ -1,4 +1,4 @@
-# NetworkListsApi.NetworkListUuidResponseEntry
+# NetworkListsApi.NetworkListUuidResponseEntryString
 
 ## Properties
 
@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **lastModified** | **String** |  | [optional] 
 **listType** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
-**itemsValues** | **[Number]** |  | [optional] 
+**itemsValues** | **[String]** |  | [optional] 
 
 

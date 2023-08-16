@@ -1,4 +1,4 @@
-# NetworkListsApi.NetworkListUuidResponseEntry
+# NetworkListsApi.NetworkListUuidResponseEntryInt
 
 ## Properties
 
