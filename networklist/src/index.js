@@ -21,6 +21,8 @@ import ListNetworkListsResponse from './model/ListNetworkListsResponse';
 import NetworkListResponseEntry from './model/NetworkListResponseEntry';
 import NetworkListUuidResponse from './model/NetworkListUuidResponse';
 import NetworkListUuidResponseEntry from './model/NetworkListUuidResponseEntry';
+import NetworkListUuidResponseEntryInt from './model/NetworkListUuidResponseEntryInt';
+import NetworkListUuidResponseEntryString from './model/NetworkListUuidResponseEntryString';
 import NetworkLists from './model/NetworkLists';
 import NetworkListsResponse from './model/NetworkListsResponse';
 import DefaultApi from './api/DefaultApi';
@@ -111,6 +113,18 @@ export {
      * @property {module:model/NetworkListUuidResponseEntry}
      */
     NetworkListUuidResponseEntry,
+
+    /**
+     * The NetworkListUuidResponseEntryInt model constructor.
+     * @property {module:model/NetworkListUuidResponseEntryInt}
+     */
+    NetworkListUuidResponseEntryInt,
+
+    /**
+     * The NetworkListUuidResponseEntryString model constructor.
+     * @property {module:model/NetworkListUuidResponseEntryString}
+     */
+    NetworkListUuidResponseEntryString,
 
     /**
      * The NetworkLists model constructor.

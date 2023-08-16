@@ -147,6 +147,8 @@ Class | Method | HTTP request | Description
  - [NetworkListsApi.NetworkListResponseEntry](docs/NetworkListResponseEntry.md)
  - [NetworkListsApi.NetworkListUuidResponse](docs/NetworkListUuidResponse.md)
  - [NetworkListsApi.NetworkListUuidResponseEntry](docs/NetworkListUuidResponseEntry.md)
+ - [NetworkListsApi.NetworkListUuidResponseEntryInt](docs/NetworkListUuidResponseEntryInt.md)
+ - [NetworkListsApi.NetworkListUuidResponseEntryString](docs/NetworkListUuidResponseEntryString.md)
  - [NetworkListsApi.NetworkLists](docs/NetworkLists.md)
  - [NetworkListsApi.NetworkListsResponse](docs/NetworkListsResponse.md)
 

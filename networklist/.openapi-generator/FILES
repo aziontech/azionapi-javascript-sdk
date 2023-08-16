@@ -11,6 +11,8 @@ docs/ListNetworkListsResponse.md
 docs/NetworkListResponseEntry.md
 docs/NetworkListUuidResponse.md
 docs/NetworkListUuidResponseEntry.md
+docs/NetworkListUuidResponseEntryInt.md
+docs/NetworkListUuidResponseEntryString.md
 docs/NetworkLists.md
 docs/NetworkListsResponse.md
 git_push.sh
@@ -27,8 +29,9 @@ src/model/ListNetworkListsResponse.js
 src/model/NetworkListResponseEntry.js
 src/model/NetworkListUuidResponse.js
 src/model/NetworkListUuidResponseEntry.js
+src/model/NetworkListUuidResponseEntryInt.js
+src/model/NetworkListUuidResponseEntryString.js
 src/model/NetworkLists.js
 src/model/NetworkListsResponse.js
-test/model/NetworkListResponseEntry.spec.js
-test/model/NetworkListUuidResponse.spec.js
-test/model/NetworkListUuidResponseEntry.spec.js
+test/model/NetworkListUuidResponseEntryInt.spec.js
+test/model/NetworkListUuidResponseEntryString.spec.js

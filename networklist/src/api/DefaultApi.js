@@ -76,7 +76,7 @@ export default class DefaultApi {
 
       let authNames = ['tokenAuth'];
       let contentTypes = [];
-      let accepts = ['application/json'];
+      let accepts = ['application/json', 'text/html'];
       let returnType = ListNetworkListsResponse;
       return this.apiClient.callApi(
         '/network_lists', 'GET',
