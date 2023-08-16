@@ -1,6 +1,5 @@
 .babelrc
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 docs/CreateEdgeFunctionsInstancesRequest.md
@@ -20,9 +19,3 @@ src/model/EdgeFunctionsInstance.js
 src/model/EdgeFunctionsInstanceResponse.js
 src/model/Links.js
 src/model/ListEdgeFunctionsInstancesResponse.js
-test/api/DefaultApi.spec.js
-test/model/CreateEdgeFunctionsInstancesRequest.spec.js
-test/model/EdgeFunctionsInstance.spec.js
-test/model/EdgeFunctionsInstanceResponse.spec.js
-test/model/Links.spec.js
-test/model/ListEdgeFunctionsInstancesResponse.spec.js
