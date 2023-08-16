@@ -66,7 +66,7 @@ export default class DefaultApi {
 
       let authNames = ['tokenAuth'];
       let contentTypes = [];
-      let accepts = [];
+      let accepts = ['application/json'];
       let returnType = null;
       return this.apiClient.callApi(
         '/storage/{version_id}/delete', 'DELETE',
