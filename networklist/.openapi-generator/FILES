@@ -33,5 +33,3 @@ src/model/NetworkListUuidResponseEntryInt.js
 src/model/NetworkListUuidResponseEntryString.js
 src/model/NetworkLists.js
 src/model/NetworkListsResponse.js
-test/model/NetworkListUuidResponseEntryInt.spec.js
-test/model/NetworkListUuidResponseEntryString.spec.js

@@ -133,6 +133,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *NetworkListsApi.DefaultApi* | [**networkListsGet**](docs/DefaultApi.md#networkListsGet) | **GET** /network_lists | List all user Network Lists
 *NetworkListsApi.DefaultApi* | [**networkListsPost**](docs/DefaultApi.md#networkListsPost) | **POST** /network_lists | Create a Network Lists
+*NetworkListsApi.DefaultApi* | [**networkListsUuidDelete**](docs/DefaultApi.md#networkListsUuidDelete) | **DELETE** /network_lists/{uuid} | Delete a Network Lists set by uuid
 *NetworkListsApi.DefaultApi* | [**networkListsUuidGet**](docs/DefaultApi.md#networkListsUuidGet) | **GET** /network_lists/{uuid} | Retrieve a Network Lists set by uuid
 *NetworkListsApi.DefaultApi* | [**networkListsUuidPut**](docs/DefaultApi.md#networkListsUuidPut) | **PUT** /network_lists/{uuid} | Overwrite some Network Lists attributes
 
