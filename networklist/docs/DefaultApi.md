@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**networkListsGet**](DefaultApi.md#networkListsGet) | **GET** /network_lists | List all user Network Lists
 [**networkListsPost**](DefaultApi.md#networkListsPost) | **POST** /network_lists | Create a Network Lists
+[**networkListsUuidDelete**](DefaultApi.md#networkListsUuidDelete) | **DELETE** /network_lists/{uuid} | Delete a Network Lists set by uuid
 [**networkListsUuidGet**](DefaultApi.md#networkListsUuidGet) | **GET** /network_lists/{uuid} | Retrieve a Network Lists set by uuid
 [**networkListsUuidPut**](DefaultApi.md#networkListsUuidPut) | **PUT** /network_lists/{uuid} | Overwrite some Network Lists attributes
 
@@ -115,6 +116,59 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json
 - **Accept**: application/json, text/html
+
+
+## networkListsUuidDelete
+
+> networkListsUuidDelete(uuid, opts)
+
+Delete a Network Lists set by uuid
+
+### Example
+
+```javascript
+import NetworkListsApi from 'network_lists_api';
+let defaultClient = NetworkListsApi.ApiClient.instance;
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new NetworkListsApi.DefaultApi();
+let uuid = "uuid_example"; // String | The id of the networkList to be deleted. 
+let opts = {
+  'accept': application/json; version=3 // String | 
+};
+apiInstance.networkListsUuidDelete(uuid, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | **String**| The id of the networkList to be deleted.  | 
+ **accept** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 
 ## networkListsUuidGet

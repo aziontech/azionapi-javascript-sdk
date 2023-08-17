@@ -127,6 +127,51 @@ export default class DefaultApi {
     }
 
     /**
+     * Callback function to receive the result of the networkListsUuidDelete operation.
+     * @callback module:api/DefaultApi~networkListsUuidDeleteCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a Network Lists set by uuid
+     * @param {String} uuid The id of the networkList to be deleted. 
+     * @param {Object} opts Optional parameters
+     * @param {String} [accept] 
+     * @param {module:api/DefaultApi~networkListsUuidDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    networkListsUuidDelete(uuid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'uuid' is set
+      if (uuid === undefined || uuid === null) {
+        throw new Error("Missing the required parameter 'uuid' when calling networkListsUuidDelete");
+      }
+
+      let pathParams = {
+        'uuid': uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Accept': opts['accept']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/network_lists/{uuid}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the networkListsUuidGet operation.
      * @callback module:api/DefaultApi~networkListsUuidGetCallback
      * @param {String} error Error message, if any.
