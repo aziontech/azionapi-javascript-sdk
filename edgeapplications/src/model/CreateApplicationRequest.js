@@ -100,6 +100,9 @@ class CreateApplicationRequest {
             if (data.hasOwnProperty('http3')) {
                 obj['http3'] = ApiClient.convertToType(data['http3'], 'Boolean');
             }
+            if (data.hasOwnProperty('websocket')) {
+                obj['websocket'] = ApiClient.convertToType(data['websocket'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -245,6 +248,11 @@ CreateApplicationRequest.prototype['l2_caching'] = undefined;
  * @member {Boolean} http3
  */
 CreateApplicationRequest.prototype['http3'] = undefined;
+
+/**
+ * @member {Boolean} websocket
+ */
+CreateApplicationRequest.prototype['websocket'] = undefined;
 
 
 

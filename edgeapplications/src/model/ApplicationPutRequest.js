@@ -103,6 +103,9 @@ class ApplicationPutRequest {
             if (data.hasOwnProperty('http3')) {
                 obj['http3'] = ApiClient.convertToType(data['http3'], 'Boolean');
             }
+            if (data.hasOwnProperty('websocket')) {
+                obj['websocket'] = ApiClient.convertToType(data['websocket'], 'Boolean');
+            }
             if (data.hasOwnProperty('supported_ciphers')) {
                 obj['supported_ciphers'] = ApiClient.convertToType(data['supported_ciphers'], 'String');
             }
@@ -236,6 +239,11 @@ ApplicationPutRequest.prototype['debug_rules'] = undefined;
  * @member {Boolean} http3
  */
 ApplicationPutRequest.prototype['http3'] = undefined;
+
+/**
+ * @member {Boolean} websocket
+ */
+ApplicationPutRequest.prototype['websocket'] = undefined;
 
 /**
  * @member {String} supported_ciphers
