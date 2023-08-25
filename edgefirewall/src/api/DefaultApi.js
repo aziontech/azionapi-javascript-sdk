@@ -16,6 +16,7 @@ import ApiClient from "../ApiClient";
 import CreateEdgeFirewallRequest from '../model/CreateEdgeFirewallRequest';
 import EdgeFirewallResponse from '../model/EdgeFirewallResponse';
 import ListEdgeFirewallResponse from '../model/ListEdgeFirewallResponse';
+import UpdateEdgeFirewallRequest from '../model/UpdateEdgeFirewallRequest';
 
 /**
 * Default service.
@@ -86,7 +87,7 @@ export default class DefaultApi {
      * Callback function to receive the result of the edgeFirewallPost operation.
      * @callback module:api/DefaultApi~edgeFirewallPostCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/EdgeFirewallResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -94,6 +95,7 @@ export default class DefaultApi {
      * Create a edge firewall
      * @param {module:model/CreateEdgeFirewallRequest} createEdgeFirewallRequest 
      * @param {module:api/DefaultApi~edgeFirewallPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/EdgeFirewallResponse}
      */
     edgeFirewallPost(createEdgeFirewallRequest, callback) {
       let postBody = createEdgeFirewallRequest;
@@ -113,8 +115,8 @@ export default class DefaultApi {
 
       let authNames = ['tokenAuth'];
       let contentTypes = ['application/json'];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = EdgeFirewallResponse;
       return this.apiClient.callApi(
         '/edge_firewall', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -209,26 +211,26 @@ export default class DefaultApi {
      * Callback function to receive the result of the edgeFirewallUuidPatch operation.
      * @callback module:api/DefaultApi~edgeFirewallUuidPatchCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ListEdgeFirewallResponse} data The data returned by the service call.
+     * @param {module:model/EdgeFirewallResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Update some edge firewall attributes, like \"active\"
      * @param {String} uuid 
-     * @param {module:model/ListEdgeFirewallResponse} body 
+     * @param {module:model/UpdateEdgeFirewallRequest} updateEdgeFirewallRequest 
      * @param {module:api/DefaultApi~edgeFirewallUuidPatchCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ListEdgeFirewallResponse}
+     * data is of type: {@link module:model/EdgeFirewallResponse}
      */
-    edgeFirewallUuidPatch(uuid, body, callback) {
-      let postBody = body;
+    edgeFirewallUuidPatch(uuid, updateEdgeFirewallRequest, callback) {
+      let postBody = updateEdgeFirewallRequest;
       // verify the required parameter 'uuid' is set
       if (uuid === undefined || uuid === null) {
         throw new Error("Missing the required parameter 'uuid' when calling edgeFirewallUuidPatch");
       }
-      // verify the required parameter 'body' is set
-      if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling edgeFirewallUuidPatch");
+      // verify the required parameter 'updateEdgeFirewallRequest' is set
+      if (updateEdgeFirewallRequest === undefined || updateEdgeFirewallRequest === null) {
+        throw new Error("Missing the required parameter 'updateEdgeFirewallRequest' when calling edgeFirewallUuidPatch");
       }
 
       let pathParams = {
@@ -244,7 +246,7 @@ export default class DefaultApi {
       let authNames = ['tokenAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ListEdgeFirewallResponse;
+      let returnType = EdgeFirewallResponse;
       return this.apiClient.callApi(
         '/edge_firewall/{uuid}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -256,26 +258,26 @@ export default class DefaultApi {
      * Callback function to receive the result of the edgeFirewallUuidPut operation.
      * @callback module:api/DefaultApi~edgeFirewallUuidPutCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ListEdgeFirewallResponse} data The data returned by the service call.
+     * @param {module:model/EdgeFirewallResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Overwrite some edge firewall attributes, like \"active\"
      * @param {String} uuid 
-     * @param {module:model/ListEdgeFirewallResponse} body 
+     * @param {module:model/UpdateEdgeFirewallRequest} updateEdgeFirewallRequest 
      * @param {module:api/DefaultApi~edgeFirewallUuidPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ListEdgeFirewallResponse}
+     * data is of type: {@link module:model/EdgeFirewallResponse}
      */
-    edgeFirewallUuidPut(uuid, body, callback) {
-      let postBody = body;
+    edgeFirewallUuidPut(uuid, updateEdgeFirewallRequest, callback) {
+      let postBody = updateEdgeFirewallRequest;
       // verify the required parameter 'uuid' is set
       if (uuid === undefined || uuid === null) {
         throw new Error("Missing the required parameter 'uuid' when calling edgeFirewallUuidPut");
       }
-      // verify the required parameter 'body' is set
-      if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling edgeFirewallUuidPut");
+      // verify the required parameter 'updateEdgeFirewallRequest' is set
+      if (updateEdgeFirewallRequest === undefined || updateEdgeFirewallRequest === null) {
+        throw new Error("Missing the required parameter 'updateEdgeFirewallRequest' when calling edgeFirewallUuidPut");
       }
 
       let pathParams = {
@@ -291,7 +293,7 @@ export default class DefaultApi {
       let authNames = ['tokenAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ListEdgeFirewallResponse;
+      let returnType = EdgeFirewallResponse;
       return this.apiClient.callApi(
         '/edge_firewall/{uuid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,

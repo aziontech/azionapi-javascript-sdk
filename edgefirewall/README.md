@@ -109,8 +109,8 @@ tokenAuth.apiKey = "YOUR API KEY"
 
 var api = new EdgeFirewallApi.DefaultApi()
 var opts = {
-  'page': 56, // {Number} 
-  'pageSize': 56, // {Number} 
+  'page': 789, // {Number} 
+  'pageSize': 789, // {Number} 
   'sort': "sort_example", // {String} 
   'orderBy': "orderBy_example" // {String} 
 };
@@ -146,6 +146,7 @@ Class | Method | HTTP request | Description
  - [EdgeFirewallApi.EdgeFirewallResponse](docs/EdgeFirewallResponse.md)
  - [EdgeFirewallApi.Links](docs/Links.md)
  - [EdgeFirewallApi.ListEdgeFirewallResponse](docs/ListEdgeFirewallResponse.md)
+ - [EdgeFirewallApi.UpdateEdgeFirewallRequest](docs/UpdateEdgeFirewallRequest.md)
 
 
 ## Documentation for Authorization

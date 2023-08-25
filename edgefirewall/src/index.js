@@ -18,6 +18,7 @@ import EdgeFirewall from './model/EdgeFirewall';
 import EdgeFirewallResponse from './model/EdgeFirewallResponse';
 import Links from './model/Links';
 import ListEdgeFirewallResponse from './model/ListEdgeFirewallResponse';
+import UpdateEdgeFirewallRequest from './model/UpdateEdgeFirewallRequest';
 import DefaultApi from './api/DefaultApi';
 
 
@@ -88,6 +89,12 @@ export {
      * @property {module:model/ListEdgeFirewallResponse}
      */
     ListEdgeFirewallResponse,
+
+    /**
+     * The UpdateEdgeFirewallRequest model constructor.
+     * @property {module:model/UpdateEdgeFirewallRequest}
+     */
+    UpdateEdgeFirewallRequest,
 
     /**
     * The DefaultApi service constructor.
