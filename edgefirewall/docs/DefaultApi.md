@@ -32,8 +32,8 @@ tokenAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new EdgeFirewallApi.DefaultApi();
 let opts = {
-  'page': 56, // Number | 
-  'pageSize': 56, // Number | 
+  'page': 789, // Number | 
+  'pageSize': 789, // Number | 
   'sort': "sort_example", // String | 
   'orderBy': "orderBy_example" // String | 
 };
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 ## edgeFirewallPost
 
-> edgeFirewallPost(createEdgeFirewallRequest)
+> EdgeFirewallResponse edgeFirewallPost(createEdgeFirewallRequest)
 
 Create a edge firewall
 
@@ -93,7 +93,7 @@ apiInstance.edgeFirewallPost(createEdgeFirewallRequest, (error, data, response) 
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**EdgeFirewallResponse**](EdgeFirewallResponse.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## edgeFirewallUuidDelete
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 ## edgeFirewallUuidPatch
 
-> ListEdgeFirewallResponse edgeFirewallUuidPatch(uuid, body)
+> EdgeFirewallResponse edgeFirewallUuidPatch(uuid, updateEdgeFirewallRequest)
 
 Update some edge firewall attributes, like \&quot;active\&quot;
 
@@ -236,8 +236,8 @@ tokenAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new EdgeFirewallApi.DefaultApi();
 let uuid = "uuid_example"; // String | 
-let body = new EdgeFirewallApi.ListEdgeFirewallResponse(); // ListEdgeFirewallResponse | 
-apiInstance.edgeFirewallUuidPatch(uuid, body, (error, data, response) => {
+let updateEdgeFirewallRequest = new EdgeFirewallApi.UpdateEdgeFirewallRequest(); // UpdateEdgeFirewallRequest | 
+apiInstance.edgeFirewallUuidPatch(uuid, updateEdgeFirewallRequest, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -252,11 +252,11 @@ apiInstance.edgeFirewallUuidPatch(uuid, body, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **String**|  | 
- **body** | **ListEdgeFirewallResponse**|  | 
+ **updateEdgeFirewallRequest** | [**UpdateEdgeFirewallRequest**](UpdateEdgeFirewallRequest.md)|  | 
 
 ### Return type
 
-[**ListEdgeFirewallResponse**](ListEdgeFirewallResponse.md)
+[**EdgeFirewallResponse**](EdgeFirewallResponse.md)
 
 ### Authorization
 
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 ## edgeFirewallUuidPut
 
-> ListEdgeFirewallResponse edgeFirewallUuidPut(uuid, body)
+> EdgeFirewallResponse edgeFirewallUuidPut(uuid, updateEdgeFirewallRequest)
 
 Overwrite some edge firewall attributes, like \&quot;active\&quot;
 
@@ -287,8 +287,8 @@ tokenAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new EdgeFirewallApi.DefaultApi();
 let uuid = "uuid_example"; // String | 
-let body = new EdgeFirewallApi.ListEdgeFirewallResponse(); // ListEdgeFirewallResponse | 
-apiInstance.edgeFirewallUuidPut(uuid, body, (error, data, response) => {
+let updateEdgeFirewallRequest = new EdgeFirewallApi.UpdateEdgeFirewallRequest(); // UpdateEdgeFirewallRequest | 
+apiInstance.edgeFirewallUuidPut(uuid, updateEdgeFirewallRequest, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -303,11 +303,11 @@ apiInstance.edgeFirewallUuidPut(uuid, body, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **String**|  | 
- **body** | **ListEdgeFirewallResponse**|  | 
+ **updateEdgeFirewallRequest** | [**UpdateEdgeFirewallRequest**](UpdateEdgeFirewallRequest.md)|  | 
 
 ### Return type
 
-[**ListEdgeFirewallResponse**](ListEdgeFirewallResponse.md)
+[**EdgeFirewallResponse**](EdgeFirewallResponse.md)
 
 ### Authorization
 

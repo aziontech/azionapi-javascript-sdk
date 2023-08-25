@@ -1,6 +1,5 @@
 .babelrc
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 docs/CreateEdgeFirewallRequest.md
@@ -9,6 +8,7 @@ docs/EdgeFirewall.md
 docs/EdgeFirewallResponse.md
 docs/Links.md
 docs/ListEdgeFirewallResponse.md
+docs/UpdateEdgeFirewallRequest.md
 git_push.sh
 mocha.opts
 package.json
@@ -20,9 +20,5 @@ src/model/EdgeFirewall.js
 src/model/EdgeFirewallResponse.js
 src/model/Links.js
 src/model/ListEdgeFirewallResponse.js
-test/api/DefaultApi.spec.js
-test/model/CreateEdgeFirewallRequest.spec.js
-test/model/EdgeFirewall.spec.js
-test/model/EdgeFirewallResponse.spec.js
-test/model/Links.spec.js
-test/model/ListEdgeFirewallResponse.spec.js
+src/model/UpdateEdgeFirewallRequest.js
+test/model/UpdateEdgeFirewallRequest.spec.js
