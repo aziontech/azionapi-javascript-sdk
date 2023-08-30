@@ -1,6 +1,6 @@
 # VariablesApi.VariablesApi
 
-All URIs are relative to *https://stage-api.azion.net/variables*
+All URIs are relative to *https://api.azionapi.net/variables*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
