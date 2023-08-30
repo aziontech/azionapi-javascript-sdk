@@ -33,11 +33,11 @@ class ApiClient {
      * Overrides the default value set in spec file if present
      * @param {String} basePath
      */
-    constructor(basePath = 'https://stage-api.azion.net/variables') {
+    constructor(basePath = 'https://api.azionapi.net/variables') {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default https://stage-api.azion.net/variables
+         * @default https://api.azionapi.net/variables
          */
         this.basePath = basePath.replace(/\/+$/, '');
 
@@ -593,8 +593,8 @@ class ApiClient {
     hostSettings() {
         return [
             {
-              'url': "https://stage-api.azion.net/variables",
-              'description': "Stage",
+              'url': "https://api.azionapi.net/variables",
+              'description': "Production",
             }
       ];
     }
