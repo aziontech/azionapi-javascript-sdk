@@ -47,7 +47,7 @@ export default class DataStreamingApi {
 
     /**
      * Create a new data streaming
-     * 
+     * Create a new data streaming.
      * @param {module:model/CreateNewDataStreamingRequest} createNewDataStreamingRequest 
      * @param {module:api/DataStreamingApi~createNewDataStreamingCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/CreateNewDataStreaming201Response}

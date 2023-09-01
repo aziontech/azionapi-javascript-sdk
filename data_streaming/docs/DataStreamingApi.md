@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 Create a new data streaming
 
-
+Create a new data streaming.
 
 ### Example
 
