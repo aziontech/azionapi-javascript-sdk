@@ -64,6 +64,9 @@ class CreateApplicationRequest {
             if (data.hasOwnProperty('address')) {
                 obj['address'] = ApiClient.convertToType(data['address'], 'String');
             }
+            if (data.hasOwnProperty('minimum_tls_version')) {
+                obj['minimum_tls_version'] = ApiClient.convertToType(data['minimum_tls_version'], 'String');
+            }
             if (data.hasOwnProperty('origin_protocol_policy')) {
                 obj['origin_protocol_policy'] = ApiClient.convertToType(data['origin_protocol_policy'], 'String');
             }
@@ -136,6 +139,10 @@ class CreateApplicationRequest {
             throw new Error("Expected the field `address` to be a primitive type in the JSON string but got " + data['address']);
         }
         // ensure the json data is a string
+        if (data['minimum_tls_version'] && !(typeof data['minimum_tls_version'] === 'string' || data['minimum_tls_version'] instanceof String)) {
+            throw new Error("Expected the field `minimum_tls_version` to be a primitive type in the JSON string but got " + data['minimum_tls_version']);
+        }
+        // ensure the json data is a string
         if (data['origin_protocol_policy'] && !(typeof data['origin_protocol_policy'] === 'string' || data['origin_protocol_policy'] instanceof String)) {
             throw new Error("Expected the field `origin_protocol_policy` to be a primitive type in the JSON string but got " + data['origin_protocol_policy']);
         }
@@ -188,6 +195,11 @@ CreateApplicationRequest.prototype['origin_type'] = undefined;
  * @member {String} address
  */
 CreateApplicationRequest.prototype['address'] = undefined;
+
+/**
+ * @member {String} minimum_tls_version
+ */
+CreateApplicationRequest.prototype['minimum_tls_version'] = undefined;
 
 /**
  * @member {String} origin_protocol_policy
