@@ -61,14 +61,14 @@ import OriginsResultResponseAddresses from './model/OriginsResultResponseAddress
 import PatchDeviceGroupsRequest from './model/PatchDeviceGroupsRequest';
 import PatchOriginsRequest from './model/PatchOriginsRequest';
 import PatchRulesEngineRequest from './model/PatchRulesEngineRequest';
-import RulesEngineBehavior from './model/RulesEngineBehavior';
-import RulesEngineBehaviorTarget from './model/RulesEngineBehaviorTarget';
-import RulesEngineBehaviorTargetOneOf from './model/RulesEngineBehaviorTargetOneOf';
+import RulesEngineBehaviorEntry from './model/RulesEngineBehaviorEntry';
+import RulesEngineBehaviorObject from './model/RulesEngineBehaviorObject';
+import RulesEngineBehaviorObjectTarget from './model/RulesEngineBehaviorObjectTarget';
+import RulesEngineBehaviorString from './model/RulesEngineBehaviorString';
 import RulesEngineCriteria from './model/RulesEngineCriteria';
 import RulesEngineIdResponse from './model/RulesEngineIdResponse';
 import RulesEngineResponse from './model/RulesEngineResponse';
 import RulesEngineResultResponse from './model/RulesEngineResultResponse';
-import RulesEngineResultResponseBehaviors from './model/RulesEngineResultResponseBehaviors';
 import UpdateDeviceGroupsRequest from './model/UpdateDeviceGroupsRequest';
 import UpdateOriginsRequest from './model/UpdateOriginsRequest';
 import UpdateRulesEngineRequest from './model/UpdateRulesEngineRequest';
@@ -407,22 +407,28 @@ export {
     PatchRulesEngineRequest,
 
     /**
-     * The RulesEngineBehavior model constructor.
-     * @property {module:model/RulesEngineBehavior}
+     * The RulesEngineBehaviorEntry model constructor.
+     * @property {module:model/RulesEngineBehaviorEntry}
      */
-    RulesEngineBehavior,
+    RulesEngineBehaviorEntry,
 
     /**
-     * The RulesEngineBehaviorTarget model constructor.
-     * @property {module:model/RulesEngineBehaviorTarget}
+     * The RulesEngineBehaviorObject model constructor.
+     * @property {module:model/RulesEngineBehaviorObject}
      */
-    RulesEngineBehaviorTarget,
+    RulesEngineBehaviorObject,
 
     /**
-     * The RulesEngineBehaviorTargetOneOf model constructor.
-     * @property {module:model/RulesEngineBehaviorTargetOneOf}
+     * The RulesEngineBehaviorObjectTarget model constructor.
+     * @property {module:model/RulesEngineBehaviorObjectTarget}
      */
-    RulesEngineBehaviorTargetOneOf,
+    RulesEngineBehaviorObjectTarget,
+
+    /**
+     * The RulesEngineBehaviorString model constructor.
+     * @property {module:model/RulesEngineBehaviorString}
+     */
+    RulesEngineBehaviorString,
 
     /**
      * The RulesEngineCriteria model constructor.
@@ -447,12 +453,6 @@ export {
      * @property {module:model/RulesEngineResultResponse}
      */
     RulesEngineResultResponse,
-
-    /**
-     * The RulesEngineResultResponseBehaviors model constructor.
-     * @property {module:model/RulesEngineResultResponseBehaviors}
-     */
-    RulesEngineResultResponseBehaviors,
 
     /**
      * The UpdateDeviceGroupsRequest model constructor.
