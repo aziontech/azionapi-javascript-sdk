@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **description** | **String** |  | [optional] 
 **criteria** | **[[RulesEngineCriteria]]** |  | 
-**behaviors** | [**[RulesEngineBehavior]**](RulesEngineBehavior.md) |  | 
+**behaviors** | [**[RulesEngineBehaviorEntry]**](RulesEngineBehaviorEntry.md) |  | 
 
 

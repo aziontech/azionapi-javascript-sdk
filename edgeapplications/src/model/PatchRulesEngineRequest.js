@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import RulesEngineBehavior from './RulesEngineBehavior';
+import RulesEngineBehaviorEntry from './RulesEngineBehaviorEntry';
 import RulesEngineCriteria from './RulesEngineCriteria';
 
 /**
@@ -59,7 +59,7 @@ class PatchRulesEngineRequest {
                 obj['criteria'] = ApiClient.convertToType(data['criteria'], [[RulesEngineCriteria]]);
             }
             if (data.hasOwnProperty('behaviors')) {
-                obj['behaviors'] = ApiClient.convertToType(data['behaviors'], [RulesEngineBehavior]);
+                obj['behaviors'] = ApiClient.convertToType(data['behaviors'], [RulesEngineBehaviorEntry]);
             }
         }
         return obj;
@@ -90,7 +90,7 @@ class PatchRulesEngineRequest {
             }
             // validate the optional field `behaviors` (array)
             for (const item of data['behaviors']) {
-                RulesEngineBehavior.validateJSON(item);
+                RulesEngineBehaviorEntry.validateJSON(item);
             };
         }
 
@@ -118,7 +118,7 @@ PatchRulesEngineRequest.prototype['description'] = undefined;
 PatchRulesEngineRequest.prototype['criteria'] = undefined;
 
 /**
- * @member {Array.<module:model/RulesEngineBehavior>} behaviors
+ * @member {Array.<module:model/RulesEngineBehaviorEntry>} behaviors
  */
 PatchRulesEngineRequest.prototype['behaviors'] = undefined;
 

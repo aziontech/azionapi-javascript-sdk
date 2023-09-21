@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import RulesEngineBehaviorEntry from './RulesEngineBehaviorEntry';
 import RulesEngineCriteria from './RulesEngineCriteria';
-import RulesEngineResultResponseBehaviors from './RulesEngineResultResponseBehaviors';
 
 /**
  * The RulesEngineResultResponse model module.
@@ -74,7 +74,7 @@ class RulesEngineResultResponse {
                 obj['phase'] = ApiClient.convertToType(data['phase'], 'String');
             }
             if (data.hasOwnProperty('behaviors')) {
-                obj['behaviors'] = ApiClient.convertToType(data['behaviors'], [RulesEngineResultResponseBehaviors]);
+                obj['behaviors'] = ApiClient.convertToType(data['behaviors'], [RulesEngineBehaviorEntry]);
             }
             if (data.hasOwnProperty('criteria')) {
                 obj['criteria'] = ApiClient.convertToType(data['criteria'], [[RulesEngineCriteria]]);
@@ -120,7 +120,7 @@ class RulesEngineResultResponse {
             }
             // validate the optional field `behaviors` (array)
             for (const item of data['behaviors']) {
-                RulesEngineResultResponseBehaviors.validateJSON(item);
+                RulesEngineBehaviorEntry.validateJSON(item);
             };
         }
         // ensure the json data is an array
@@ -157,7 +157,7 @@ RulesEngineResultResponse.prototype['description'] = undefined;
 RulesEngineResultResponse.prototype['phase'] = undefined;
 
 /**
- * @member {Array.<module:model/RulesEngineResultResponseBehaviors>} behaviors
+ * @member {Array.<module:model/RulesEngineBehaviorEntry>} behaviors
  */
 RulesEngineResultResponse.prototype['behaviors'] = undefined;
 

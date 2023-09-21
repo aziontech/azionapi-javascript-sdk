@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import RulesEngineBehavior from './RulesEngineBehavior';
+import RulesEngineBehaviorEntry from './RulesEngineBehaviorEntry';
 import RulesEngineCriteria from './RulesEngineCriteria';
 
 /**
@@ -26,7 +26,7 @@ class CreateRulesEngineRequest {
      * @alias module:model/CreateRulesEngineRequest
      * @param name {String} 
      * @param criteria {Array.<Array.<module:model/RulesEngineCriteria>>} 
-     * @param behaviors {Array.<module:model/RulesEngineBehavior>} 
+     * @param behaviors {Array.<module:model/RulesEngineBehaviorEntry>} 
      */
     constructor(name, criteria, behaviors) { 
         
@@ -65,7 +65,7 @@ class CreateRulesEngineRequest {
                 obj['criteria'] = ApiClient.convertToType(data['criteria'], [[RulesEngineCriteria]]);
             }
             if (data.hasOwnProperty('behaviors')) {
-                obj['behaviors'] = ApiClient.convertToType(data['behaviors'], [RulesEngineBehavior]);
+                obj['behaviors'] = ApiClient.convertToType(data['behaviors'], [RulesEngineBehaviorEntry]);
             }
         }
         return obj;
@@ -102,7 +102,7 @@ class CreateRulesEngineRequest {
             }
             // validate the optional field `behaviors` (array)
             for (const item of data['behaviors']) {
-                RulesEngineBehavior.validateJSON(item);
+                RulesEngineBehaviorEntry.validateJSON(item);
             };
         }
 
@@ -130,7 +130,7 @@ CreateRulesEngineRequest.prototype['description'] = undefined;
 CreateRulesEngineRequest.prototype['criteria'] = undefined;
 
 /**
- * @member {Array.<module:model/RulesEngineBehavior>} behaviors
+ * @member {Array.<module:model/RulesEngineBehaviorEntry>} behaviors
  */
 CreateRulesEngineRequest.prototype['behaviors'] = undefined;
 
