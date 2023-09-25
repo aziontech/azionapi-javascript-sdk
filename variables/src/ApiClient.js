@@ -33,11 +33,11 @@ class ApiClient {
      * Overrides the default value set in spec file if present
      * @param {String} basePath
      */
-    constructor(basePath = 'https://api.azionapi.net/variables') {
+    constructor(basePath = 'https://api.azionapi.net') {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default https://api.azionapi.net/variables
+         * @default https://api.azionapi.net
          */
         this.basePath = basePath.replace(/\/+$/, '');
 
@@ -593,7 +593,7 @@ class ApiClient {
     hostSettings() {
         return [
             {
-              'url': "https://api.azionapi.net/variables",
+              'url': "https://api.azionapi.net",
               'description': "Production",
             }
       ];
