@@ -13,11 +13,15 @@
 
 
 import ApiClient from "../ApiClient";
+import CreateNewWAFRulesetRequest from '../model/CreateNewWAFRulesetRequest';
+import SingleWAF from '../model/SingleWAF';
 import WAFDomains200 from '../model/WAFDomains200';
 import WAFEvents200 from '../model/WAFEvents200';
 import WAFEvents400 from '../model/WAFEvents400';
 import WAFEvents401 from '../model/WAFEvents401';
 import WAFEvents404 from '../model/WAFEvents404';
+import WAFList200 from '../model/WAFList200';
+import WAFSingle200 from '../model/WAFSingle200';
 
 /**
 * WAF service.
@@ -39,6 +43,86 @@ export default class WAFApi {
 
 
     /**
+     * Callback function to receive the result of the createNewWAFRuleset operation.
+     * @callback module:api/WAFApi~createNewWAFRulesetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/SingleWAF} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a new WAF Rule Set in an account.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateNewWAFRulesetRequest} [createNewWAFRulesetRequest] 
+     * @param {module:api/WAFApi~createNewWAFRulesetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SingleWAF}
+     */
+    createNewWAFRuleset(opts, callback) {
+      opts = opts || {};
+      let postBody = opts['createNewWAFRulesetRequest'];
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = ['application/json; version=3'];
+      let accepts = ['application/json; version=3'];
+      let returnType = SingleWAF;
+      return this.apiClient.callApi(
+        '/waf/rulesets', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteWAFRuleset operation.
+     * @callback module:api/WAFApi~deleteWAFRulesetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Remove an WAF Rule Set from an account. Warning: this action cannot be undone.
+     * @param {String} wafRuleSetId 
+     * @param {module:api/WAFApi~deleteWAFRulesetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteWAFRuleset(wafRuleSetId, callback) {
+      let postBody = null;
+      // verify the required parameter 'wafRuleSetId' is set
+      if (wafRuleSetId === undefined || wafRuleSetId === null) {
+        throw new Error("Missing the required parameter 'wafRuleSetId' when calling deleteWAFRuleset");
+      }
+
+      let pathParams = {
+        'waf_rule_set_id': wafRuleSetId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/waf/rulesets/{waf_rule_set_id}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getWAFDomains operation.
      * @callback module:api/WAFApi~getWAFDomainsCallback
      * @param {String} error Error message, if any.
@@ -47,7 +131,7 @@ export default class WAFApi {
      */
 
     /**
-     * Find domains attached to a WAF
+     * List all domains attached to a Web Application Firewall (WAF) in an account.
      * @param {Number} wafId ID of WAF to return
      * @param {Object} opts Optional parameters
      * @param {String} [name] searches WAF for name
@@ -137,6 +221,181 @@ export default class WAFApi {
       let returnType = WAFEvents200;
       return this.apiClient.callApi(
         '/waf/{wafId}/waf_events', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getWAFRuleset operation.
+     * @callback module:api/WAFApi~getWAFRulesetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/WAFSingle200} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List a specific Rule Set associated to a Web Application Firewall (WAF) in an account.
+     * @param {Number} wafRuleSetId ID of WAF Ruleset to return
+     * @param {module:api/WAFApi~getWAFRulesetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/WAFSingle200}
+     */
+    getWAFRuleset(wafRuleSetId, callback) {
+      let postBody = null;
+      // verify the required parameter 'wafRuleSetId' is set
+      if (wafRuleSetId === undefined || wafRuleSetId === null) {
+        throw new Error("Missing the required parameter 'wafRuleSetId' when calling getWAFRuleset");
+      }
+
+      let pathParams = {
+        'waf_rule_set_id': wafRuleSetId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json; version=3'];
+      let returnType = WAFSingle200;
+      return this.apiClient.callApi(
+        '/waf/rulesets/{waf_rule_set_id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listAllWAF operation.
+     * @callback module:api/WAFApi~listAllWAFCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/WAFList200} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List all Web Application Firewalls (WAFs) created in an account
+     * @param {Object} opts Optional parameters
+     * @param {Number} [page = 1)] Identifies which page should be returned, if the return is paginated.
+     * @param {Number} [pageSize = 10)] Identifies how many items should be returned per page.
+     * @param {module:api/WAFApi~listAllWAFCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/WAFList200}
+     */
+    listAllWAF(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'page': opts['page'],
+        'page_size': opts['pageSize']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json; version=3'];
+      let returnType = WAFList200;
+      return this.apiClient.callApi(
+        '/waf', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listAllWAFRulesets operation.
+     * @callback module:api/WAFApi~listAllWAFRulesetsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/WAFList200} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * list all Rule Sets associated to a Web Application Firewall (WAF) in an account.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} [orderBy = 'name')] Identifies which property the return should be sorted by.
+     * @param {module:model/String} [sort = 'asc')] Defines whether objects are shown in ascending or descending order depending on the value set in order_by.
+     * @param {Number} [page = 1)] Identifies which page should be returned, if the return is paginated.
+     * @param {Number} [pageSize = 10)] Identifies how many items should be returned per page.
+     * @param {module:api/WAFApi~listAllWAFRulesetsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/WAFList200}
+     */
+    listAllWAFRulesets(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'order_by': opts['orderBy'],
+        'sort': opts['sort'],
+        'page': opts['page'],
+        'page_size': opts['pageSize']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json; version=3'];
+      let returnType = WAFList200;
+      return this.apiClient.callApi(
+        '/waf/rulesets', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateWAFRuleset operation.
+     * @callback module:api/WAFApi~updateWAFRulesetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/SingleWAF} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change only select settings of a WAF Rule Set
+     * @param {String} wafRuleSetId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SingleWAF} [singleWAF] 
+     * @param {module:api/WAFApi~updateWAFRulesetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SingleWAF}
+     */
+    updateWAFRuleset(wafRuleSetId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['singleWAF'];
+      // verify the required parameter 'wafRuleSetId' is set
+      if (wafRuleSetId === undefined || wafRuleSetId === null) {
+        throw new Error("Missing the required parameter 'wafRuleSetId' when calling updateWAFRuleset");
+      }
+
+      let pathParams = {
+        'waf_rule_set_id': wafRuleSetId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = ['application/json; version=3'];
+      let accepts = ['application/json; version=3'];
+      let returnType = SingleWAF;
+      return this.apiClient.callApi(
+        '/waf/rulesets/{waf_rule_set_id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
