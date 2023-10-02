@@ -13,11 +13,16 @@
 
 
 import ApiClient from './ApiClient';
+import CreateNewWAFRulesetRequest from './model/CreateNewWAFRulesetRequest';
+import SingleWAF from './model/SingleWAF';
 import WAFDomains200 from './model/WAFDomains200';
 import WAFEvents200 from './model/WAFEvents200';
 import WAFEvents400 from './model/WAFEvents400';
 import WAFEvents401 from './model/WAFEvents401';
 import WAFEvents404 from './model/WAFEvents404';
+import WAFList200 from './model/WAFList200';
+import WAFSensitivityChoices from './model/WAFSensitivityChoices';
+import WAFSingle200 from './model/WAFSingle200';
 import WAFApi from './api/WAFApi';
 
 
@@ -60,6 +65,18 @@ export {
     ApiClient,
 
     /**
+     * The CreateNewWAFRulesetRequest model constructor.
+     * @property {module:model/CreateNewWAFRulesetRequest}
+     */
+    CreateNewWAFRulesetRequest,
+
+    /**
+     * The SingleWAF model constructor.
+     * @property {module:model/SingleWAF}
+     */
+    SingleWAF,
+
+    /**
      * The WAFDomains200 model constructor.
      * @property {module:model/WAFDomains200}
      */
@@ -88,6 +105,24 @@ export {
      * @property {module:model/WAFEvents404}
      */
     WAFEvents404,
+
+    /**
+     * The WAFList200 model constructor.
+     * @property {module:model/WAFList200}
+     */
+    WAFList200,
+
+    /**
+     * The WAFSensitivityChoices model constructor.
+     * @property {module:model/WAFSensitivityChoices}
+     */
+    WAFSensitivityChoices,
+
+    /**
+     * The WAFSingle200 model constructor.
+     * @property {module:model/WAFSingle200}
+     */
+    WAFSingle200,
 
     /**
     * The WAFApi service constructor.

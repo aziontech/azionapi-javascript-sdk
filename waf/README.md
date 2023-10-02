@@ -108,9 +108,8 @@ tokenAuth.apiKey = "YOUR API KEY"
 //tokenAuth.apiKeyPrefix['Authorization'] = "Token"
 
 var api = new WebApplicationFirewallApi.WAFApi()
-var wafId = 789; // {Number} ID of WAF to return
 var opts = {
-  'name': "name_example" // {String} searches WAF for name
+  'createNewWAFRulesetRequest': new WebApplicationFirewallApi.CreateNewWAFRulesetRequest() // {CreateNewWAFRulesetRequest} 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -119,7 +118,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getWAFDomains(wafId, opts, callback);
+api.createNewWAFRuleset(opts, callback);
 
 ```
 
@@ -129,17 +128,28 @@ All URIs are relative to *https://api.azionapi.net*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*WebApplicationFirewallApi.WAFApi* | [**getWAFDomains**](docs/WAFApi.md#getWAFDomains) | **GET** /waf/{wafId}/domains | Find domains attached to a WAF
+*WebApplicationFirewallApi.WAFApi* | [**createNewWAFRuleset**](docs/WAFApi.md#createNewWAFRuleset) | **POST** /waf/rulesets | Create a new WAF Rule Set in an account.
+*WebApplicationFirewallApi.WAFApi* | [**deleteWAFRuleset**](docs/WAFApi.md#deleteWAFRuleset) | **DELETE** /waf/rulesets/{waf_rule_set_id} | Remove an WAF Rule Set from an account. Warning: this action cannot be undone.
+*WebApplicationFirewallApi.WAFApi* | [**getWAFDomains**](docs/WAFApi.md#getWAFDomains) | **GET** /waf/{wafId}/domains | List all domains attached to a Web Application Firewall (WAF) in an account.
 *WebApplicationFirewallApi.WAFApi* | [**getWAFEvents**](docs/WAFApi.md#getWAFEvents) | **GET** /waf/{wafId}/waf_events | Find WAF log events
+*WebApplicationFirewallApi.WAFApi* | [**getWAFRuleset**](docs/WAFApi.md#getWAFRuleset) | **GET** /waf/rulesets/{waf_rule_set_id} | List a specific Rule Set associated to a Web Application Firewall (WAF) in an account.
+*WebApplicationFirewallApi.WAFApi* | [**listAllWAF**](docs/WAFApi.md#listAllWAF) | **GET** /waf | List all Web Application Firewalls (WAFs) created in an account
+*WebApplicationFirewallApi.WAFApi* | [**listAllWAFRulesets**](docs/WAFApi.md#listAllWAFRulesets) | **GET** /waf/rulesets | list all Rule Sets associated to a Web Application Firewall (WAF) in an account.
+*WebApplicationFirewallApi.WAFApi* | [**updateWAFRuleset**](docs/WAFApi.md#updateWAFRuleset) | **PATCH** /waf/rulesets/{waf_rule_set_id} | Change only select settings of a WAF Rule Set
 
 
 ## Documentation for Models
 
+ - [WebApplicationFirewallApi.CreateNewWAFRulesetRequest](docs/CreateNewWAFRulesetRequest.md)
+ - [WebApplicationFirewallApi.SingleWAF](docs/SingleWAF.md)
  - [WebApplicationFirewallApi.WAFDomains200](docs/WAFDomains200.md)
  - [WebApplicationFirewallApi.WAFEvents200](docs/WAFEvents200.md)
  - [WebApplicationFirewallApi.WAFEvents400](docs/WAFEvents400.md)
  - [WebApplicationFirewallApi.WAFEvents401](docs/WAFEvents401.md)
  - [WebApplicationFirewallApi.WAFEvents404](docs/WAFEvents404.md)
+ - [WebApplicationFirewallApi.WAFList200](docs/WAFList200.md)
+ - [WebApplicationFirewallApi.WAFSensitivityChoices](docs/WAFSensitivityChoices.md)
+ - [WebApplicationFirewallApi.WAFSingle200](docs/WAFSingle200.md)
 
 
 ## Documentation for Authorization
