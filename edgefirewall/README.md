@@ -108,12 +108,7 @@ tokenAuth.apiKey = "YOUR API KEY"
 //tokenAuth.apiKeyPrefix['Authorization'] = "Token"
 
 var api = new EdgeFirewallApi.DefaultApi()
-var opts = {
-  'page': 789, // {Number} 
-  'pageSize': 789, // {Number} 
-  'sort': "sort_example", // {String} 
-  'orderBy': "orderBy_example" // {String} 
-};
+var edgeFirewallId = 789; // {Number} 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -121,7 +116,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.edgeFirewallGet(opts, callback);
+api.edgeFirewallEdgeFirewallIdRulesEngineGet(edgeFirewallId, callback);
 
 ```
 
@@ -131,6 +126,12 @@ All URIs are relative to *https://api.azionapi.net*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*EdgeFirewallApi.DefaultApi* | [**edgeFirewallEdgeFirewallIdRulesEngineGet**](docs/DefaultApi.md#edgeFirewallEdgeFirewallIdRulesEngineGet) | **GET** /edge_firewall/{edge_firewall_id}/rules_engine | List all rule sets.
+*EdgeFirewallApi.DefaultApi* | [**edgeFirewallEdgeFirewallIdRulesEnginePost**](docs/DefaultApi.md#edgeFirewallEdgeFirewallIdRulesEnginePost) | **POST** /edge_firewall/{edge_firewall_id}/rules_engine | Create rule set.
+*EdgeFirewallApi.DefaultApi* | [**edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdDelete**](docs/DefaultApi.md#edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdDelete) | **DELETE** /edge_firewall/{edge_firewall_id}/rules_engine/{rule_set_id} | Delete rule set.
+*EdgeFirewallApi.DefaultApi* | [**edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdGet**](docs/DefaultApi.md#edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdGet) | **GET** /edge_firewall/{edge_firewall_id}/rules_engine/{rule_set_id} | Retrieve rule set by ID.
+*EdgeFirewallApi.DefaultApi* | [**edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdPatch**](docs/DefaultApi.md#edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdPatch) | **PATCH** /edge_firewall/{edge_firewall_id}/rules_engine/{rule_set_id} | Edit rule set.
+*EdgeFirewallApi.DefaultApi* | [**edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdPut**](docs/DefaultApi.md#edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdPut) | **PUT** /edge_firewall/{edge_firewall_id}/rules_engine/{rule_set_id} | Overwrite rule set
 *EdgeFirewallApi.DefaultApi* | [**edgeFirewallGet**](docs/DefaultApi.md#edgeFirewallGet) | **GET** /edge_firewall | List all user edge firewall
 *EdgeFirewallApi.DefaultApi* | [**edgeFirewallPost**](docs/DefaultApi.md#edgeFirewallPost) | **POST** /edge_firewall | Create a edge firewall
 *EdgeFirewallApi.DefaultApi* | [**edgeFirewallUuidDelete**](docs/DefaultApi.md#edgeFirewallUuidDelete) | **DELETE** /edge_firewall/{uuid} | Delete an edge firewall by uuid
@@ -141,12 +142,24 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [EdgeFirewallApi.Behaviors](docs/Behaviors.md)
+ - [EdgeFirewallApi.Conditionals](docs/Conditionals.md)
  - [EdgeFirewallApi.CreateEdgeFirewallRequest](docs/CreateEdgeFirewallRequest.md)
+ - [EdgeFirewallApi.CreateRuleSetRequest](docs/CreateRuleSetRequest.md)
  - [EdgeFirewallApi.EdgeFirewall](docs/EdgeFirewall.md)
  - [EdgeFirewallApi.EdgeFirewallResponse](docs/EdgeFirewallResponse.md)
  - [EdgeFirewallApi.Links](docs/Links.md)
  - [EdgeFirewallApi.ListEdgeFirewallResponse](docs/ListEdgeFirewallResponse.md)
+ - [EdgeFirewallApi.RuleSetResponse](docs/RuleSetResponse.md)
+ - [EdgeFirewallApi.RuleSetResponseAll](docs/RuleSetResponseAll.md)
+ - [EdgeFirewallApi.RuleSetResult](docs/RuleSetResult.md)
+ - [EdgeFirewallApi.RuleSetResultAll](docs/RuleSetResultAll.md)
+ - [EdgeFirewallApi.RuleSetResultResults](docs/RuleSetResultResults.md)
+ - [EdgeFirewallApi.SSLVerificationStatusArguments](docs/SSLVerificationStatusArguments.md)
+ - [EdgeFirewallApi.SSLVerificationStatusCriteria](docs/SSLVerificationStatusCriteria.md)
+ - [EdgeFirewallApi.SSLVerificationStatusOperators](docs/SSLVerificationStatusOperators.md)
  - [EdgeFirewallApi.UpdateEdgeFirewallRequest](docs/UpdateEdgeFirewallRequest.md)
+ - [EdgeFirewallApi.Variables](docs/Variables.md)
 
 
 ## Documentation for Authorization

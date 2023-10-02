@@ -14,8 +14,12 @@
 
 import ApiClient from "../ApiClient";
 import CreateEdgeFirewallRequest from '../model/CreateEdgeFirewallRequest';
+import CreateRuleSetRequest from '../model/CreateRuleSetRequest';
 import EdgeFirewallResponse from '../model/EdgeFirewallResponse';
 import ListEdgeFirewallResponse from '../model/ListEdgeFirewallResponse';
+import RuleSetResponse from '../model/RuleSetResponse';
+import RuleSetResponseAll from '../model/RuleSetResponseAll';
+import RuleSetResult from '../model/RuleSetResult';
 import UpdateEdgeFirewallRequest from '../model/UpdateEdgeFirewallRequest';
 
 /**
@@ -36,6 +40,300 @@ export default class DefaultApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the edgeFirewallEdgeFirewallIdRulesEngineGet operation.
+     * @callback module:api/DefaultApi~edgeFirewallEdgeFirewallIdRulesEngineGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/RuleSetResponseAll} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List all rule sets.
+     * @param {Number} edgeFirewallId 
+     * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdRulesEngineGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/RuleSetResponseAll}
+     */
+    edgeFirewallEdgeFirewallIdRulesEngineGet(edgeFirewallId, callback) {
+      let postBody = null;
+      // verify the required parameter 'edgeFirewallId' is set
+      if (edgeFirewallId === undefined || edgeFirewallId === null) {
+        throw new Error("Missing the required parameter 'edgeFirewallId' when calling edgeFirewallEdgeFirewallIdRulesEngineGet");
+      }
+
+      let pathParams = {
+        'edge_firewall_id': edgeFirewallId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json; version=3'];
+      let returnType = RuleSetResponseAll;
+      return this.apiClient.callApi(
+        '/edge_firewall/{edge_firewall_id}/rules_engine', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the edgeFirewallEdgeFirewallIdRulesEnginePost operation.
+     * @callback module:api/DefaultApi~edgeFirewallEdgeFirewallIdRulesEnginePostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/RuleSetResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create rule set.
+     * @param {Number} edgeFirewallId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateRuleSetRequest} [createRuleSetRequest] 
+     * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdRulesEnginePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/RuleSetResponse}
+     */
+    edgeFirewallEdgeFirewallIdRulesEnginePost(edgeFirewallId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['createRuleSetRequest'];
+      // verify the required parameter 'edgeFirewallId' is set
+      if (edgeFirewallId === undefined || edgeFirewallId === null) {
+        throw new Error("Missing the required parameter 'edgeFirewallId' when calling edgeFirewallEdgeFirewallIdRulesEnginePost");
+      }
+
+      let pathParams = {
+        'edge_firewall_id': edgeFirewallId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = ['application/json; version=3'];
+      let accepts = ['application/json; version=3'];
+      let returnType = RuleSetResponse;
+      return this.apiClient.callApi(
+        '/edge_firewall/{edge_firewall_id}/rules_engine', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdDelete operation.
+     * @callback module:api/DefaultApi~edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdDeleteCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete rule set.
+     * @param {Number} edgeFirewallId 
+     * @param {Number} ruleSetId 
+     * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdDelete(edgeFirewallId, ruleSetId, callback) {
+      let postBody = null;
+      // verify the required parameter 'edgeFirewallId' is set
+      if (edgeFirewallId === undefined || edgeFirewallId === null) {
+        throw new Error("Missing the required parameter 'edgeFirewallId' when calling edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdDelete");
+      }
+      // verify the required parameter 'ruleSetId' is set
+      if (ruleSetId === undefined || ruleSetId === null) {
+        throw new Error("Missing the required parameter 'ruleSetId' when calling edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdDelete");
+      }
+
+      let pathParams = {
+        'edge_firewall_id': edgeFirewallId,
+        'rule_set_id': ruleSetId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/edge_firewall/{edge_firewall_id}/rules_engine/{rule_set_id}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdGet operation.
+     * @callback module:api/DefaultApi~edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/RuleSetResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve rule set by ID.
+     * @param {Number} edgeFirewallId 
+     * @param {Number} ruleSetId 
+     * @param {Object} opts Optional parameters
+     * @param {String} [orderBy] 
+     * @param {module:model/String} [sort] 
+     * @param {Number} [page = 1)] 
+     * @param {Number} [pageSize = 10)] 
+     * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/RuleSetResult}
+     */
+    edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdGet(edgeFirewallId, ruleSetId, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'edgeFirewallId' is set
+      if (edgeFirewallId === undefined || edgeFirewallId === null) {
+        throw new Error("Missing the required parameter 'edgeFirewallId' when calling edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdGet");
+      }
+      // verify the required parameter 'ruleSetId' is set
+      if (ruleSetId === undefined || ruleSetId === null) {
+        throw new Error("Missing the required parameter 'ruleSetId' when calling edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdGet");
+      }
+
+      let pathParams = {
+        'edge_firewall_id': edgeFirewallId,
+        'rule_set_id': ruleSetId
+      };
+      let queryParams = {
+        'order_by': opts['orderBy'],
+        'sort': opts['sort'],
+        'page': opts['page'],
+        'page_size': opts['pageSize']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json; version=3'];
+      let returnType = RuleSetResult;
+      return this.apiClient.callApi(
+        '/edge_firewall/{edge_firewall_id}/rules_engine/{rule_set_id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdPatch operation.
+     * @callback module:api/DefaultApi~edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdPatchCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/RuleSetResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Edit rule set.
+     * @param {Number} edgeFirewallId 
+     * @param {Number} ruleSetId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateRuleSetRequest} [createRuleSetRequest] 
+     * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdPatchCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/RuleSetResult}
+     */
+    edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdPatch(edgeFirewallId, ruleSetId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['createRuleSetRequest'];
+      // verify the required parameter 'edgeFirewallId' is set
+      if (edgeFirewallId === undefined || edgeFirewallId === null) {
+        throw new Error("Missing the required parameter 'edgeFirewallId' when calling edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdPatch");
+      }
+      // verify the required parameter 'ruleSetId' is set
+      if (ruleSetId === undefined || ruleSetId === null) {
+        throw new Error("Missing the required parameter 'ruleSetId' when calling edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdPatch");
+      }
+
+      let pathParams = {
+        'edge_firewall_id': edgeFirewallId,
+        'rule_set_id': ruleSetId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = ['application/json; version=3'];
+      let accepts = ['application/json; version=3'];
+      let returnType = RuleSetResult;
+      return this.apiClient.callApi(
+        '/edge_firewall/{edge_firewall_id}/rules_engine/{rule_set_id}', 'PATCH',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdPut operation.
+     * @callback module:api/DefaultApi~edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdPutCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/RuleSetResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Overwrite rule set
+     * @param {Number} edgeFirewallId 
+     * @param {Number} ruleSetId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateRuleSetRequest} [createRuleSetRequest] 
+     * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdPutCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/RuleSetResult}
+     */
+    edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdPut(edgeFirewallId, ruleSetId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['createRuleSetRequest'];
+      // verify the required parameter 'edgeFirewallId' is set
+      if (edgeFirewallId === undefined || edgeFirewallId === null) {
+        throw new Error("Missing the required parameter 'edgeFirewallId' when calling edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdPut");
+      }
+      // verify the required parameter 'ruleSetId' is set
+      if (ruleSetId === undefined || ruleSetId === null) {
+        throw new Error("Missing the required parameter 'ruleSetId' when calling edgeFirewallEdgeFirewallIdRulesEngineRuleSetIdPut");
+      }
+
+      let pathParams = {
+        'edge_firewall_id': edgeFirewallId,
+        'rule_set_id': ruleSetId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = ['application/json; version=3'];
+      let accepts = ['application/json; version=3'];
+      let returnType = RuleSetResult;
+      return this.apiClient.callApi(
+        '/edge_firewall/{edge_firewall_id}/rules_engine/{rule_set_id}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the edgeFirewallGet operation.
