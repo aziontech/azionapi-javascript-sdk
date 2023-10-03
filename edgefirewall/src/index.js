@@ -13,12 +13,24 @@
 
 
 import ApiClient from './ApiClient';
+import Behaviors from './model/Behaviors';
+import Conditionals from './model/Conditionals';
 import CreateEdgeFirewallRequest from './model/CreateEdgeFirewallRequest';
+import CreateRuleSetRequest from './model/CreateRuleSetRequest';
 import EdgeFirewall from './model/EdgeFirewall';
 import EdgeFirewallResponse from './model/EdgeFirewallResponse';
 import Links from './model/Links';
 import ListEdgeFirewallResponse from './model/ListEdgeFirewallResponse';
+import RuleSetResponse from './model/RuleSetResponse';
+import RuleSetResponseAll from './model/RuleSetResponseAll';
+import RuleSetResult from './model/RuleSetResult';
+import RuleSetResultAll from './model/RuleSetResultAll';
+import RuleSetResultResults from './model/RuleSetResultResults';
+import SSLVerificationStatusArguments from './model/SSLVerificationStatusArguments';
+import SSLVerificationStatusCriteria from './model/SSLVerificationStatusCriteria';
+import SSLVerificationStatusOperators from './model/SSLVerificationStatusOperators';
 import UpdateEdgeFirewallRequest from './model/UpdateEdgeFirewallRequest';
+import Variables from './model/Variables';
 import DefaultApi from './api/DefaultApi';
 
 
@@ -61,10 +73,28 @@ export {
     ApiClient,
 
     /**
+     * The Behaviors model constructor.
+     * @property {module:model/Behaviors}
+     */
+    Behaviors,
+
+    /**
+     * The Conditionals model constructor.
+     * @property {module:model/Conditionals}
+     */
+    Conditionals,
+
+    /**
      * The CreateEdgeFirewallRequest model constructor.
      * @property {module:model/CreateEdgeFirewallRequest}
      */
     CreateEdgeFirewallRequest,
+
+    /**
+     * The CreateRuleSetRequest model constructor.
+     * @property {module:model/CreateRuleSetRequest}
+     */
+    CreateRuleSetRequest,
 
     /**
      * The EdgeFirewall model constructor.
@@ -91,10 +121,64 @@ export {
     ListEdgeFirewallResponse,
 
     /**
+     * The RuleSetResponse model constructor.
+     * @property {module:model/RuleSetResponse}
+     */
+    RuleSetResponse,
+
+    /**
+     * The RuleSetResponseAll model constructor.
+     * @property {module:model/RuleSetResponseAll}
+     */
+    RuleSetResponseAll,
+
+    /**
+     * The RuleSetResult model constructor.
+     * @property {module:model/RuleSetResult}
+     */
+    RuleSetResult,
+
+    /**
+     * The RuleSetResultAll model constructor.
+     * @property {module:model/RuleSetResultAll}
+     */
+    RuleSetResultAll,
+
+    /**
+     * The RuleSetResultResults model constructor.
+     * @property {module:model/RuleSetResultResults}
+     */
+    RuleSetResultResults,
+
+    /**
+     * The SSLVerificationStatusArguments model constructor.
+     * @property {module:model/SSLVerificationStatusArguments}
+     */
+    SSLVerificationStatusArguments,
+
+    /**
+     * The SSLVerificationStatusCriteria model constructor.
+     * @property {module:model/SSLVerificationStatusCriteria}
+     */
+    SSLVerificationStatusCriteria,
+
+    /**
+     * The SSLVerificationStatusOperators model constructor.
+     * @property {module:model/SSLVerificationStatusOperators}
+     */
+    SSLVerificationStatusOperators,
+
+    /**
      * The UpdateEdgeFirewallRequest model constructor.
      * @property {module:model/UpdateEdgeFirewallRequest}
      */
     UpdateEdgeFirewallRequest,
+
+    /**
+     * The Variables model constructor.
+     * @property {module:model/Variables}
+     */
+    Variables,
 
     /**
     * The DefaultApi service constructor.
