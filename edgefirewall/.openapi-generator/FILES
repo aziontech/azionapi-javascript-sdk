@@ -45,15 +45,3 @@ src/model/SSLVerificationStatusCriteria.js
 src/model/SSLVerificationStatusOperators.js
 src/model/UpdateEdgeFirewallRequest.js
 src/model/Variables.js
-test/model/Behaviors.spec.js
-test/model/Conditionals.spec.js
-test/model/CreateRuleSetRequest.spec.js
-test/model/RuleSetResponse.spec.js
-test/model/RuleSetResponseAll.spec.js
-test/model/RuleSetResult.spec.js
-test/model/RuleSetResultAll.spec.js
-test/model/RuleSetResultResults.spec.js
-test/model/SSLVerificationStatusArguments.spec.js
-test/model/SSLVerificationStatusCriteria.spec.js
-test/model/SSLVerificationStatusOperators.spec.js
-test/model/Variables.spec.js
