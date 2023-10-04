@@ -3,6 +3,7 @@
 .travis.yml
 README.md
 docs/CreateNewWAFRulesetRequest.md
+docs/Links.md
 docs/SingleWAF.md
 docs/WAFApi.md
 docs/WAFDomains200.md
@@ -20,6 +21,7 @@ src/ApiClient.js
 src/api/WAFApi.js
 src/index.js
 src/model/CreateNewWAFRulesetRequest.js
+src/model/Links.js
 src/model/SingleWAF.js
 src/model/WAFDomains200.js
 src/model/WAFEvents200.js
@@ -29,8 +31,4 @@ src/model/WAFEvents404.js
 src/model/WAFList200.js
 src/model/WAFSensitivityChoices.js
 src/model/WAFSingle200.js
-test/model/CreateNewWAFRulesetRequest.spec.js
-test/model/SingleWAF.spec.js
-test/model/WAFList200.spec.js
-test/model/WAFSensitivityChoices.spec.js
-test/model/WAFSingle200.spec.js
+test/model/Links.spec.js

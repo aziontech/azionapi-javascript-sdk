@@ -6,7 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **count** | **Number** |  | [optional] 
 **totalPages** | **Number** |  | [optional] 
-**links** | [**SingleWAF**](SingleWAF.md) |  | [optional] 
+**links** | [**Links**](Links.md) |  | [optional] 
+**results** | [**[SingleWAF]**](SingleWAF.md) |  | [optional] 
 **schemaVersion** | **Number** |  | [optional] 
 
 

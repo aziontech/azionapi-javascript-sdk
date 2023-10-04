@@ -141,6 +141,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [WebApplicationFirewallApi.CreateNewWAFRulesetRequest](docs/CreateNewWAFRulesetRequest.md)
+ - [WebApplicationFirewallApi.Links](docs/Links.md)
  - [WebApplicationFirewallApi.SingleWAF](docs/SingleWAF.md)
  - [WebApplicationFirewallApi.WAFDomains200](docs/WAFDomains200.md)
  - [WebApplicationFirewallApi.WAFEvents200](docs/WAFEvents200.md)

@@ -14,6 +14,7 @@
 
 import ApiClient from './ApiClient';
 import CreateNewWAFRulesetRequest from './model/CreateNewWAFRulesetRequest';
+import Links from './model/Links';
 import SingleWAF from './model/SingleWAF';
 import WAFDomains200 from './model/WAFDomains200';
 import WAFEvents200 from './model/WAFEvents200';
@@ -69,6 +70,12 @@ export {
      * @property {module:model/CreateNewWAFRulesetRequest}
      */
     CreateNewWAFRulesetRequest,
+
+    /**
+     * The Links model constructor.
+     * @property {module:model/Links}
+     */
+    Links,
 
     /**
      * The SingleWAF model constructor.

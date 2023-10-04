@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import Links from './Links';
 import SingleWAF from './SingleWAF';
 
 /**
@@ -55,7 +56,10 @@ class WAFList200 {
                 obj['total_pages'] = ApiClient.convertToType(data['total_pages'], 'Number');
             }
             if (data.hasOwnProperty('links')) {
-                obj['links'] = SingleWAF.constructFromObject(data['links']);
+                obj['links'] = Links.constructFromObject(data['links']);
+            }
+            if (data.hasOwnProperty('results')) {
+                obj['results'] = ApiClient.convertToType(data['results'], [SingleWAF]);
             }
             if (data.hasOwnProperty('schema_version')) {
                 obj['schema_version'] = ApiClient.convertToType(data['schema_version'], 'Number');
@@ -72,7 +76,17 @@ class WAFList200 {
     static validateJSON(data) {
         // validate the optional field `links`
         if (data['links']) { // data not null
-          SingleWAF.validateJSON(data['links']);
+          Links.validateJSON(data['links']);
+        }
+        if (data['results']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['results'])) {
+                throw new Error("Expected the field `results` to be an array in the JSON data but got " + data['results']);
+            }
+            // validate the optional field `results` (array)
+            for (const item of data['results']) {
+                SingleWAF.validateJSON(item);
+            };
         }
 
         return true;
@@ -94,9 +108,14 @@ WAFList200.prototype['count'] = undefined;
 WAFList200.prototype['total_pages'] = undefined;
 
 /**
- * @member {module:model/SingleWAF} links
+ * @member {module:model/Links} links
  */
 WAFList200.prototype['links'] = undefined;
+
+/**
+ * @member {Array.<module:model/SingleWAF>} results
+ */
+WAFList200.prototype['results'] = undefined;
 
 /**
  * @member {Number} schema_version
