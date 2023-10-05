@@ -133,15 +133,25 @@ export default class ZonesApi {
 
     /**
      * Get a collection of Intelligent DNS zones
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} [orderBy = 'name')] Identifies which property the return should be sorted by.
+     * @param {module:model/String} [sort = 'asc')] Defines whether objects are shown in ascending or descending order depending on the value set in order_by.
+     * @param {Number} [page = 1)] Identifies which page should be returned, if the return is paginated.
+     * @param {Number} [pageSize = 10)] Identifies how many items should be returned per page.
      * @param {module:api/ZonesApi~getZonesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GetZonesResponse}
      */
-    getZones(callback) {
+    getZones(opts, callback) {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
       };
       let queryParams = {
+        'order_by': opts['orderBy'],
+        'sort': opts['sort'],
+        'page': opts['page'],
+        'page_size': opts['pageSize']
       };
       let headerParams = {
       };
