@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ## getZones
 
-> GetZonesResponse getZones()
+> GetZonesResponse getZones(opts)
 
 Get a collection of Intelligent DNS zones
 
@@ -128,7 +128,13 @@ tokenAuth.apiKey = 'YOUR API KEY';
 //tokenAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new IntelligentDnsApi.ZonesApi();
-apiInstance.getZones((error, data, response) => {
+let opts = {
+  'orderBy': "'name'", // String | Identifies which property the return should be sorted by.
+  'sort': "'asc'", // String | Defines whether objects are shown in ascending or descending order depending on the value set in order_by.
+  'page': 1, // Number | Identifies which page should be returned, if the return is paginated.
+  'pageSize': 10 // Number | Identifies how many items should be returned per page.
+};
+apiInstance.getZones(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -139,7 +145,13 @@ apiInstance.getZones((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderBy** | **String**| Identifies which property the return should be sorted by. | [optional] [default to &#39;name&#39;]
+ **sort** | **String**| Defines whether objects are shown in ascending or descending order depending on the value set in order_by. | [optional] [default to &#39;asc&#39;]
+ **page** | **Number**| Identifies which page should be returned, if the return is paginated. | [optional] [default to 1]
+ **pageSize** | **Number**| Identifies how many items should be returned per page. | [optional] [default to 10]
 
 ### Return type
 
