@@ -97,10 +97,14 @@ export default class RecordsApi {
     /**
      * Get a collection of Intelligent DNS zone records
      * @param {Number} zoneId The hosted zone id
+     * @param {Object} opts Optional parameters
+     * @param {Number} [page = 1)] Identifies which page should be returned, if the return is paginated.
+     * @param {Number} [pageSize = 10)] Identifies how many items should be returned per page.
      * @param {module:api/RecordsApi~getZoneRecordsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GetRecordsResponse}
      */
-    getZoneRecords(zoneId, callback) {
+    getZoneRecords(zoneId, opts, callback) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'zoneId' is set
       if (zoneId === undefined || zoneId === null) {
@@ -111,6 +115,8 @@ export default class RecordsApi {
         'zone_id': zoneId
       };
       let queryParams = {
+        'page': opts['page'],
+        'page_size': opts['pageSize']
       };
       let headerParams = {
       };
