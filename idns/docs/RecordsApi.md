@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ## getZoneRecords
 
-> GetRecordsResponse getZoneRecords(zoneId)
+> GetRecordsResponse getZoneRecords(zoneId, opts)
 
 Get a collection of Intelligent DNS zone records
 
@@ -81,7 +81,11 @@ tokenAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new IntelligentDnsApi.RecordsApi();
 let zoneId = 56; // Number | The hosted zone id
-apiInstance.getZoneRecords(zoneId, (error, data, response) => {
+let opts = {
+  'page': 1, // Number | Identifies which page should be returned, if the return is paginated.
+  'pageSize': 10 // Number | Identifies how many items should be returned per page.
+};
+apiInstance.getZoneRecords(zoneId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -96,6 +100,8 @@ apiInstance.getZoneRecords(zoneId, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **zoneId** | **Number**| The hosted zone id | 
+ **page** | **Number**| Identifies which page should be returned, if the return is paginated. | [optional] [default to 1]
+ **pageSize** | **Number**| Identifies how many items should be returned per page. | [optional] [default to 10]
 
 ### Return type
 
