@@ -53,6 +53,12 @@ class EdgeFunctionsInstance {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('last_editor')) {
+                obj['last_editor'] = ApiClient.convertToType(data['last_editor'], 'String');
+            }
+            if (data.hasOwnProperty('last_modified')) {
+                obj['last_modified'] = ApiClient.convertToType(data['last_modified'], 'String');
+            }
             if (data.hasOwnProperty('json_args')) {
                 obj['json_args'] = ApiClient.convertToType(data['json_args'], Object);
             }
@@ -73,6 +79,14 @@ class EdgeFunctionsInstance {
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
         }
+        // ensure the json data is a string
+        if (data['last_editor'] && !(typeof data['last_editor'] === 'string' || data['last_editor'] instanceof String)) {
+            throw new Error("Expected the field `last_editor` to be a primitive type in the JSON string but got " + data['last_editor']);
+        }
+        // ensure the json data is a string
+        if (data['last_modified'] && !(typeof data['last_modified'] === 'string' || data['last_modified'] instanceof String)) {
+            throw new Error("Expected the field `last_modified` to be a primitive type in the JSON string but got " + data['last_modified']);
+        }
 
         return true;
     }
@@ -91,6 +105,16 @@ EdgeFunctionsInstance.prototype['id'] = undefined;
  * @member {String} name
  */
 EdgeFunctionsInstance.prototype['name'] = undefined;
+
+/**
+ * @member {String} last_editor
+ */
+EdgeFunctionsInstance.prototype['last_editor'] = undefined;
+
+/**
+ * @member {String} last_modified
+ */
+EdgeFunctionsInstance.prototype['last_modified'] = undefined;
 
 /**
  * @member {Object} json_args

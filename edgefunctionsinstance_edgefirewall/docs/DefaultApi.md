@@ -32,8 +32,8 @@ tokenAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new EdgeFunctionsInstancesApi.DefaultApi();
 let opts = {
-  'page': 56, // Number | 
-  'pageSize': 56, // Number | 
+  'page': 789, // Number | 
+  'pageSize': 789, // Number | 
   'sort': "sort_example", // String | 
   'orderBy': "orderBy_example" // String | 
 };
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 ## edgeFirewallEdgeFirewallIdFunctionsInstancesPost
 
-> edgeFirewallEdgeFirewallIdFunctionsInstancesPost(createEdgeFunctionsInstancesRequest)
+> EdgeFunctionsInstanceResponse edgeFirewallEdgeFirewallIdFunctionsInstancesPost(createEdgeFunctionsInstancesRequest)
 
 Create an Edge Functions Instance
 
@@ -93,7 +93,7 @@ apiInstance.edgeFirewallEdgeFirewallIdFunctionsInstancesPost(createEdgeFunctions
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**EdgeFunctionsInstanceResponse**](EdgeFunctionsInstanceResponse.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## edgeFirewallEdgeFirewallIdFunctionsInstancesUuidDelete
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 ## edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPatch
 
-> ListEdgeFunctionsInstancesResponse edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPatch(uuid, body)
+> EdgeFunctionsInstanceResponse edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPatch(uuid, body)
 
 Update some Edge Functions Instance attributes
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListEdgeFunctionsInstancesResponse**](ListEdgeFunctionsInstancesResponse.md)
+[**EdgeFunctionsInstanceResponse**](EdgeFunctionsInstanceResponse.md)
 
 ### Authorization
 
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 ## edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPut
 
-> ListEdgeFunctionsInstancesResponse edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPut(uuid, body)
+> EdgeFunctionsInstanceResponse edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPut(uuid, body)
 
 Overwrite some Edge Functions Instance attributes
 
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListEdgeFunctionsInstancesResponse**](ListEdgeFunctionsInstancesResponse.md)
+[**EdgeFunctionsInstanceResponse**](EdgeFunctionsInstanceResponse.md)
 
 ### Authorization
 
