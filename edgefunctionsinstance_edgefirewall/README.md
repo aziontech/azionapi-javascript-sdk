@@ -109,8 +109,8 @@ tokenAuth.apiKey = "YOUR API KEY"
 
 var api = new EdgeFunctionsInstancesApi.DefaultApi()
 var opts = {
-  'page': 56, // {Number} 
-  'pageSize': 56, // {Number} 
+  'page': 789, // {Number} 
+  'pageSize': 789, // {Number} 
   'sort': "sort_example", // {String} 
   'orderBy': "orderBy_example" // {String} 
 };

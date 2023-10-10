@@ -86,7 +86,7 @@ export default class DefaultApi {
      * Callback function to receive the result of the edgeFirewallEdgeFirewallIdFunctionsInstancesPost operation.
      * @callback module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesPostCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/EdgeFunctionsInstanceResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -94,6 +94,7 @@ export default class DefaultApi {
      * Create an Edge Functions Instance
      * @param {module:model/CreateEdgeFunctionsInstancesRequest} createEdgeFunctionsInstancesRequest 
      * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/EdgeFunctionsInstanceResponse}
      */
     edgeFirewallEdgeFirewallIdFunctionsInstancesPost(createEdgeFunctionsInstancesRequest, callback) {
       let postBody = createEdgeFunctionsInstancesRequest;
@@ -113,8 +114,8 @@ export default class DefaultApi {
 
       let authNames = ['tokenAuth'];
       let contentTypes = ['application/json'];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = EdgeFunctionsInstanceResponse;
       return this.apiClient.callApi(
         '/edge_firewall/:edge_firewall_id:/functions_instances', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -209,7 +210,7 @@ export default class DefaultApi {
      * Callback function to receive the result of the edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPatch operation.
      * @callback module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPatchCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ListEdgeFunctionsInstancesResponse} data The data returned by the service call.
+     * @param {module:model/EdgeFunctionsInstanceResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -218,7 +219,7 @@ export default class DefaultApi {
      * @param {String} uuid 
      * @param {module:model/CreateEdgeFunctionsInstancesRequest} body 
      * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPatchCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ListEdgeFunctionsInstancesResponse}
+     * data is of type: {@link module:model/EdgeFunctionsInstanceResponse}
      */
     edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPatch(uuid, body, callback) {
       let postBody = body;
@@ -244,7 +245,7 @@ export default class DefaultApi {
       let authNames = ['tokenAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ListEdgeFunctionsInstancesResponse;
+      let returnType = EdgeFunctionsInstanceResponse;
       return this.apiClient.callApi(
         '/edge_firewall/:edge_firewall_id:/functions_instances/{uuid}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -256,7 +257,7 @@ export default class DefaultApi {
      * Callback function to receive the result of the edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPut operation.
      * @callback module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPutCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ListEdgeFunctionsInstancesResponse} data The data returned by the service call.
+     * @param {module:model/EdgeFunctionsInstanceResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -265,7 +266,7 @@ export default class DefaultApi {
      * @param {String} uuid 
      * @param {module:model/CreateEdgeFunctionsInstancesRequest} body 
      * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ListEdgeFunctionsInstancesResponse}
+     * data is of type: {@link module:model/EdgeFunctionsInstanceResponse}
      */
     edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPut(uuid, body, callback) {
       let postBody = body;
@@ -291,7 +292,7 @@ export default class DefaultApi {
       let authNames = ['tokenAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ListEdgeFunctionsInstancesResponse;
+      let returnType = EdgeFunctionsInstanceResponse;
       return this.apiClient.callApi(
         '/edge_firewall/:edge_firewall_id:/functions_instances/{uuid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
