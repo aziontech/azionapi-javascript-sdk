@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import WAFEvents200ResultsInner from './WAFEvents200ResultsInner';
 
 /**
  * The WAFEvents200 model module.
@@ -48,7 +49,7 @@ class WAFEvents200 {
             obj = obj || new WAFEvents200();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [Object]);
+                obj['results'] = ApiClient.convertToType(data['results'], [WAFEvents200ResultsInner]);
             }
             if (data.hasOwnProperty('schema_version')) {
                 obj['schema_version'] = ApiClient.convertToType(data['schema_version'], 'Number');
@@ -63,9 +64,15 @@ class WAFEvents200 {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WAFEvents200</code>.
      */
     static validateJSON(data) {
-        // ensure the json data is an array
-        if (!Array.isArray(data['results'])) {
-            throw new Error("Expected the field `results` to be an array in the JSON data but got " + data['results']);
+        if (data['results']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['results'])) {
+                throw new Error("Expected the field `results` to be an array in the JSON data but got " + data['results']);
+            }
+            // validate the optional field `results` (array)
+            for (const item of data['results']) {
+                WAFEvents200ResultsInner.validateJSON(item);
+            };
         }
 
         return true;
@@ -77,7 +84,7 @@ class WAFEvents200 {
 
 
 /**
- * @member {Array.<Object>} results
+ * @member {Array.<module:model/WAFEvents200ResultsInner>} results
  */
 WAFEvents200.prototype['results'] = undefined;
 

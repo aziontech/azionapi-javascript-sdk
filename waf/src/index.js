@@ -16,8 +16,10 @@ import ApiClient from './ApiClient';
 import CreateNewWAFRulesetRequest from './model/CreateNewWAFRulesetRequest';
 import Links from './model/Links';
 import SingleWAF from './model/SingleWAF';
+import WAFDomainList200 from './model/WAFDomainList200';
 import WAFDomains200 from './model/WAFDomains200';
 import WAFEvents200 from './model/WAFEvents200';
+import WAFEvents200ResultsInner from './model/WAFEvents200ResultsInner';
 import WAFEvents400 from './model/WAFEvents400';
 import WAFEvents401 from './model/WAFEvents401';
 import WAFEvents404 from './model/WAFEvents404';
@@ -84,6 +86,12 @@ export {
     SingleWAF,
 
     /**
+     * The WAFDomainList200 model constructor.
+     * @property {module:model/WAFDomainList200}
+     */
+    WAFDomainList200,
+
+    /**
      * The WAFDomains200 model constructor.
      * @property {module:model/WAFDomains200}
      */
@@ -94,6 +102,12 @@ export {
      * @property {module:model/WAFEvents200}
      */
     WAFEvents200,
+
+    /**
+     * The WAFEvents200ResultsInner model constructor.
+     * @property {module:model/WAFEvents200ResultsInner}
+     */
+    WAFEvents200ResultsInner,
 
     /**
      * The WAFEvents400 model constructor.

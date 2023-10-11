@@ -12,6 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import Links from './Links';
+import WAFDomainList200 from './WAFDomainList200';
 
 /**
  * The WAFDomains200 model module.
@@ -47,8 +49,17 @@ class WAFDomains200 {
         if (data) {
             obj = obj || new WAFDomains200();
 
+            if (data.hasOwnProperty('count')) {
+                obj['count'] = ApiClient.convertToType(data['count'], 'Number');
+            }
+            if (data.hasOwnProperty('total_pages')) {
+                obj['total_pages'] = ApiClient.convertToType(data['total_pages'], 'Number');
+            }
+            if (data.hasOwnProperty('links')) {
+                obj['links'] = Links.constructFromObject(data['links']);
+            }
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [Object]);
+                obj['results'] = ApiClient.convertToType(data['results'], [WAFDomainList200]);
             }
             if (data.hasOwnProperty('schema_version')) {
                 obj['schema_version'] = ApiClient.convertToType(data['schema_version'], 'Number');
@@ -63,9 +74,19 @@ class WAFDomains200 {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WAFDomains200</code>.
      */
     static validateJSON(data) {
-        // ensure the json data is an array
-        if (!Array.isArray(data['results'])) {
-            throw new Error("Expected the field `results` to be an array in the JSON data but got " + data['results']);
+        // validate the optional field `links`
+        if (data['links']) { // data not null
+          Links.validateJSON(data['links']);
+        }
+        if (data['results']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['results'])) {
+                throw new Error("Expected the field `results` to be an array in the JSON data but got " + data['results']);
+            }
+            // validate the optional field `results` (array)
+            for (const item of data['results']) {
+                WAFDomainList200.validateJSON(item);
+            };
         }
 
         return true;
@@ -77,7 +98,22 @@ class WAFDomains200 {
 
 
 /**
- * @member {Array.<Object>} results
+ * @member {Number} count
+ */
+WAFDomains200.prototype['count'] = undefined;
+
+/**
+ * @member {Number} total_pages
+ */
+WAFDomains200.prototype['total_pages'] = undefined;
+
+/**
+ * @member {module:model/Links} links
+ */
+WAFDomains200.prototype['links'] = undefined;
+
+/**
+ * @member {Array.<module:model/WAFDomainList200>} results
  */
 WAFDomains200.prototype['results'] = undefined;
 

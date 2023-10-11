@@ -4,7 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | **[Object]** |  | [optional] 
+**count** | **Number** |  | [optional] 
+**totalPages** | **Number** |  | [optional] 
+**links** | [**Links**](Links.md) |  | [optional] 
+**results** | [**[WAFDomainList200]**](WAFDomainList200.md) |  | [optional] 
 **schemaVersion** | **Number** |  | [optional] 
 
 
