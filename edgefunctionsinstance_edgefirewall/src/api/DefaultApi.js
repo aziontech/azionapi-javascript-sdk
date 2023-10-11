@@ -37,6 +37,207 @@ export default class DefaultApi {
 
 
     /**
+     * Callback function to receive the result of the edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdDelete operation.
+     * @callback module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdDeleteCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete an Edge Functions Instance by uuid
+     * @param {Number} edgeFirewallId 
+     * @param {Number} edgeFunctionInstanceId 
+     * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdDelete(edgeFirewallId, edgeFunctionInstanceId, callback) {
+      let postBody = null;
+      // verify the required parameter 'edgeFirewallId' is set
+      if (edgeFirewallId === undefined || edgeFirewallId === null) {
+        throw new Error("Missing the required parameter 'edgeFirewallId' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdDelete");
+      }
+      // verify the required parameter 'edgeFunctionInstanceId' is set
+      if (edgeFunctionInstanceId === undefined || edgeFunctionInstanceId === null) {
+        throw new Error("Missing the required parameter 'edgeFunctionInstanceId' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdDelete");
+      }
+
+      let pathParams = {
+        'edge_firewall_id': edgeFirewallId,
+        'edge_function_instance_id': edgeFunctionInstanceId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/edge_firewall/{edge_firewall_id}/functions_instances/{edge_function_instance_id}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdGet operation.
+     * @callback module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/EdgeFunctionsInstanceResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve an Edge Functions Instance set by uuid
+     * @param {Number} edgeFirewallId 
+     * @param {Number} edgeFunctionInstanceId 
+     * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/EdgeFunctionsInstanceResponse}
+     */
+    edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdGet(edgeFirewallId, edgeFunctionInstanceId, callback) {
+      let postBody = null;
+      // verify the required parameter 'edgeFirewallId' is set
+      if (edgeFirewallId === undefined || edgeFirewallId === null) {
+        throw new Error("Missing the required parameter 'edgeFirewallId' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdGet");
+      }
+      // verify the required parameter 'edgeFunctionInstanceId' is set
+      if (edgeFunctionInstanceId === undefined || edgeFunctionInstanceId === null) {
+        throw new Error("Missing the required parameter 'edgeFunctionInstanceId' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdGet");
+      }
+
+      let pathParams = {
+        'edge_firewall_id': edgeFirewallId,
+        'edge_function_instance_id': edgeFunctionInstanceId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = EdgeFunctionsInstanceResponse;
+      return this.apiClient.callApi(
+        '/edge_firewall/{edge_firewall_id}/functions_instances/{edge_function_instance_id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdPatch operation.
+     * @callback module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdPatchCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/EdgeFunctionsInstanceResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update some Edge Functions Instance attributes
+     * @param {Number} edgeFirewallId 
+     * @param {Number} edgeFunctionInstanceId 
+     * @param {module:model/CreateEdgeFunctionsInstancesRequest} body 
+     * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdPatchCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/EdgeFunctionsInstanceResponse}
+     */
+    edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdPatch(edgeFirewallId, edgeFunctionInstanceId, body, callback) {
+      let postBody = body;
+      // verify the required parameter 'edgeFirewallId' is set
+      if (edgeFirewallId === undefined || edgeFirewallId === null) {
+        throw new Error("Missing the required parameter 'edgeFirewallId' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdPatch");
+      }
+      // verify the required parameter 'edgeFunctionInstanceId' is set
+      if (edgeFunctionInstanceId === undefined || edgeFunctionInstanceId === null) {
+        throw new Error("Missing the required parameter 'edgeFunctionInstanceId' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdPatch");
+      }
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdPatch");
+      }
+
+      let pathParams = {
+        'edge_firewall_id': edgeFirewallId,
+        'edge_function_instance_id': edgeFunctionInstanceId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = EdgeFunctionsInstanceResponse;
+      return this.apiClient.callApi(
+        '/edge_firewall/{edge_firewall_id}/functions_instances/{edge_function_instance_id}', 'PATCH',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdPut operation.
+     * @callback module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdPutCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/EdgeFunctionsInstanceResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Overwrite some Edge Functions Instance attributes
+     * @param {Number} edgeFirewallId 
+     * @param {Number} edgeFunctionInstanceId 
+     * @param {module:model/CreateEdgeFunctionsInstancesRequest} body 
+     * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdPutCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/EdgeFunctionsInstanceResponse}
+     */
+    edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdPut(edgeFirewallId, edgeFunctionInstanceId, body, callback) {
+      let postBody = body;
+      // verify the required parameter 'edgeFirewallId' is set
+      if (edgeFirewallId === undefined || edgeFirewallId === null) {
+        throw new Error("Missing the required parameter 'edgeFirewallId' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdPut");
+      }
+      // verify the required parameter 'edgeFunctionInstanceId' is set
+      if (edgeFunctionInstanceId === undefined || edgeFunctionInstanceId === null) {
+        throw new Error("Missing the required parameter 'edgeFunctionInstanceId' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdPut");
+      }
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesEdgeFunctionInstanceIdPut");
+      }
+
+      let pathParams = {
+        'edge_firewall_id': edgeFirewallId,
+        'edge_function_instance_id': edgeFunctionInstanceId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = EdgeFunctionsInstanceResponse;
+      return this.apiClient.callApi(
+        '/edge_firewall/{edge_firewall_id}/functions_instances/{edge_function_instance_id}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the edgeFirewallEdgeFirewallIdFunctionsInstancesGet operation.
      * @callback module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesGetCallback
      * @param {String} error Error message, if any.
@@ -46,6 +247,7 @@ export default class DefaultApi {
 
     /**
      * List all user Edge Functions Instances
+     * @param {Number} edgeFirewallId 
      * @param {Object} opts Optional parameters
      * @param {Number} [page] 
      * @param {Number} [pageSize] 
@@ -54,11 +256,16 @@ export default class DefaultApi {
      * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ListEdgeFunctionsInstancesResponse}
      */
-    edgeFirewallEdgeFirewallIdFunctionsInstancesGet(opts, callback) {
+    edgeFirewallEdgeFirewallIdFunctionsInstancesGet(edgeFirewallId, opts, callback) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'edgeFirewallId' is set
+      if (edgeFirewallId === undefined || edgeFirewallId === null) {
+        throw new Error("Missing the required parameter 'edgeFirewallId' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesGet");
+      }
 
       let pathParams = {
+        'edge_firewall_id': edgeFirewallId
       };
       let queryParams = {
         'page': opts['page'],
@@ -76,7 +283,7 @@ export default class DefaultApi {
       let accepts = ['application/json'];
       let returnType = ListEdgeFunctionsInstancesResponse;
       return this.apiClient.callApi(
-        '/edge_firewall/:edge_firewall_id:/functions_instances', 'GET',
+        '/edge_firewall/{edge_firewall_id}/functions_instances', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -92,18 +299,24 @@ export default class DefaultApi {
 
     /**
      * Create an Edge Functions Instance
+     * @param {Number} edgeFirewallId 
      * @param {module:model/CreateEdgeFunctionsInstancesRequest} createEdgeFunctionsInstancesRequest 
      * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EdgeFunctionsInstanceResponse}
      */
-    edgeFirewallEdgeFirewallIdFunctionsInstancesPost(createEdgeFunctionsInstancesRequest, callback) {
+    edgeFirewallEdgeFirewallIdFunctionsInstancesPost(edgeFirewallId, createEdgeFunctionsInstancesRequest, callback) {
       let postBody = createEdgeFunctionsInstancesRequest;
+      // verify the required parameter 'edgeFirewallId' is set
+      if (edgeFirewallId === undefined || edgeFirewallId === null) {
+        throw new Error("Missing the required parameter 'edgeFirewallId' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesPost");
+      }
       // verify the required parameter 'createEdgeFunctionsInstancesRequest' is set
       if (createEdgeFunctionsInstancesRequest === undefined || createEdgeFunctionsInstancesRequest === null) {
         throw new Error("Missing the required parameter 'createEdgeFunctionsInstancesRequest' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesPost");
       }
 
       let pathParams = {
+        'edge_firewall_id': edgeFirewallId
       };
       let queryParams = {
       };
@@ -117,184 +330,7 @@ export default class DefaultApi {
       let accepts = ['application/json'];
       let returnType = EdgeFunctionsInstanceResponse;
       return this.apiClient.callApi(
-        '/edge_firewall/:edge_firewall_id:/functions_instances', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the edgeFirewallEdgeFirewallIdFunctionsInstancesUuidDelete operation.
-     * @callback module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesUuidDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Delete an Edge Functions Instance by uuid
-     * @param {String} uuid 
-     * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesUuidDeleteCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    edgeFirewallEdgeFirewallIdFunctionsInstancesUuidDelete(uuid, callback) {
-      let postBody = null;
-      // verify the required parameter 'uuid' is set
-      if (uuid === undefined || uuid === null) {
-        throw new Error("Missing the required parameter 'uuid' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesUuidDelete");
-      }
-
-      let pathParams = {
-        'uuid': uuid
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['tokenAuth'];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/edge_firewall/:edge_firewall_id:/functions_instances/{uuid}', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the edgeFirewallEdgeFirewallIdFunctionsInstancesUuidGet operation.
-     * @callback module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesUuidGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EdgeFunctionsInstanceResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Retrieve an Edge Functions Instance set by uuid
-     * @param {String} uuid 
-     * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesUuidGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EdgeFunctionsInstanceResponse}
-     */
-    edgeFirewallEdgeFirewallIdFunctionsInstancesUuidGet(uuid, callback) {
-      let postBody = null;
-      // verify the required parameter 'uuid' is set
-      if (uuid === undefined || uuid === null) {
-        throw new Error("Missing the required parameter 'uuid' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesUuidGet");
-      }
-
-      let pathParams = {
-        'uuid': uuid
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['tokenAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = EdgeFunctionsInstanceResponse;
-      return this.apiClient.callApi(
-        '/edge_firewall/:edge_firewall_id:/functions_instances/{uuid}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPatch operation.
-     * @callback module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPatchCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EdgeFunctionsInstanceResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Update some Edge Functions Instance attributes
-     * @param {String} uuid 
-     * @param {module:model/CreateEdgeFunctionsInstancesRequest} body 
-     * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPatchCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EdgeFunctionsInstanceResponse}
-     */
-    edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPatch(uuid, body, callback) {
-      let postBody = body;
-      // verify the required parameter 'uuid' is set
-      if (uuid === undefined || uuid === null) {
-        throw new Error("Missing the required parameter 'uuid' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPatch");
-      }
-      // verify the required parameter 'body' is set
-      if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPatch");
-      }
-
-      let pathParams = {
-        'uuid': uuid
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['tokenAuth'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = EdgeFunctionsInstanceResponse;
-      return this.apiClient.callApi(
-        '/edge_firewall/:edge_firewall_id:/functions_instances/{uuid}', 'PATCH',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPut operation.
-     * @callback module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EdgeFunctionsInstanceResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Overwrite some Edge Functions Instance attributes
-     * @param {String} uuid 
-     * @param {module:model/CreateEdgeFunctionsInstancesRequest} body 
-     * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EdgeFunctionsInstanceResponse}
-     */
-    edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPut(uuid, body, callback) {
-      let postBody = body;
-      // verify the required parameter 'uuid' is set
-      if (uuid === undefined || uuid === null) {
-        throw new Error("Missing the required parameter 'uuid' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPut");
-      }
-      // verify the required parameter 'body' is set
-      if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling edgeFirewallEdgeFirewallIdFunctionsInstancesUuidPut");
-      }
-
-      let pathParams = {
-        'uuid': uuid
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['tokenAuth'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = EdgeFunctionsInstanceResponse;
-      return this.apiClient.callApi(
-        '/edge_firewall/:edge_firewall_id:/functions_instances/{uuid}', 'PUT',
+        '/edge_firewall/{edge_firewall_id}/functions_instances', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
