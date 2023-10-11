@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | **[Object]** |  | [optional] 
+**results** | [**[WAFEvents200ResultsInner]**](WAFEvents200ResultsInner.md) |  | [optional] 
 **schemaVersion** | **Number** |  | [optional] 
 
 

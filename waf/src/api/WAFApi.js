@@ -147,7 +147,7 @@ export default class WAFApi {
       }
 
       let pathParams = {
-        'wafId': wafId
+        'waf_id': wafId
       };
       let queryParams = {
         'name': opts['name']
@@ -162,7 +162,7 @@ export default class WAFApi {
       let accepts = ['application/json; version=3'];
       let returnType = WAFDomains200;
       return this.apiClient.callApi(
-        '/waf/{wafId}/domains', 'GET',
+        '/waf/{waf_id}/domains', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -183,6 +183,9 @@ export default class WAFApi {
      * @param {String} domainsIds Multiple domain's id (they must be separated by comma like 1233,1234)
      * @param {Object} opts Optional parameters
      * @param {Number} [networkListId] Id of a network list
+     * @param {module:model/String} [sort = 'asc')] 
+     * @param {Number} [page = 1)] 
+     * @param {Number} [pageSize = 10)] 
      * @param {module:api/WAFApi~getWAFEventsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/WAFEvents200}
      */
@@ -203,12 +206,15 @@ export default class WAFApi {
       }
 
       let pathParams = {
-        'wafId': wafId
+        'waf_id': wafId
       };
       let queryParams = {
         'hour_range': hourRange,
         'network_list_id': opts['networkListId'],
-        'domains_ids': domainsIds
+        'domains_ids': domainsIds,
+        'sort': opts['sort'],
+        'page': opts['page'],
+        'page_size': opts['pageSize']
       };
       let headerParams = {
       };
@@ -220,7 +226,7 @@ export default class WAFApi {
       let accepts = ['application/json; version=3'];
       let returnType = WAFEvents200;
       return this.apiClient.callApi(
-        '/waf/{wafId}/waf_events', 'GET',
+        '/waf/{waf_id}/waf_events', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

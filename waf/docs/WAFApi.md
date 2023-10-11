@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createNewWAFRuleset**](WAFApi.md#createNewWAFRuleset) | **POST** /waf/rulesets | Create a new WAF Rule Set in an account.
 [**deleteWAFRuleset**](WAFApi.md#deleteWAFRuleset) | **DELETE** /waf/rulesets/{waf_rule_set_id} | Remove an WAF Rule Set from an account. Warning: this action cannot be undone.
-[**getWAFDomains**](WAFApi.md#getWAFDomains) | **GET** /waf/{wafId}/domains | List all domains attached to a Web Application Firewall (WAF) in an account.
-[**getWAFEvents**](WAFApi.md#getWAFEvents) | **GET** /waf/{wafId}/waf_events | Find WAF log events
+[**getWAFDomains**](WAFApi.md#getWAFDomains) | **GET** /waf/{waf_id}/domains | List all domains attached to a Web Application Firewall (WAF) in an account.
+[**getWAFEvents**](WAFApi.md#getWAFEvents) | **GET** /waf/{waf_id}/waf_events | Find WAF log events
 [**getWAFRuleset**](WAFApi.md#getWAFRuleset) | **GET** /waf/rulesets/{waf_rule_set_id} | List a specific Rule Set associated to a Web Application Firewall (WAF) in an account.
 [**listAllWAF**](WAFApi.md#listAllWAF) | **GET** /waf | List all Web Application Firewalls (WAFs) created in an account
 [**listAllWAFRulesets**](WAFApi.md#listAllWAFRulesets) | **GET** /waf/rulesets | list all Rule Sets associated to a Web Application Firewall (WAF) in an account.
@@ -190,7 +190,10 @@ let wafId = 789; // Number | ID of WAF to return
 let hourRange = 789; // Number | Last log hours since now (it must be a integer number ranging between 1 and 72)
 let domainsIds = "domainsIds_example"; // String | Multiple domain's id (they must be separated by comma like 1233,1234)
 let opts = {
-  'networkListId': 789 // Number | Id of a network list
+  'networkListId': 789, // Number | Id of a network list
+  'sort': "'asc'", // String | 
+  'page': 1, // Number | 
+  'pageSize': 10 // Number | 
 };
 apiInstance.getWAFEvents(wafId, hourRange, domainsIds, opts, (error, data, response) => {
   if (error) {
@@ -210,6 +213,9 @@ Name | Type | Description  | Notes
  **hourRange** | **Number**| Last log hours since now (it must be a integer number ranging between 1 and 72) | 
  **domainsIds** | **String**| Multiple domain&#39;s id (they must be separated by comma like 1233,1234) | 
  **networkListId** | **Number**| Id of a network list | [optional] 
+ **sort** | **String**|  | [optional] [default to &#39;asc&#39;]
+ **page** | **Number**|  | [optional] [default to 1]
+ **pageSize** | **Number**|  | [optional] [default to 10]
 
 ### Return type
 

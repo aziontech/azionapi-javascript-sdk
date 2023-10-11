@@ -130,8 +130,8 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *WebApplicationFirewallApi.WAFApi* | [**createNewWAFRuleset**](docs/WAFApi.md#createNewWAFRuleset) | **POST** /waf/rulesets | Create a new WAF Rule Set in an account.
 *WebApplicationFirewallApi.WAFApi* | [**deleteWAFRuleset**](docs/WAFApi.md#deleteWAFRuleset) | **DELETE** /waf/rulesets/{waf_rule_set_id} | Remove an WAF Rule Set from an account. Warning: this action cannot be undone.
-*WebApplicationFirewallApi.WAFApi* | [**getWAFDomains**](docs/WAFApi.md#getWAFDomains) | **GET** /waf/{wafId}/domains | List all domains attached to a Web Application Firewall (WAF) in an account.
-*WebApplicationFirewallApi.WAFApi* | [**getWAFEvents**](docs/WAFApi.md#getWAFEvents) | **GET** /waf/{wafId}/waf_events | Find WAF log events
+*WebApplicationFirewallApi.WAFApi* | [**getWAFDomains**](docs/WAFApi.md#getWAFDomains) | **GET** /waf/{waf_id}/domains | List all domains attached to a Web Application Firewall (WAF) in an account.
+*WebApplicationFirewallApi.WAFApi* | [**getWAFEvents**](docs/WAFApi.md#getWAFEvents) | **GET** /waf/{waf_id}/waf_events | Find WAF log events
 *WebApplicationFirewallApi.WAFApi* | [**getWAFRuleset**](docs/WAFApi.md#getWAFRuleset) | **GET** /waf/rulesets/{waf_rule_set_id} | List a specific Rule Set associated to a Web Application Firewall (WAF) in an account.
 *WebApplicationFirewallApi.WAFApi* | [**listAllWAF**](docs/WAFApi.md#listAllWAF) | **GET** /waf | List all Web Application Firewalls (WAFs) created in an account
 *WebApplicationFirewallApi.WAFApi* | [**listAllWAFRulesets**](docs/WAFApi.md#listAllWAFRulesets) | **GET** /waf/rulesets | list all Rule Sets associated to a Web Application Firewall (WAF) in an account.
@@ -143,8 +143,10 @@ Class | Method | HTTP request | Description
  - [WebApplicationFirewallApi.CreateNewWAFRulesetRequest](docs/CreateNewWAFRulesetRequest.md)
  - [WebApplicationFirewallApi.Links](docs/Links.md)
  - [WebApplicationFirewallApi.SingleWAF](docs/SingleWAF.md)
+ - [WebApplicationFirewallApi.WAFDomainList200](docs/WAFDomainList200.md)
  - [WebApplicationFirewallApi.WAFDomains200](docs/WAFDomains200.md)
  - [WebApplicationFirewallApi.WAFEvents200](docs/WAFEvents200.md)
+ - [WebApplicationFirewallApi.WAFEvents200ResultsInner](docs/WAFEvents200ResultsInner.md)
  - [WebApplicationFirewallApi.WAFEvents400](docs/WAFEvents400.md)
  - [WebApplicationFirewallApi.WAFEvents401](docs/WAFEvents401.md)
  - [WebApplicationFirewallApi.WAFEvents404](docs/WAFEvents404.md)
