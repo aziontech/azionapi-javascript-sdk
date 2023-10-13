@@ -35,5 +35,3 @@ src/model/WAFEvents404.js
 src/model/WAFList200.js
 src/model/WAFSensitivityChoices.js
 src/model/WAFSingle200.js
-test/model/WAFDomainList200.spec.js
-test/model/WAFEvents200ResultsInner.spec.js
