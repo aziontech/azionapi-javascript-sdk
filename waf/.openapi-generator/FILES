@@ -10,6 +10,7 @@ docs/WAFDomainList200.md
 docs/WAFDomains200.md
 docs/WAFEvents200.md
 docs/WAFEvents200ResultsInner.md
+docs/WAFEvents200ResultsInnerTop10CountriesInner.md
 docs/WAFEvents400.md
 docs/WAFEvents401.md
 docs/WAFEvents404.md
@@ -29,9 +30,11 @@ src/model/WAFDomainList200.js
 src/model/WAFDomains200.js
 src/model/WAFEvents200.js
 src/model/WAFEvents200ResultsInner.js
+src/model/WAFEvents200ResultsInnerTop10CountriesInner.js
 src/model/WAFEvents400.js
 src/model/WAFEvents401.js
 src/model/WAFEvents404.js
 src/model/WAFList200.js
 src/model/WAFSensitivityChoices.js
 src/model/WAFSingle200.js
+test/model/WAFEvents200ResultsInnerTop10CountriesInner.spec.js
