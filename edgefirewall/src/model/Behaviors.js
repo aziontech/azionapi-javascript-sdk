@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import BehaviorsArgument from './BehaviorsArgument';
 
 /**
  * The Behaviors model module.
@@ -50,8 +51,8 @@ class Behaviors {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('target')) {
-                obj['target'] = ApiClient.convertToType(data['target'], 'String');
+            if (data.hasOwnProperty('argument')) {
+                obj['argument'] = BehaviorsArgument.constructFromObject(data['argument']);
             }
         }
         return obj;
@@ -67,9 +68,9 @@ class Behaviors {
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
         }
-        // ensure the json data is a string
-        if (data['target'] && !(typeof data['target'] === 'string' || data['target'] instanceof String)) {
-            throw new Error("Expected the field `target` to be a primitive type in the JSON string but got " + data['target']);
+        // validate the optional field `argument`
+        if (data['argument']) { // data not null
+          BehaviorsArgument.validateJSON(data['argument']);
         }
 
         return true;
@@ -86,9 +87,9 @@ class Behaviors {
 Behaviors.prototype['name'] = undefined;
 
 /**
- * @member {String} target
+ * @member {module:model/BehaviorsArgument} argument
  */
-Behaviors.prototype['target'] = undefined;
+Behaviors.prototype['argument'] = undefined;
 
 
 
