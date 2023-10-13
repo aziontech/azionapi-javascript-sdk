@@ -147,6 +147,7 @@ Class | Method | HTTP request | Description
  - [WebApplicationFirewallApi.WAFDomains200](docs/WAFDomains200.md)
  - [WebApplicationFirewallApi.WAFEvents200](docs/WAFEvents200.md)
  - [WebApplicationFirewallApi.WAFEvents200ResultsInner](docs/WAFEvents200ResultsInner.md)
+ - [WebApplicationFirewallApi.WAFEvents200ResultsInnerTop10CountriesInner](docs/WAFEvents200ResultsInnerTop10CountriesInner.md)
  - [WebApplicationFirewallApi.WAFEvents400](docs/WAFEvents400.md)
  - [WebApplicationFirewallApi.WAFEvents401](docs/WAFEvents401.md)
  - [WebApplicationFirewallApi.WAFEvents404](docs/WAFEvents404.md)

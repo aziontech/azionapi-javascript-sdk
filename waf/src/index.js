@@ -20,6 +20,7 @@ import WAFDomainList200 from './model/WAFDomainList200';
 import WAFDomains200 from './model/WAFDomains200';
 import WAFEvents200 from './model/WAFEvents200';
 import WAFEvents200ResultsInner from './model/WAFEvents200ResultsInner';
+import WAFEvents200ResultsInnerTop10CountriesInner from './model/WAFEvents200ResultsInnerTop10CountriesInner';
 import WAFEvents400 from './model/WAFEvents400';
 import WAFEvents401 from './model/WAFEvents401';
 import WAFEvents404 from './model/WAFEvents404';
@@ -108,6 +109,12 @@ export {
      * @property {module:model/WAFEvents200ResultsInner}
      */
     WAFEvents200ResultsInner,
+
+    /**
+     * The WAFEvents200ResultsInnerTop10CountriesInner model constructor.
+     * @property {module:model/WAFEvents200ResultsInnerTop10CountriesInner}
+     */
+    WAFEvents200ResultsInnerTop10CountriesInner,
 
     /**
      * The WAFEvents400 model constructor.

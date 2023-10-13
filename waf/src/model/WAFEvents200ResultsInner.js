@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import WAFEvents200ResultsInnerTop10CountriesInner from './WAFEvents200ResultsInnerTop10CountriesInner';
 
 /**
  * The WAFEvents200ResultsInner model module.
@@ -51,10 +52,10 @@ class WAFEvents200ResultsInner {
                 obj['country_count'] = ApiClient.convertToType(data['country_count'], 'Number');
             }
             if (data.hasOwnProperty('top_10_countries')) {
-                obj['top_10_countries'] = ApiClient.convertToType(data['top_10_countries'], ['String']);
+                obj['top_10_countries'] = ApiClient.convertToType(data['top_10_countries'], [WAFEvents200ResultsInnerTop10CountriesInner]);
             }
             if (data.hasOwnProperty('top_10_ips')) {
-                obj['top_10_ips'] = ApiClient.convertToType(data['top_10_ips'], ['String']);
+                obj['top_10_ips'] = ApiClient.convertToType(data['top_10_ips'], [WAFEvents200ResultsInnerTop10CountriesInner]);
             }
             if (data.hasOwnProperty('hit_count')) {
                 obj['hit_count'] = ApiClient.convertToType(data['hit_count'], 'Number');
@@ -87,13 +88,25 @@ class WAFEvents200ResultsInner {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WAFEvents200ResultsInner</code>.
      */
     static validateJSON(data) {
-        // ensure the json data is an array
-        if (!Array.isArray(data['top_10_countries'])) {
-            throw new Error("Expected the field `top_10_countries` to be an array in the JSON data but got " + data['top_10_countries']);
+        if (data['top_10_countries']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['top_10_countries'])) {
+                throw new Error("Expected the field `top_10_countries` to be an array in the JSON data but got " + data['top_10_countries']);
+            }
+            // validate the optional field `top_10_countries` (array)
+            for (const item of data['top_10_countries']) {
+                WAFEvents200ResultsInnerTop10CountriesInner.validateJSON(item);
+            };
         }
-        // ensure the json data is an array
-        if (!Array.isArray(data['top_10_ips'])) {
-            throw new Error("Expected the field `top_10_ips` to be an array in the JSON data but got " + data['top_10_ips']);
+        if (data['top_10_ips']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['top_10_ips'])) {
+                throw new Error("Expected the field `top_10_ips` to be an array in the JSON data but got " + data['top_10_ips']);
+            }
+            // validate the optional field `top_10_ips` (array)
+            for (const item of data['top_10_ips']) {
+                WAFEvents200ResultsInnerTop10CountriesInner.validateJSON(item);
+            };
         }
         // ensure the json data is a string
         if (data['match_zone'] && !(typeof data['match_zone'] === 'string' || data['match_zone'] instanceof String)) {
@@ -122,12 +135,12 @@ class WAFEvents200ResultsInner {
 WAFEvents200ResultsInner.prototype['country_count'] = undefined;
 
 /**
- * @member {Array.<String>} top_10_countries
+ * @member {Array.<module:model/WAFEvents200ResultsInnerTop10CountriesInner>} top_10_countries
  */
 WAFEvents200ResultsInner.prototype['top_10_countries'] = undefined;
 
 /**
- * @member {Array.<String>} top_10_ips
+ * @member {Array.<module:model/WAFEvents200ResultsInnerTop10CountriesInner>} top_10_ips
  */
 WAFEvents200ResultsInner.prototype['top_10_ips'] = undefined;
 

@@ -135,6 +135,8 @@ export default class WAFApi {
      * @param {Number} wafId ID of WAF to return
      * @param {Object} opts Optional parameters
      * @param {String} [name] searches WAF for name
+     * @param {Number} [page = 1)] Identifies which page should be returned, if the return is paginated.
+     * @param {Number} [pageSize = 10)] Identifies how many items should be returned per page.
      * @param {module:api/WAFApi~getWAFDomainsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/WAFDomains200}
      */
@@ -150,7 +152,9 @@ export default class WAFApi {
         'waf_id': wafId
       };
       let queryParams = {
-        'name': opts['name']
+        'name': opts['name'],
+        'page': opts['page'],
+        'page_size': opts['pageSize']
       };
       let headerParams = {
       };
@@ -180,12 +184,10 @@ export default class WAFApi {
      * Find WAF log events
      * @param {Number} wafId ID of WAF to return
      * @param {Number} hourRange Last log hours since now (it must be a integer number ranging between 1 and 72)
-     * @param {String} domainsIds Multiple domain's id (they must be separated by comma like 1233,1234)
+     * @param {Array.<Number>} domainsIds Multiple domain's id (they must be separated by comma like 1233,1234)
      * @param {Object} opts Optional parameters
      * @param {Number} [networkListId] Id of a network list
      * @param {module:model/String} [sort = 'asc')] 
-     * @param {Number} [page = 1)] 
-     * @param {Number} [pageSize = 10)] 
      * @param {module:api/WAFApi~getWAFEventsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/WAFEvents200}
      */
@@ -211,10 +213,8 @@ export default class WAFApi {
       let queryParams = {
         'hour_range': hourRange,
         'network_list_id': opts['networkListId'],
-        'domains_ids': domainsIds,
-        'sort': opts['sort'],
-        'page': opts['page'],
-        'page_size': opts['pageSize']
+        'domains_ids': this.apiClient.buildCollectionParam(domainsIds, 'multi'),
+        'sort': opts['sort']
       };
       let headerParams = {
       };

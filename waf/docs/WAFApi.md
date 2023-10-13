@@ -135,7 +135,9 @@ tokenAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new WebApplicationFirewallApi.WAFApi();
 let wafId = 789; // Number | ID of WAF to return
 let opts = {
-  'name': "name_example" // String | searches WAF for name
+  'name': "name_example", // String | searches WAF for name
+  'page': 1, // Number | Identifies which page should be returned, if the return is paginated.
+  'pageSize': 10 // Number | Identifies how many items should be returned per page.
 };
 apiInstance.getWAFDomains(wafId, opts, (error, data, response) => {
   if (error) {
@@ -153,6 +155,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **wafId** | **Number**| ID of WAF to return | 
  **name** | **String**| searches WAF for name | [optional] 
+ **page** | **Number**| Identifies which page should be returned, if the return is paginated. | [optional] [default to 1]
+ **pageSize** | **Number**| Identifies how many items should be returned per page. | [optional] [default to 10]
 
 ### Return type
 
@@ -188,12 +192,10 @@ tokenAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new WebApplicationFirewallApi.WAFApi();
 let wafId = 789; // Number | ID of WAF to return
 let hourRange = 789; // Number | Last log hours since now (it must be a integer number ranging between 1 and 72)
-let domainsIds = "domainsIds_example"; // String | Multiple domain's id (they must be separated by comma like 1233,1234)
+let domainsIds = [null]; // [Number] | Multiple domain's id (they must be separated by comma like 1233,1234)
 let opts = {
   'networkListId': 789, // Number | Id of a network list
-  'sort': "'asc'", // String | 
-  'page': 1, // Number | 
-  'pageSize': 10 // Number | 
+  'sort': "'asc'" // String | 
 };
 apiInstance.getWAFEvents(wafId, hourRange, domainsIds, opts, (error, data, response) => {
   if (error) {
@@ -211,11 +213,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **wafId** | **Number**| ID of WAF to return | 
  **hourRange** | **Number**| Last log hours since now (it must be a integer number ranging between 1 and 72) | 
- **domainsIds** | **String**| Multiple domain&#39;s id (they must be separated by comma like 1233,1234) | 
+ **domainsIds** | [**[Number]**](Number.md)| Multiple domain&#39;s id (they must be separated by comma like 1233,1234) | 
  **networkListId** | **Number**| Id of a network list | [optional] 
  **sort** | **String**|  | [optional] [default to &#39;asc&#39;]
- **page** | **Number**|  | [optional] [default to 1]
- **pageSize** | **Number**|  | [optional] [default to 10]
 
 ### Return type
 
