@@ -14,11 +14,13 @@
 
 import ApiClient from './ApiClient';
 import Behaviors from './model/Behaviors';
+import BehaviorsArgument from './model/BehaviorsArgument';
 import Conditionals from './model/Conditionals';
 import CreateEdgeFirewallRequest from './model/CreateEdgeFirewallRequest';
 import CreateRuleSetRequest from './model/CreateRuleSetRequest';
 import EdgeFirewall from './model/EdgeFirewall';
 import EdgeFirewallResponse from './model/EdgeFirewallResponse';
+import GenericBehaviorDetails from './model/GenericBehaviorDetails';
 import Links from './model/Links';
 import ListEdgeFirewallResponse from './model/ListEdgeFirewallResponse';
 import RuleSetResponse from './model/RuleSetResponse';
@@ -29,6 +31,8 @@ import RuleSetResultResults from './model/RuleSetResultResults';
 import SSLVerificationStatusArguments from './model/SSLVerificationStatusArguments';
 import SSLVerificationStatusCriteria from './model/SSLVerificationStatusCriteria';
 import SSLVerificationStatusOperators from './model/SSLVerificationStatusOperators';
+import SetRateLimitDetails from './model/SetRateLimitDetails';
+import SetWAFRuleSetDetails from './model/SetWAFRuleSetDetails';
 import UpdateEdgeFirewallRequest from './model/UpdateEdgeFirewallRequest';
 import Variables from './model/Variables';
 import DefaultApi from './api/DefaultApi';
@@ -79,6 +83,12 @@ export {
     Behaviors,
 
     /**
+     * The BehaviorsArgument model constructor.
+     * @property {module:model/BehaviorsArgument}
+     */
+    BehaviorsArgument,
+
+    /**
      * The Conditionals model constructor.
      * @property {module:model/Conditionals}
      */
@@ -107,6 +117,12 @@ export {
      * @property {module:model/EdgeFirewallResponse}
      */
     EdgeFirewallResponse,
+
+    /**
+     * The GenericBehaviorDetails model constructor.
+     * @property {module:model/GenericBehaviorDetails}
+     */
+    GenericBehaviorDetails,
 
     /**
      * The Links model constructor.
@@ -167,6 +183,18 @@ export {
      * @property {module:model/SSLVerificationStatusOperators}
      */
     SSLVerificationStatusOperators,
+
+    /**
+     * The SetRateLimitDetails model constructor.
+     * @property {module:model/SetRateLimitDetails}
+     */
+    SetRateLimitDetails,
+
+    /**
+     * The SetWAFRuleSetDetails model constructor.
+     * @property {module:model/SetWAFRuleSetDetails}
+     */
+    SetWAFRuleSetDetails,
 
     /**
      * The UpdateEdgeFirewallRequest model constructor.

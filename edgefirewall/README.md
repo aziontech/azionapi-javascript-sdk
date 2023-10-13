@@ -109,6 +109,12 @@ tokenAuth.apiKey = "YOUR API KEY"
 
 var api = new EdgeFirewallApi.DefaultApi()
 var edgeFirewallId = 789; // {Number} 
+var opts = {
+  'page': 789, // {Number} 
+  'pageSize': 789, // {Number} 
+  'sort': "sort_example", // {String} 
+  'orderBy': "orderBy_example" // {String} 
+};
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -116,7 +122,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.edgeFirewallEdgeFirewallIdRulesEngineGet(edgeFirewallId, callback);
+api.edgeFirewallEdgeFirewallIdRulesEngineGet(edgeFirewallId, opts, callback);
 
 ```
 
@@ -143,11 +149,13 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [EdgeFirewallApi.Behaviors](docs/Behaviors.md)
+ - [EdgeFirewallApi.BehaviorsArgument](docs/BehaviorsArgument.md)
  - [EdgeFirewallApi.Conditionals](docs/Conditionals.md)
  - [EdgeFirewallApi.CreateEdgeFirewallRequest](docs/CreateEdgeFirewallRequest.md)
  - [EdgeFirewallApi.CreateRuleSetRequest](docs/CreateRuleSetRequest.md)
  - [EdgeFirewallApi.EdgeFirewall](docs/EdgeFirewall.md)
  - [EdgeFirewallApi.EdgeFirewallResponse](docs/EdgeFirewallResponse.md)
+ - [EdgeFirewallApi.GenericBehaviorDetails](docs/GenericBehaviorDetails.md)
  - [EdgeFirewallApi.Links](docs/Links.md)
  - [EdgeFirewallApi.ListEdgeFirewallResponse](docs/ListEdgeFirewallResponse.md)
  - [EdgeFirewallApi.RuleSetResponse](docs/RuleSetResponse.md)
@@ -158,6 +166,8 @@ Class | Method | HTTP request | Description
  - [EdgeFirewallApi.SSLVerificationStatusArguments](docs/SSLVerificationStatusArguments.md)
  - [EdgeFirewallApi.SSLVerificationStatusCriteria](docs/SSLVerificationStatusCriteria.md)
  - [EdgeFirewallApi.SSLVerificationStatusOperators](docs/SSLVerificationStatusOperators.md)
+ - [EdgeFirewallApi.SetRateLimitDetails](docs/SetRateLimitDetails.md)
+ - [EdgeFirewallApi.SetWAFRuleSetDetails](docs/SetWAFRuleSetDetails.md)
  - [EdgeFirewallApi.UpdateEdgeFirewallRequest](docs/UpdateEdgeFirewallRequest.md)
  - [EdgeFirewallApi.Variables](docs/Variables.md)
 

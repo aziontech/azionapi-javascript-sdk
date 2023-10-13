@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ## edgeFirewallEdgeFirewallIdRulesEngineGet
 
-> RuleSetResponseAll edgeFirewallEdgeFirewallIdRulesEngineGet(edgeFirewallId)
+> RuleSetResponseAll edgeFirewallEdgeFirewallIdRulesEngineGet(edgeFirewallId, opts)
 
 List all rule sets.
 
@@ -38,7 +38,13 @@ tokenAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new EdgeFirewallApi.DefaultApi();
 let edgeFirewallId = 789; // Number | 
-apiInstance.edgeFirewallEdgeFirewallIdRulesEngineGet(edgeFirewallId, (error, data, response) => {
+let opts = {
+  'page': 789, // Number | 
+  'pageSize': 789, // Number | 
+  'sort': "sort_example", // String | 
+  'orderBy': "orderBy_example" // String | 
+};
+apiInstance.edgeFirewallEdgeFirewallIdRulesEngineGet(edgeFirewallId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -53,6 +59,10 @@ apiInstance.edgeFirewallEdgeFirewallIdRulesEngineGet(edgeFirewallId, (error, dat
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **edgeFirewallId** | **Number**|  | 
+ **page** | **Number**|  | [optional] 
+ **pageSize** | **Number**|  | [optional] 
+ **sort** | **String**|  | [optional] 
+ **orderBy** | **String**|  | [optional] 
 
 ### Return type
 

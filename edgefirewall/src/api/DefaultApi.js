@@ -52,10 +52,16 @@ export default class DefaultApi {
     /**
      * List all rule sets.
      * @param {Number} edgeFirewallId 
+     * @param {Object} opts Optional parameters
+     * @param {Number} [page] 
+     * @param {Number} [pageSize] 
+     * @param {String} [sort] 
+     * @param {String} [orderBy] 
      * @param {module:api/DefaultApi~edgeFirewallEdgeFirewallIdRulesEngineGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/RuleSetResponseAll}
      */
-    edgeFirewallEdgeFirewallIdRulesEngineGet(edgeFirewallId, callback) {
+    edgeFirewallEdgeFirewallIdRulesEngineGet(edgeFirewallId, opts, callback) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'edgeFirewallId' is set
       if (edgeFirewallId === undefined || edgeFirewallId === null) {
@@ -66,6 +72,10 @@ export default class DefaultApi {
         'edge_firewall_id': edgeFirewallId
       };
       let queryParams = {
+        'page': opts['page'],
+        'page_size': opts['pageSize'],
+        'sort': opts['sort'],
+        'order_by': opts['orderBy']
       };
       let headerParams = {
       };
