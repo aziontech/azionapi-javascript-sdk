@@ -1,4 +1,4 @@
-# EdgeFirewallApi.Behaviors
+# EdgeFirewallApi.SetWAFRuleSetBehavior
 
 ## Properties
 

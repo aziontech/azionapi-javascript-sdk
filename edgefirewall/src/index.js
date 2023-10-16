@@ -14,15 +14,14 @@
 
 import ApiClient from './ApiClient';
 import Behaviors from './model/Behaviors';
-import BehaviorsArgument from './model/BehaviorsArgument';
 import Conditionals from './model/Conditionals';
 import CreateEdgeFirewallRequest from './model/CreateEdgeFirewallRequest';
 import CreateRuleSetRequest from './model/CreateRuleSetRequest';
 import EdgeFirewall from './model/EdgeFirewall';
 import EdgeFirewallResponse from './model/EdgeFirewallResponse';
-import GenericBehaviorDetails from './model/GenericBehaviorDetails';
 import Links from './model/Links';
 import ListEdgeFirewallResponse from './model/ListEdgeFirewallResponse';
+import NullArgumentBehavior from './model/NullArgumentBehavior';
 import RuleSetResponse from './model/RuleSetResponse';
 import RuleSetResponseAll from './model/RuleSetResponseAll';
 import RuleSetResult from './model/RuleSetResult';
@@ -31,8 +30,13 @@ import RuleSetResultResults from './model/RuleSetResultResults';
 import SSLVerificationStatusArguments from './model/SSLVerificationStatusArguments';
 import SSLVerificationStatusCriteria from './model/SSLVerificationStatusCriteria';
 import SSLVerificationStatusOperators from './model/SSLVerificationStatusOperators';
-import SetRateLimitDetails from './model/SetRateLimitDetails';
-import SetWAFRuleSetDetails from './model/SetWAFRuleSetDetails';
+import SetRateLimitBehavior from './model/SetRateLimitBehavior';
+import SetRateLimitBehaviorArgument from './model/SetRateLimitBehaviorArgument';
+import SetRateLimitBehaviorArgumentAverageRateLimit from './model/SetRateLimitBehaviorArgumentAverageRateLimit';
+import SetWAFRuleSetBehavior from './model/SetWAFRuleSetBehavior';
+import SetWAFRuleSetBehaviorArgument from './model/SetWAFRuleSetBehaviorArgument';
+import SimpleArgumentBehavior from './model/SimpleArgumentBehavior';
+import SimpleArgumentBehaviorArgument from './model/SimpleArgumentBehaviorArgument';
 import UpdateEdgeFirewallRequest from './model/UpdateEdgeFirewallRequest';
 import Variables from './model/Variables';
 import DefaultApi from './api/DefaultApi';
@@ -83,12 +87,6 @@ export {
     Behaviors,
 
     /**
-     * The BehaviorsArgument model constructor.
-     * @property {module:model/BehaviorsArgument}
-     */
-    BehaviorsArgument,
-
-    /**
      * The Conditionals model constructor.
      * @property {module:model/Conditionals}
      */
@@ -119,12 +117,6 @@ export {
     EdgeFirewallResponse,
 
     /**
-     * The GenericBehaviorDetails model constructor.
-     * @property {module:model/GenericBehaviorDetails}
-     */
-    GenericBehaviorDetails,
-
-    /**
      * The Links model constructor.
      * @property {module:model/Links}
      */
@@ -135,6 +127,12 @@ export {
      * @property {module:model/ListEdgeFirewallResponse}
      */
     ListEdgeFirewallResponse,
+
+    /**
+     * The NullArgumentBehavior model constructor.
+     * @property {module:model/NullArgumentBehavior}
+     */
+    NullArgumentBehavior,
 
     /**
      * The RuleSetResponse model constructor.
@@ -185,16 +183,46 @@ export {
     SSLVerificationStatusOperators,
 
     /**
-     * The SetRateLimitDetails model constructor.
-     * @property {module:model/SetRateLimitDetails}
+     * The SetRateLimitBehavior model constructor.
+     * @property {module:model/SetRateLimitBehavior}
      */
-    SetRateLimitDetails,
+    SetRateLimitBehavior,
 
     /**
-     * The SetWAFRuleSetDetails model constructor.
-     * @property {module:model/SetWAFRuleSetDetails}
+     * The SetRateLimitBehaviorArgument model constructor.
+     * @property {module:model/SetRateLimitBehaviorArgument}
      */
-    SetWAFRuleSetDetails,
+    SetRateLimitBehaviorArgument,
+
+    /**
+     * The SetRateLimitBehaviorArgumentAverageRateLimit model constructor.
+     * @property {module:model/SetRateLimitBehaviorArgumentAverageRateLimit}
+     */
+    SetRateLimitBehaviorArgumentAverageRateLimit,
+
+    /**
+     * The SetWAFRuleSetBehavior model constructor.
+     * @property {module:model/SetWAFRuleSetBehavior}
+     */
+    SetWAFRuleSetBehavior,
+
+    /**
+     * The SetWAFRuleSetBehaviorArgument model constructor.
+     * @property {module:model/SetWAFRuleSetBehaviorArgument}
+     */
+    SetWAFRuleSetBehaviorArgument,
+
+    /**
+     * The SimpleArgumentBehavior model constructor.
+     * @property {module:model/SimpleArgumentBehavior}
+     */
+    SimpleArgumentBehavior,
+
+    /**
+     * The SimpleArgumentBehaviorArgument model constructor.
+     * @property {module:model/SimpleArgumentBehaviorArgument}
+     */
+    SimpleArgumentBehaviorArgument,
 
     /**
      * The UpdateEdgeFirewallRequest model constructor.
