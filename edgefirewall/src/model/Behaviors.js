@@ -12,7 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
-import BehaviorsArgument from './BehaviorsArgument';
+import NullArgumentBehavior from './NullArgumentBehavior';
+import SetCustomResponse from './SetCustomResponse';
+import SetCustomResponseArgument from './SetCustomResponseArgument';
+import SetRateLimitBehavior from './SetRateLimitBehavior';
+import SetWAFRuleSetAndWafModeBehavior from './SetWAFRuleSetAndWafModeBehavior';
+import SetWAFRuleSetBehavior from './SetWAFRuleSetBehavior';
+import SimpleArgumentBehavior from './SimpleArgumentBehavior';
 
 /**
  * The Behaviors model module.
@@ -23,18 +29,120 @@ class Behaviors {
     /**
      * Constructs a new <code>Behaviors</code>.
      * @alias module:model/Behaviors
+     * @param {(module:model/NullArgumentBehavior|module:model/SetCustomResponse|module:model/SetRateLimitBehavior|module:model/SetWAFRuleSetAndWafModeBehavior|module:model/SetWAFRuleSetBehavior|module:model/SimpleArgumentBehavior)} instance The actual instance to initialize Behaviors.
      */
-    constructor() { 
-        
-        Behaviors.initialize(this);
-    }
+    constructor(instance = null) {
+        if (instance === null) {
+            this.actualInstance = null;
+            return;
+        }
+        var match = 0;
+        var errorMessages = [];
+        try {
+            if (typeof instance === "NullArgumentBehavior") {
+                this.actualInstance = instance;
+            } else {
+                // plain JS object
+                // validate the object
+                NullArgumentBehavior.validateJSON(instance); // throw an exception if no match
+                // create NullArgumentBehavior from JS object
+                this.actualInstance = NullArgumentBehavior.constructFromObject(instance);
+            }
+            match++;
+        } catch(err) {
+            // json data failed to deserialize into NullArgumentBehavior
+            errorMessages.push("Failed to construct NullArgumentBehavior: " + err)
+        }
 
-    /**
-     * Initializes the fields of this object.
-     * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
-     * Only for internal use.
-     */
-    static initialize(obj) { 
+        try {
+            if (typeof instance === "SimpleArgumentBehavior") {
+                this.actualInstance = instance;
+            } else {
+                // plain JS object
+                // validate the object
+                SimpleArgumentBehavior.validateJSON(instance); // throw an exception if no match
+                // create SimpleArgumentBehavior from JS object
+                this.actualInstance = SimpleArgumentBehavior.constructFromObject(instance);
+            }
+            match++;
+        } catch(err) {
+            // json data failed to deserialize into SimpleArgumentBehavior
+            errorMessages.push("Failed to construct SimpleArgumentBehavior: " + err)
+        }
+
+        try {
+            if (typeof instance === "SetRateLimitBehavior") {
+                this.actualInstance = instance;
+            } else {
+                // plain JS object
+                // validate the object
+                SetRateLimitBehavior.validateJSON(instance); // throw an exception if no match
+                // create SetRateLimitBehavior from JS object
+                this.actualInstance = SetRateLimitBehavior.constructFromObject(instance);
+            }
+            match++;
+        } catch(err) {
+            // json data failed to deserialize into SetRateLimitBehavior
+            errorMessages.push("Failed to construct SetRateLimitBehavior: " + err)
+        }
+
+        try {
+            if (typeof instance === "SetWAFRuleSetBehavior") {
+                this.actualInstance = instance;
+            } else {
+                // plain JS object
+                // validate the object
+                SetWAFRuleSetBehavior.validateJSON(instance); // throw an exception if no match
+                // create SetWAFRuleSetBehavior from JS object
+                this.actualInstance = SetWAFRuleSetBehavior.constructFromObject(instance);
+            }
+            match++;
+        } catch(err) {
+            // json data failed to deserialize into SetWAFRuleSetBehavior
+            errorMessages.push("Failed to construct SetWAFRuleSetBehavior: " + err)
+        }
+
+        try {
+            if (typeof instance === "SetWAFRuleSetAndWafModeBehavior") {
+                this.actualInstance = instance;
+            } else {
+                // plain JS object
+                // validate the object
+                SetWAFRuleSetAndWafModeBehavior.validateJSON(instance); // throw an exception if no match
+                // create SetWAFRuleSetAndWafModeBehavior from JS object
+                this.actualInstance = SetWAFRuleSetAndWafModeBehavior.constructFromObject(instance);
+            }
+            match++;
+        } catch(err) {
+            // json data failed to deserialize into SetWAFRuleSetAndWafModeBehavior
+            errorMessages.push("Failed to construct SetWAFRuleSetAndWafModeBehavior: " + err)
+        }
+
+        try {
+            if (typeof instance === "SetCustomResponse") {
+                this.actualInstance = instance;
+            } else {
+                // plain JS object
+                // validate the object
+                SetCustomResponse.validateJSON(instance); // throw an exception if no match
+                // create SetCustomResponse from JS object
+                this.actualInstance = SetCustomResponse.constructFromObject(instance);
+            }
+            match++;
+        } catch(err) {
+            // json data failed to deserialize into SetCustomResponse
+            errorMessages.push("Failed to construct SetCustomResponse: " + err)
+        }
+
+        if (match > 1) {
+            throw new Error("Multiple matches found constructing `Behaviors` with oneOf schemas NullArgumentBehavior, SetCustomResponse, SetRateLimitBehavior, SetWAFRuleSetAndWafModeBehavior, SetWAFRuleSetBehavior, SimpleArgumentBehavior. Input: " + JSON.stringify(instance));
+        } else if (match === 0) {
+            this.actualInstance = null; // clear the actual instance in case there are multiple matches
+            throw new Error("No match found constructing `Behaviors` with oneOf schemas NullArgumentBehavior, SetCustomResponse, SetRateLimitBehavior, SetWAFRuleSetAndWafModeBehavior, SetWAFRuleSetBehavior, SimpleArgumentBehavior. Details: " +
+                            errorMessages.join(", "));
+        } else { // only 1 match
+            // the input is valid
+        }
     }
 
     /**
@@ -45,41 +153,42 @@ class Behaviors {
      * @return {module:model/Behaviors} The populated <code>Behaviors</code> instance.
      */
     static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new Behaviors();
-
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('argument')) {
-                obj['argument'] = BehaviorsArgument.constructFromObject(data['argument']);
-            }
-        }
-        return obj;
+        return new Behaviors(data);
     }
 
     /**
-     * Validates the JSON data with respect to <code>Behaviors</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Behaviors</code>.
+     * Gets the actual instance, which can be <code>NullArgumentBehavior</code>, <code>SetCustomResponse</code>, <code>SetRateLimitBehavior</code>, <code>SetWAFRuleSetAndWafModeBehavior</code>, <code>SetWAFRuleSetBehavior</code>, <code>SimpleArgumentBehavior</code>.
+     * @return {(module:model/NullArgumentBehavior|module:model/SetCustomResponse|module:model/SetRateLimitBehavior|module:model/SetWAFRuleSetAndWafModeBehavior|module:model/SetWAFRuleSetBehavior|module:model/SimpleArgumentBehavior)} The actual instance.
      */
-    static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // validate the optional field `argument`
-        if (data['argument']) { // data not null
-          BehaviorsArgument.validateJSON(data['argument']);
-        }
-
-        return true;
+    getActualInstance() {
+        return this.actualInstance;
     }
 
+    /**
+     * Sets the actual instance, which can be <code>NullArgumentBehavior</code>, <code>SetCustomResponse</code>, <code>SetRateLimitBehavior</code>, <code>SetWAFRuleSetAndWafModeBehavior</code>, <code>SetWAFRuleSetBehavior</code>, <code>SimpleArgumentBehavior</code>.
+     * @param {(module:model/NullArgumentBehavior|module:model/SetCustomResponse|module:model/SetRateLimitBehavior|module:model/SetWAFRuleSetAndWafModeBehavior|module:model/SetWAFRuleSetBehavior|module:model/SimpleArgumentBehavior)} obj The actual instance.
+     */
+    setActualInstance(obj) {
+       this.actualInstance = Behaviors.constructFromObject(obj).getActualInstance();
+    }
 
+    /**
+     * Returns the JSON representation of the actual instance.
+     * @return {string}
+     */
+    toJSON = function(){
+        return this.getActualInstance();
+    }
+
+    /**
+     * Create an instance of Behaviors from a JSON string.
+     * @param {string} json_string JSON string.
+     * @return {module:model/Behaviors} An instance of Behaviors.
+     */
+    static fromJSON = function(json_string){
+        return Behaviors.constructFromObject(JSON.parse(json_string));
+    }
 }
-
-
 
 /**
  * @member {module:model/Behaviors.NameEnum} name
@@ -87,59 +196,12 @@ class Behaviors {
 Behaviors.prototype['name'] = undefined;
 
 /**
- * @member {module:model/BehaviorsArgument} argument
+ * @member {module:model/SetCustomResponseArgument} argument
  */
 Behaviors.prototype['argument'] = undefined;
 
 
-
-
-
-/**
- * Allowed values for the <code>name</code> property.
- * @enum {String}
- * @readonly
- */
-Behaviors['NameEnum'] = {
-
-    /**
-     * value: "deny"
-     * @const
-     */
-    "deny": "deny",
-
-    /**
-     * value: "drop"
-     * @const
-     */
-    "drop": "drop",
-
-    /**
-     * value: "set_rate_limit"
-     * @const
-     */
-    "set_rate_limit": "set_rate_limit",
-
-    /**
-     * value: "set_waf_ruleset"
-     * @const
-     */
-    "set_waf_ruleset": "set_waf_ruleset",
-
-    /**
-     * value: "run_function"
-     * @const
-     */
-    "run_function": "run_function",
-
-    /**
-     * value: "tag_event"
-     * @const
-     */
-    "tag_event": "tag_event"
-};
-
-
+Behaviors.OneOf = ["NullArgumentBehavior", "SetCustomResponse", "SetRateLimitBehavior", "SetWAFRuleSetAndWafModeBehavior", "SetWAFRuleSetBehavior", "SimpleArgumentBehavior"];
 
 export default Behaviors;
 
