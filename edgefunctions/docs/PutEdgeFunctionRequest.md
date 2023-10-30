@@ -13,3 +13,14 @@ Name | Type | Description | Notes
 **isProprietaryCode** | **Boolean** |  | [optional] 
 
 
+
+## Enum: InitiatorTypeEnum
+
+
+* `application` (value: `"edge_application"`)
+
+* `firewall` (value: `"edge_firewall"`)
+
+
+
+

@@ -124,7 +124,7 @@ PutEdgeFunctionRequest.prototype['json_args'] = undefined;
 PutEdgeFunctionRequest.prototype['active'] = undefined;
 
 /**
- * @member {String} initiator_type
+ * @member {module:model/PutEdgeFunctionRequest.InitiatorTypeEnum} initiator_type
  */
 PutEdgeFunctionRequest.prototype['initiator_type'] = undefined;
 
@@ -140,6 +140,27 @@ PutEdgeFunctionRequest.prototype['is_proprietary_code'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>initiator_type</code> property.
+ * @enum {String}
+ * @readonly
+ */
+PutEdgeFunctionRequest['InitiatorTypeEnum'] = {
+
+    /**
+     * value: "edge_application"
+     * @const
+     */
+    "application": "edge_application",
+
+    /**
+     * value: "edge_firewall"
+     * @const
+     */
+    "firewall": "edge_firewall"
+};
 
 
 

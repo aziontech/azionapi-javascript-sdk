@@ -59,6 +59,9 @@ class CreateEdgeFunctionRequest {
             if (data.hasOwnProperty('json_args')) {
                 obj['json_args'] = ApiClient.convertToType(data['json_args'], Object);
             }
+            if (data.hasOwnProperty('initiator_type')) {
+                obj['initiator_type'] = ApiClient.convertToType(data['initiator_type'], 'String');
+            }
             if (data.hasOwnProperty('active')) {
                 obj['active'] = ApiClient.convertToType(data['active'], 'Boolean');
             }
@@ -86,6 +89,10 @@ class CreateEdgeFunctionRequest {
         // ensure the json data is a string
         if (data['code'] && !(typeof data['code'] === 'string' || data['code'] instanceof String)) {
             throw new Error("Expected the field `code` to be a primitive type in the JSON string but got " + data['code']);
+        }
+        // ensure the json data is a string
+        if (data['initiator_type'] && !(typeof data['initiator_type'] === 'string' || data['initiator_type'] instanceof String)) {
+            throw new Error("Expected the field `initiator_type` to be a primitive type in the JSON string but got " + data['initiator_type']);
         }
 
         return true;
@@ -117,6 +124,11 @@ CreateEdgeFunctionRequest.prototype['code'] = undefined;
 CreateEdgeFunctionRequest.prototype['json_args'] = undefined;
 
 /**
+ * @member {module:model/CreateEdgeFunctionRequest.InitiatorTypeEnum} initiator_type
+ */
+CreateEdgeFunctionRequest.prototype['initiator_type'] = undefined;
+
+/**
  * @member {Boolean} active
  */
 CreateEdgeFunctionRequest.prototype['active'] = undefined;
@@ -128,6 +140,27 @@ CreateEdgeFunctionRequest.prototype['is_proprietary_code'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>initiator_type</code> property.
+ * @enum {String}
+ * @readonly
+ */
+CreateEdgeFunctionRequest['InitiatorTypeEnum'] = {
+
+    /**
+     * value: "edge_application"
+     * @const
+     */
+    "application": "edge_application",
+
+    /**
+     * value: "edge_firewall"
+     * @const
+     */
+    "firewall": "edge_firewall"
+};
 
 
 
