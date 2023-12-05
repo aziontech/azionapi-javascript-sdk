@@ -137,7 +137,3 @@ src/model/RulesEngineResultResponse.js
 src/model/UpdateDeviceGroupsRequest.js
 src/model/UpdateOriginsRequest.js
 src/model/UpdateRulesEngineRequest.js
-test/model/RulesEngineBehaviorEntry.spec.js
-test/model/RulesEngineBehaviorObject.spec.js
-test/model/RulesEngineBehaviorObjectTarget.spec.js
-test/model/RulesEngineBehaviorString.spec.js

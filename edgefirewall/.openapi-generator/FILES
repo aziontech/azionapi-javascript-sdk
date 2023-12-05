@@ -71,16 +71,3 @@ src/model/SimpleArgumentBehavior.js
 src/model/SimpleArgumentBehaviorArgument.js
 src/model/UpdateEdgeFirewallRequest.js
 src/model/Variables.js
-test/model/NullArgumentBehavior.spec.js
-test/model/SetCustomResponse.spec.js
-test/model/SetCustomResponseArgument.spec.js
-test/model/SetCustomResponseArgumentStatusCode.spec.js
-test/model/SetRateLimitBehavior.spec.js
-test/model/SetRateLimitBehaviorArgument.spec.js
-test/model/SetRateLimitBehaviorArgumentAverageRateLimit.spec.js
-test/model/SetWAFRuleSetAndWafModeBehavior.spec.js
-test/model/SetWAFRuleSetAndWafModeBehaviorArgument.spec.js
-test/model/SetWAFRuleSetBehavior.spec.js
-test/model/SetWAFRuleSetBehaviorArgument.spec.js
-test/model/SimpleArgumentBehavior.spec.js
-test/model/SimpleArgumentBehaviorArgument.spec.js
