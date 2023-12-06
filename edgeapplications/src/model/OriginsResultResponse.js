@@ -128,6 +128,12 @@ class OriginsResultResponse {
             if (data.hasOwnProperty('hmac_secret_key')) {
                 obj['hmac_secret_key'] = ApiClient.convertToType(data['hmac_secret_key'], 'String');
             }
+            if (data.hasOwnProperty('bucket')) {
+                obj['bucket'] = ApiClient.convertToType(data['bucket'], 'String');
+            }
+            if (data.hasOwnProperty('prefix')) {
+                obj['prefix'] = ApiClient.convertToType(data['prefix'], 'String');
+            }
         }
         return obj;
     }
@@ -193,6 +199,14 @@ class OriginsResultResponse {
         // ensure the json data is a string
         if (data['hmac_secret_key'] && !(typeof data['hmac_secret_key'] === 'string' || data['hmac_secret_key'] instanceof String)) {
             throw new Error("Expected the field `hmac_secret_key` to be a primitive type in the JSON string but got " + data['hmac_secret_key']);
+        }
+        // ensure the json data is a string
+        if (data['bucket'] && !(typeof data['bucket'] === 'string' || data['bucket'] instanceof String)) {
+            throw new Error("Expected the field `bucket` to be a primitive type in the JSON string but got " + data['bucket']);
+        }
+        // ensure the json data is a string
+        if (data['prefix'] && !(typeof data['prefix'] === 'string' || data['prefix'] instanceof String)) {
+            throw new Error("Expected the field `prefix` to be a primitive type in the JSON string but got " + data['prefix']);
         }
 
         return true;
@@ -282,6 +296,16 @@ OriginsResultResponse.prototype['hmac_access_key'] = undefined;
  * @member {String} hmac_secret_key
  */
 OriginsResultResponse.prototype['hmac_secret_key'] = undefined;
+
+/**
+ * @member {String} bucket
+ */
+OriginsResultResponse.prototype['bucket'] = undefined;
+
+/**
+ * @member {String} prefix
+ */
+OriginsResultResponse.prototype['prefix'] = undefined;
 
 
 

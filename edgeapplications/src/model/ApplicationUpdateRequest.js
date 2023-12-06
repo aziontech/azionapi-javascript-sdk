@@ -71,9 +71,6 @@ class ApplicationUpdateRequest {
             if (data.hasOwnProperty('application_acceleration')) {
                 obj['application_acceleration'] = ApiClient.convertToType(data['application_acceleration'], 'Boolean');
             }
-            if (data.hasOwnProperty('caching')) {
-                obj['caching'] = ApiClient.convertToType(data['caching'], 'Boolean');
-            }
             if (data.hasOwnProperty('device_detection')) {
                 obj['device_detection'] = ApiClient.convertToType(data['device_detection'], 'Boolean');
             }
@@ -171,11 +168,6 @@ ApplicationUpdateRequest.prototype['debug_rules'] = undefined;
  * @member {Boolean} application_acceleration
  */
 ApplicationUpdateRequest.prototype['application_acceleration'] = undefined;
-
-/**
- * @member {Boolean} caching
- */
-ApplicationUpdateRequest.prototype['caching'] = undefined;
 
 /**
  * @member {Boolean} device_detection

@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **minimumTlsVersion** | **String** |  | [optional] 
 **active** | **Boolean** |  | [optional] 
 **applicationAcceleration** | **Boolean** |  | [optional] 
-**caching** | **Boolean** |  | [optional] 
 **deviceDetection** | **Boolean** |  | [optional] 
 **edgeFirewall** | **Boolean** |  | [optional] 
 **edgeFunctions** | **Boolean** |  | [optional] 
