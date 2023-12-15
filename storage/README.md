@@ -107,7 +107,7 @@ tokenAuth.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //tokenAuth.apiKeyPrefix['Authorization'] = "Token"
 
-var api = new ObjectStorage.BucketsApi()
+var api = new ObjectStorage.StorageApi()
 var bucketCreate = new ObjectStorage.BucketCreate(); // {BucketCreate} 
 var callback = function(error, data, response) {
   if (error) {
@@ -116,7 +116,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.apiV1StorageBucketsCreate(bucketCreate, callback);
+api.storageApiBucketsCreate(bucketCreate, callback);
 
 ```
 
@@ -126,23 +126,30 @@ All URIs are relative to *https://api.azion.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ObjectStorage.BucketsApi* | [**apiV1StorageBucketsCreate**](docs/BucketsApi.md#apiV1StorageBucketsCreate) | **POST** /v4/storage/buckets | /v4/storage/buckets
-*ObjectStorage.BucketsApi* | [**apiV1StorageBucketsDestroy**](docs/BucketsApi.md#apiV1StorageBucketsDestroy) | **DELETE** /v4/storage/buckets/{name} | /v4/storage/buckets/:name
-*ObjectStorage.BucketsApi* | [**apiV1StorageBucketsList**](docs/BucketsApi.md#apiV1StorageBucketsList) | **GET** /v4/storage/buckets | /v4/storage/buckets
-*ObjectStorage.BucketsApi* | [**apiV1StorageBucketsPartialUpdate**](docs/BucketsApi.md#apiV1StorageBucketsPartialUpdate) | **PATCH** /v4/storage/buckets/{name} | /v4/storage/buckets/:name
+*ObjectStorage.StorageApi* | [**storageApiBucketsCreate**](docs/StorageApi.md#storageApiBucketsCreate) | **POST** /v4/storage/buckets | Create a new bucket
+*ObjectStorage.StorageApi* | [**storageApiBucketsDestroy**](docs/StorageApi.md#storageApiBucketsDestroy) | **DELETE** /v4/storage/buckets/{name} | Delete a bucket
+*ObjectStorage.StorageApi* | [**storageApiBucketsList**](docs/StorageApi.md#storageApiBucketsList) | **GET** /v4/storage/buckets | List buckets
+*ObjectStorage.StorageApi* | [**storageApiBucketsObjectsCreate**](docs/StorageApi.md#storageApiBucketsObjectsCreate) | **POST** /v4/storage/buckets/{bucket_name}/objects/{object_key} | Create new object key
+*ObjectStorage.StorageApi* | [**storageApiBucketsObjectsDestroy**](docs/StorageApi.md#storageApiBucketsObjectsDestroy) | **DELETE** /v4/storage/buckets/{bucket_name}/objects/{object_key} | Delete object key
+*ObjectStorage.StorageApi* | [**storageApiBucketsObjectsList**](docs/StorageApi.md#storageApiBucketsObjectsList) | **GET** /v4/storage/buckets/{bucket_name}/objects | List buckets objects
+*ObjectStorage.StorageApi* | [**storageApiBucketsObjectsRetrieve**](docs/StorageApi.md#storageApiBucketsObjectsRetrieve) | **GET** /v4/storage/buckets/{bucket_name}/objects/{object_key} | Download object
+*ObjectStorage.StorageApi* | [**storageApiBucketsObjectsUpdate**](docs/StorageApi.md#storageApiBucketsObjectsUpdate) | **PUT** /v4/storage/buckets/{bucket_name}/objects/{object_key} | Update the object key
+*ObjectStorage.StorageApi* | [**storageApiBucketsPartialUpdate**](docs/StorageApi.md#storageApiBucketsPartialUpdate) | **PATCH** /v4/storage/buckets/{name} | Update bucket info
 
 
 ## Documentation for Models
 
  - [ObjectStorage.Bucket](docs/Bucket.md)
  - [ObjectStorage.BucketCreate](docs/BucketCreate.md)
+ - [ObjectStorage.BucketObject](docs/BucketObject.md)
  - [ObjectStorage.EdgeAccessEnum](docs/EdgeAccessEnum.md)
+ - [ObjectStorage.ObjectResponseData](docs/ObjectResponseData.md)
  - [ObjectStorage.PaginatedBucketList](docs/PaginatedBucketList.md)
- - [ObjectStorage.PatchedBucket](docs/PatchedBucket.md)
+ - [ObjectStorage.PaginatedBucketObjectList](docs/PaginatedBucketObjectList.md)
  - [ObjectStorage.ResponseBucket](docs/ResponseBucket.md)
- - [ObjectStorage.ResponseDeleteBucket](docs/ResponseDeleteBucket.md)
- - [ObjectStorage.ResponseDeleteBucketData](docs/ResponseDeleteBucketData.md)
  - [ObjectStorage.StateEnum](docs/StateEnum.md)
+ - [ObjectStorage.SuccessBucketOperation](docs/SuccessBucketOperation.md)
+ - [ObjectStorage.SuccessObjectOperation](docs/SuccessObjectOperation.md)
 
 
 ## Documentation for Authorization
