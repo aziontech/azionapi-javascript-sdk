@@ -15,14 +15,16 @@
 import ApiClient from './ApiClient';
 import Bucket from './model/Bucket';
 import BucketCreate from './model/BucketCreate';
+import BucketObject from './model/BucketObject';
 import EdgeAccessEnum from './model/EdgeAccessEnum';
+import ObjectResponseData from './model/ObjectResponseData';
 import PaginatedBucketList from './model/PaginatedBucketList';
-import PatchedBucket from './model/PatchedBucket';
+import PaginatedBucketObjectList from './model/PaginatedBucketObjectList';
 import ResponseBucket from './model/ResponseBucket';
-import ResponseDeleteBucket from './model/ResponseDeleteBucket';
-import ResponseDeleteBucketData from './model/ResponseDeleteBucketData';
 import StateEnum from './model/StateEnum';
-import BucketsApi from './api/BucketsApi';
+import SuccessBucketOperation from './model/SuccessBucketOperation';
+import SuccessObjectOperation from './model/SuccessObjectOperation';
+import StorageApi from './api/StorageApi';
 
 
 /**
@@ -76,10 +78,22 @@ export {
     BucketCreate,
 
     /**
+     * The BucketObject model constructor.
+     * @property {module:model/BucketObject}
+     */
+    BucketObject,
+
+    /**
      * The EdgeAccessEnum model constructor.
      * @property {module:model/EdgeAccessEnum}
      */
     EdgeAccessEnum,
+
+    /**
+     * The ObjectResponseData model constructor.
+     * @property {module:model/ObjectResponseData}
+     */
+    ObjectResponseData,
 
     /**
      * The PaginatedBucketList model constructor.
@@ -88,10 +102,10 @@ export {
     PaginatedBucketList,
 
     /**
-     * The PatchedBucket model constructor.
-     * @property {module:model/PatchedBucket}
+     * The PaginatedBucketObjectList model constructor.
+     * @property {module:model/PaginatedBucketObjectList}
      */
-    PatchedBucket,
+    PaginatedBucketObjectList,
 
     /**
      * The ResponseBucket model constructor.
@@ -100,26 +114,26 @@ export {
     ResponseBucket,
 
     /**
-     * The ResponseDeleteBucket model constructor.
-     * @property {module:model/ResponseDeleteBucket}
-     */
-    ResponseDeleteBucket,
-
-    /**
-     * The ResponseDeleteBucketData model constructor.
-     * @property {module:model/ResponseDeleteBucketData}
-     */
-    ResponseDeleteBucketData,
-
-    /**
      * The StateEnum model constructor.
      * @property {module:model/StateEnum}
      */
     StateEnum,
 
     /**
-    * The BucketsApi service constructor.
-    * @property {module:api/BucketsApi}
+     * The SuccessBucketOperation model constructor.
+     * @property {module:model/SuccessBucketOperation}
+     */
+    SuccessBucketOperation,
+
+    /**
+     * The SuccessObjectOperation model constructor.
+     * @property {module:model/SuccessObjectOperation}
+     */
+    SuccessObjectOperation,
+
+    /**
+    * The StorageApi service constructor.
+    * @property {module:api/StorageApi}
     */
-    BucketsApi
+    StorageApi
 };
