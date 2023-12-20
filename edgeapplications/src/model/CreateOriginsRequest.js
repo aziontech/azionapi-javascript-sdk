@@ -24,12 +24,10 @@ class CreateOriginsRequest {
      * Constructs a new <code>CreateOriginsRequest</code>.
      * @alias module:model/CreateOriginsRequest
      * @param name {String} 
-     * @param addresses {Array.<module:model/CreateOriginsRequestAddresses>} 
-     * @param hostHeader {String} 
      */
-    constructor(name, addresses, hostHeader) { 
+    constructor(name) { 
         
-        CreateOriginsRequest.initialize(this, name, addresses, hostHeader);
+        CreateOriginsRequest.initialize(this, name);
     }
 
     /**
@@ -37,10 +35,8 @@ class CreateOriginsRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, addresses, hostHeader) { 
+    static initialize(obj, name) { 
         obj['name'] = name;
-        obj['addresses'] = addresses;
-        obj['host_header'] = hostHeader;
     }
 
     /**
@@ -163,7 +159,7 @@ class CreateOriginsRequest {
 
 }
 
-CreateOriginsRequest.RequiredProperties = ["name", "addresses", "host_header"];
+CreateOriginsRequest.RequiredProperties = ["name"];
 
 /**
  * @member {String} name
