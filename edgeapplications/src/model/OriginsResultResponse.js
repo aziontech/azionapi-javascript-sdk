@@ -23,26 +23,11 @@ class OriginsResultResponse {
     /**
      * Constructs a new <code>OriginsResultResponse</code>.
      * @alias module:model/OriginsResultResponse
-     * @param originId {Number} 
-     * @param originKey {String} 
      * @param name {String} 
-     * @param originType {String} 
-     * @param addresses {Array.<module:model/OriginsResultResponseAddresses>} 
-     * @param originProtocolPolicy {String} 
-     * @param isOriginRedirectionEnabled {Boolean} 
-     * @param hostHeader {String} 
-     * @param method {String} 
-     * @param originPath {String} 
-     * @param connectionTimeout {Number} 
-     * @param timeoutBetweenBytes {Number} 
-     * @param hmacAuthentication {Boolean} 
-     * @param hmacRegionName {String} 
-     * @param hmacAccessKey {String} 
-     * @param hmacSecretKey {String} 
      */
-    constructor(originId, originKey, name, originType, addresses, originProtocolPolicy, isOriginRedirectionEnabled, hostHeader, method, originPath, connectionTimeout, timeoutBetweenBytes, hmacAuthentication, hmacRegionName, hmacAccessKey, hmacSecretKey) { 
+    constructor(name) { 
         
-        OriginsResultResponse.initialize(this, originId, originKey, name, originType, addresses, originProtocolPolicy, isOriginRedirectionEnabled, hostHeader, method, originPath, connectionTimeout, timeoutBetweenBytes, hmacAuthentication, hmacRegionName, hmacAccessKey, hmacSecretKey);
+        OriginsResultResponse.initialize(this, name);
     }
 
     /**
@@ -50,23 +35,8 @@ class OriginsResultResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, originId, originKey, name, originType, addresses, originProtocolPolicy, isOriginRedirectionEnabled, hostHeader, method, originPath, connectionTimeout, timeoutBetweenBytes, hmacAuthentication, hmacRegionName, hmacAccessKey, hmacSecretKey) { 
-        obj['origin_id'] = originId;
-        obj['origin_key'] = originKey;
+    static initialize(obj, name) { 
         obj['name'] = name;
-        obj['origin_type'] = originType;
-        obj['addresses'] = addresses;
-        obj['origin_protocol_policy'] = originProtocolPolicy;
-        obj['is_origin_redirection_enabled'] = isOriginRedirectionEnabled;
-        obj['host_header'] = hostHeader;
-        obj['method'] = method;
-        obj['origin_path'] = originPath;
-        obj['connection_timeout'] = connectionTimeout;
-        obj['timeout_between_bytes'] = timeoutBetweenBytes;
-        obj['hmac_authentication'] = hmacAuthentication;
-        obj['hmac_region_name'] = hmacRegionName;
-        obj['hmac_access_key'] = hmacAccessKey;
-        obj['hmac_secret_key'] = hmacSecretKey;
     }
 
     /**
@@ -215,7 +185,7 @@ class OriginsResultResponse {
 
 }
 
-OriginsResultResponse.RequiredProperties = ["origin_id", "origin_key", "name", "origin_type", "addresses", "origin_protocol_policy", "is_origin_redirection_enabled", "host_header", "method", "origin_path", "connection_timeout", "timeout_between_bytes", "hmac_authentication", "hmac_region_name", "hmac_access_key", "hmac_secret_key"];
+OriginsResultResponse.RequiredProperties = ["name"];
 
 /**
  * @member {Number} origin_id

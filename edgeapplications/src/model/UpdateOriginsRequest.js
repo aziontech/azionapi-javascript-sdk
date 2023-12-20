@@ -24,12 +24,10 @@ class UpdateOriginsRequest {
      * Constructs a new <code>UpdateOriginsRequest</code>.
      * @alias module:model/UpdateOriginsRequest
      * @param name {String} 
-     * @param addresses {Array.<module:model/CreateOriginsRequestAddresses>} 
-     * @param hostHeader {String} 
      */
-    constructor(name, addresses, hostHeader) { 
+    constructor(name) { 
         
-        UpdateOriginsRequest.initialize(this, name, addresses, hostHeader);
+        UpdateOriginsRequest.initialize(this, name);
     }
 
     /**
@@ -37,10 +35,8 @@ class UpdateOriginsRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, addresses, hostHeader) { 
+    static initialize(obj, name) { 
         obj['name'] = name;
-        obj['addresses'] = addresses;
-        obj['host_header'] = hostHeader;
     }
 
     /**
@@ -163,7 +159,7 @@ class UpdateOriginsRequest {
 
 }
 
-UpdateOriginsRequest.RequiredProperties = ["name", "addresses", "host_header"];
+UpdateOriginsRequest.RequiredProperties = ["name"];
 
 /**
  * @member {String} name
