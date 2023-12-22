@@ -196,6 +196,7 @@ let apiInstance = new ObjectStorage.StorageApi();
 let bucketName = "bucketName_example"; // String | 
 let objectKey = "objectKey_example"; // String | 
 let opts = {
+  'contentType': "contentType_example", // String | The content type of the file (Example: text/plain).
   'body': "/path/to/file" // File | 
 };
 apiInstance.storageApiBucketsObjectsCreate(bucketName, objectKey, opts, (error, data, response) => {
@@ -214,6 +215,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **bucketName** | **String**|  | 
  **objectKey** | **String**|  | 
+ **contentType** | **String**| The content type of the file (Example: text/plain). | [optional] 
  **body** | **File**|  | [optional] 
 
 ### Return type
@@ -416,6 +418,7 @@ let apiInstance = new ObjectStorage.StorageApi();
 let bucketName = "bucketName_example"; // String | 
 let objectKey = "objectKey_example"; // String | 
 let opts = {
+  'contentType': "contentType_example", // String | The content type of the file (Example: text/plain).
   'body': "/path/to/file" // File | 
 };
 apiInstance.storageApiBucketsObjectsUpdate(bucketName, objectKey, opts, (error, data, response) => {
@@ -434,6 +437,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **bucketName** | **String**|  | 
  **objectKey** | **String**|  | 
+ **contentType** | **String**| The content type of the file (Example: text/plain). | [optional] 
  **body** | **File**|  | [optional] 
 
 ### Return type
