@@ -181,13 +181,13 @@ export default class StorageApi {
      * @param {String} bucketName 
      * @param {String} objectKey 
      * @param {Object} opts Optional parameters
-     * @param {Object.<String, {String: Object}>} [requestBody] 
+     * @param {File} [body] 
      * @param {module:api/StorageApi~storageApiBucketsObjectsCreateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SuccessObjectOperation}
      */
     storageApiBucketsObjectsCreate(bucketName, objectKey, opts, callback) {
       opts = opts || {};
-      let postBody = opts['requestBody'];
+      let postBody = opts['body'];
       // verify the required parameter 'bucketName' is set
       if (bucketName === undefined || bucketName === null) {
         throw new Error("Missing the required parameter 'bucketName' when calling storageApiBucketsObjectsCreate");
@@ -380,13 +380,13 @@ export default class StorageApi {
      * @param {String} bucketName 
      * @param {String} objectKey 
      * @param {Object} opts Optional parameters
-     * @param {Object.<String, {String: Object}>} [requestBody] 
+     * @param {File} [body] 
      * @param {module:api/StorageApi~storageApiBucketsObjectsUpdateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SuccessObjectOperation}
      */
     storageApiBucketsObjectsUpdate(bucketName, objectKey, opts, callback) {
       opts = opts || {};
-      let postBody = opts['requestBody'];
+      let postBody = opts['body'];
       // verify the required parameter 'bucketName' is set
       if (bucketName === undefined || bucketName === null) {
         throw new Error("Missing the required parameter 'bucketName' when calling storageApiBucketsObjectsUpdate");

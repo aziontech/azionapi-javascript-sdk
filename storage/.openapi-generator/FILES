@@ -31,9 +31,3 @@ src/model/ResponseBucket.js
 src/model/StateEnum.js
 src/model/SuccessBucketOperation.js
 src/model/SuccessObjectOperation.js
-test/api/StorageApi.spec.js
-test/model/BucketObject.spec.js
-test/model/ObjectResponseData.spec.js
-test/model/PaginatedBucketObjectList.spec.js
-test/model/SuccessBucketOperation.spec.js
-test/model/SuccessObjectOperation.spec.js
