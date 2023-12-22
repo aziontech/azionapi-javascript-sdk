@@ -181,6 +181,7 @@ export default class StorageApi {
      * @param {String} bucketName 
      * @param {String} objectKey 
      * @param {Object} opts Optional parameters
+     * @param {String} [contentType] The content type of the file (Example: text/plain).
      * @param {File} [body] 
      * @param {module:api/StorageApi~storageApiBucketsObjectsCreateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SuccessObjectOperation}
@@ -204,6 +205,7 @@ export default class StorageApi {
       let queryParams = {
       };
       let headerParams = {
+        'Content-Type': opts['contentType']
       };
       let formParams = {
       };
@@ -380,6 +382,7 @@ export default class StorageApi {
      * @param {String} bucketName 
      * @param {String} objectKey 
      * @param {Object} opts Optional parameters
+     * @param {String} [contentType] The content type of the file (Example: text/plain).
      * @param {File} [body] 
      * @param {module:api/StorageApi~storageApiBucketsObjectsUpdateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SuccessObjectOperation}
@@ -403,6 +406,7 @@ export default class StorageApi {
       let queryParams = {
       };
       let headerParams = {
+        'Content-Type': opts['contentType']
       };
       let formParams = {
       };
