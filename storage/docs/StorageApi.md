@@ -196,7 +196,7 @@ let apiInstance = new ObjectStorage.StorageApi();
 let bucketName = "bucketName_example"; // String | 
 let objectKey = "objectKey_example"; // String | 
 let opts = {
-  'requestBody': {key: null} // {String: Object} | 
+  'body': "/path/to/file" // File | 
 };
 apiInstance.storageApiBucketsObjectsCreate(bucketName, objectKey, opts, (error, data, response) => {
   if (error) {
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **bucketName** | **String**|  | 
  **objectKey** | **String**|  | 
- **requestBody** | [**{String: Object}**](Object.md)|  | [optional] 
+ **body** | **File**|  | [optional] 
 
 ### Return type
 
@@ -416,7 +416,7 @@ let apiInstance = new ObjectStorage.StorageApi();
 let bucketName = "bucketName_example"; // String | 
 let objectKey = "objectKey_example"; // String | 
 let opts = {
-  'requestBody': {key: null} // {String: Object} | 
+  'body': "/path/to/file" // File | 
 };
 apiInstance.storageApiBucketsObjectsUpdate(bucketName, objectKey, opts, (error, data, response) => {
   if (error) {
@@ -434,7 +434,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **bucketName** | **String**|  | 
  **objectKey** | **String**|  | 
- **requestBody** | [**{String: Object}**](Object.md)|  | [optional] 
+ **body** | **File**|  | [optional] 
 
 ### Return type
 
