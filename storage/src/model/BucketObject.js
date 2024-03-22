@@ -25,11 +25,10 @@ class BucketObject {
      * @param key {String} 
      * @param lastModified {Date} 
      * @param size {Number} 
-     * @param etag {String} 
      */
-    constructor(key, lastModified, size, etag) { 
+    constructor(key, lastModified, size) { 
         
-        BucketObject.initialize(this, key, lastModified, size, etag);
+        BucketObject.initialize(this, key, lastModified, size);
     }
 
     /**
@@ -37,11 +36,10 @@ class BucketObject {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, key, lastModified, size, etag) { 
+    static initialize(obj, key, lastModified, size) { 
         obj['key'] = key;
         obj['last_modified'] = lastModified;
         obj['size'] = size;
-        obj['etag'] = etag;
     }
 
     /**
@@ -79,7 +77,7 @@ class BucketObject {
     static validateJSON(data) {
         // check to make sure all required properties are present in the JSON string
         for (const property of BucketObject.RequiredProperties) {
-            if (!data[property]) {
+            if (!data.hasOwnProperty(property)) {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
         }
@@ -98,7 +96,7 @@ class BucketObject {
 
 }
 
-BucketObject.RequiredProperties = ["key", "last_modified", "size", "etag"];
+BucketObject.RequiredProperties = ["key", "last_modified", "size"];
 
 /**
  * @member {String} key
