@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **key** | **String** |  | [readonly] 
 **lastModified** | **Date** |  | [readonly] 
 **size** | **Number** |  | [readonly] 
-**etag** | **String** |  | [readonly] 
+**etag** | **String** |  | [optional] [readonly] 
 
 
