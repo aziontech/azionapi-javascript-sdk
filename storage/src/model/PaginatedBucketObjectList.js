@@ -57,6 +57,9 @@ class PaginatedBucketObjectList {
             if (data.hasOwnProperty('previous')) {
                 obj['previous'] = ApiClient.convertToType(data['previous'], 'String');
             }
+            if (data.hasOwnProperty('continuation_token')) {
+                obj['continuation_token'] = ApiClient.convertToType(data['continuation_token'], 'String');
+            }
             if (data.hasOwnProperty('results')) {
                 obj['results'] = ApiClient.convertToType(data['results'], [BucketObject]);
             }
@@ -77,6 +80,10 @@ class PaginatedBucketObjectList {
         // ensure the json data is a string
         if (data['previous'] && !(typeof data['previous'] === 'string' || data['previous'] instanceof String)) {
             throw new Error("Expected the field `previous` to be a primitive type in the JSON string but got " + data['previous']);
+        }
+        // ensure the json data is a string
+        if (data['continuation_token'] && !(typeof data['continuation_token'] === 'string' || data['continuation_token'] instanceof String)) {
+            throw new Error("Expected the field `continuation_token` to be a primitive type in the JSON string but got " + data['continuation_token']);
         }
         if (data['results']) { // data not null
             // ensure the json data is an array
@@ -111,6 +118,11 @@ PaginatedBucketObjectList.prototype['next'] = undefined;
  * @member {String} previous
  */
 PaginatedBucketObjectList.prototype['previous'] = undefined;
+
+/**
+ * @member {String} continuation_token
+ */
+PaginatedBucketObjectList.prototype['continuation_token'] = undefined;
 
 /**
  * @member {Array.<module:model/BucketObject>} results

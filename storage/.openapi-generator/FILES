@@ -5,6 +5,7 @@ README.md
 docs/Bucket.md
 docs/BucketCreate.md
 docs/BucketObject.md
+docs/BucketUpdate.md
 docs/EdgeAccessEnum.md
 docs/ObjectResponseData.md
 docs/PaginatedBucketList.md
@@ -23,6 +24,7 @@ src/index.js
 src/model/Bucket.js
 src/model/BucketCreate.js
 src/model/BucketObject.js
+src/model/BucketUpdate.js
 src/model/EdgeAccessEnum.js
 src/model/ObjectResponseData.js
 src/model/PaginatedBucketList.js
@@ -31,3 +33,4 @@ src/model/ResponseBucket.js
 src/model/StateEnum.js
 src/model/SuccessBucketOperation.js
 src/model/SuccessObjectOperation.js
+test/model/BucketUpdate.spec.js

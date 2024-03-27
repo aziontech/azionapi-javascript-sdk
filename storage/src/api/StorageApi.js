@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import BucketCreate from '../model/BucketCreate';
+import BucketUpdate from '../model/BucketUpdate';
 import PaginatedBucketList from '../model/PaginatedBucketList';
 import PaginatedBucketObjectList from '../model/PaginatedBucketObjectList';
 import ResponseBucket from '../model/ResponseBucket';
@@ -283,8 +284,8 @@ export default class StorageApi {
      * 
      * @param {String} bucketName 
      * @param {Object} opts Optional parameters
-     * @param {Number} [page] A page number within the paginated result set.
-     * @param {Number} [pageSize] Number of results to return per page.
+     * @param {String} [continuationToken] Token for next page.
+     * @param {Number} [maxObjectCount] Number of results to return per page.
      * @param {module:api/StorageApi~storageApiBucketsObjectsListCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/PaginatedBucketObjectList}
      */
@@ -300,8 +301,8 @@ export default class StorageApi {
         'bucket_name': bucketName
       };
       let queryParams = {
-        'page': opts['page'],
-        'page_size': opts['pageSize']
+        'continuation_token': opts['continuationToken'],
+        'max_object_count': opts['maxObjectCount']
       };
       let headerParams = {
       };
@@ -323,7 +324,7 @@ export default class StorageApi {
      * Callback function to receive the result of the storageApiBucketsObjectsRetrieve operation.
      * @callback module:api/StorageApi~storageApiBucketsObjectsRetrieveCallback
      * @param {String} error Error message, if any.
-     * @param {File} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -333,7 +334,6 @@ export default class StorageApi {
      * @param {String} bucketName 
      * @param {String} objectKey 
      * @param {module:api/StorageApi~storageApiBucketsObjectsRetrieveCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link File}
      */
     storageApiBucketsObjectsRetrieve(bucketName, objectKey, callback) {
       let postBody = null;
@@ -359,8 +359,8 @@ export default class StorageApi {
 
       let authNames = ['tokenAuth'];
       let contentTypes = [];
-      let accepts = ['application/octet-stream'];
-      let returnType = File;
+      let accepts = ['text/html', 'application/json', 'application/xml', 'text/plain', 'image/jpeg', 'image/png', 'image/gif', 'video/mp4', 'audio/mpeg', 'application/pdf', 'application/javascript', 'text/css', 'application/octet-stream'];
+      let returnType = null;
       return this.apiClient.callApi(
         '/v4/storage/buckets/{bucket_name}/objects/{object_key}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -434,11 +434,14 @@ export default class StorageApi {
      * Update bucket info
      * 
      * @param {String} name 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/BucketUpdate} [bucketUpdate] 
      * @param {module:api/StorageApi~storageApiBucketsPartialUpdateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ResponseBucket}
      */
-    storageApiBucketsPartialUpdate(name, callback) {
-      let postBody = null;
+    storageApiBucketsPartialUpdate(name, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['bucketUpdate'];
       // verify the required parameter 'name' is set
       if (name === undefined || name === null) {
         throw new Error("Missing the required parameter 'name' when calling storageApiBucketsPartialUpdate");
@@ -455,7 +458,7 @@ export default class StorageApi {
       };
 
       let authNames = ['tokenAuth'];
-      let contentTypes = [];
+      let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ResponseBucket;
       return this.apiClient.callApi(

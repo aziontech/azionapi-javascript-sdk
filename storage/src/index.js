@@ -16,6 +16,7 @@ import ApiClient from './ApiClient';
 import Bucket from './model/Bucket';
 import BucketCreate from './model/BucketCreate';
 import BucketObject from './model/BucketObject';
+import BucketUpdate from './model/BucketUpdate';
 import EdgeAccessEnum from './model/EdgeAccessEnum';
 import ObjectResponseData from './model/ObjectResponseData';
 import PaginatedBucketList from './model/PaginatedBucketList';
@@ -82,6 +83,12 @@ export {
      * @property {module:model/BucketObject}
      */
     BucketObject,
+
+    /**
+     * The BucketUpdate model constructor.
+     * @property {module:model/BucketUpdate}
+     */
+    BucketUpdate,
 
     /**
      * The EdgeAccessEnum model constructor.
