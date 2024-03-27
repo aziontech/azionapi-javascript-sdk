@@ -307,8 +307,8 @@ tokenAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new ObjectStorage.StorageApi();
 let bucketName = "bucketName_example"; // String | 
 let opts = {
-  'page': 56, // Number | A page number within the paginated result set.
-  'pageSize': 56 // Number | Number of results to return per page.
+  'continuationToken': "continuationToken_example", // String | Token for next page.
+  'maxObjectCount': 56 // Number | Number of results to return per page.
 };
 apiInstance.storageApiBucketsObjectsList(bucketName, opts, (error, data, response) => {
   if (error) {
@@ -325,8 +325,8 @@ apiInstance.storageApiBucketsObjectsList(bucketName, opts, (error, data, respons
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **bucketName** | **String**|  | 
- **page** | **Number**| A page number within the paginated result set. | [optional] 
- **pageSize** | **Number**| Number of results to return per page. | [optional] 
+ **continuationToken** | **String**| Token for next page. | [optional] 
+ **maxObjectCount** | **Number**| Number of results to return per page. | [optional] 
 
 ### Return type
 
@@ -344,7 +344,7 @@ Name | Type | Description  | Notes
 
 ## storageApiBucketsObjectsRetrieve
 
-> File storageApiBucketsObjectsRetrieve(bucketName, objectKey)
+> storageApiBucketsObjectsRetrieve(bucketName, objectKey)
 
 Download object
 
@@ -368,7 +368,7 @@ apiInstance.storageApiBucketsObjectsRetrieve(bucketName, objectKey, (error, data
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -383,7 +383,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+null (empty response body)
 
 ### Authorization
 
@@ -392,7 +392,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/octet-stream
+- **Accept**: text/html, application/json, application/xml, text/plain, image/jpeg, image/png, image/gif, video/mp4, audio/mpeg, application/pdf, application/javascript, text/css, application/octet-stream
 
 
 ## storageApiBucketsObjectsUpdate
@@ -456,7 +456,7 @@ Name | Type | Description  | Notes
 
 ## storageApiBucketsPartialUpdate
 
-> ResponseBucket storageApiBucketsPartialUpdate(name)
+> ResponseBucket storageApiBucketsPartialUpdate(name, opts)
 
 Update bucket info
 
@@ -475,7 +475,10 @@ tokenAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new ObjectStorage.StorageApi();
 let name = "name_example"; // String | 
-apiInstance.storageApiBucketsPartialUpdate(name, (error, data, response) => {
+let opts = {
+  'bucketUpdate': new ObjectStorage.BucketUpdate() // BucketUpdate | 
+};
+apiInstance.storageApiBucketsPartialUpdate(name, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -490,6 +493,7 @@ apiInstance.storageApiBucketsPartialUpdate(name, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**|  | 
+ **bucketUpdate** | [**BucketUpdate**](BucketUpdate.md)|  | [optional] 
 
 ### Return type
 
@@ -501,6 +505,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 

@@ -143,6 +143,7 @@ Class | Method | HTTP request | Description
  - [ObjectStorage.Bucket](docs/Bucket.md)
  - [ObjectStorage.BucketCreate](docs/BucketCreate.md)
  - [ObjectStorage.BucketObject](docs/BucketObject.md)
+ - [ObjectStorage.BucketUpdate](docs/BucketUpdate.md)
  - [ObjectStorage.EdgeAccessEnum](docs/EdgeAccessEnum.md)
  - [ObjectStorage.ObjectResponseData](docs/ObjectResponseData.md)
  - [ObjectStorage.PaginatedBucketList](docs/PaginatedBucketList.md)
