@@ -15,22 +15,19 @@ import ApiClient from '../ApiClient';
 import DomainData from './DomainData';
 
 /**
- * The PutDomainRequest model module.
- * @module model/PutDomainRequest
+ * The DomainEntity model module.
+ * @module model/DomainEntity
  * @version 2.0.0
  */
-class PutDomainRequest {
+class DomainEntity {
     /**
-     * Constructs a new <code>PutDomainRequest</code>.
-     * @alias module:model/PutDomainRequest
+     * Constructs a new <code>DomainEntity</code>.
+     * @alias module:model/DomainEntity
      * @implements module:model/DomainData
-     * @param name {String} 
-     * @param cnames {Array.<String>} 
-     * @param edgeApplicationId {Number} 
      */
-    constructor(name, cnames, edgeApplicationId) { 
+    constructor() { 
         DomainData.initialize(this);
-        PutDomainRequest.initialize(this, name, cnames, edgeApplicationId);
+        DomainEntity.initialize(this);
     }
 
     /**
@@ -38,22 +35,19 @@ class PutDomainRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, cnames, edgeApplicationId) { 
-        obj['name'] = name;
-        obj['cnames'] = cnames;
-        obj['edge_application_id'] = edgeApplicationId;
+    static initialize(obj) { 
     }
 
     /**
-     * Constructs a <code>PutDomainRequest</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>DomainEntity</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/PutDomainRequest} obj Optional instance to populate.
-     * @return {module:model/PutDomainRequest} The populated <code>PutDomainRequest</code> instance.
+     * @param {module:model/DomainEntity} obj Optional instance to populate.
+     * @return {module:model/DomainEntity} The populated <code>DomainEntity</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new PutDomainRequest();
+            obj = obj || new DomainEntity();
             DomainData.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('name')) {
@@ -89,22 +83,22 @@ class PutDomainRequest {
             if (data.hasOwnProperty('crl_list')) {
                 obj['crl_list'] = ApiClient.convertToType(data['crl_list'], ['Number']);
             }
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
+            }
+            if (data.hasOwnProperty('domain_name')) {
+                obj['domain_name'] = ApiClient.convertToType(data['domain_name'], 'String');
+            }
         }
         return obj;
     }
 
     /**
-     * Validates the JSON data with respect to <code>PutDomainRequest</code>.
+     * Validates the JSON data with respect to <code>DomainEntity</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>PutDomainRequest</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DomainEntity</code>.
      */
     static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of PutDomainRequest.RequiredProperties) {
-            if (!data.hasOwnProperty(property)) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
         // ensure the json data is a string
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
@@ -125,6 +119,10 @@ class PutDomainRequest {
         if (!Array.isArray(data['crl_list'])) {
             throw new Error("Expected the field `crl_list` to be an array in the JSON data but got " + data['crl_list']);
         }
+        // ensure the json data is a string
+        if (data['domain_name'] && !(typeof data['domain_name'] === 'string' || data['domain_name'] instanceof String)) {
+            throw new Error("Expected the field `domain_name` to be a primitive type in the JSON string but got " + data['domain_name']);
+        }
 
         return true;
     }
@@ -132,62 +130,72 @@ class PutDomainRequest {
 
 }
 
-PutDomainRequest.RequiredProperties = ["name", "cnames", "edge_application_id"];
+
 
 /**
  * @member {String} name
  */
-PutDomainRequest.prototype['name'] = undefined;
+DomainEntity.prototype['name'] = undefined;
 
 /**
  * @member {Array.<String>} cnames
  */
-PutDomainRequest.prototype['cnames'] = undefined;
+DomainEntity.prototype['cnames'] = undefined;
 
 /**
  * @member {Boolean} cname_access_only
  */
-PutDomainRequest.prototype['cname_access_only'] = undefined;
+DomainEntity.prototype['cname_access_only'] = undefined;
 
 /**
  * @member {Boolean} is_active
  */
-PutDomainRequest.prototype['is_active'] = undefined;
+DomainEntity.prototype['is_active'] = undefined;
 
 /**
  * @member {Number} edge_application_id
  */
-PutDomainRequest.prototype['edge_application_id'] = undefined;
+DomainEntity.prototype['edge_application_id'] = undefined;
 
 /**
  * @member {Number} digital_certificate_id
  */
-PutDomainRequest.prototype['digital_certificate_id'] = undefined;
+DomainEntity.prototype['digital_certificate_id'] = undefined;
 
 /**
- * @member {module:model/PutDomainRequest.EnvironmentEnum} environment
+ * @member {module:model/DomainEntity.EnvironmentEnum} environment
  */
-PutDomainRequest.prototype['environment'] = undefined;
+DomainEntity.prototype['environment'] = undefined;
 
 /**
  * @member {Boolean} is_mtls_enabled
  */
-PutDomainRequest.prototype['is_mtls_enabled'] = undefined;
+DomainEntity.prototype['is_mtls_enabled'] = undefined;
 
 /**
  * @member {Number} mtls_trusted_ca_certificate_id
  */
-PutDomainRequest.prototype['mtls_trusted_ca_certificate_id'] = undefined;
+DomainEntity.prototype['mtls_trusted_ca_certificate_id'] = undefined;
 
 /**
- * @member {module:model/PutDomainRequest.MtlsVerificationEnum} mtls_verification
+ * @member {module:model/DomainEntity.MtlsVerificationEnum} mtls_verification
  */
-PutDomainRequest.prototype['mtls_verification'] = undefined;
+DomainEntity.prototype['mtls_verification'] = undefined;
 
 /**
  * @member {Array.<Number>} crl_list
  */
-PutDomainRequest.prototype['crl_list'] = undefined;
+DomainEntity.prototype['crl_list'] = undefined;
+
+/**
+ * @member {Number} id
+ */
+DomainEntity.prototype['id'] = undefined;
+
+/**
+ * @member {String} domain_name
+ */
+DomainEntity.prototype['domain_name'] = undefined;
 
 
 // Implement DomainData interface:
@@ -243,7 +251,7 @@ DomainData.prototype['crl_list'] = undefined;
  * @enum {String}
  * @readonly
  */
-PutDomainRequest['EnvironmentEnum'] = {
+DomainEntity['EnvironmentEnum'] = {
 
     /**
      * value: "production"
@@ -264,7 +272,7 @@ PutDomainRequest['EnvironmentEnum'] = {
  * @enum {String}
  * @readonly
  */
-PutDomainRequest['MtlsVerificationEnum'] = {
+DomainEntity['MtlsVerificationEnum'] = {
 
     /**
      * value: "enforce"
@@ -281,5 +289,5 @@ PutDomainRequest['MtlsVerificationEnum'] = {
 
 
 
-export default PutDomainRequest;
+export default DomainEntity;
 

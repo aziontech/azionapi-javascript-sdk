@@ -1,4 +1,4 @@
-# DomainApi.UpdateDomainRequest
+# DomainApi.DomainData
 
 ## Properties
 

@@ -3,10 +3,11 @@
 .travis.yml
 README.md
 docs/CreateDomainRequest.md
+docs/DomainData.md
+docs/DomainEntity.md
 docs/DomainLinks.md
 docs/DomainResponseWithResult.md
 docs/DomainResponseWithResults.md
-docs/DomainResults.md
 docs/DomainsApi.md
 docs/PutDomainRequest.md
 docs/UpdateDomainRequest.md
@@ -17,9 +18,12 @@ src/ApiClient.js
 src/api/DomainsApi.js
 src/index.js
 src/model/CreateDomainRequest.js
+src/model/DomainData.js
+src/model/DomainEntity.js
 src/model/DomainLinks.js
 src/model/DomainResponseWithResult.js
 src/model/DomainResponseWithResults.js
-src/model/DomainResults.js
 src/model/PutDomainRequest.js
 src/model/UpdateDomainRequest.js
+test/model/DomainData.spec.js
+test/model/DomainEntity.spec.js

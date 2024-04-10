@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import DomainEntity from './DomainEntity';
 import DomainLinks from './DomainLinks';
-import DomainResults from './DomainResults';
 
 /**
  * The DomainResponseWithResults model module.
@@ -28,7 +28,7 @@ class DomainResponseWithResults {
      * @param totalPages {Number} 
      * @param schemaVersion {Number} 
      * @param links {module:model/DomainLinks} 
-     * @param results {Array.<module:model/DomainResults>} 
+     * @param results {Array.<module:model/DomainEntity>} 
      */
     constructor(count, totalPages, schemaVersion, links, results) { 
         
@@ -72,7 +72,7 @@ class DomainResponseWithResults {
                 obj['links'] = DomainLinks.constructFromObject(data['links']);
             }
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [DomainResults]);
+                obj['results'] = ApiClient.convertToType(data['results'], [DomainEntity]);
             }
         }
         return obj;
@@ -86,7 +86,7 @@ class DomainResponseWithResults {
     static validateJSON(data) {
         // check to make sure all required properties are present in the JSON string
         for (const property of DomainResponseWithResults.RequiredProperties) {
-            if (!data[property]) {
+            if (!data.hasOwnProperty(property)) {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
         }
@@ -101,7 +101,7 @@ class DomainResponseWithResults {
             }
             // validate the optional field `results` (array)
             for (const item of data['results']) {
-                DomainResults.validateJSON(item);
+                DomainEntity.validateJSON(item);
             };
         }
 
@@ -134,7 +134,7 @@ DomainResponseWithResults.prototype['schema_version'] = undefined;
 DomainResponseWithResults.prototype['links'] = undefined;
 
 /**
- * @member {Array.<module:model/DomainResults>} results
+ * @member {Array.<module:model/DomainEntity>} results
  */
 DomainResponseWithResults.prototype['results'] = undefined;
 
