@@ -4,11 +4,38 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cnames** | **[String]** |  | 
-**cnameAccessOnly** | **Boolean** |  | 
 **name** | **String** |  | 
-**isActive** | **Boolean** |  | 
+**cnames** | **[String]** |  | 
+**cnameAccessOnly** | **Boolean** |  | [optional] 
+**isActive** | **Boolean** |  | [optional] 
 **edgeApplicationId** | **Number** |  | 
-**digitalCertificateId** | **Number** |  | 
+**digitalCertificateId** | **Number** |  | [optional] 
+**environment** | **String** |  | [optional] 
+**isMtlsEnabled** | **Boolean** |  | [optional] 
+**mtlsTrustedCaCertificateId** | **Number** |  | [optional] 
+**mtlsVerification** | **String** |  | [optional] 
+**crlList** | **[Number]** |  | [optional] 
+
+
+
+## Enum: EnvironmentEnum
+
+
+* `production` (value: `"production"`)
+
+* `preview` (value: `"preview"`)
+
+
+
+
+
+## Enum: MtlsVerificationEnum
+
+
+* `enforce` (value: `"enforce"`)
+
+* `permissive` (value: `"permissive"`)
+
+
 
 

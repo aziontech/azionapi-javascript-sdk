@@ -1,4 +1,4 @@
-# DomainApi.UpdateDomainRequest
+# DomainApi.DomainEntity
 
 ## Properties
 
@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **mtlsTrustedCaCertificateId** | **Number** |  | [optional] 
 **mtlsVerification** | **String** |  | [optional] 
 **crlList** | **[Number]** |  | [optional] 
+**id** | **Number** |  | [optional] 
+**domainName** | **String** |  | [optional] 
 
 
 

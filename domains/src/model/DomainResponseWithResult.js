@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import DomainEntity from './DomainEntity';
 import DomainLinks from './DomainLinks';
-import DomainResults from './DomainResults';
 
 /**
  * The DomainResponseWithResult model module.
@@ -24,7 +24,7 @@ class DomainResponseWithResult {
     /**
      * Constructs a new <code>DomainResponseWithResult</code>.
      * @alias module:model/DomainResponseWithResult
-     * @param results {module:model/DomainResults} 
+     * @param results {module:model/DomainEntity} 
      * @param schemaVersion {Number} 
      */
     constructor(results, schemaVersion) { 
@@ -60,7 +60,7 @@ class DomainResponseWithResult {
                 obj['links'] = DomainLinks.constructFromObject(data['links']);
             }
             if (data.hasOwnProperty('results')) {
-                obj['results'] = DomainResults.constructFromObject(data['results']);
+                obj['results'] = DomainEntity.constructFromObject(data['results']);
             }
             if (data.hasOwnProperty('total_pages')) {
                 obj['total_pages'] = ApiClient.convertToType(data['total_pages'], 'Number');
@@ -80,7 +80,7 @@ class DomainResponseWithResult {
     static validateJSON(data) {
         // check to make sure all required properties are present in the JSON string
         for (const property of DomainResponseWithResult.RequiredProperties) {
-            if (!data[property]) {
+            if (!data.hasOwnProperty(property)) {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
         }
@@ -90,7 +90,7 @@ class DomainResponseWithResult {
         }
         // validate the optional field `results`
         if (data['results']) { // data not null
-          DomainResults.validateJSON(data['results']);
+          DomainEntity.validateJSON(data['results']);
         }
 
         return true;
@@ -112,7 +112,7 @@ DomainResponseWithResult.prototype['count'] = undefined;
 DomainResponseWithResult.prototype['links'] = undefined;
 
 /**
- * @member {module:model/DomainResults} results
+ * @member {module:model/DomainEntity} results
  */
 DomainResponseWithResult.prototype['results'] = undefined;
 
