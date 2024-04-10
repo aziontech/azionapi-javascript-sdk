@@ -25,5 +25,3 @@ src/model/DomainResponseWithResult.js
 src/model/DomainResponseWithResults.js
 src/model/PutDomainRequest.js
 src/model/UpdateDomainRequest.js
-test/model/DomainData.spec.js
-test/model/DomainEntity.spec.js
