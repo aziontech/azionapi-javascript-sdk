@@ -77,6 +77,9 @@ class UpdateDomainRequest {
             if (data.hasOwnProperty('mtls_trusted_ca_certificate_id')) {
                 obj['mtls_trusted_ca_certificate_id'] = ApiClient.convertToType(data['mtls_trusted_ca_certificate_id'], 'Number');
             }
+            if (data.hasOwnProperty('edge_firewall_id')) {
+                obj['edge_firewall_id'] = ApiClient.convertToType(data['edge_firewall_id'], 'Number');
+            }
             if (data.hasOwnProperty('mtls_verification')) {
                 obj['mtls_verification'] = ApiClient.convertToType(data['mtls_verification'], 'String');
             }
@@ -168,6 +171,11 @@ UpdateDomainRequest.prototype['is_mtls_enabled'] = undefined;
 UpdateDomainRequest.prototype['mtls_trusted_ca_certificate_id'] = undefined;
 
 /**
+ * @member {Number} edge_firewall_id
+ */
+UpdateDomainRequest.prototype['edge_firewall_id'] = undefined;
+
+/**
  * @member {module:model/UpdateDomainRequest.MtlsVerificationEnum} mtls_verification
  */
 UpdateDomainRequest.prototype['mtls_verification'] = undefined;
@@ -215,6 +223,10 @@ DomainData.prototype['is_mtls_enabled'] = undefined;
  * @member {Number} mtls_trusted_ca_certificate_id
  */
 DomainData.prototype['mtls_trusted_ca_certificate_id'] = undefined;
+/**
+ * @member {Number} edge_firewall_id
+ */
+DomainData.prototype['edge_firewall_id'] = undefined;
 /**
  * @member {module:model/DomainData.MtlsVerificationEnum} mtls_verification
  */
