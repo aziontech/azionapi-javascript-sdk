@@ -34,8 +34,8 @@ tokenAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new DomainApi.DomainsApi();
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | 
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | 
   'createDomainRequest': new DomainApi.CreateDomainRequest() // CreateDomainRequest | 
 };
 apiInstance.createDomain(opts, (error, data, response) => {
@@ -92,7 +92,7 @@ tokenAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new DomainApi.DomainsApi();
 let id = "id_example"; // String | The id of the domain to be deleted. 
 let opts = {
-  'accept': application/json; version=3 // String | 
+  'accept': "application/json; version=3" // String | 
 };
 apiInstance.delDomain(id, opts, (error, data, response) => {
   if (error) {
@@ -147,7 +147,7 @@ tokenAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new DomainApi.DomainsApi();
 let id = "id_example"; // String | The id of the domain to be consulted. 
 let opts = {
-  'accept': application/json; version=3 // String | 
+  'accept': "application/json; version=3" // String | 
 };
 apiInstance.getDomain(id, opts, (error, data, response) => {
   if (error) {
@@ -205,7 +205,7 @@ let opts = {
   'pageSize': 789, // Number | 
   'sort': "sort_example", // String | 
   'orderBy': "orderBy_example", // String | 
-  'accept': application/json; version=3 // String | 
+  'accept': "application/json; version=3" // String | 
 };
 apiInstance.getDomains(opts, (error, data, response) => {
   if (error) {
@@ -263,8 +263,8 @@ tokenAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new DomainApi.DomainsApi();
 let id = "id_example"; // String | 
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | 
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | 
   'putDomainRequest': new DomainApi.PutDomainRequest() // PutDomainRequest | 
 };
 apiInstance.putDomain(id, opts, (error, data, response) => {
@@ -322,8 +322,8 @@ tokenAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new DomainApi.DomainsApi();
 let id = "id_example"; // String | 
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | 
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | 
   'updateDomainRequest': new DomainApi.UpdateDomainRequest() // UpdateDomainRequest | 
 };
 apiInstance.updateDomain(id, opts, (error, data, response) => {

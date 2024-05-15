@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import DomainData from './DomainData';
+import DomainDataDigitalCertificateId from './DomainDataDigitalCertificateId';
 
 /**
  * The UpdateDomainRequest model module.
@@ -66,7 +67,7 @@ class UpdateDomainRequest {
                 obj['edge_application_id'] = ApiClient.convertToType(data['edge_application_id'], 'Number');
             }
             if (data.hasOwnProperty('digital_certificate_id')) {
-                obj['digital_certificate_id'] = ApiClient.convertToType(data['digital_certificate_id'], 'Number');
+                obj['digital_certificate_id'] = DomainDataDigitalCertificateId.constructFromObject(data['digital_certificate_id']);
             }
             if (data.hasOwnProperty('environment')) {
                 obj['environment'] = ApiClient.convertToType(data['environment'], 'String');
@@ -103,6 +104,10 @@ class UpdateDomainRequest {
         // ensure the json data is an array
         if (!Array.isArray(data['cnames'])) {
             throw new Error("Expected the field `cnames` to be an array in the JSON data but got " + data['cnames']);
+        }
+        // validate the optional field `digital_certificate_id`
+        if (data['digital_certificate_id']) { // data not null
+          DomainDataDigitalCertificateId.validateJSON(data['digital_certificate_id']);
         }
         // ensure the json data is a string
         if (data['environment'] && !(typeof data['environment'] === 'string' || data['environment'] instanceof String)) {
@@ -151,7 +156,7 @@ UpdateDomainRequest.prototype['is_active'] = undefined;
 UpdateDomainRequest.prototype['edge_application_id'] = undefined;
 
 /**
- * @member {Number} digital_certificate_id
+ * @member {module:model/DomainDataDigitalCertificateId} digital_certificate_id
  */
 UpdateDomainRequest.prototype['digital_certificate_id'] = undefined;
 
@@ -208,7 +213,7 @@ DomainData.prototype['is_active'] = undefined;
  */
 DomainData.prototype['edge_application_id'] = undefined;
 /**
- * @member {Number} digital_certificate_id
+ * @member {module:model/DomainDataDigitalCertificateId} digital_certificate_id
  */
 DomainData.prototype['digital_certificate_id'] = undefined;
 /**
