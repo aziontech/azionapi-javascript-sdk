@@ -15,6 +15,7 @@
 import ApiClient from './ApiClient';
 import CreateDomainRequest from './model/CreateDomainRequest';
 import DomainData from './model/DomainData';
+import DomainDataDigitalCertificateId from './model/DomainDataDigitalCertificateId';
 import DomainEntity from './model/DomainEntity';
 import DomainLinks from './model/DomainLinks';
 import DomainResponseWithResult from './model/DomainResponseWithResult';
@@ -73,6 +74,12 @@ export {
      * @property {module:model/DomainData}
      */
     DomainData,
+
+    /**
+     * The DomainDataDigitalCertificateId model constructor.
+     * @property {module:model/DomainDataDigitalCertificateId}
+     */
+    DomainDataDigitalCertificateId,
 
     /**
      * The DomainEntity model constructor.

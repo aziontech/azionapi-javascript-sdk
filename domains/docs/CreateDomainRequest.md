@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **cnameAccessOnly** | **Boolean** |  | [optional] 
 **isActive** | **Boolean** |  | [optional] 
 **edgeApplicationId** | **Number** |  | 
-**digitalCertificateId** | **Number** |  | [optional] 
+**digitalCertificateId** | [**DomainDataDigitalCertificateId**](DomainDataDigitalCertificateId.md) |  | [optional] 
 **environment** | **String** |  | [optional] 
 **isMtlsEnabled** | **Boolean** |  | [optional] 
 **mtlsTrustedCaCertificateId** | **Number** |  | [optional] 
