@@ -143,7 +143,9 @@ Class | Method | HTTP request | Description
 
  - [DomainApi.CreateDomainRequest](docs/CreateDomainRequest.md)
  - [DomainApi.DomainData](docs/DomainData.md)
+ - [DomainApi.DomainDataResponse](docs/DomainDataResponse.md)
  - [DomainApi.DomainEntity](docs/DomainEntity.md)
+ - [DomainApi.DomainEntityResponse](docs/DomainEntityResponse.md)
  - [DomainApi.DomainLinks](docs/DomainLinks.md)
  - [DomainApi.DomainResponseWithResult](docs/DomainResponseWithResult.md)
  - [DomainApi.DomainResponseWithResults](docs/DomainResponseWithResults.md)

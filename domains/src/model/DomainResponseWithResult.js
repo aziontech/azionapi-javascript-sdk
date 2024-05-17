@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import DomainEntity from './DomainEntity';
+import DomainEntityResponse from './DomainEntityResponse';
 import DomainLinks from './DomainLinks';
 
 /**
@@ -24,7 +24,7 @@ class DomainResponseWithResult {
     /**
      * Constructs a new <code>DomainResponseWithResult</code>.
      * @alias module:model/DomainResponseWithResult
-     * @param results {module:model/DomainEntity} 
+     * @param results {module:model/DomainEntityResponse} 
      * @param schemaVersion {Number} 
      */
     constructor(results, schemaVersion) { 
@@ -60,7 +60,7 @@ class DomainResponseWithResult {
                 obj['links'] = DomainLinks.constructFromObject(data['links']);
             }
             if (data.hasOwnProperty('results')) {
-                obj['results'] = DomainEntity.constructFromObject(data['results']);
+                obj['results'] = DomainEntityResponse.constructFromObject(data['results']);
             }
             if (data.hasOwnProperty('total_pages')) {
                 obj['total_pages'] = ApiClient.convertToType(data['total_pages'], 'Number');
@@ -90,7 +90,7 @@ class DomainResponseWithResult {
         }
         // validate the optional field `results`
         if (data['results']) { // data not null
-          DomainEntity.validateJSON(data['results']);
+          DomainEntityResponse.validateJSON(data['results']);
         }
 
         return true;
@@ -112,7 +112,7 @@ DomainResponseWithResult.prototype['count'] = undefined;
 DomainResponseWithResult.prototype['links'] = undefined;
 
 /**
- * @member {module:model/DomainEntity} results
+ * @member {module:model/DomainEntityResponse} results
  */
 DomainResponseWithResult.prototype['results'] = undefined;
 
