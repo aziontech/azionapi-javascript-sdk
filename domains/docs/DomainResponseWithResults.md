@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **totalPages** | **Number** |  | 
 **schemaVersion** | **Number** |  | 
 **links** | [**DomainLinks**](DomainLinks.md) |  | 
-**results** | [**[DomainEntity]**](DomainEntity.md) |  | 
+**results** | [**[DomainEntityResponse]**](DomainEntityResponse.md) |  | 
 
 

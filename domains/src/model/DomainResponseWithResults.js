@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import DomainEntity from './DomainEntity';
+import DomainEntityResponse from './DomainEntityResponse';
 import DomainLinks from './DomainLinks';
 
 /**
@@ -28,7 +28,7 @@ class DomainResponseWithResults {
      * @param totalPages {Number} 
      * @param schemaVersion {Number} 
      * @param links {module:model/DomainLinks} 
-     * @param results {Array.<module:model/DomainEntity>} 
+     * @param results {Array.<module:model/DomainEntityResponse>} 
      */
     constructor(count, totalPages, schemaVersion, links, results) { 
         
@@ -72,7 +72,7 @@ class DomainResponseWithResults {
                 obj['links'] = DomainLinks.constructFromObject(data['links']);
             }
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [DomainEntity]);
+                obj['results'] = ApiClient.convertToType(data['results'], [DomainEntityResponse]);
             }
         }
         return obj;
@@ -101,7 +101,7 @@ class DomainResponseWithResults {
             }
             // validate the optional field `results` (array)
             for (const item of data['results']) {
-                DomainEntity.validateJSON(item);
+                DomainEntityResponse.validateJSON(item);
             };
         }
 
@@ -134,7 +134,7 @@ DomainResponseWithResults.prototype['schema_version'] = undefined;
 DomainResponseWithResults.prototype['links'] = undefined;
 
 /**
- * @member {Array.<module:model/DomainEntity>} results
+ * @member {Array.<module:model/DomainEntityResponse>} results
  */
 DomainResponseWithResults.prototype['results'] = undefined;
 

@@ -15,7 +15,9 @@
 import ApiClient from './ApiClient';
 import CreateDomainRequest from './model/CreateDomainRequest';
 import DomainData from './model/DomainData';
+import DomainDataResponse from './model/DomainDataResponse';
 import DomainEntity from './model/DomainEntity';
+import DomainEntityResponse from './model/DomainEntityResponse';
 import DomainLinks from './model/DomainLinks';
 import DomainResponseWithResult from './model/DomainResponseWithResult';
 import DomainResponseWithResults from './model/DomainResponseWithResults';
@@ -75,10 +77,22 @@ export {
     DomainData,
 
     /**
+     * The DomainDataResponse model constructor.
+     * @property {module:model/DomainDataResponse}
+     */
+    DomainDataResponse,
+
+    /**
      * The DomainEntity model constructor.
      * @property {module:model/DomainEntity}
      */
     DomainEntity,
+
+    /**
+     * The DomainEntityResponse model constructor.
+     * @property {module:model/DomainEntityResponse}
+     */
+    DomainEntityResponse,
 
     /**
      * The DomainLinks model constructor.

@@ -4,7 +4,9 @@
 README.md
 docs/CreateDomainRequest.md
 docs/DomainData.md
+docs/DomainDataResponse.md
 docs/DomainEntity.md
+docs/DomainEntityResponse.md
 docs/DomainLinks.md
 docs/DomainResponseWithResult.md
 docs/DomainResponseWithResults.md
@@ -19,9 +21,13 @@ src/api/DomainsApi.js
 src/index.js
 src/model/CreateDomainRequest.js
 src/model/DomainData.js
+src/model/DomainDataResponse.js
 src/model/DomainEntity.js
+src/model/DomainEntityResponse.js
 src/model/DomainLinks.js
 src/model/DomainResponseWithResult.js
 src/model/DomainResponseWithResults.js
 src/model/PutDomainRequest.js
 src/model/UpdateDomainRequest.js
+test/model/DomainDataResponse.spec.js
+test/model/DomainEntityResponse.spec.js
