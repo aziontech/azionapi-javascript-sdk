@@ -143,7 +143,6 @@ Class | Method | HTTP request | Description
 
  - [DomainApi.CreateDomainRequest](docs/CreateDomainRequest.md)
  - [DomainApi.DomainData](docs/DomainData.md)
- - [DomainApi.DomainDataDigitalCertificateId](docs/DomainDataDigitalCertificateId.md)
  - [DomainApi.DomainEntity](docs/DomainEntity.md)
  - [DomainApi.DomainLinks](docs/DomainLinks.md)
  - [DomainApi.DomainResponseWithResult](docs/DomainResponseWithResult.md)
