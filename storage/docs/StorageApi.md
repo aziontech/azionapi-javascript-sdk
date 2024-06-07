@@ -13,6 +13,10 @@ Method | HTTP request | Description
 [**storageApiBucketsObjectsRetrieve**](StorageApi.md#storageApiBucketsObjectsRetrieve) | **GET** /v4/storage/buckets/{bucket_name}/objects/{object_key} | Download object
 [**storageApiBucketsObjectsUpdate**](StorageApi.md#storageApiBucketsObjectsUpdate) | **PUT** /v4/storage/buckets/{bucket_name}/objects/{object_key} | Update the object key
 [**storageApiBucketsPartialUpdate**](StorageApi.md#storageApiBucketsPartialUpdate) | **PATCH** /v4/storage/buckets/{name} | Update bucket info
+[**storageApiS3CredentialsByAccessKey**](StorageApi.md#storageApiS3CredentialsByAccessKey) | **GET** /v4/storage/s3-credentials/{s3_credential_access_key} | get by s3 credentials by access key
+[**storageApiS3CredentialsCreate**](StorageApi.md#storageApiS3CredentialsCreate) | **POST** /v4/storage/s3-credentials | create s3 credentials
+[**storageApiS3CredentialsDelete**](StorageApi.md#storageApiS3CredentialsDelete) | **DELETE** /v4/storage/s3-credentials/{s3_credential_access_key} | delete by s3 credentials
+[**storageApiS3CredentialsList**](StorageApi.md#storageApiS3CredentialsList) | **GET** /v4/storage/s3-credentials | List s3 credentials
 
 
 
@@ -392,7 +396,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/html, application/json, application/xml, text/plain, image/jpeg, image/png, image/gif, video/mp4, audio/mpeg, application/pdf, application/javascript, text/css, application/octet-stream
+- **Accept**: text/html, application/json, application/xml, text/plain, image/jpeg, image/png, image/gif, video/mp4, audio/mpeg, application/pdf, application/javascript, text/css, application/octet-stream, multipart/form-data, application/x-www-form-urlencoded
 
 
 ## storageApiBucketsObjectsUpdate
@@ -506,5 +510,217 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## storageApiS3CredentialsByAccessKey
+
+> ResponseS3Credential storageApiS3CredentialsByAccessKey(s3CredentialAccessKey)
+
+get by s3 credentials by access key
+
+
+
+### Example
+
+```javascript
+import ObjectStorage from 'object_storage';
+let defaultClient = ObjectStorage.ApiClient.instance;
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new ObjectStorage.StorageApi();
+let s3CredentialAccessKey = "s3CredentialAccessKey_example"; // String | 
+apiInstance.storageApiS3CredentialsByAccessKey(s3CredentialAccessKey, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **s3CredentialAccessKey** | **String**|  | 
+
+### Return type
+
+[**ResponseS3Credential**](ResponseS3Credential.md)
+
+### Authorization
+
+[tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## storageApiS3CredentialsCreate
+
+> ResponseS3Credential storageApiS3CredentialsCreate(s3CredentialCreate)
+
+create s3 credentials
+
+
+
+### Example
+
+```javascript
+import ObjectStorage from 'object_storage';
+let defaultClient = ObjectStorage.ApiClient.instance;
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new ObjectStorage.StorageApi();
+let s3CredentialCreate = new ObjectStorage.S3CredentialCreate(); // S3CredentialCreate | 
+apiInstance.storageApiS3CredentialsCreate(s3CredentialCreate, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **s3CredentialCreate** | [**S3CredentialCreate**](S3CredentialCreate.md)|  | 
+
+### Return type
+
+[**ResponseS3Credential**](ResponseS3Credential.md)
+
+### Authorization
+
+[tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## storageApiS3CredentialsDelete
+
+> ResponseS3Credential storageApiS3CredentialsDelete(s3CredentialAccessKey)
+
+delete by s3 credentials
+
+
+
+### Example
+
+```javascript
+import ObjectStorage from 'object_storage';
+let defaultClient = ObjectStorage.ApiClient.instance;
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new ObjectStorage.StorageApi();
+let s3CredentialAccessKey = "s3CredentialAccessKey_example"; // String | 
+apiInstance.storageApiS3CredentialsDelete(s3CredentialAccessKey, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **s3CredentialAccessKey** | **String**|  | 
+
+### Return type
+
+[**ResponseS3Credential**](ResponseS3Credential.md)
+
+### Authorization
+
+[tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## storageApiS3CredentialsList
+
+> PaginatedS3CredentialList storageApiS3CredentialsList(opts)
+
+List s3 credentials
+
+
+
+### Example
+
+```javascript
+import ObjectStorage from 'object_storage';
+let defaultClient = ObjectStorage.ApiClient.instance;
+// Configure API key authorization: tokenAuth
+let tokenAuth = defaultClient.authentications['tokenAuth'];
+tokenAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//tokenAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new ObjectStorage.StorageApi();
+let opts = {
+  'key': "key_example", // String | Object key. Used to identify the object for requests. Sent in POST requests as a path variable.
+  'lastModified': "lastModified_example", // String | Timestamp of the last modification to the object.
+  'size': 56, // Number | Size of file in bytes.
+  'continuationToken': "continuationToken_example" // String | Hash that can be added to the continuation_token query to skip list to the next page.
+};
+apiInstance.storageApiS3CredentialsList(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **key** | **String**| Object key. Used to identify the object for requests. Sent in POST requests as a path variable. | [optional] 
+ **lastModified** | **String**| Timestamp of the last modification to the object. | [optional] 
+ **size** | **Number**| Size of file in bytes. | [optional] 
+ **continuationToken** | **String**| Hash that can be added to the continuation_token query to skip list to the next page. | [optional] 
+
+### Return type
+
+[**PaginatedS3CredentialList**](PaginatedS3CredentialList.md)
+
+### Authorization
+
+[tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
