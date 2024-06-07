@@ -21,7 +21,11 @@ import EdgeAccessEnum from './model/EdgeAccessEnum';
 import ObjectResponseData from './model/ObjectResponseData';
 import PaginatedBucketList from './model/PaginatedBucketList';
 import PaginatedBucketObjectList from './model/PaginatedBucketObjectList';
+import PaginatedS3CredentialList from './model/PaginatedS3CredentialList';
 import ResponseBucket from './model/ResponseBucket';
+import ResponseS3Credential from './model/ResponseS3Credential';
+import S3Credential from './model/S3Credential';
+import S3CredentialCreate from './model/S3CredentialCreate';
 import StateEnum from './model/StateEnum';
 import SuccessBucketOperation from './model/SuccessBucketOperation';
 import SuccessObjectOperation from './model/SuccessObjectOperation';
@@ -115,10 +119,34 @@ export {
     PaginatedBucketObjectList,
 
     /**
+     * The PaginatedS3CredentialList model constructor.
+     * @property {module:model/PaginatedS3CredentialList}
+     */
+    PaginatedS3CredentialList,
+
+    /**
      * The ResponseBucket model constructor.
      * @property {module:model/ResponseBucket}
      */
     ResponseBucket,
+
+    /**
+     * The ResponseS3Credential model constructor.
+     * @property {module:model/ResponseS3Credential}
+     */
+    ResponseS3Credential,
+
+    /**
+     * The S3Credential model constructor.
+     * @property {module:model/S3Credential}
+     */
+    S3Credential,
+
+    /**
+     * The S3CredentialCreate model constructor.
+     * @property {module:model/S3CredentialCreate}
+     */
+    S3CredentialCreate,
 
     /**
      * The StateEnum model constructor.

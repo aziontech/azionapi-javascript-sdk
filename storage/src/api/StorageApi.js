@@ -17,7 +17,10 @@ import BucketCreate from '../model/BucketCreate';
 import BucketUpdate from '../model/BucketUpdate';
 import PaginatedBucketList from '../model/PaginatedBucketList';
 import PaginatedBucketObjectList from '../model/PaginatedBucketObjectList';
+import PaginatedS3CredentialList from '../model/PaginatedS3CredentialList';
 import ResponseBucket from '../model/ResponseBucket';
+import ResponseS3Credential from '../model/ResponseS3Credential';
+import S3CredentialCreate from '../model/S3CredentialCreate';
 import SuccessBucketOperation from '../model/SuccessBucketOperation';
 import SuccessObjectOperation from '../model/SuccessObjectOperation';
 
@@ -359,7 +362,7 @@ export default class StorageApi {
 
       let authNames = ['tokenAuth'];
       let contentTypes = [];
-      let accepts = ['text/html', 'application/json', 'application/xml', 'text/plain', 'image/jpeg', 'image/png', 'image/gif', 'video/mp4', 'audio/mpeg', 'application/pdf', 'application/javascript', 'text/css', 'application/octet-stream'];
+      let accepts = ['text/html', 'application/json', 'application/xml', 'text/plain', 'image/jpeg', 'image/png', 'image/gif', 'video/mp4', 'audio/mpeg', 'application/pdf', 'application/javascript', 'text/css', 'application/octet-stream', 'multipart/form-data', 'application/x-www-form-urlencoded'];
       let returnType = null;
       return this.apiClient.callApi(
         '/v4/storage/buckets/{bucket_name}/objects/{object_key}', 'GET',
@@ -463,6 +466,181 @@ export default class StorageApi {
       let returnType = ResponseBucket;
       return this.apiClient.callApi(
         '/v4/storage/buckets/{name}', 'PATCH',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the storageApiS3CredentialsByAccessKey operation.
+     * @callback module:api/StorageApi~storageApiS3CredentialsByAccessKeyCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ResponseS3Credential} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * get by s3 credentials by access key
+     * 
+     * @param {String} s3CredentialAccessKey 
+     * @param {module:api/StorageApi~storageApiS3CredentialsByAccessKeyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ResponseS3Credential}
+     */
+    storageApiS3CredentialsByAccessKey(s3CredentialAccessKey, callback) {
+      let postBody = null;
+      // verify the required parameter 's3CredentialAccessKey' is set
+      if (s3CredentialAccessKey === undefined || s3CredentialAccessKey === null) {
+        throw new Error("Missing the required parameter 's3CredentialAccessKey' when calling storageApiS3CredentialsByAccessKey");
+      }
+
+      let pathParams = {
+        's3_credential_access_key': s3CredentialAccessKey
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ResponseS3Credential;
+      return this.apiClient.callApi(
+        '/v4/storage/s3-credentials/{s3_credential_access_key}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the storageApiS3CredentialsCreate operation.
+     * @callback module:api/StorageApi~storageApiS3CredentialsCreateCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ResponseS3Credential} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * create s3 credentials
+     * 
+     * @param {module:model/S3CredentialCreate} s3CredentialCreate 
+     * @param {module:api/StorageApi~storageApiS3CredentialsCreateCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ResponseS3Credential}
+     */
+    storageApiS3CredentialsCreate(s3CredentialCreate, callback) {
+      let postBody = s3CredentialCreate;
+      // verify the required parameter 's3CredentialCreate' is set
+      if (s3CredentialCreate === undefined || s3CredentialCreate === null) {
+        throw new Error("Missing the required parameter 's3CredentialCreate' when calling storageApiS3CredentialsCreate");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ResponseS3Credential;
+      return this.apiClient.callApi(
+        '/v4/storage/s3-credentials', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the storageApiS3CredentialsDelete operation.
+     * @callback module:api/StorageApi~storageApiS3CredentialsDeleteCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ResponseS3Credential} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * delete by s3 credentials
+     * 
+     * @param {String} s3CredentialAccessKey 
+     * @param {module:api/StorageApi~storageApiS3CredentialsDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ResponseS3Credential}
+     */
+    storageApiS3CredentialsDelete(s3CredentialAccessKey, callback) {
+      let postBody = null;
+      // verify the required parameter 's3CredentialAccessKey' is set
+      if (s3CredentialAccessKey === undefined || s3CredentialAccessKey === null) {
+        throw new Error("Missing the required parameter 's3CredentialAccessKey' when calling storageApiS3CredentialsDelete");
+      }
+
+      let pathParams = {
+        's3_credential_access_key': s3CredentialAccessKey
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ResponseS3Credential;
+      return this.apiClient.callApi(
+        '/v4/storage/s3-credentials/{s3_credential_access_key}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the storageApiS3CredentialsList operation.
+     * @callback module:api/StorageApi~storageApiS3CredentialsListCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PaginatedS3CredentialList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List s3 credentials
+     * 
+     * @param {Object} opts Optional parameters
+     * @param {String} [key] Object key. Used to identify the object for requests. Sent in POST requests as a path variable.
+     * @param {String} [lastModified] Timestamp of the last modification to the object.
+     * @param {Number} [size] Size of file in bytes.
+     * @param {String} [continuationToken] Hash that can be added to the continuation_token query to skip list to the next page.
+     * @param {module:api/StorageApi~storageApiS3CredentialsListCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/PaginatedS3CredentialList}
+     */
+    storageApiS3CredentialsList(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'key': opts['key'],
+        'last_modified': opts['lastModified'],
+        'size': opts['size'],
+        'continuation_token': opts['continuationToken']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['tokenAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = PaginatedS3CredentialList;
+      return this.apiClient.callApi(
+        '/v4/storage/s3-credentials', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
