@@ -37,7 +37,7 @@ let opts = {
   'filter': "filter_example", // String | 
   'orderBy': "orderBy_example", // String | 
   'sort': "sort_example", // String | 
-  'accept': application/json; version=3 // String | 
+  'accept': "application/json; version=3" // String | 
 };
 apiInstance.edgeApplicationsGet(opts, (error, data, response) => {
   if (error) {
@@ -94,7 +94,7 @@ tokenAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new EdgeApplicationApi.EdgeApplicationsMainSettingsApi();
 let id = "id_example"; // String | The id of the edge application that you plan to delete.
 let opts = {
-  'accept': application/json; version=3 // String | 
+  'accept': "application/json; version=3" // String | 
 };
 apiInstance.edgeApplicationsIdDelete(id, opts, (error, data, response) => {
   if (error) {
@@ -147,7 +147,7 @@ tokenAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new EdgeApplicationApi.EdgeApplicationsMainSettingsApi();
 let id = "id_example"; // String | 
 let opts = {
-  'accept': application/json; version=3 // String | 
+  'accept': "application/json; version=3" // String | 
 };
 apiInstance.edgeApplicationsIdGet(id, opts, (error, data, response) => {
   if (error) {
@@ -200,8 +200,8 @@ tokenAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new EdgeApplicationApi.EdgeApplicationsMainSettingsApi();
 let id = "id_example"; // String | 
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
   'applicationUpdateRequest': new EdgeApplicationApi.ApplicationUpdateRequest() // ApplicationUpdateRequest | 
 };
 apiInstance.edgeApplicationsIdPatch(id, opts, (error, data, response) => {
@@ -257,8 +257,8 @@ tokenAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new EdgeApplicationApi.EdgeApplicationsMainSettingsApi();
 let id = "id_example"; // String | The Id of the edge application to be overwritten. 
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
   'applicationPutRequest': new EdgeApplicationApi.ApplicationPutRequest() // ApplicationPutRequest | 
 };
 apiInstance.edgeApplicationsIdPut(id, opts, (error, data, response) => {
@@ -313,8 +313,8 @@ tokenAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new EdgeApplicationApi.EdgeApplicationsMainSettingsApi();
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
   'createApplicationRequest': new EdgeApplicationApi.CreateApplicationRequest() // CreateApplicationRequest | 
 };
 apiInstance.edgeApplicationsPost(opts, (error, data, response) => {

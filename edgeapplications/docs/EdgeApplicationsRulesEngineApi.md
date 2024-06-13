@@ -39,7 +39,7 @@ let opts = {
   'filter': "filter_example", // String | 
   'orderBy': "orderBy_example", // String | 
   'sort': "sort_example", // String | 
-  'accept': application/json; version=3 // String | 
+  'accept': "application/json; version=3" // String | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdRulesEnginePhaseRulesGet(edgeApplicationId, phase, opts, (error, data, response) => {
   if (error) {
@@ -101,8 +101,8 @@ let apiInstance = new EdgeApplicationApi.EdgeApplicationsRulesEngineApi();
 let edgeApplicationId = 789; // Number | 
 let phase = "phase_example"; // String | 
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
   'createRulesEngineRequest': new EdgeApplicationApi.CreateRulesEngineRequest() // CreateRulesEngineRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdRulesEnginePhaseRulesPost(edgeApplicationId, phase, opts, (error, data, response) => {
@@ -161,7 +161,7 @@ let edgeApplicationId = 789; // Number | The id of the edge application you plan
 let phase = "phase_example"; // String | 
 let ruleId = 789; // Number | The id of the rule you plan to delete. 
 let opts = {
-  'accept': application/json; version=3 // String | 
+  'accept': "application/json; version=3" // String | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdRulesEnginePhaseRulesRuleIdDelete(edgeApplicationId, phase, ruleId, opts, (error, data, response) => {
   if (error) {
@@ -218,7 +218,7 @@ let edgeApplicationId = 789; // Number | The id of the edge application you want
 let phase = "phase_example"; // String | 
 let ruleId = 789; // Number | The id of the rule you plan to delete. 
 let opts = {
-  'accept': application/json; version=3 // String | 
+  'accept': "application/json; version=3" // String | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdRulesEnginePhaseRulesRuleIdGet(edgeApplicationId, phase, ruleId, opts, (error, data, response) => {
   if (error) {
@@ -275,8 +275,8 @@ let edgeApplicationId = 789; // Number |
 let phase = "phase_example"; // String | 
 let ruleId = 789; // Number | 
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
   'patchRulesEngineRequest': new EdgeApplicationApi.PatchRulesEngineRequest() // PatchRulesEngineRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdRulesEnginePhaseRulesRuleIdPatch(edgeApplicationId, phase, ruleId, opts, (error, data, response) => {
@@ -336,8 +336,8 @@ let edgeApplicationId = 789; // Number |
 let phase = "phase_example"; // String | 
 let ruleId = 789; // Number | 
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
   'updateRulesEngineRequest': new EdgeApplicationApi.UpdateRulesEngineRequest() // UpdateRulesEngineRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdRulesEnginePhaseRulesRuleIdPut(edgeApplicationId, phase, ruleId, opts, (error, data, response) => {

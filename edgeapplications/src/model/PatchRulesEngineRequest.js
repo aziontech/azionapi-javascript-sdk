@@ -52,6 +52,12 @@ class PatchRulesEngineRequest {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('order')) {
+                obj['order'] = ApiClient.convertToType(data['order'], 'Number');
+            }
+            if (data.hasOwnProperty('is_active')) {
+                obj['is_active'] = ApiClient.convertToType(data['is_active'], 'Boolean');
+            }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
@@ -106,6 +112,16 @@ class PatchRulesEngineRequest {
  * @member {String} name
  */
 PatchRulesEngineRequest.prototype['name'] = undefined;
+
+/**
+ * @member {Number} order
+ */
+PatchRulesEngineRequest.prototype['order'] = undefined;
+
+/**
+ * @member {Boolean} is_active
+ */
+PatchRulesEngineRequest.prototype['is_active'] = undefined;
 
 /**
  * @member {String} description
