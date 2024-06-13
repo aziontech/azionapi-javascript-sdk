@@ -58,6 +58,12 @@ class UpdateRulesEngineRequest {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('order')) {
+                obj['order'] = ApiClient.convertToType(data['order'], 'Number');
+            }
+            if (data.hasOwnProperty('is_active')) {
+                obj['is_active'] = ApiClient.convertToType(data['is_active'], 'Boolean');
+            }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
@@ -79,7 +85,7 @@ class UpdateRulesEngineRequest {
     static validateJSON(data) {
         // check to make sure all required properties are present in the JSON string
         for (const property of UpdateRulesEngineRequest.RequiredProperties) {
-            if (!data[property]) {
+            if (!data.hasOwnProperty(property)) {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
         }
@@ -118,6 +124,16 @@ UpdateRulesEngineRequest.RequiredProperties = ["name", "criteria", "behaviors"];
  * @member {String} name
  */
 UpdateRulesEngineRequest.prototype['name'] = undefined;
+
+/**
+ * @member {Number} order
+ */
+UpdateRulesEngineRequest.prototype['order'] = undefined;
+
+/**
+ * @member {Boolean} is_active
+ */
+UpdateRulesEngineRequest.prototype['is_active'] = undefined;
 
 /**
  * @member {String} description

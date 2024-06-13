@@ -34,8 +34,8 @@ let apiInstance = new EdgeApplicationApi.EdgeApplicationsEdgeFunctionsInstancesA
 let edgeApplicationId = "edgeApplicationId_example"; // String | 
 let functionsInstancesId = "functionsInstancesId_example"; // String | 
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json" // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
 };
 apiInstance.edgeApplicationsEdgeApplicationIdFunctionsInstancesFunctionsInstancesIdDelete(edgeApplicationId, functionsInstancesId, opts, (error, data, response) => {
   if (error) {
@@ -91,7 +91,7 @@ let apiInstance = new EdgeApplicationApi.EdgeApplicationsEdgeFunctionsInstancesA
 let edgeApplicationId = 789; // Number | 
 let functionsInstancesId = 789; // Number | 
 let opts = {
-  'accept': application/json; version=3 // String | The id of the edge function instance you plan to query. 
+  'accept': "application/json; version=3" // String | The id of the edge function instance you plan to query. 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdFunctionsInstancesFunctionsInstancesIdGet(edgeApplicationId, functionsInstancesId, opts, (error, data, response) => {
   if (error) {
@@ -146,8 +146,8 @@ let apiInstance = new EdgeApplicationApi.EdgeApplicationsEdgeFunctionsInstancesA
 let edgeApplicationId = "edgeApplicationId_example"; // String | The id of the edge application you plan to overwrite 
 let functionsInstancesId = "functionsInstancesId_example"; // String | The id of the edge function instance you plan to overwrite.
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
   'applicationUpdateInstanceRequest': new EdgeApplicationApi.ApplicationUpdateInstanceRequest() // ApplicationUpdateInstanceRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdFunctionsInstancesFunctionsInstancesIdPatch(edgeApplicationId, functionsInstancesId, opts, (error, data, response) => {
@@ -205,8 +205,8 @@ let apiInstance = new EdgeApplicationApi.EdgeApplicationsEdgeFunctionsInstancesA
 let edgeApplicationId = "edgeApplicationId_example"; // String | The id of the edge application you plan to overwrite 
 let functionsInstancesId = "functionsInstancesId_example"; // String | The id of the edge function instance you plan to overwrite.
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
   'applicationPutInstanceRequest': new EdgeApplicationApi.ApplicationPutInstanceRequest() // ApplicationPutInstanceRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdFunctionsInstancesFunctionsInstancesIdPut(edgeApplicationId, functionsInstancesId, opts, (error, data, response) => {
@@ -268,7 +268,7 @@ let opts = {
   'filter': "filter_example", // String | 
   'orderBy': "orderBy_example", // String | 
   'sort': "sort_example", // String | 
-  'accept': application/json; version=3 // String | 
+  'accept': "application/json; version=3" // String | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdFunctionsInstancesGet(edgeApplicationId, opts, (error, data, response) => {
   if (error) {
@@ -326,8 +326,8 @@ tokenAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new EdgeApplicationApi.EdgeApplicationsEdgeFunctionsInstancesApi();
 let edgeApplicationId = 789; // Number | 
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
   'applicationCreateInstanceRequest': new EdgeApplicationApi.ApplicationCreateInstanceRequest() // ApplicationCreateInstanceRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdFunctionsInstancesPost(edgeApplicationId, opts, (error, data, response) => {

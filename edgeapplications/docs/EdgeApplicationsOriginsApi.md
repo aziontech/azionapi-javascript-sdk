@@ -38,7 +38,7 @@ let opts = {
   'filter': "filter_example", // String | 
   'orderBy': "orderBy_example", // String | 
   'sort': "sort_example", // String | 
-  'accept': application/json; version=3 // String | 
+  'accept': "application/json; version=3" // String | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdOriginsGet(edgeApplicationId, opts, (error, data, response) => {
   if (error) {
@@ -97,7 +97,7 @@ let apiInstance = new EdgeApplicationApi.EdgeApplicationsOriginsApi();
 let edgeApplicationId = 789; // Number | 
 let originKey = "originKey_example"; // String | 
 let opts = {
-  'accept': application/json; version=3 // String | The id of the Origin that you plan to delete.
+  'accept': "application/json; version=3" // String | The id of the Origin that you plan to delete.
 };
 apiInstance.edgeApplicationsEdgeApplicationIdOriginsOriginKeyDelete(edgeApplicationId, originKey, opts, (error, data, response) => {
   if (error) {
@@ -152,7 +152,7 @@ let apiInstance = new EdgeApplicationApi.EdgeApplicationsOriginsApi();
 let edgeApplicationId = 789; // Number | 
 let originKey = "originKey_example"; // String | 
 let opts = {
-  'accept': application/json; version=3 // String | The id of the Origin that you plan to query.
+  'accept': "application/json; version=3" // String | The id of the Origin that you plan to query.
 };
 apiInstance.edgeApplicationsEdgeApplicationIdOriginsOriginKeyGet(edgeApplicationId, originKey, opts, (error, data, response) => {
   if (error) {
@@ -207,8 +207,8 @@ let apiInstance = new EdgeApplicationApi.EdgeApplicationsOriginsApi();
 let edgeApplicationId = 789; // Number | 
 let originKey = "originKey_example"; // String | 
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
   'patchOriginsRequest': new EdgeApplicationApi.PatchOriginsRequest() // PatchOriginsRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdOriginsOriginKeyPatch(edgeApplicationId, originKey, opts, (error, data, response) => {
@@ -266,8 +266,8 @@ let apiInstance = new EdgeApplicationApi.EdgeApplicationsOriginsApi();
 let edgeApplicationId = 789; // Number | 
 let originKey = "originKey_example"; // String | 
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
   'updateOriginsRequest': new EdgeApplicationApi.UpdateOriginsRequest() // UpdateOriginsRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdOriginsOriginKeyPut(edgeApplicationId, originKey, opts, (error, data, response) => {
@@ -324,8 +324,8 @@ tokenAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new EdgeApplicationApi.EdgeApplicationsOriginsApi();
 let edgeApplicationId = 789; // Number | 
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
   'createOriginsRequest': new EdgeApplicationApi.CreateOriginsRequest() // CreateOriginsRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdOriginsPost(edgeApplicationId, opts, (error, data, response) => {

@@ -34,8 +34,8 @@ let apiInstance = new EdgeApplicationApi.EdgeApplicationsCacheSettingsApi();
 let edgeApplicationId = 789; // Number | 
 let cacheSettingsId = 789; // Number | 
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json" // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
 };
 apiInstance.edgeApplicationsEdgeApplicationIdCacheSettingsCacheSettingsIdDelete(edgeApplicationId, cacheSettingsId, opts, (error, data, response) => {
   if (error) {
@@ -91,7 +91,7 @@ let apiInstance = new EdgeApplicationApi.EdgeApplicationsCacheSettingsApi();
 let edgeApplicationId = 789; // Number | 
 let cacheSettingsId = 789; // Number | 
 let opts = {
-  'accept': application/json; version=3 // String | 
+  'accept': "application/json; version=3" // String | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdCacheSettingsCacheSettingsIdGet(edgeApplicationId, cacheSettingsId, opts, (error, data, response) => {
   if (error) {
@@ -146,7 +146,7 @@ let apiInstance = new EdgeApplicationApi.EdgeApplicationsCacheSettingsApi();
 let edgeApplicationId = 789; // Number | 
 let cacheSettingsId = 789; // Number | 
 let opts = {
-  'accept': application/json; version=3, // String | 
+  'accept': "application/json; version=3", // String | 
   'applicationCachePatchRequest': new EdgeApplicationApi.ApplicationCachePatchRequest() // ApplicationCachePatchRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdCacheSettingsCacheSettingsIdPatch(edgeApplicationId, cacheSettingsId, opts, (error, data, response) => {
@@ -203,8 +203,8 @@ let apiInstance = new EdgeApplicationApi.EdgeApplicationsCacheSettingsApi();
 let edgeApplicationId = 789; // Number | 
 let cacheSettingsId = 789; // Number | 
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
   'applicationCachePutRequest': new EdgeApplicationApi.ApplicationCachePutRequest() // ApplicationCachePutRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdCacheSettingsCacheSettingsIdPut(edgeApplicationId, cacheSettingsId, opts, (error, data, response) => {
@@ -266,7 +266,7 @@ let opts = {
   'filter': "filter_example", // String | 
   'orderBy': "orderBy_example", // String | 
   'sort': "sort_example", // String | 
-  'accept': application/json; version=3 // String | 
+  'accept': "application/json; version=3" // String | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdCacheSettingsGet(edgeApplicationId, opts, (error, data, response) => {
   if (error) {
@@ -324,8 +324,8 @@ tokenAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new EdgeApplicationApi.EdgeApplicationsCacheSettingsApi();
 let edgeApplicationId = 789; // Number | 
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
   'applicationCacheCreateRequest': new EdgeApplicationApi.ApplicationCacheCreateRequest() // ApplicationCacheCreateRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdCacheSettingsPost(edgeApplicationId, opts, (error, data, response) => {

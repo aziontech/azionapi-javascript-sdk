@@ -34,7 +34,7 @@ let apiInstance = new EdgeApplicationApi.EdgeApplicationsDeviceGroupsApi();
 let edgeApplicationId = 789; // Number | 
 let deviceGroupId = 789; // Number | 
 let opts = {
-  'accept': application/json; version=3 // String | The id of the Device Groups that you plan to delete.
+  'accept': "application/json; version=3" // String | The id of the Device Groups that you plan to delete.
 };
 apiInstance.edgeApplicationsEdgeApplicationIdDeviceGroupsDeviceGroupIdDelete(edgeApplicationId, deviceGroupId, opts, (error, data, response) => {
   if (error) {
@@ -89,7 +89,7 @@ let apiInstance = new EdgeApplicationApi.EdgeApplicationsDeviceGroupsApi();
 let edgeApplicationId = 789; // Number | 
 let deviceGroupId = 789; // Number | 
 let opts = {
-  'accept': application/json; version=3 // String | The id of the Device Groups that you plan to query.
+  'accept': "application/json; version=3" // String | The id of the Device Groups that you plan to query.
 };
 apiInstance.edgeApplicationsEdgeApplicationIdDeviceGroupsDeviceGroupIdGet(edgeApplicationId, deviceGroupId, opts, (error, data, response) => {
   if (error) {
@@ -144,8 +144,8 @@ let apiInstance = new EdgeApplicationApi.EdgeApplicationsDeviceGroupsApi();
 let edgeApplicationId = 789; // Number | 
 let deviceGroupId = 789; // Number | 
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
   'patchDeviceGroupsRequest': new EdgeApplicationApi.PatchDeviceGroupsRequest() // PatchDeviceGroupsRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdDeviceGroupsDeviceGroupIdPatch(edgeApplicationId, deviceGroupId, opts, (error, data, response) => {
@@ -203,8 +203,8 @@ let apiInstance = new EdgeApplicationApi.EdgeApplicationsDeviceGroupsApi();
 let edgeApplicationId = 789; // Number | 
 let deviceGroupId = 789; // Number | 
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
   'updateDeviceGroupsRequest': new EdgeApplicationApi.UpdateDeviceGroupsRequest() // UpdateDeviceGroupsRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdDeviceGroupsDeviceGroupIdPut(edgeApplicationId, deviceGroupId, opts, (error, data, response) => {
@@ -266,7 +266,7 @@ let opts = {
   'filter': "filter_example", // String | 
   'orderBy': "orderBy_example", // String | 
   'sort': "sort_example", // String | 
-  'accept': application/json; version=3 // String | 
+  'accept': "application/json; version=3" // String | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdDeviceGroupsGet(edgeApplicationId, opts, (error, data, response) => {
   if (error) {
@@ -324,8 +324,8 @@ tokenAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new EdgeApplicationApi.EdgeApplicationsDeviceGroupsApi();
 let edgeApplicationId = 789; // Number | 
 let opts = {
-  'accept': application/json; version=3, // String | 
-  'contentType': application/json, // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
+  'accept': "application/json; version=3", // String | 
+  'contentType': "application/json", // String | The type of coding used in the Body (application/json). <br>  Example: Content-Type: application/json
   'createDeviceGroupsRequest': new EdgeApplicationApi.CreateDeviceGroupsRequest() // CreateDeviceGroupsRequest | 
 };
 apiInstance.edgeApplicationsEdgeApplicationIdDeviceGroupsPost(edgeApplicationId, opts, (error, data, response) => {
