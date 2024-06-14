@@ -24,5 +24,6 @@ Name | Type | Description | Notes
 **loadBalancer** | **Boolean** |  | 
 **rawLogs** | **Boolean** |  | 
 **webApplicationFirewall** | **Boolean** |  | 
+**websocket** | **Boolean** |  | [optional] 
 
 

@@ -145,6 +145,9 @@ class ApplicationResultsCreate {
             if (data.hasOwnProperty('l2_caching')) {
                 obj['l2_caching'] = ApiClient.convertToType(data['l2_caching'], 'Boolean');
             }
+            if (data.hasOwnProperty('websocket')) {
+                obj['websocket'] = ApiClient.convertToType(data['websocket'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -285,6 +288,11 @@ ApplicationResultsCreate.prototype['web_application_firewall'] = undefined;
  * @member {Boolean} l2_caching
  */
 ApplicationResultsCreate.prototype['l2_caching'] = undefined;
+
+/**
+ * @member {Boolean} websocket
+ */
+ApplicationResultsCreate.prototype['websocket'] = undefined;
 
 
 
