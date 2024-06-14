@@ -147,6 +147,9 @@ class ApplicationUpdateResults {
             if (data.hasOwnProperty('web_application_firewall')) {
                 obj['web_application_firewall'] = ApiClient.convertToType(data['web_application_firewall'], 'Boolean');
             }
+            if (data.hasOwnProperty('websocket')) {
+                obj['websocket'] = ApiClient.convertToType(data['websocket'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -287,6 +290,11 @@ ApplicationUpdateResults.prototype['raw_logs'] = undefined;
  * @member {Boolean} web_application_firewall
  */
 ApplicationUpdateResults.prototype['web_application_firewall'] = undefined;
+
+/**
+ * @member {Boolean} websocket
+ */
+ApplicationUpdateResults.prototype['websocket'] = undefined;
 
 
 
