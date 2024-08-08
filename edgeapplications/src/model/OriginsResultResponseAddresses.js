@@ -23,7 +23,7 @@ class OriginsResultResponseAddresses {
      * Constructs a new <code>OriginsResultResponseAddresses</code>.
      * @alias module:model/OriginsResultResponseAddresses
      * @param address {String} 
-     * @param weight {String} 
+     * @param weight {Number} 
      * @param serverRole {String} 
      * @param isActive {Boolean} 
      */
@@ -59,7 +59,7 @@ class OriginsResultResponseAddresses {
                 obj['address'] = ApiClient.convertToType(data['address'], 'String');
             }
             if (data.hasOwnProperty('weight')) {
-                obj['weight'] = ApiClient.convertToType(data['weight'], 'String');
+                obj['weight'] = ApiClient.convertToType(data['weight'], 'Number');
             }
             if (data.hasOwnProperty('server_role')) {
                 obj['server_role'] = ApiClient.convertToType(data['server_role'], 'String');
@@ -88,10 +88,6 @@ class OriginsResultResponseAddresses {
             throw new Error("Expected the field `address` to be a primitive type in the JSON string but got " + data['address']);
         }
         // ensure the json data is a string
-        if (data['weight'] && !(typeof data['weight'] === 'string' || data['weight'] instanceof String)) {
-            throw new Error("Expected the field `weight` to be a primitive type in the JSON string but got " + data['weight']);
-        }
-        // ensure the json data is a string
         if (data['server_role'] && !(typeof data['server_role'] === 'string' || data['server_role'] instanceof String)) {
             throw new Error("Expected the field `server_role` to be a primitive type in the JSON string but got " + data['server_role']);
         }
@@ -110,7 +106,7 @@ OriginsResultResponseAddresses.RequiredProperties = ["address", "weight", "serve
 OriginsResultResponseAddresses.prototype['address'] = undefined;
 
 /**
- * @member {String} weight
+ * @member {Number} weight
  */
 OriginsResultResponseAddresses.prototype['weight'] = undefined;
 
