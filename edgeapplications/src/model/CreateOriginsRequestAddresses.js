@@ -52,6 +52,15 @@ class CreateOriginsRequestAddresses {
             if (data.hasOwnProperty('address')) {
                 obj['address'] = ApiClient.convertToType(data['address'], 'String');
             }
+            if (data.hasOwnProperty('is_active')) {
+                obj['is_active'] = ApiClient.convertToType(data['is_active'], 'Boolean');
+            }
+            if (data.hasOwnProperty('weight')) {
+                obj['weight'] = ApiClient.convertToType(data['weight'], 'Number');
+            }
+            if (data.hasOwnProperty('server_role')) {
+                obj['server_role'] = ApiClient.convertToType(data['server_role'], 'String');
+            }
         }
         return obj;
     }
@@ -72,6 +81,10 @@ class CreateOriginsRequestAddresses {
         if (data['address'] && !(typeof data['address'] === 'string' || data['address'] instanceof String)) {
             throw new Error("Expected the field `address` to be a primitive type in the JSON string but got " + data['address']);
         }
+        // ensure the json data is a string
+        if (data['server_role'] && !(typeof data['server_role'] === 'string' || data['server_role'] instanceof String)) {
+            throw new Error("Expected the field `server_role` to be a primitive type in the JSON string but got " + data['server_role']);
+        }
 
         return true;
     }
@@ -85,6 +98,21 @@ CreateOriginsRequestAddresses.RequiredProperties = ["address"];
  * @member {String} address
  */
 CreateOriginsRequestAddresses.prototype['address'] = undefined;
+
+/**
+ * @member {Boolean} is_active
+ */
+CreateOriginsRequestAddresses.prototype['is_active'] = undefined;
+
+/**
+ * @member {Number} weight
+ */
+CreateOriginsRequestAddresses.prototype['weight'] = undefined;
+
+/**
+ * @member {String} server_role
+ */
+CreateOriginsRequestAddresses.prototype['server_role'] = undefined;
 
 
 
