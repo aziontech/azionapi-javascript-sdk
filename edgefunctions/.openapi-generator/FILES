@@ -4,6 +4,7 @@
 README.md
 docs/BadRequestResponse.md
 docs/CreateEdgeFunctionRequest.md
+docs/CreateEdgeFunctionRequestJsonArgs.md
 docs/EdgeFunctionResponse.md
 docs/EdgeFunctionsApi.md
 docs/ErrorResponse.md
@@ -20,6 +21,7 @@ src/api/EdgeFunctionsApi.js
 src/index.js
 src/model/BadRequestResponse.js
 src/model/CreateEdgeFunctionRequest.js
+src/model/CreateEdgeFunctionRequestJsonArgs.js
 src/model/EdgeFunctionResponse.js
 src/model/ErrorResponse.js
 src/model/Links.js
@@ -27,3 +29,4 @@ src/model/ListEdgeFunctionResponse.js
 src/model/PatchEdgeFunctionRequest.js
 src/model/PutEdgeFunctionRequest.js
 src/model/Results.js
+test/model/CreateEdgeFunctionRequestJsonArgs.spec.js

@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import CreateEdgeFunctionRequestJsonArgs from './CreateEdgeFunctionRequestJsonArgs';
 
 /**
  * The PatchEdgeFunctionRequest model module.
@@ -54,7 +55,7 @@ class PatchEdgeFunctionRequest {
                 obj['code'] = ApiClient.convertToType(data['code'], 'String');
             }
             if (data.hasOwnProperty('json_args')) {
-                obj['json_args'] = ApiClient.convertToType(data['json_args'], Object);
+                obj['json_args'] = CreateEdgeFunctionRequestJsonArgs.constructFromObject(data['json_args']);
             }
             if (data.hasOwnProperty('active')) {
                 obj['active'] = ApiClient.convertToType(data['active'], 'Boolean');
@@ -80,6 +81,10 @@ class PatchEdgeFunctionRequest {
         if (data['code'] && !(typeof data['code'] === 'string' || data['code'] instanceof String)) {
             throw new Error("Expected the field `code` to be a primitive type in the JSON string but got " + data['code']);
         }
+        // validate the optional field `json_args`
+        if (data['json_args']) { // data not null
+          CreateEdgeFunctionRequestJsonArgs.validateJSON(data['json_args']);
+        }
 
         return true;
     }
@@ -100,7 +105,7 @@ PatchEdgeFunctionRequest.prototype['name'] = undefined;
 PatchEdgeFunctionRequest.prototype['code'] = undefined;
 
 /**
- * @member {Object} json_args
+ * @member {module:model/CreateEdgeFunctionRequestJsonArgs} json_args
  */
 PatchEdgeFunctionRequest.prototype['json_args'] = undefined;
 

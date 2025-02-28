@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **language** | **String** |  | [optional] 
 **code** | **String** |  | [optional] 
-**jsonArgs** | **Object** |  | [optional] 
+**jsonArgs** | [**CreateEdgeFunctionRequestJsonArgs**](CreateEdgeFunctionRequestJsonArgs.md) |  | [optional] 
 **initiatorType** | **String** |  | [optional] 
 **active** | **Boolean** |  | [optional] 
 **isProprietaryCode** | **Boolean** |  | [optional] 
@@ -17,9 +17,9 @@ Name | Type | Description | Notes
 ## Enum: InitiatorTypeEnum
 
 
-* `application` (value: `"edge_application"`)
+* `edge_application` (value: `"edge_application"`)
 
-* `firewall` (value: `"edge_firewall"`)
+* `edge_firewall` (value: `"edge_firewall"`)
 
 
 
