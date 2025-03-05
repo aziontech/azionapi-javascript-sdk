@@ -15,6 +15,7 @@
 import ApiClient from './ApiClient';
 import BadRequestResponse from './model/BadRequestResponse';
 import CreateEdgeFunctionRequest from './model/CreateEdgeFunctionRequest';
+import CreateEdgeFunctionRequestJsonArgs from './model/CreateEdgeFunctionRequestJsonArgs';
 import EdgeFunctionResponse from './model/EdgeFunctionResponse';
 import ErrorResponse from './model/ErrorResponse';
 import Links from './model/Links';
@@ -74,6 +75,12 @@ export {
      * @property {module:model/CreateEdgeFunctionRequest}
      */
     CreateEdgeFunctionRequest,
+
+    /**
+     * The CreateEdgeFunctionRequestJsonArgs model constructor.
+     * @property {module:model/CreateEdgeFunctionRequestJsonArgs}
+     */
+    CreateEdgeFunctionRequestJsonArgs,
 
     /**
      * The EdgeFunctionResponse model constructor.

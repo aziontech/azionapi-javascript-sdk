@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import CreateEdgeFunctionRequestJsonArgs from './CreateEdgeFunctionRequestJsonArgs';
 
 /**
  * The PutEdgeFunctionRequest model module.
@@ -54,7 +55,7 @@ class PutEdgeFunctionRequest {
                 obj['code'] = ApiClient.convertToType(data['code'], 'String');
             }
             if (data.hasOwnProperty('json_args')) {
-                obj['json_args'] = ApiClient.convertToType(data['json_args'], Object);
+                obj['json_args'] = CreateEdgeFunctionRequestJsonArgs.constructFromObject(data['json_args']);
             }
             if (data.hasOwnProperty('active')) {
                 obj['active'] = ApiClient.convertToType(data['active'], 'Boolean');
@@ -86,6 +87,10 @@ class PutEdgeFunctionRequest {
         if (data['code'] && !(typeof data['code'] === 'string' || data['code'] instanceof String)) {
             throw new Error("Expected the field `code` to be a primitive type in the JSON string but got " + data['code']);
         }
+        // validate the optional field `json_args`
+        if (data['json_args']) { // data not null
+          CreateEdgeFunctionRequestJsonArgs.validateJSON(data['json_args']);
+        }
         // ensure the json data is a string
         if (data['initiator_type'] && !(typeof data['initiator_type'] === 'string' || data['initiator_type'] instanceof String)) {
             throw new Error("Expected the field `initiator_type` to be a primitive type in the JSON string but got " + data['initiator_type']);
@@ -114,7 +119,7 @@ PutEdgeFunctionRequest.prototype['name'] = undefined;
 PutEdgeFunctionRequest.prototype['code'] = undefined;
 
 /**
- * @member {Object} json_args
+ * @member {module:model/CreateEdgeFunctionRequestJsonArgs} json_args
  */
 PutEdgeFunctionRequest.prototype['json_args'] = undefined;
 
@@ -153,13 +158,13 @@ PutEdgeFunctionRequest['InitiatorTypeEnum'] = {
      * value: "edge_application"
      * @const
      */
-    "application": "edge_application",
+    "edge_application": "edge_application",
 
     /**
      * value: "edge_firewall"
      * @const
      */
-    "firewall": "edge_firewall"
+    "edge_firewall": "edge_firewall"
 };
 
 
